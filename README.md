@@ -3,3 +3,11 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 ------
 ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/4f5caccc-f8c4-4d2a-904c-a5cc4569e1bc)
 ------
+<details>
+<summary>Features</summary>
+<br>
+
+
+
+
+</details>
