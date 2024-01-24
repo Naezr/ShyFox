@@ -3,11 +3,24 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 ------
 ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/4f5caccc-f8c4-4d2a-904c-a5cc4569e1bc)
 ------
-<details>
-<summary>Features</summary>
-<br>
 
-
-
-
+## Showcase
+<details><summary>GIF</summary>
+      
+![Urlbar](https://github.com/Naezr/ShyFox/assets/95460152/c33f4e0c-8534-454e-91e3-4cea646bfa52)
+![Toolbar](https://github.com/Naezr/ShyFox/assets/95460152/a70c6039-ca40-4d80-b64a-e143d614147f)
+![Tabs sidebar](https://github.com/Naezr/ShyFox/assets/95460152/72b6476b-7174-4374-9873-2040cb83c104)
+![Menubar](https://github.com/Naezr/ShyFox/assets/95460152/b908864b-23e2-4df6-ba14-f134d90e09e5)
+![Customization](https://github.com/Naezr/ShyFox/assets/95460152/8c7df8c4-2c6d-4c5a-863c-05df1fe4dc26)
+    
 </details>
+
+## Install
+
+ - Install [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig), [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).    
+ - Put `userChrome.css` and `JS` into your `chrome` directory.
+ - Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
+ - Set first toggle prefix to ` ` and second toggle prefix to `  ` in Userchrome toggle settings and customize keybinds to what you want. ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/c9effdee-a8b2-4636-a52c-185ceffb96a5)
+ - Recomended settings for Adaptive Tab Bar Color (you can experiment with it) ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)
+
+
