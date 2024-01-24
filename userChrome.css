@@ -439,10 +439,11 @@ menupopup > menu {
   min-height: 22px !important;
   margin: 0 !important;
 }
+/*
 menupopup > *{
   background-color: var(--bg-col) !important;
 }
-
+*/
 /* compact unified extensions menu */
 #unified-extensions-view{--uei-icon-size: 20px;}
 .unified-extensions-item-message-deck,
