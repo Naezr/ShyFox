@@ -17,7 +17,14 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 
 ### Install
 
- - Install [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig), [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).    
+ - Install [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig), [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
+   <details><summary>Check if fx-autoconfig is installed</summary>
+
+    A new menu item appears
+    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/e392cad6-e975-4db1-9252-3d747ee0979f)
+
+    </details>
+
  - Put `userChrome.css` and `JS` into your `chrome` directory.
    <details><summary>Chrome folder file hierarchy</summary>
            
