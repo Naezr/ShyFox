@@ -18,7 +18,19 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 ### Install
 
  - Install [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig), [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).    
+   If for some reason you can't install fx-autoconfig (for example on linux it can be difficult), you can use the theme without it, but then the extensions, menu and overflow buttons will be on the bottom panel with urlbar. 
  - Put `userChrome.css` and `JS` into your `chrome` directory.
+   <details><summary>Chrome folder file hierarchy</summary>
+           
+         chrome        
+         ├ JS     
+         │ └ move-buttons.uc.js     
+         ├ utils       
+         │ └ important files for fx-autoconfig work     
+         └ userChrome.css
+
+        (You can delete `CSS` and `resources` folders because it just examples for fx-autoconfig developers. This folders don't used in this theme)
+   </details>
  - Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
  - Set first toggle prefix to ` ` and second toggle prefix to `  ` in Userchrome toggle settings and customize keybinds to what you want. <details><summary>Userchrome toggle settings</summary> ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/c9effdee-a8b2-4636-a52c-185ceffb96a5) </details>
  - Recomended settings for Adaptive Tab Bar Color (you can experiment with it) <details><summary>Adaptive Tab Bar Color settings</summary>  ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  </details>
