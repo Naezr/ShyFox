@@ -37,6 +37,7 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 ### Additional information     
  - If for some reason you can't install fx-autoconfig (for example on linux it can be difficult), you can use the theme without it, but then the extensions, menu and overflow buttons will be on the bottom panel with urlbar.
  - Many things are hardcoded for use in conjunction with Sidebery. So if any other extension is open in sidebar, many changes to the theme are disabled so you can access the tabs and the sidebar header so you can enable Sidebery back.
+ - Not tested on linux, so the minimize, maximize and close buttons will probably look wrong. If someone needs it, I can probably make tweaks for certain desktop environments.
 
 ### Features    
 
