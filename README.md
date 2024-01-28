@@ -18,7 +18,6 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 ### Install
 
  - Install [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig), [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).    
-   If for some reason you can't install fx-autoconfig (for example on linux it can be difficult), you can use the theme without it, but then the extensions, menu and overflow buttons will be on the bottom panel with urlbar. 
  - Put `userChrome.css` and `JS` into your `chrome` directory.
    <details><summary>Chrome folder file hierarchy</summary>
            
@@ -35,8 +34,11 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
  - Set first toggle prefix to ` ` and second toggle prefix to `  ` in Userchrome toggle settings and customize keybinds to what you want. <details><summary>Userchrome toggle settings</summary> ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/c9effdee-a8b2-4636-a52c-185ceffb96a5) </details>
  - Recomended settings for Adaptive Tab Bar Color (you can experiment with it) <details><summary>Adaptive Tab Bar Color settings</summary>  ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  </details>
 
+### Additional information     
+ - If for some reason you can't install fx-autoconfig (for example on linux it can be difficult), you can use the theme without it, but then the extensions, menu and overflow buttons will be on the bottom panel with urlbar.
+ - Many things are hardcoded for use in conjunction with Sidebery. So if any other extension is open in sidebar, many changes to the theme are disabled so you can access the tabs and the sidebar header so you can enable Sidebery back.
 
-### Features  
+### Features    
 
  - Very shy and clean UI without unnecessary things to distract you from interacting with the website.
  - More like the Arc browser for windows than Arc for windows itself at the moment. (If you want something more like Arc, try [arcticfox](https://github.com/sirlan-ff00ff/arcticfox-theme))
