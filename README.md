@@ -17,16 +17,18 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 
 ### Install
 
- - Install [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig), [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
-   <details><summary>Check if fx-autoconfig is installed</summary>
+1. Download theme files and [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig) (and read fx-autoconfig install instructions)     
+2. Install theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).     
+3. Close the browser and install fx-autoconfig following the instructions from its [page](https://github.com/MrOtherGuy/fx-autoconfig) on github
+    <details><summary>Check if fx-autoconfig is installed</summary>
 
     A new menu item appears
     ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/e392cad6-e975-4db1-9252-3d747ee0979f)
 
     </details>
 
- - Put `userChrome.css` and `JS` into your `chrome` directory.
-   <details><summary>Chrome folder file hierarchy</summary>
+4. Put `userChrome.css` and `JS` into your `chrome` directory.
+    <details><summary>Chrome folder file hierarchy</summary>
            
          chrome        
          ├ JS     
@@ -36,16 +38,19 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
          └ userChrome.css
 
         (You can delete `CSS` and `resources` folders because it just examples for fx-autoconfig developers. This folders don't used in this theme)
+
    </details>
- - Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
- - Set first toggle prefix to ` ` and second toggle prefix to `  ` in Userchrome toggle settings and customize keybinds to what you want. <details><summary>Userchrome toggle settings</summary> ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/c9effdee-a8b2-4636-a52c-185ceffb96a5) </details>
- - Recomended settings for Adaptive Tab Bar Color (you can experiment with it) <details><summary>Adaptive Tab Bar Color settings</summary>  ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  </details>
+5. Launch Firefox and open Sidebery in sidebar    
+6. Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
+7. Set first toggle prefix to ` ` and second toggle prefix to `  ` in Userchrome toggle settings and customize keybinds to what you want. <details><summary>Userchrome toggle settings</summary> ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/c9effdee-a8b2-4636-a52c-185ceffb96a5) </details>
+8. Recomended settings for Adaptive Tab Bar Color (you can experiment with it) <details><summary>Adaptive Tab Bar Color settings</summary>  ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  </details>
 
 ### Additional information     
  - If for some reason you can't install fx-autoconfig (for example on linux it can be difficult), you can use the theme without it, but then the extensions, menu and overflow buttons will be on the bottom panel with urlbar.
  - Many things are hardcoded for use in conjunction with Sidebery. So if any other extension is open in sidebar, many changes to the theme are disabled so you can access the tabs and the sidebar header so you can enable Sidebery back.
  - Not tested on linux, so the minimize, maximize and close buttons will probably look wrong. If someone needs it, I can probably make tweaks for certain desktop environments.
-
+ - Doesn't work on ESR and forks based on it. Probably will work when the next major ESR update is released.
+        
 ### Features    
 
  - Very shy and clean UI without unnecessary things to distract you from interacting with the website.
