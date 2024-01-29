@@ -20,13 +20,6 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 1. Download theme files and [fx-autoconfig](https://github.com/MrOtherGuy/fx-autoconfig) (and read fx-autoconfig install instructions)     
 2. Install theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).     
 3. Close the browser and install fx-autoconfig following the instructions from its [page](https://github.com/MrOtherGuy/fx-autoconfig) on github
-    <details><summary>Check if fx-autoconfig is installed</summary>
-
-    A new menu item appears
-    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/e392cad6-e975-4db1-9252-3d747ee0979f)
-
-    </details>
-
 4. Put `userChrome.css` and `JS` into your `chrome` directory.
     <details><summary>Chrome folder file hierarchy</summary>
            
@@ -40,7 +33,14 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
         (You can delete `CSS` and `resources` folders because it just examples for fx-autoconfig developers. This folders don't used in this theme)
 
    </details>
-5. Launch Firefox and open Sidebery in sidebar    
+5. Launch Firefox and open Sidebery in sidebar
+    <details><summary>Check if fx-autoconfig is installed</summary>
+
+    A new menu item appears
+    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/e392cad6-e975-4db1-9252-3d747ee0979f)
+
+    </details>
+  
 6. Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
 7. Set first toggle prefix to ` ` and second toggle prefix to `  ` in Userchrome toggle settings and customize keybinds to what you want. <details><summary>Userchrome toggle settings</summary> ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/c9effdee-a8b2-4636-a52c-185ceffb96a5) </details>
 8. Recomended settings for Adaptive Tab Bar Color (you can experiment with it) <details><summary>Adaptive Tab Bar Color settings</summary>  ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  </details>
