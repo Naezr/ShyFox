@@ -257,7 +257,9 @@
   #nav-bar:hover,
   #urlbar:focus-within,
   #urlbar:is([breakout][breakout-extend]),
-  #nav-bar-customization-target > *[open]
+  #nav-bar-customization-target > *[open],
+  #urlbar-input-container > *[open],
+  #identity-box > *[open]
 ) {
   #nav-bar{
     bottom: 0px;
