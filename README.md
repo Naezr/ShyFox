@@ -1,18 +1,18 @@
 # ShyFox   
-a theme for Firefox to make it look and somewhat behave like [this](https://www.reddit.com/r/FirefoxCSS/comments/195n51c/mightyfox_an_idea_need_help_to_build_it_up/) concept   
+A theme for Firefox that makes it something similar to Arc, but still has its own vision
 ------
-![изображение](https://github.com/Naezr/ShyFox/assets/95460152/4f5caccc-f8c4-4d2a-904c-a5cc4569e1bc)
+![firefox_scl1iROLfK](https://github.com/Naezr/ShyFox/assets/95460152/3a29beaa-bfa9-49f8-b38f-a1b2cc12f3b5)
+
 ------
 
 ## Showcase
 <details><summary>GIF</summary>
-      
-![Urlbar](https://github.com/Naezr/ShyFox/assets/95460152/c33f4e0c-8534-454e-91e3-4cea646bfa52)
-![Toolbar](https://github.com/Naezr/ShyFox/assets/95460152/a70c6039-ca40-4d80-b64a-e143d614147f)
-![Tabs sidebar](https://github.com/Naezr/ShyFox/assets/95460152/72b6476b-7174-4374-9873-2040cb83c104)
-![Menubar](https://github.com/Naezr/ShyFox/assets/95460152/b908864b-23e2-4df6-ba14-f134d90e09e5)
-![Customization](https://github.com/Naezr/ShyFox/assets/95460152/8c7df8c4-2c6d-4c5a-863c-05df1fe4dc26)
-    
+
+Window
+![window](https://github.com/Naezr/ShyFox/assets/95460152/0a9f24b1-de38-42b9-a842-dd6197d1147d)
+Fullscreen
+![fullscreen](https://github.com/Naezr/ShyFox/assets/95460152/1f71cd04-d2fe-40ce-932b-8f4691aa8a2c)
+
 </details>
 
 ### Install
@@ -21,7 +21,7 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
 2. Install theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).     
 3. Go to about: config and set `toolkit.legacyUserProfileCustomizations.stylesheets` to `true`.      
 4. Close the browser and install fx-autoconfig following the instructions from its [page](https://github.com/MrOtherGuy/fx-autoconfig) on github
-5. Put `userChrome.css` and `JS` into your `chrome` directory.
+5. Put `userChrome.css`, `userContent.css` and `JS` into your `chrome` directory.
     <details><summary>Chrome folder file hierarchy</summary>
            
          chrome        
@@ -29,35 +29,51 @@ a theme for Firefox to make it look and somewhat behave like [this](https://www.
          │ └ move-buttons.uc.js     
          ├ utils       
          │ └ important files for fx-autoconfig work     
-         └ userChrome.css
+         ├ userChrome.css
+         └ userContent.css
 
         (You can delete `CSS` and `resources` folders because it just examples for fx-autoconfig developers. This folders don't used in this theme)
 
    </details>
-6. Launch Firefox and open Sidebery in sidebar
+7. Launch Firefox and open Sidebery in sidebar
     <details><summary>Check if fx-autoconfig is installed</summary>
 
-    A new menu item appears
-    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/e392cad6-e975-4db1-9252-3d747ee0979f)
+    A new menu item appears       
+    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/2d4ef84a-0b3a-4630-a8ee-069b66107edf)
 
     </details>
   
-7. Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
-8. Set first toggle prefix to ` ` and second toggle prefix to `  ` in Userchrome toggle settings and customize keybinds to what you want. <details><summary>Userchrome toggle settings</summary> ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/c9effdee-a8b2-4636-a52c-185ceffb96a5) </details>
-9. Recomended settings for Adaptive Tab Bar Color (you can experiment with it) <details><summary>Adaptive Tab Bar Color settings</summary>  ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  </details>
+8. Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
+9. Set first toggle prefix to `-` and second toggle prefix to `=` in Userchrome toggle settings and customize keybinds to what you want.       
+    ( This is needed to switch sidebar modes )      <details><summary>Userchrome toggle settings</summary> !![изображение](https://github.com/Naezr/ShyFox/assets/95460152/855f9f9f-ed1c-49a6-b3d5-ccdc1ee56cab)
+ </details>     
+ 
+10. Recomended settings for Adaptive Tab Bar Color (you can experiment with it)
+
+<details><summary>Adaptive Tab Bar Color settings</summary>  
+            
+![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  </details>
 
 ### Additional information     
  - If for some reason you can't install fx-autoconfig (for example on linux it can be difficult), you can use the theme without it, but then the extensions, menu and overflow buttons will be on the bottom panel with urlbar.
- - Many things are hardcoded for use in conjunction with Sidebery. So if any other extension is open in sidebar, many changes to the theme are disabled so you can access the tabs and the sidebar header so you can enable Sidebery back.
- - Not tested on linux, so the minimize, maximize and close buttons will probably look wrong. If someone needs it, I can probably make tweaks for certain desktop environments.
  - Doesn't work on ESR and forks based on it. Probably will work when the next major ESR update is released.
-        
+ - You can choose how many pinned tabs there will be in one row. To do this, go to Sidebery settings > Styles editor. Select one of the following options there
+   <details><summary>Styles editor</summary>
+
+      ![Без имени](https://github.com/Naezr/ShyFox/assets/95460152/8be41969-a83f-4f1d-a530-8cb7aa6e2c47)
+
+      
+   </details>
 ### Features    
 
- - Very shy and clean UI without unnecessary things to distract you from interacting with the website.
- - More like the Arc browser for windows than Arc for windows itself at the moment. (If you want something more like Arc, try [arcticfox](https://github.com/sirlan-ff00ff/arcticfox-theme))
- - Cool sliding toolbars
- - Customizing menu support
+ - Vertical tabs with multiple options (Always visible / Thin sidebar / Show on hover)
+ - Takes up the least amount of space without taking away functionality
+ - A floating search menu, roughly like the Arc browser. ( only appears when searching, if you just need to copy the url, the urlbar stays in the bottom bar )
+ - Compact contextual menus and extensions menu
+ - Slightly improved new tab page
+ - Customization screen support ( Usually, themes so radically changing the interface completely break the customization screen )
+ - Full screen support
+ - The regular bookmark bar doesn't work, use Sidebery to manage your bookmarks. ( I don't know what can be done with the bookmark bar, if you have ideas, open a issue ) 
 
 ### To-Do
 
