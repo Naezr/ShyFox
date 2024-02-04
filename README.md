@@ -59,11 +59,17 @@ Fullscreen
  - Doesn't work on ESR and forks based on it. Probably will work when the next major ESR update is released.
  - You can choose how many pinned tabs there will be in one row. To do this, go to Sidebery settings > Styles editor. Select one of the following options there
    <details><summary>Styles editor</summary>
-
-      ![Без имени](https://github.com/Naezr/ShyFox/assets/95460152/8be41969-a83f-4f1d-a530-8cb7aa6e2c47)
-
-      
+   
+   ![Без имени](https://github.com/Naezr/ShyFox/assets/95460152/8be41969-a83f-4f1d-a530-8cb7aa6e2c47)
+   
    </details>
+ - You can choose which side the window control buttons will be on. By default they are on the right, but you can move them to the left. To do this, go to the /* WINDOW CONTROL BUTTONS */ section in the userChrome.css file. There you can do this:    
+   <details><summary>userChrome.css</summary>
+   
+   ![Без имеdasdни](https://github.com/Naezr/ShyFox/assets/95460152/b3840862-7d17-47c1-ba15-dbd931654fa5)
+   
+   </details>
+ 
 ### Features    
 
  - Vertical tabs with multiple options (Always visible / Thin sidebar / Show on hover)
