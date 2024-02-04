@@ -51,8 +51,10 @@ Fullscreen
 10. Recomended settings for Adaptive Tab Bar Color (you can experiment with it)
 
 <details><summary>Adaptive Tab Bar Color settings</summary>  
-            
+    
 ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  </details>
+
+Optional. Rename your favorite wallpaper to `wallpaper.png` and put it into `chrome` folder. It will be shown on new tab page
 
 ### Additional information     
  - If for some reason you can't install fx-autoconfig (for example on linux it can be difficult), you can use the theme without it, but then the extensions, menu and overflow buttons will be on the bottom panel with urlbar.
