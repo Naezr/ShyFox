@@ -326,7 +326,7 @@
   top: calc(var(--margin) + 15px);
   right: calc(var(--margin) + var(--panel-hide-ldg) - var(--toolbar-button-wdt));
   
-  background-color: var(--tb-col);
+  background-color: var(--tb-col) !important;
   
   transition: var(--transition) !important;
   
