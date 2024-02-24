@@ -1,0 +1,148 @@
+/* ShyFox Toolbar */
+
+#main-window:not([titlepreface*="​"])[chromehidden=""]{
+  --right-margin: var(--toolbar-button-wdt);
+}
+
+/* hide */
+
+/* native tabs */
+#tabbrowser-tabs,
+#alltabs-button,
+
+/* line in overflow menu */
+#widget-overflow-mainView toolbarseparator,
+
+/* private indicator */
+#private-browsing-indicator-with-label
+
+/*  */
+{display: none}
+
+
+/* initial setup */
+#TabsToolbar{
+  position: fixed; 
+  z-index: 1 !important;
+  
+  width: var(--toolbar-button-wdt);
+  
+  right: 0px;
+  top: 2px;
+  bottom: 2px;
+
+  transition: var(--transition) !important;
+  background-color: var(--bg-col) !important;
+}
+
+/* fullscreen padding */
+#main-window[inFullscreen=true]:not([titlepreface*="​"]) #TabsToolbar{right: 0px !important;}
+
+/* vertical orientation */
+#TabsToolbar-customization-target{
+  position: absolute;
+  
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: left !important;
+  
+  & > * {padding: 3px !important;}
+}
+
+
+
+/* margins for window controls */
+#main-window:not([titlepreface*="​"]){
+  #TabsToolbar {
+    margin-top: var(--buttonbox-right-hgt)
+  }
+}
+
+/* hidden mode */
+#main-window[titlepreface*="​"]{
+  
+  --toolbar-real-wdt: 0px !important;
+  
+  #TabsToolbar{
+    top: calc(
+      var(--margin) 
+      + var(--toolbar-hide-offset)
+    );
+    
+    right: calc(
+      var(--margin) 
+      + var(--panel-hide-ldg) 
+      - var(--toolbar-button-wdt)
+    );
+    
+    bottom: auto;
+    
+    z-index: 3 !important;
+    
+    background-color: var(--tb-col) !important;
+  
+    border-radius: var(--rounding);
+    border: var(--outline) !important;
+    outline: var(--shadow) !important;
+  
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: none !important;
+        
+    & > * {
+     transition: var(--transition) !important;
+      opacity: 0;
+    }
+  }
+  
+  #TabsToolbar-customization-target{
+    position: relative !important;
+  }
+
+  /* show on hover or focus */
+  &:has(
+    #TabsToolbar:hover
+    .titlebar-buttonbox-container:not(:hover),
+    #TabsToolbar-customization-target *[open]
+  ) {
+    #TabsToolbar{
+      right: 0px;
+      width: calc(var(--toolbar-button-wdt) + var(--panel-open-ldg));
+      padding-right: var(--panel-open-ldg) !important;
+      
+      opacity: 1 !important;
+      
+      & > * {opacity: 1 !important;}
+    }
+  }
+  
+  &[inFullscreen="true"] {
+    #TabsToolbar{
+      
+      opacity: 0;
+      
+      right: calc(
+        var(--panel-hide-ldg) 
+        - var(--toolbar-button-wdt)
+      );
+    }
+  }
+}
+
+/* limit toolbar items width */
+#TabsToolbar-customization-target > * {
+  max-width: var(--toolbar-button-wdt) !important;
+}
+
+/* delete hardcoded menu button padding */
+#PanelUI-menu-button{
+  padding-right: 0px;
+}
+
+
+
+

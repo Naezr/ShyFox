@@ -1,0 +1,91 @@
+/* ShyFox Variables */
+
+/* invisible values:
+
+1 - "᠎"
+2 - "​"
+3 - "‌"
+
+*/
+
+/* Settings */
+
+:root{ 
+  
+  /* border thickness */
+  --margin: 0.8rem;
+  
+  /* rounded corners radius of most elements */
+  --rounding: 10px;
+  
+  /* transition duration */
+  --trans-dur: 0.25s;
+  
+  /* sidebar width */
+  --sdbr-wdt: 300px;         /* initial state */
+  --sdbr-hide-wdt: 340px;    /* hidden state */
+  --sdbr-min-wdt: 50px;      /* minimal state */
+  
+  /* navbar width */
+  --navbar-wdt: 60vw;
+  
+  /* sidebar height in hidden state */
+  --sdbr-hide-hgt: 92vh;
+  
+  /* ledge of the panels relative to screen edge in open state */
+  --panel-open-ldg: 25px;
+  
+  /* ledge of the panels relative to border in hidden state */
+  --panel-hide-ldg: 1.5px;
+  
+  /* */
+  --toolbar-hide-offset: 35px;
+  
+  /* colors */
+  --outline-col: #fafafa30;
+  --shadow-col: #00000020;
+  --private-col: #6e00bc80;
+}
+
+
+/* Variables */
+
+:root{
+  
+  /* pick browser colors */
+  --bg-col: var(--lwt-accent-color-inactive, var(--lwt-accent-color));
+  --tb-col: var(--toolbar-bgcolor);
+  --bt-col: var(--toolbarbutton-icon-fill);
+  --st-col: var(--sidebar-background-color);
+  
+  /* shared shortcuts */
+  --outline: 1px solid var(--outline-col);
+  --shadow: 2px solid var(--shadow-col);
+  --transition: all var(--trans-dur) ease-out;
+  
+  /* constant variables  */
+  --toolbar-item-hgt: 40px;
+  --toolbar-button-wdt: 45px;
+  --bookmarks-hgt: 35px;
+  
+  /* dynamic margin */
+  --left-margin: 0px;
+  --right-margin 10px;
+  --top-margin: 0px;
+  --bottom-margin: 0px; 
+  
+  &:not([inFullscreen="true"]){
+    --left-margin: var(--margin);
+    --right-margin: var(--margin);
+    --top-margin: var(--margin);
+    --bottom-margin: var(--margin);
+  }
+}
+
+
+/* Rounded buttons */
+
+:root{
+  --tab-border-radius: var(--rounding) !important;
+  --toolbarbutton-border-radius: var(--rounding) !important;
+}
