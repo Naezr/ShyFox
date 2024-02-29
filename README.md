@@ -2,6 +2,8 @@
 
 BETA NOTE: NOW WITHOUT ANY JS!!!!!!
 
+(readme is untouched relative to the release version)
+
 A theme for Firefox that makes it something similar to Arc, but still has its own vision
 ------
 ![firefox_scl1iROLfK](https://github.com/Naezr/ShyFox/assets/95460152/3a29beaa-bfa9-49f8-b38f-a1b2cc12f3b5)
