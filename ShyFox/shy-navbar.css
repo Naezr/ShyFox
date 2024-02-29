@@ -23,7 +23,7 @@
   
   top: 0px;
   left: var(--left-margin);
-  right: var(--right-margin);
+  right: var(--right-margin) !important;;
   
 }
 
@@ -37,10 +37,10 @@
 
 /* margins for window controls */
 #main-window:not([inFullscreen])[titlepreface*="​"]:not([titlepreface*="‌"])
-{ #nav-bar{margin-right: var(--buttonbox-right-wdt);} }
+{ #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));} }
 
 #main-window:not([inFullscreen]):not([titlepreface*="​"]):not([titlepreface*="‌"])
-{ #nav-bar{margin-right: var(--buttonbox-right-wdt); } }
+{ #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button)); } }
 
 #main-window:not([inFullscreen])[titlepreface*="᠎"]:not([titlepreface*="‌"])
 { #nav-bar{margin-left: var(--buttonbox-left-wdt);} }
@@ -48,7 +48,7 @@
 
 
 /* hidden state */
-#main-window[titlepreface*="‌"]{
+#main-window[titlepreface*="‌"]:not([customizing]){
   
   #nav-bar{
     
@@ -88,10 +88,21 @@
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-top: none !important;
-  
-    & > *:not(#customizationui-widget-panel) {
-      transition: var(--transition) !important;
-      opacity: 0;
+    
+    #nav-bar-customization-target > *{
+       transition: var(--transition) !important;
+       opacity: 0;
+    }
+    
+    /* hover target */
+    #nav-bar-customization-target::before{
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: transparent;
+      height: 500px;
+      width: 100%;
+      bottom: 30px;
     }
   }
   
@@ -101,24 +112,27 @@
         var(--panel-hide-ldg) 
         - var(--toolbar-item-hgt) 
       );
-      
+      /*
       opacity: 0;
+      */
     }
   }
   
   /* show on hover or focus */
   &:has(
-    #nav-bar:hover,
+    #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
+    #nav-bar-customization-target *:not(#unified-extensions-button)[open],
     #urlbar:focus-within,
     #urlbar[breakout][breakout-extend],
-    #nav-bar-customization-target *[open]
+    #nav-bar-overflow-button[open]
   ) {
     #nav-bar{
       top: 0px;
       padding-top: var(--panel-open-ldg) !important;
+      /*
       opacity: 1 !important;
-      
-      & > * {opacity: 1 !important;}
+      */
+      #nav-bar-customization-target > * {opacity: 1 !important;}
     }
   }
   /* adaptive to small window width */
@@ -137,6 +151,16 @@
 /* limit items height */
 #nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
 
+/* customization page */
+#main-window[customizing]{
+  #nav-bar{
+    left: 120px !important;
+    right: 120px !important;
+    
+    top: var(--margin) !important;
+    border-radius: var(--rounding) !important;
+  }
+}
 
 
 /* findbar */
@@ -151,10 +175,10 @@ findbar {
   padding-bottom: 0px !important;
 }
 
-/* rounded searchbar */
+/* rounded searchbar (findbar) */
 .findbar-textbox {border-radius: var(--rounding) !important;}
 
-/* fullscreen */
+/* fullscreen findbar */
 #main-window[inFullscreen="true"] {
   findbar{
     padding: calc(var(--margin) / 2) !important;

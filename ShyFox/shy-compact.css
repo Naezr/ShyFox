@@ -1,10 +1,7 @@
 /* ShyFox compact menus */
 
 /* compact menus */
-.subviewbutton{
-  appearance: auto !important;
-  background: transparent !important;
-}
+
 
 /* compact context menu */
 .menupopup-arrowscrollbox,
@@ -50,10 +47,6 @@ menupopup > menu {
 
 #unified-extensions-view .panel-subview-body 
 {padding:4px !important;}
-
-#unified-extensions-view .unified-extensions-item .unified-extensions-item-icon, 
-#unified-extensions-view .unified-extensions-item .toolbarbutton-badge-stack 
-{margin-inline-end: 0px !important;}
 
 #unified-extensions-view #overflowed-extensions-list,
 #unified-extensions-view #unified-extensions-area,

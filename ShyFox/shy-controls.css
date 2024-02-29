@@ -61,13 +61,15 @@
 /* fullscreen */
 :root[sizemode="fullscreen"] {
   --window-control-wdt: 0px;
+  --buttonbox-left-hgt: 0px;
+  --buttonbox-right-hgt: 0px;
   .titlebar-buttonbox-container {display: none}
 }
 
 /* paddings */
 :root{
   --buttonbox-right-wdt: var(--window-control-wdt);
-  --buttonbox-right-hgt: 30px;
+  --buttonbox-right-hgt: 35px;
   
   --buttonbox-left-wdt: 0px;
   --buttonbox-left-hgt: 0px;
@@ -87,6 +89,11 @@
   top: 8px;
 }
 
+:root{
+  --nav-rgt-btnbx-margin: var(--margin);
+  --nav-rgt-btnbx-button: var(--toolbar-button-wdt);
+}
+
 /* Rules for window controls on left */
 @media (-moz-gtk-csd-reversed-placement), (-moz-platform: macos){
   :root{
@@ -94,7 +101,10 @@
     --buttonbox-right-hgt: 0px !important;
    
     --buttonbox-left-wdt: var(--window-control-wdt) !important;
-    --buttonbox-left-hgt: 30px !important;
+    --buttonbox-left-hgt: 35px !important;
+    
+    --nav-rgt-btnbx-margin: 0px !important;
+    --nav-rgt-btnbx-button: 0px !important;
   }
   
   /* set position to left */

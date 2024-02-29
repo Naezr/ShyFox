@@ -59,16 +59,17 @@
     var(--sdbr-wdt) 
     - var(--buttonbox-left-wdt)
   ) !important;
-  
-  /* hide folders icons */
-  .bookmark-item[container="true"] .toolbarbutton-icon{
-    display: none
-  }
 }
 
+#PlacesChevron .toolbarbutton-icon{
+  width: 35px !important;
+  height: var(--toolbar-item-hgt) !important;
+  scale: 0.88;
+  padding: 8px !important;
+}
 
 /* hidden mode */
-#main-window[titlepreface*="᠎"]{
+#main-window[titlepreface*="᠎"]:not([customizing]){
   --sdbr-real-wdt: 0px;
   
   /* sidebar + bookmaarks */
@@ -147,14 +148,14 @@
     top: calc((100vh - var(--sdbr-hide-hgt)) / 2);
     margin-left: 0px !important;
   }
-  
+  /*
   &[inFullscreen]{
     #sidebar-box,
     #PersonalToolbar{
       opacity: 0;
     }
   }
-  
+  */
   /* show on hover or focus */
   &:has(
     #sidebar-box:hover,
@@ -181,6 +182,17 @@
         - var(--sdbr-hide-wdt)
       ) !important
     }
+  }
+}
+
+/* customization page */
+#main-window[customizing]{
+  #PersonalToolbar{
+    top: 65px !important;
+    left: 20px !important;
+    margin-left: 0px !important;
+    
+    border-radius: var(--rounding) !important;
   }
 }
 

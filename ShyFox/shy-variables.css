@@ -42,7 +42,6 @@
   --toolbar-hide-offset: 35px;
   
   /* colors */
-  --outline-col: #fafafa30;
   --shadow-col: #00000020;
   --private-col: #6e00bc80;
 }
@@ -56,10 +55,10 @@
   --bg-col: var(--lwt-accent-color-inactive, var(--lwt-accent-color));
   --tb-col: var(--toolbar-bgcolor);
   --bt-col: var(--toolbarbutton-icon-fill);
-  --st-col: var(--sidebar-background-color);
+  --st-col: var(--sidebar-background-color);   /* it is page header color, applyed by "adaptive tab bar color" sidebar background overrided btw */
   
   /* shared shortcuts */
-  --outline: 1px solid var(--outline-col);
+  --outline: 1px solid var(--arrowpanel-background);
   --shadow: 2px solid var(--shadow-col);
   --transition: all var(--trans-dur) ease-out;
   

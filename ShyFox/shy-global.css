@@ -33,7 +33,6 @@
     /* set border to page content */
     #appcontent browser{
       border: var(--outline);
-      outline: var(--shadow);
     }
   }
 }
@@ -52,6 +51,31 @@ menupopup{
   margin-top: -1px !important;
   position: relative;
   z-index: 3;
+}
+
+/* customizing page */
+#main-window[customizing]{
+  #customization-palette-container {padding-top: 100px}
+  
+  #customization-panelWrapper{
+    margin-top: 70px;
+    margin-right: 50px;
+  }
+  
+  .panel-arrowbox {display: none !important;}
+  .panel-arrowcontent{border-radius: var(--rounding) !important;}
+  
+  #customization-footer{
+    position: fixed !important;
+
+    bottom: 10px;   
+    right: 60px;
+    left: 10px;
+    
+    background-color: var(--bg-col) !important;
+    border-radius: var(--rounding) !important;
+    
+  }
 }
 
 /* private mode outline */
@@ -108,3 +132,6 @@ menupopup{
 /* fix some items dissapearing */
 #titlebar {opacity: 1 !important;}
 
+:root[tabsintitlebar] #titlebar:-moz-window-inactive {
+opacity: 1 !important;
+}
