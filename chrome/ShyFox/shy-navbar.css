@@ -1,0 +1,205 @@
+/* ShyFox Navbar - Top */
+
+/* variables */
+:root{
+  --navbar-real-wdt: var(--navbar-wdt);
+  
+  /* idk why in needed here, but without it all breaks */
+  --right-margin: 0px;
+}
+
+#main-window:not([titlepreface*="+"])[chromehidden=""]{
+  --top-margin: calc(var(--toolbar-item-hgt)) !important;
+}
+
+/* initial */
+#nav-bar{
+  position: fixed !important;
+  z-index: 1 !important;
+  
+  transition: var(--transition) !important;
+  
+  background-color: var(--bg-col) !important;
+  
+  top: 0px;
+  left: var(--left-margin);
+  right: var(--right-margin) !important;;
+  
+}
+
+/* centered navbar text */
+#urlbar:not(:is(
+  [breakout][breakout-extend],
+  :focus-within
+) ) {
+  #urlbar-input {text-align: center !important}
+}
+
+/* margins for window controls */
+#main-window:not([inFullscreen])[titlepreface*="="]:not([titlepreface*="+"])
+{ #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));}}
+
+#main-window:not([inFullscreen]):not([titlepreface*="="]):not([titlepreface*="+"])
+{ #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button));}}
+
+#main-window:not([inFullscreen])[titlepreface*="-"]:not([titlepreface*="+"])
+{ #nav-bar{margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));}}
+
+
+
+/* hidden state */
+#main-window[titlepreface*="+"]:not([customizing]){
+  
+  #nav-bar{
+    
+    z-index: 3 !important;
+    
+    background-color: transparent !important;
+    
+    border-radius: var(--rounding);
+    
+    width: var(--navbar-real-wdt);
+    max-width: calc(
+      100vw 
+      - var(--left-margin)
+      - var(--right-margin)
+    );
+    
+    top: calc(
+      var(--margin) 
+      + var(--panel-hide-ldg) 
+      - var(--toolbar-item-hgt) 
+    );
+    
+    left: calc(
+      (
+        100vw 
+        - var(--navbar-real-wdt) 
+        + var(--left-margin) 
+      - var(--right-margin) 
+      ) / 2 
+    );
+    
+    right: auto;
+    
+    #nav-bar-customization-target > *{
+       transition: var(--transition) !important;
+       opacity: 0;
+    }
+    
+    /* hover target */
+    #nav-bar-customization-target::before{
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: transparent;
+      height: 500px;
+      width: 100%;
+      bottom: 30px;
+    }
+    
+    &::before{
+      content: "";
+      position: absolute;
+      transition: var(--transition);
+      
+      bottom: var(--hide-bar-padding);
+      height: calc(var(--margin) - var(--hide-bar-padding) * 2);
+      width: calc(100% - var(--hide-bar-wdt-pad));
+      left: calc(var(--hide-bar-wdt-pad) / 2);
+      
+      border-radius: var(--rounding);
+      background-color: var(--bt-col);
+      opacity: var(--hide-bar-opct);
+    }
+  }
+  
+  &[inFullscreen="true"]{
+    #nav-bar{
+      top: calc(
+        var(--panel-hide-ldg) 
+        - var(--toolbar-item-hgt) 
+      );
+    }
+  }
+  
+  /* show on hover or focus */
+  &:has(
+    #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
+    #nav-bar-customization-target *:not(#unified-extensions-button)[open],
+    #urlbar:focus-within,
+    #urlbar[breakout][breakout-extend],
+    #nav-bar-overflow-button[open],
+    #nav-bar-overflow-button:hover
+  ) {
+    #nav-bar{
+      top: 0px;
+      padding-top: var(--panel-open-ldg) !important;
+      
+      background-color: var(--tb-col) !important;
+      
+      /* corners, shadow */
+      border: var(--outline) !important;
+      outline: var(--shadow) !important;
+  
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-top: none !important;
+      
+      #nav-bar-customization-target > * {opacity: 1 !important;}
+      
+      &::before{opacity: 0}
+    }
+  }
+  /* adaptive to small window width */
+  @media (max-width: 1000px) {
+    :root{--navbar-real-wdt: 98vw !important;}
+    #nav-bar{
+      max-width: none !important;
+      left: calc((100vw - var(--navbar-real-wdt)) / 2) !important;
+    }
+  }
+}
+  
+/* rounded urlbar */
+#urlbar-background {border-radius: calc(var(--rounding))!important;}
+
+/* limit items height */
+#nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
+
+/* customization page */
+#main-window[customizing]{
+  #nav-bar{
+    left: 120px !important;
+    right: 120px !important;
+    
+    top: var(--margin) !important;
+    border-radius: var(--rounding) !important;
+  }
+  
+  #urlbar-background, #searchbar {background-color: var(--tb-col) !important;}
+}
+
+
+/* findbar */
+findbar {
+  background: var(--bg-col) !important;
+  border: none !important;
+  
+  /* position on bottom */
+  order: 1 !important;
+  
+  padding-top: var(--margin) !important;
+  padding-bottom: 0px !important;
+}
+
+/* rounded searchbar (findbar) */
+.findbar-textbox {border-radius: var(--rounding) !important;}
+
+/* fullscreen findbar */
+#main-window[inFullscreen="true"] {
+  findbar{
+    padding: calc(var(--margin) / 2) !important;
+  }
+}
+

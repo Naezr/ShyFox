@@ -1,0 +1,154 @@
+/* ShyFox window control buttons */
+
+/* restore original buttons design */
+.titlebar-button{
+  list-style-image: none !important;
+  appearance: auto !important;
+  background-color: var(--bt-col);
+}
+
+.titlebar-min {
+  -moz-default-appearance: -moz-window-button-minimize !important;
+}
+.titlebar-max {
+  -moz-default-appearance: -moz-window-button-maximize !important;
+}
+.titlebar-restore {
+  -moz-default-appearance: -moz-window-button-restore !important;
+}
+.titlebar-close {
+  -moz-default-appearance: -moz-window-button-close !important;
+}
+
+/* default (if system not detected) */
+:root {--window-control-wdt: 140px;}
+
+/* Windows */
+
+@media (-moz-platform: windows-win10), (-moz-platform: windows-win11){
+  :root {--window-control-wdt: 138px;}
+}
+
+@media (-moz-platform: windows-win7), (-moz-platform: windows-win8){
+  :root {--window-control-wdt: 105px;}
+}
+
+/* Linux GTK */
+
+:root{
+  --window-control-gtk-max-wdt: 0px;
+  --window-control-gtk-min-wdt: 0px;
+}
+
+@media (-moz-gtk-csd-maximize-button) {
+  :root {--window-control-gtk-max-wdt: 40px;}
+}
+
+@media (-moz-gtk-csd-minimize-button) {
+  :root {--window-control-gtk-min-wdt: 40px;}
+}
+
+@media (-moz-gtk-csd-available) {
+  :root {--window-control-wdt: calc(
+    35px
+    + var(--window-control-gtk-min-wdt)
+    + var(--window-control-gtk-max-wdt)
+  );}
+}
+
+/* MacOS */
+@media (-moz-platform: macos){
+  :root {--window-control-wdt: 72px;}
+}
+
+/* paddings */
+:root{
+  --buttonbox-right-wdt: var(--window-control-wdt);
+  --buttonbox-right-hgt: 35px;
+  
+  --buttonbox-left-wdt: 0px;
+  --buttonbox-left-hgt: 0px;
+}
+
+/* move buttons to correct position */
+.titlebar-buttonbox-container{
+  position: fixed !important;
+  overflow: clip !important;
+
+  z-index: -1 !important;
+  
+  transition: var(--transition) !important;
+  
+  /* set position to right */
+  right: 0px;
+  top: 8px;
+}
+
+/* useful variables */
+:root{
+  --nav-rgt-btnbx-margin: var(--margin);
+  --nav-rgt-btnbx-button: var(--toolbar-button-wdt);
+  
+  --nav-lft-btnbx-margin: 0px;
+  --nav-lft-btnbx-button: 0px;
+}
+
+@media not (-moz-gtk-csd-reversed-placement),
+@media not (-moz-platform: macos)
+{
+  #main-window[titlepreface*="="][titlepreface*="+"]{
+    .titlebar-buttonbox-container{
+      top: -4px;
+      right: -12px;
+      opacity: 0.1;
+      &:hover{opacity: 1}
+    }
+  }
+}
+
+/* Rules for window controls on left */
+@media (-moz-gtk-csd-reversed-placement), (-moz-platform: macos){
+  :root{
+    --buttonbox-right-wdt: 0px;
+    --buttonbox-right-hgt: 0px;
+   
+    --buttonbox-left-wdt: var(--window-control-wdt);
+    --buttonbox-left-hgt: 35px;
+    
+    --nav-rgt-btnbx-margin: 0px;
+    --nav-rgt-btnbx-button: 0px;
+    
+    --nav-lft-btnbx-margin: var(--margin);
+    --nav-lft-btnbx-button: var(--toolbar-button-wdt);
+  }
+  
+  /* set position to left */
+  .titlebar-buttonbox-container{
+    left: 0px;
+    right: auto !important;
+  }
+  
+  #main-window[titlepreface*="-"][titlepreface*="+"]:not([customizing]){
+    .titlebar-buttonbox-container:not(:hover){
+      top: -4px;
+      left: -12px;
+      opacity: 0.1;
+    }
+  }
+}
+
+/* fullscreen */
+:root[sizemode="fullscreen"] {
+  --window-control-wdt: 0px;
+  
+  --buttonbox-left-hgt: 0px;
+  --buttonbox-right-hgt: 0px;
+  
+  --nav-rgt-btnbx-margin: 0px;
+  --nav-rgt-btnbx-button: 0px;
+    
+  --nav-lft-btnbx-margin: 0px;
+  --nav-lft-btnbx-button: 0px;
+  
+  .titlebar-buttonbox-container {display: none}
+}

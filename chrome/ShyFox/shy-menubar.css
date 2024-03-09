@@ -1,0 +1,34 @@
+/* MENU BAR */
+
+@media not (-moz-platform: macos) {
+  
+  /* initial setup */
+  #toolbar-menubar {
+    
+    position: fixed;
+    overflow: clip;
+    visibility: visible !important;
+    z-index: 5;
+    
+    width: -fit-content;
+    max-height: 0px;
+    padding-bottom: 0 !important;
+    
+    transition: var(--transition) !important;
+    
+    top: var(--top-margin);
+    left: var(--left-margin);
+    
+    border-radius: var(--rounding);
+    background-color: var(--tb-col) !important;
+  }
+
+  /* outline only when visible */
+  #toolbar-menubar:not([inactive="true"]) {
+    border: var(--outline) !important;
+    outline: var(--shadow) !important;
+  }
+  #main-menubar * {
+    padding-top: 0px !important;
+  }
+}

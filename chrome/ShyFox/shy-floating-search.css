@@ -1,0 +1,32 @@
+/* ShyFox Floating Search */
+
+#urlbar:is([breakout][breakout-extend]){
+  #urlbar-input {font-size: 20px !important;}
+  
+  position: fixed !important;
+  z-index: 999 !important;
+  
+  bottom: auto !important;
+  top: 20vh !important;
+  
+  left: 18vw !important;
+  right: 18vw !important;
+  width: 64vw !important;
+  
+  &:before{
+    content: "";
+    position: fixed;
+    pointer-events: none;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    top: 0px;
+    left: 0px;
+    
+    background-color: var(--bg-col);
+    opacity: 0.7;
+    backdrop-filter: blur(300px);
+  }
+}
+
