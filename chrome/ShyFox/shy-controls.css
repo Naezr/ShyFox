@@ -1,37 +1,54 @@
 /* ShyFox window control buttons */
 
-/* restore original buttons design */
-.titlebar-button{
-  list-style-image: none !important;
-  appearance: auto !important;
-  background-color: var(--bt-col);
-}
-
-.titlebar-min {
-  -moz-default-appearance: -moz-window-button-minimize !important;
-}
-.titlebar-max {
-  -moz-default-appearance: -moz-window-button-maximize !important;
-}
-.titlebar-restore {
-  -moz-default-appearance: -moz-window-button-restore !important;
-}
-.titlebar-close {
-  -moz-default-appearance: -moz-window-button-close !important;
-}
 
 /* default (if system not detected) */
 :root {--window-control-wdt: 140px;}
 
+/* move buttons to correct position */
+.titlebar-buttonbox-container{
+  position: fixed !important;
+  overflow: clip !important;
+
+  z-index: -1 !important;
+  
+  transition: var(--transition) !important;
+  
+  /* set position to right */
+  right: 0px;
+  top: 8px;
+}
+
 /* Windows */
 
-@media (-moz-platform: windows-win10), (-moz-platform: windows-win11){
+@media (-moz-platform: windows), {
   :root {--window-control-wdt: 138px;}
+  .titlebar-buttonbox-container{
+    top: 0px;
+    height: var(--toolbar-item-hgt);
+  }
+  
+  #main-window[titlepreface*="="][titlepreface*="+"] {
+    .titlebar-button {padding: calc(var(--margin) / 2) 15px !important;}
+    .titlebar-buttonbox-container{
+      height: var(--margin) !important;
+      top: 0px;
+      opacity: 0.3;
+      &:hover{opacity: 1}
+    }
+  }
+  #main-window:not([titlepreface*="="])[titlepreface*="+"] {  
+    .titlebar-button {padding: calc(var(--margin) / 2) 1.1px !important;}
+    .titlebar-buttonbox-container{
+      width: var(--toolbar-button-wdt) !important;
+      justify-content: right !important;
+      top: 0px;
+      opacity: 0.3;
+      &:hover{opacity: 1}
+    }
+  }
 }
 
-@media (-moz-platform: windows-win7), (-moz-platform: windows-win8){
-  :root {--window-control-wdt: 105px;}
-}
+
 
 /* Linux GTK */
 
@@ -49,11 +66,32 @@
 }
 
 @media (-moz-gtk-csd-available) {
-  :root {--window-control-wdt: calc(
-    35px
-    + var(--window-control-gtk-min-wdt)
-    + var(--window-control-gtk-max-wdt)
-  );}
+  :root {
+    --window-control-wdt: calc(
+      35px
+      + var(--window-control-gtk-min-wdt)
+      + var(--window-control-gtk-max-wdt)
+    );
+  }
+  /* restore original buttons design */
+  .titlebar-button{
+    list-style-image: none !important;
+    appearance: auto !important;
+    background-color: var(--bt-col);
+  }
+
+  .titlebar-min {
+    -moz-default-appearance: -moz-window-button-minimize !important;
+  }
+  .titlebar-max {
+    -moz-default-appearance: -moz-window-button-maximize !important;
+  }
+  .titlebar-restore {
+    -moz-default-appearance: -moz-window-button-restore !important;
+  }
+  .titlebar-close {
+    -moz-default-appearance: -moz-window-button-close !important;
+  }
 }
 
 /* MacOS */
@@ -70,20 +108,6 @@
   --buttonbox-left-hgt: 0px;
 }
 
-/* move buttons to correct position */
-.titlebar-buttonbox-container{
-  position: fixed !important;
-  overflow: clip !important;
-
-  z-index: -1 !important;
-  
-  transition: var(--transition) !important;
-  
-  /* set position to right */
-  right: 0px;
-  top: 8px;
-}
-
 /* useful variables */
 :root{
   --nav-rgt-btnbx-margin: var(--margin);
@@ -91,19 +115,6 @@
   
   --nav-lft-btnbx-margin: 0px;
   --nav-lft-btnbx-button: 0px;
-}
-
-@media not (-moz-gtk-csd-reversed-placement),
-@media not (-moz-platform: macos)
-{
-  #main-window[titlepreface*="="][titlepreface*="+"]{
-    .titlebar-buttonbox-container{
-      top: -4px;
-      right: -12px;
-      opacity: 0.1;
-      &:hover{opacity: 1}
-    }
-  }
 }
 
 /* Rules for window controls on left */
