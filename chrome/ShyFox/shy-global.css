@@ -1,0 +1,178 @@
+/* ShyFox global styles */
+
+/* set background color */
+#appcontent .browserStack, #browser {background: var(--bg-col)}
+
+#browser > #appcontent {
+  transition: var(--transition) !important;
+  
+  /* shift website content relative to panels */
+  margin-left: var(--left-margin);
+  margin-right: var(--right-margin);
+  margin-top: var(--top-margin);
+  margin-bottom: var(--bottom-margin);
+}
+
+/* remove all margins in popups like "login with Google" or Bitwarden window */
+#main-window:not([chromehidden=""]){
+  #navigator-toolbox {display: none !important;}
+  --margin: 0px !important;
+}
+
+/* apply only if not in fullscreen video */
+#main-window:not([inDOMFullscreen="true"])[chromehidden=""]{
+    
+  /* rounded corners */
+  &:not([titlepreface="᠎​‌"][inFullscreen="true"]){
+    #appcontent browser {
+      border-radius: var(--rounding);
+    }
+  }
+  /* apply only if not in f11 fullscreen */
+  &:not([inFullscreen="true"]){
+    
+    /* set border to page content */
+    #appcontent browser{
+      border: var(--outline);
+    }
+  }
+}
+
+
+/* apply colors to context menus */
+menupopup{
+  --panel-background: var(--bg-col)!important;                        
+  --panel-border-color: var(--tb-col) !important;                    
+  --toolbar-field-focus-background-color: var(--bt-col) !important;
+  --panel-color: var(--bt-col) !important;                                  
+}     
+
+menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+  background-color: var(--tb-col) !important;
+  color: var(--bt-col) !important;
+}
+
+
+/* some important things */
+#navigator-toolbox {
+  margin-top: -1px !important;
+  position: relative;
+  z-index: 3;
+}
+
+/* customizing page */
+#main-window[customizing]{
+  #customization-palette-container {padding-top: 100px}
+  
+  #customization-panelWrapper{
+    margin-top: 60px;
+    margin-right: 50px;
+  }
+  
+  .panel-arrowbox {right: 25px;}
+  .panel-arrowcontent{border-radius: var(--rounding) !important;}
+  
+  #customization-footer{
+    position: fixed !important;
+
+    bottom: 10px;   
+    right: 70px;
+    left: 10px;
+    
+    background-color: var(--bg-col) !important;
+    border-radius: var(--rounding) !important;
+    
+  }
+}
+
+:root[customizing] .customization-target:not(#widget-overflow-fixed-list) {
+  min-width: 0px !important;
+}
+
+/* notification bar */
+.global-notificationbox{
+  position: fixed !important;
+  z-index: 999 !important;
+  
+  width: calc(100vw 
+    - var(--left-margin)
+    - var(--right-margin)
+  ) !important;
+  
+  top: var(--top-margin);
+  left: var(--left-margin);
+  
+  background-color: transparent !important;
+  
+  notification-message{
+    border-radius: var(--rounding) !important;
+    
+    &::before {display: none !important;}
+  }
+}
+
+#main-window:has(
+  .global-notificationbox notification-message
+) {
+  #browser > #appcontent{
+    padding-top: 50px
+  }
+}
+
+/* private mode outline */
+#main-window[privatebrowsingmode="temporary"]
+{--outline: 2px solid var(--private-col) !important;}
+
+/* drag window using top border */
+#browser::after {
+  position: fixed;
+  pointer-events: none;
+  -moz-window-dragging: drag;
+  z-index: 1;
+  
+  height: calc(var(--margin) + 2px);
+  top: -1px;
+  width: 100vw;
+  
+  content: "";
+  background-color: transparent;
+}
+
+/* statuspanel */
+#statuspanel #statuspanel-label {
+  padding-inline: 6px !important;
+  border-radius: var(--rounding) !important;
+  
+  background-color: var(--tb-col) !important;
+  color: var(--bt-col) !important;
+  
+  border: var(--outline) !important;
+  outline: var(--shadow) !important;
+}
+
+/* devtools */
+.browserSidebarContainer{ 
+  background-color: var(--bg-col) !important;
+}
+
+.devtools-side-splitter, .devtools-horizontal-splitter {background-color: transparent !important;}
+.devtools-side-splitter {min-width: var(--margin) !important;}
+.devtools-horizontal-splitter {min-height: var(--margin) !important;}
+
+.rdm-toolbar {
+  margin-top: var(--margin) !important;
+  width: 95% !important;
+  margin-left: 3% !important;
+}
+
+.rdm-toolbar,
+.devtools-button,
+.user-agent
+{border-radius: var(--rounding) !important;}}
+
+/* fix some items dissapearing */
+#titlebar {opacity: 1 !important;}
+
+:root[tabsintitlebar] #titlebar:-moz-window-inactive {
+  opacity: 1 !important;
+}
