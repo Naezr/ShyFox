@@ -41,7 +41,13 @@ temporarly empty
 3. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files and close Firefox.
 4. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
 5. Launch Firefox and open Sidebery in sidebar
+6. Go to the customizing page and move buttons to something like that
+   <details><summary>Customize</summary>
+   
+   ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/f13f96ff-4edd-4980-92a6-8f943b300cd7)
 
+   
+   </summary>
 Optional. You can change `wallpaper.png` in `chrome` folder to you own image or remove it at all.
 Also you can disable floating search bar. To do it go to the userChrome.css file and comment line that imports `shy-floating-search.css`. Btw, you can remove all imports from `addons` section, they are optional.
 
