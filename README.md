@@ -1,4 +1,4 @@
-# ShyFox   BETA
+# ShyFox 3.0
 
 3.0 release notes:
  - Navigtion bar now on top. I plan to add the ability to move it down like I did in version 2.0 but I don't want to delay this update any longer
