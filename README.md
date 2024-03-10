@@ -33,7 +33,7 @@ temporarly empty
      
     <details><summary>Adaptive Tab Bar Color settings</summary>  
     
-    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/657a3809-ba99-4ebb-87fd-536762621bf4)  
+    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
     
     </details>
 
