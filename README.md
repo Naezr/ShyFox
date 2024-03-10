@@ -38,10 +38,10 @@ temporarly empty
     </details>
 
     Import `sidebery/sidebery-style.json` into Sidebery (Sidebery settings > help > import addon data).
-3. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files and close Firefox.
-4. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
-5. Launch Firefox and open Sidebery in sidebar
-6. Go to the customizing page and move buttons to something like that
+2. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files and close Firefox.
+3. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
+4. Launch Firefox and open Sidebery in sidebar
+5. Go to the customizing page and move buttons to something like that
    <details><summary>Customize</summary>
    
    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/f13f96ff-4edd-4980-92a6-8f943b300cd7)
