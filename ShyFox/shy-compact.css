@@ -1,0 +1,72 @@
+/* ShyFox compact menus */
+
+/* compact menus */
+
+
+/* compact context menu */
+.menupopup-arrowscrollbox,
+#context-navigation > .menuitem-iconic 
+{border-radius: var(--rounding) !important;}
+
+#context-navigation > .menuitem-iconic[disabled="true"] {background-color: transparent !important;}
+
+#main-window > #mainPopupSet > #contentAreaContextMenu > #shadow-root > .menupopup-arrowscrollbox {
+  border-radius: calc(var(--rounding) / 2) !important; 
+  padding: 6px !important;
+} 
+
+menupopup {margin: 6px 0 !important;}
+
+#main-menubar menupopup {margin: 6px 8px 0 -8px !important;}
+
+menupopup > menuitem,
+menupopup > menu {
+  max-height: 20px !important;
+  min-height: 20px !important;
+  border-radius: calc(var(--rounding) / 2) !important;
+  padding-inline: 6px !important;
+  margin: 0 !important;
+}
+.menu-accel {margin-inline: 6px 0 !important;}
+
+
+
+/*  compact extensions menu */
+#unified-extensions-panel #unified-extensions-view 
+{width: 100% !important;}
+
+#unified-extensions-view{
+    --uei-icon-size: 22px; 
+    --extensions-in-row: 4;
+}
+
+#unified-extensions-view .panel-subview-body + toolbarseparator,
+#unified-extensions-view .unified-extensions-item-menu-button.subviewbutton,
+#unified-extensions-view .unified-extensions-item-action-button .unified-extensions-item-contents
+{display:none !important;}
+
+#unified-extensions-view .panel-subview-body 
+{padding:4px !important;}
+
+#unified-extensions-view #overflowed-extensions-list,
+#unified-extensions-view #unified-extensions-area,
+#unified-extensions-view .unified-extensions-list {
+  display: grid !important;
+  grid-template-columns: repeat(var(--extensions-in-row),auto);
+  justify-items:left !important;
+  align-items:left !important;
+}
+
+#unified-extensions-view .unified-extensions-list .unified-extensions-item,
+#unified-extensions-view .unified-extensions-list
+{max-width: max-content;}
+
+#unified-extensions-view #unified-extensions-area {
+  padding-bottom: 5px !important;
+  border-bottom: 1px solid var(--panel-separator-color);
+}
+
+.unified-extensions-list{
+  padding-top: 5px;
+}
+
