@@ -21,7 +21,7 @@ Inspired by Arc, adapted for Firefox
 temporarly empty
 
 ### Install
-
+0. If you migrating from 2.0 you need delete fx-autoconfig. To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder. If you new user, skip it.
 1. Install and configure theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
     <details><summary>Userchrome toggle settings</summary> 
     
