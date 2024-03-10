@@ -95,7 +95,7 @@
 }
 
 
-@media (-moz-gtk-csd-available) and not (-moz-gtk-csd-reversed-placement){
+@media (-moz-gtk-csd-available){
   #main-window[titlepreface*="="][titlepreface*="+"]:not([customizing]){
     .titlebar-buttonbox-container{
       top: 0px;
