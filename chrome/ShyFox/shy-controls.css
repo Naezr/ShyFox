@@ -96,6 +96,7 @@
 
 
 @media (-moz-gtk-csd-available){
+@media not (-moz-gtk-csd-reversed-placement){
   #main-window[titlepreface*="="][titlepreface*="+"]:not([customizing]){
     .titlebar-buttonbox-container{
       top: 0px;
@@ -108,6 +109,7 @@
   #main-window:not([titlepreface*="="])[titlepreface*="+"]:not([customizing]){
     .titlebar-min, .titlebar-restore, .titlebar-max {display: none}
   }
+}
 }
 
 /* MacOS */
