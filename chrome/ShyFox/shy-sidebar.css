@@ -81,10 +81,11 @@
     width: calc(
       var(--sdbr-wdt) 
       + var(--panel-open-ldg)
-      + var(--margin)
+      + var(--margin) / 2
     ) !important;
     
     padding: var(--margin);
+    padding-right: calc(var(--margin) / 2) !important;
     padding-left: var(--panel-open-ldg) !important;
     
     left: calc(
@@ -92,7 +93,7 @@
       + var(--panel-hide-ldg) 
       - var(--sdbr-wdt)
       - var(--panel-open-ldg)
-      - var(--margin)
+      - var(--margin) / 2
     ) !important;
     
     background-color: transparent !important;
