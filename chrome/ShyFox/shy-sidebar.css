@@ -147,12 +147,12 @@
       top: calc(-2px - var(--little-gap));
       
       width: calc(
-        var(--sdbr-hide-wdt) 
-        + var(--panel-hide-ldg) 
+        var(--sdbr-wdt) 
         + var(--panel-open-ldg)
-      );
+        + var(--margin) / 2
+      ) !important;
       
-      left: calc(0px - var(--panel-open-ldg))
+      left: 0px;
     }
   }
   
