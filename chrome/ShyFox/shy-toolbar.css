@@ -1,6 +1,6 @@
 /* ShyFox Toolbar */
 
-#main-window:not([titlepreface*="="])[chromehidden=""]{
+#main-window:not([titlepreface*="="])[chromehidden=""]:not([inDOMFullscreen="true"]){
   --right-margin: var(--toolbar-button-wdt);
 }
 
