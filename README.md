@@ -56,6 +56,7 @@ Also you can disable floating search bar. To do it go to the userChrome.css file
 ### To-Do
 
  - Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebey cannot be transparent)
+ - Make the sliding panels floating so that there is no connection to the edge of the screen
 
 ### Thanks
 
