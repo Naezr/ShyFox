@@ -8,7 +8,7 @@
   --right-margin: 0px;
 }
 
-#main-window:not([titlepreface*="+"])[chromehidden=""]{
+#main-window:not([titlepreface*="+"])[chromehidden=""]:not([inDOMFullscreen="true"]){
   --top-margin: calc(var(--toolbar-item-hgt)) !important;
 }
 
