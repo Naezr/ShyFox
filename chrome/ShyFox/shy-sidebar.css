@@ -5,7 +5,7 @@
   --little-gap: 6px;
 }
 
-#main-window:not([titlepreface*="-"])[chromehidden=""]{
+#main-window:not([titlepreface*="-"])[chromehidden=""]:not([inDOMFullscreen="true"]){
   --left-margin: var(--sdbr-wdt) !important;
 }
 
