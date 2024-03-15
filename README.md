@@ -42,19 +42,21 @@ Inspired by Arc, adapted for Firefox
     
     </details>
 
-    Import `sidebery/sidebery-style.json` into Sidebery (Sidebery settings > help > import addon data).
+    Import `sidebery/sidebery-style.json` and `sidebery/sidebery-settings.json` into Sidebery (Sidebery settings > help > import addon data).
 
     <details><summary>Note</summary>
     
-    When importing styles, Sidebery does not delete the old style, but inserts the new one after the old one. To make the ShyFox style for Sidebery work, go to the Style editor page in Sidebery settings and delete everything from the text box on the right. Then re-import the file from ShyFox.
+    - When importing styles, Sidebery does not delete the old style, but inserts the new one after the old one. To make the ShyFox style for Sidebery work, go to the Style editor page in Sidebery settings and delete everything from the text box on the right. Then re-import the file from ShyFox.
+    - You can import only the style without settings if you don't want to lose your config.
+    - In general, you can use any style for Sidebery, not necessarily the one that comes with ShyFox. But I'm not responsible for how it will fit together.
     
     </details>
 
 
-2. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files and close Firefox.
-3. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
-4. Launch Firefox and open Sidebery in sidebar
-5. Go to the customizing page and move buttons to something like that
+3. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files and close Firefox.
+4. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
+5. Launch Firefox and open Sidebery in sidebar
+6. Go to the customizing page and move buttons to something like that
    <details><summary>Customize</summary>
    
    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/f13f96ff-4edd-4980-92a6-8f943b300cd7)
