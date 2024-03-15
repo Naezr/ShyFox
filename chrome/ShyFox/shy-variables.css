@@ -10,23 +10,14 @@
   /* rounded corners radius of most elements */
   --rounding: 10px;
   
-  /* transition duration */
+  /* animations time */
   --trans-dur: 0.25s;
   
-  /* sidebar width */
   --sdbr-wdt: 300px;
   
-  /* navbar width */
   --navbar-wdt: 60vw;
   
-  /* sidebar height in hidden state */
-  --sdbr-hide-hgt: 91vh;
-  
-  /* ledge of the panels relative to screen edge in open state */
-  --panel-open-ldg: 25px;
-  
-  /* distance right toolbar lowered in hidden state */
-  --toolbar-hide-offset: 35px;
+  --findbar-wdt: 50vw;
   
   /* how much thinner hidden panels bars than window border */
   --hide-bar-padding: 3px;
@@ -40,6 +31,7 @@
   /* colors */
   --shadow-col: #00000020;
   --private-col: #6e00bc80;
+  --debug-col: transparent; /* rgba(0, 0, 255, 0.2) */
 }
 
 

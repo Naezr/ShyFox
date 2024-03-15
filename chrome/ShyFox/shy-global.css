@@ -81,7 +81,6 @@ menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_mo
     
     background-color: var(--bg-col) !important;
     border-radius: var(--rounding) !important;
-    
   }
 }
 
@@ -135,7 +134,7 @@ menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_mo
   width: 100vw;
   
   content: "";
-  background-color: transparent;
+  background-color: var(--debug-col);
 }
 
 /* statuspanel */

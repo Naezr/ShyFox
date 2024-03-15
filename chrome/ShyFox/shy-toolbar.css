@@ -16,8 +16,6 @@
 /*  */
 {display: none}
 
-
-
 /* initial setup */
 #TabsToolbar,
 #PanelUI-menu-button,
@@ -78,7 +76,7 @@
   
   display: flex !important;
   flex-direction: column !important;
-  justify-content: left !important;
+  justify-content: center !important;
   
   & > * {padding: 3px !important;}
 }
@@ -107,7 +105,7 @@
   {
     top: calc(
       var(--margin) 
-      + var(--toolbar-hide-offset)
+      + var(--top-margin)
     );
     
     right: calc(
@@ -123,7 +121,7 @@
   #TabsToolbar{
     top: calc(
       var(--margin) 
-      + var(--toolbar-hide-offset)
+      + var(--top-margin)
       - 3px
     );
     
@@ -133,7 +131,21 @@
     
     border-radius: var(--rounding);
     
+    /* hover target */
     &::before{
+      content: "";
+      position: absolute;
+      z-index: -999;
+      background-color: var(--debug-col);
+      
+      width: 500%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+    }
+    
+    /* indication bar */
+    &::after{
       content: "";
       position: absolute;
       transition: var(--transition);
@@ -185,31 +197,25 @@
     #unified-extensions-button
     {
       display: visible !important;
-      right: 0px;
+      right: calc(var(--right-margin) + var(--margin));
       
-      /*
-      opacity: 1 !important;
-      */
       & > * {opacity: 1 !important;}
     }
     #TabsToolbar{
-      width: calc(var(--toolbar-button-wdt) + var(--panel-open-ldg));
-      padding-right: var(--panel-open-ldg) !important;
+      width: calc(var(--toolbar-button-wdt) + 4px) !important;;
+      padding-right: 0px !important;
       
       background-color: var(--tb-col) !important;
       
       border: var(--outline) !important;
       outline: var(--shadow) !important;
-  
-      border-top-right-radius: 0px;
-      border-bottom-right-radius: 0px;
-      border-right: none !important;
       
-      &::before{opacity: 0}
+      &::after{opacity: 0}
     }
+    
     #PanelUI-menu-button,
     #unified-extensions-button{
-      margin-right: var(--panel-open-ldg) !important;
+      margin-right: 2px !important;
     }
   }
 }

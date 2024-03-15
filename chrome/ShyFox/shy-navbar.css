@@ -51,7 +51,7 @@
 #main-window[titlepreface*="+"]:not([customizing]){
   
   #nav-bar{
-    
+    overflow: visible !important;
     z-index: 3 !important;
     
     background-color: transparent !important;
@@ -76,11 +76,15 @@
         100vw 
         - var(--navbar-real-wdt) 
         + var(--left-margin) 
-      - var(--right-margin) 
+        - var(--right-margin) 
       ) / 2 
     );
     
     right: auto;
+    
+    #nav-bar-customization-target{
+      overflow: visible !important;
+    }
     
     #nav-bar-customization-target > *{
        transition: var(--transition) !important;
@@ -91,13 +95,14 @@
     #nav-bar-customization-target::before{
       content: "";
       position: absolute;
-      z-index: -1;
-      background-color: transparent;
-      height: 500px;
+      z-index: -999;
+      background-color: var(--debug-col);
+      height: 500%;
       width: 100%;
-      bottom: 30px;
+      bottom: 0px;
     }
     
+    /* indication bar */
     &::before{
       content: "";
       position: absolute;
@@ -114,15 +119,6 @@
     }
   }
   
-  &[inFullscreen="true"]{
-    #nav-bar{
-      top: calc(
-        var(--panel-hide-ldg) 
-        - var(--toolbar-item-hgt) 
-      );
-    }
-  }
-  
   /* show on hover or focus */
   &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
@@ -133,25 +129,21 @@
     #nav-bar-overflow-button:hover
   ) {
     #nav-bar{
-      top: 0px;
-      padding-top: var(--panel-open-ldg) !important;
+      top: calc(var(--top-margin) + var(--margin));
       
       background-color: var(--tb-col) !important;
       
       /* corners, shadow */
       border: var(--outline) !important;
       outline: var(--shadow) !important;
-  
-      border-top-left-radius: 0px;
-      border-top-right-radius: 0px;
-      border-top: none !important;
       
       #nav-bar-customization-target > *:not([disabled="true"]) {opacity: 1 !important;}
       #nav-bar-customization-target > *[disabled="true"] {opacity: auto !important;}
       
-      &::before{opacity: 0}
+      &::before {opacity: 0}
     }
   }
+  
   /* adaptive to small window width */
   @media (max-width: 1000px) {
     :root{--navbar-real-wdt: 98vw !important;}
@@ -180,27 +172,3 @@
   
   #urlbar-background, #searchbar {background-color: var(--tb-col) !important;}
 }
-
-
-/* findbar */
-findbar {
-  background: var(--bg-col) !important;
-  border: none !important;
-  
-  /* position on bottom */
-  order: 1 !important;
-  
-  padding-top: var(--margin) !important;
-  padding-bottom: 0px !important;
-}
-
-/* rounded searchbar (findbar) */
-.findbar-textbox {border-radius: var(--rounding) !important;}
-
-/* fullscreen findbar */
-#main-window[inFullscreen="true"] {
-  findbar{
-    padding: calc(var(--margin) / 2) !important;
-  }
-}
-

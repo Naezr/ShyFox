@@ -2,16 +2,17 @@
 
 /* variables */
 :root{
-  --little-gap: 6px;
+  --little-gap: calc(var(--margin) / 1.5);
+  --bookmarks-hgt: var(--toolbar-item-hgt);
 }
 
+/* set left margin to sidebar width */
 #main-window:not([titlepreface*="-"])[chromehidden=""]:not([inDOMFullscreen="true"]){
   --left-margin: var(--sdbr-wdt) !important;
 }
 
 /* hide splitter */
 #sidebar-splitter {display: none}
-
 
 /* initial */
 
@@ -39,7 +40,7 @@
   
   top: calc(
     var(--margin) / 2 
-    + var(--toolbar-item-hgt)  /* bookmarks height */
+    + var(--bookmarks-hgt)
   );
   
   bottom: var(--margin);
@@ -67,6 +68,13 @@
   &[collapsed="true"] {display: none}
 }
 
+/* remove space reserved for bookmarks toolbar if it hidden */
+#main-window:has(
+  #PersonalToolbar[collapsed="true"]
+) {
+  --bookmarks-hgt: 0px;
+  --little-gap: 0px;
+}
 
 /* hidden mode */
 #main-window[titlepreface*="-"]:not([customizing]){
@@ -78,43 +86,77 @@
   {
     z-index: 3 !important;
     
-    width: calc(
-      var(--sdbr-wdt) 
-      + var(--panel-open-ldg)
-      + var(--margin) / 2
-    ) !important;
+    width: var(--sdbr-wdt) !important;
     
-    padding: var(--margin);
-    padding-right: calc(var(--margin) / 2) !important;
-    padding-left: var(--panel-open-ldg) !important;
+    padding-top: var(--margin);
+    padding-bottom: var(--margin);
+    padding-right: calc(0px);
+    padding-left: calc(0px);
     
     left: calc(
       var(--left-margin) 
       + var(--panel-hide-ldg) 
       - var(--sdbr-wdt)
-      - var(--panel-open-ldg)
-      - var(--margin) / 2
+      - var(--margin)
     ) !important;
     
     background-color: transparent !important;
     
     border-radius: var(--rounding);
     
+    /* hover target */
+    &::before{
+      content: "";
+      position: absolute;
+      z-index: -999;
+      background-color: var(--debug-col);
+      
+      width: 150%;
+      height: 100%;
+      right: 0px;
+      top: 0px;
+    }
+    
     /* hide content */
     & * {
       transition: var(--transition) !important;
       opacity: 0;
     }
+  }
+  
+  /* sidebar */
+  #sidebar-box{
+    height: calc(
+      100vh
+      - var(--bookmarks-hgt)
+      - var(--little-gap)
+      - var(--top-margin)
+      - var(--bottom-margin)
+      - var(--margin) * 2
+    ) !important;
     
-    &::before{
+    top: calc(
+      var(--top-margin)
+      + var(--margin)
+      + var(--bookmarks-hgt) + var(--little-gap)
+    );
+    
+    /* indication bar */
+    &::after{
       content: "";
       position: absolute;
       transition: var(--transition);
       
       right: var(--hide-bar-padding);
       width: calc(var(--margin) - var(--hide-bar-padding) * 2 );
-      height: calc(100% - var(--hide-bar-wdt-pad));
-      top: calc(var(--hide-bar-wdt-pad) / 2);
+      height: calc(
+        100% 
+        - var(--hide-bar-wdt-pad) 
+        + var(--bookmarks-hgt)
+        + var(--little-gap)
+      );
+      
+      bottom: calc(var(--hide-bar-wdt-pad) / 2);
       
       border-radius: var(--rounding);
       background-color: var(--bt-col);
@@ -122,18 +164,11 @@
     }
   }
   
-  /* sidebar */
-  #sidebar-box{
-    
-    height: calc(
-      var(--sdbr-hide-hgt) 
-      - var(--toolbar-item-hgt)
-    ) !important;
-    
-    top: calc(
-      (100vh - var(--sdbr-hide-hgt)) / 2 
-      + var(--toolbar-item-hgt) + var(--little-gap)
-    );
+  /* bookmarks */
+  #PersonalToolbar{
+    top: calc(var(--top-margin) + var(--margin));
+    margin-left: 0px !important;
+    overflow: visible !important;
     
     /* fill gap between sidebar and bookmarks with transparent thing */
     &::after{
@@ -141,25 +176,16 @@
       z-index: 1;
       position: absolute;
       
-      background-color: transparent;
+      background-color: var(--debug-col);
+      opacity: 1 !important;
       
       height: calc(var(--little-gap) + 4px);
-      top: calc(-2px - var(--little-gap));
+      bottom: calc(-2px - var(--little-gap));
       
-      width: calc(
-        var(--sdbr-wdt) 
-        + var(--panel-open-ldg)
-        + var(--margin) / 2
-      ) !important;
+      width: 150%;
       
-      left: 0px;
+      right: 0px;
     }
-  }
-  
-  /* bookmarks */
-  #PersonalToolbar{
-    top: calc((100vh - var(--sdbr-hide-hgt)) / 2);
-    margin-left: 0px !important;
   }
 
   /* show on hover or focus */
@@ -173,18 +199,14 @@
     #PersonalToolbar
     {
       opacity: 1 !important;
-      left: 0px !important;
+      left: calc(var(--left-margin) + var(--margin)) !important;
       
       background-color: var(--bg-col) !important;
       
       border: var(--outline) !important;
       outline: var(--shadow) !important;
-    
-      border-top-left-radius: 0px;
-      border-bottom-left-radius: 0px;
-      border-left: none !important;
-      
-      &::before{opacity: 0}
+            
+      &::after{opacity: 0}
       
       & * {opacity: 1}
     }
