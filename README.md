@@ -34,6 +34,14 @@ Inspired by Arc, adapted for Firefox
     </details>
 
     Import `sidebery/sidebery-style.json` into Sidebery (Sidebery settings > help > import addon data).
+
+    <details><summary>Note</summary>
+    
+    When importing styles, Sidebery does not delete the old style, but inserts the new one after the old one. To make the ShyFox style for Sidebery work, go to the Style editor page in Sidebery settings and delete everything from the text box on the right. Then re-import the file from ShyFox.
+    
+    </details>
+
+
 2. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files and close Firefox.
 3. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
 4. Launch Firefox and open Sidebery in sidebar
