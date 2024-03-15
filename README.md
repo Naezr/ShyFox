@@ -1,12 +1,20 @@
 # ShyFox 3.0
 
-3.0 release notes:
+<details><summary>Release notes</summary></summary> 
+3.1:
+ - Panels in the hidden state are now floating and do not touch the window edge
+ - Findbar rework
+ - If you disable bookmarks toolbar all still look fine
+
+3.0:
  - Navigtion bar now on top. I plan to add the ability to move it down like I did in version 2.0 but I don't want to delay this update any longer
  - Bookmarks toolbar used now and putted above sidebar. Since it's quite short, it will be more convenient to use folders with short names and emoji instead of regular links.
  - Thin sidebar mode are removed. This mode was rather inconvenient and I didn't use it. Maybe I'll bring it back someday if someone asks for it
  - All panels can be shown or hidden independently. Interestingly enough, I tried to implement it with various crutches for a long time, but nothing worked. It turned out that in userChrome Toggle settings it was possible to enable this functionality
 
 2.0 version still available [here](https://github.com/Naezr/ShyFox/tree/2.0-old)
+
+</details>
 
 Inspired by Arc, adapted for Firefox
 ------
@@ -64,7 +72,8 @@ Also you can disable floating search bar. To do it go to the userChrome.css file
 ### To-Do
 
  - Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebey cannot be transparent)
- - Make the sliding panels floating so that there is no connection to the edge of the screen
+ - Add icons to menubar and context menu
+ - Add navbar on bottom support
 
 ### Thanks
 
