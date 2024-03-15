@@ -97,7 +97,6 @@
       var(--left-margin) 
       + var(--panel-hide-ldg) 
       - var(--sdbr-wdt)
-      - var(--margin)
     ) !important;
     
     background-color: transparent !important;
