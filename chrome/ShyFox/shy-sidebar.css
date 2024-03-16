@@ -88,10 +88,8 @@
     
     width: var(--sdbr-wdt) !important;
     
-    padding-top: var(--margin);
-    padding-bottom: var(--margin);
-    padding-right: calc(0px);
-    padding-left: calc(0px);
+    padding-top: calc(var(--margin) / 2);
+    padding-bottom: calc(var(--margin) / 2);
     
     left: calc(
       var(--left-margin) 
@@ -168,6 +166,8 @@
     top: calc(var(--top-margin) + var(--margin));
     margin-left: 0px !important;
     overflow: visible !important;
+
+    padding-inline: 0px !important;
     
     /* fill gap between sidebar and bookmarks with transparent thing */
     &::after{
