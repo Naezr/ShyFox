@@ -10,6 +10,13 @@
   display: none
 }
 
+/* other bookmarks */
+#OtherBookmarks{
+  & > label {display: none !important;}
+  & > image {margin-inline: 0px !important;}
+  list-style-image: url("../icons/book.svg") !important;
+}
+
 /* monochrome extensions */
 
 /* Userchrome Toggle => sidebar icon */
