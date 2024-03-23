@@ -83,4 +83,8 @@
 :root{
   --tab-border-radius: var(--rounding) !important;
   --toolbarbutton-border-radius: var(--rounding) !important;
+  --arrowpanel-menuitem-border-radius: var(--rounding) !important;
+
+  /* padding tweak */
+  --toolbar-start-end-padding: calc(var(--margin) / 2) !important;
 }
