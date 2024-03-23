@@ -172,3 +172,8 @@
   
   #urlbar-background, #searchbar {background-color: var(--tb-col) !important;}
 }
+
+/* padding tweak */
+.toolbaritem-combined-buttons:not([widget-type="button-and-view"], [widget-type="custom"]), .toolbaritem-menu-buttons {
+  margin-inline-end: var(--toolbar-start-end-padding) !important;
+}
