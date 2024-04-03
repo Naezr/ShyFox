@@ -1,4 +1,4 @@
-# ShyFox 3.0
+# ShyFox 3.1
 
 <details><summary>Release notes</summary></summary> 
  
@@ -27,7 +27,8 @@ Inspired by Arc, adapted for Firefox
 
 ### Install
 0. If you migrating from 2.0 you need delete fx-autoconfig. To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder. If you new user, skip it.
-1. Install and configure theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
+1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
+2. Install and configure theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
     <details><summary>Userchrome toggle settings</summary> 
     
     Make sure you click each "Apply changes" button, preferably several times
@@ -55,7 +56,7 @@ Inspired by Arc, adapted for Firefox
     </details>
 
 
-3. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files and close Firefox.
+3. Close Firefox.
 4. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
 5. Launch Firefox and open Sidebery in sidebar
 6. Go to the customizing page and move buttons to something like that
