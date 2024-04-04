@@ -56,7 +56,7 @@
     
     background-color: transparent !important;
     
-    border-radius: var(--rounding);
+    border-radius: var(--big-rounding);
     
     width: var(--navbar-real-wdt);
     max-width: calc(

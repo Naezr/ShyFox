@@ -9,6 +9,8 @@
   bottom: auto !important;
   top: 20vh !important;
   
+  border-radius: var(--big-rounding);
+  
   left: 18vw !important;
   right: 18vw !important;
   width: 64vw !important;

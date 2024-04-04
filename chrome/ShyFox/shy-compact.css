@@ -6,12 +6,12 @@
 /* compact context menu */
 .menupopup-arrowscrollbox,
 #context-navigation > .menuitem-iconic 
-{border-radius: var(--rounding) !important;}
+{border-radius: var(--big-rounding) !important;}
 
 #context-navigation > .menuitem-iconic[disabled="true"] {background-color: transparent !important;}
 
 #main-window > #mainPopupSet > #contentAreaContextMenu > #shadow-root > .menupopup-arrowscrollbox {
-  border-radius: calc(var(--rounding) / 2) !important; 
+  border-radius: var(--rounding) !important; 
   padding: 6px !important;
 } 
 
@@ -23,14 +23,13 @@ menupopup > menuitem,
 menupopup > menu {
   max-height: 20px !important;
   min-height: 20px !important;
-  border-radius: calc(var(--rounding) / 2) !important;
+  border-radius: var(--rounding) !important;
   padding-inline: 6px !important;
   margin: 0 !important;
 }
 .menu-accel {margin-inline: 6px 0 !important;}
 
-
-
+  
 /*  compact extensions menu */
 #unified-extensions-panel #unified-extensions-view 
 {width: 100% !important;}

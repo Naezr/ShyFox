@@ -50,7 +50,7 @@ findbar{
   /* corners, shadow */
   border: var(--outline) !important;
   outline: var(--shadow) !important;
-  border-radius: var(--rounding) !important;
+  border-radius: var(--big-rounding) !important;
   
   /* rounded buttons */
   .findbar-textbox, .findbar-closebutton,

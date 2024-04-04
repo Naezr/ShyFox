@@ -25,7 +25,7 @@
   /* rounded corners */
   &:not([titlepreface="᠎​‌"][inFullscreen="true"]){
     #appcontent browser {
-      border-radius: var(--rounding);
+      border-radius: var(--big-rounding);
     }
   }
   /* apply only if not in f11 fullscreen */
@@ -89,9 +89,10 @@ menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_mo
 }
 
 /* notification bar */
-.global-notificationbox{
+#tab-notification-deck, .global-notificationbox{
   position: fixed !important;
   z-index: 999 !important;
+  vbox {background-color: transparent !important;}
   
   width: calc(100vw 
     - var(--left-margin)
@@ -101,17 +102,16 @@ menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_mo
   top: var(--top-margin);
   left: var(--left-margin);
   
-  background-color: transparent !important;
-  
   notification-message{
-    border-radius: var(--rounding) !important;
+    border-radius: var(--big-rounding) !important;
     
     &::before {display: none !important;}
   }
 }
 
 #main-window:has(
-  .global-notificationbox notification-message
+  .global-notificationbox notification-message,
+  #tab-notification-deck notification-message
 ) {
   #browser > #appcontent{
     padding-top: 50px

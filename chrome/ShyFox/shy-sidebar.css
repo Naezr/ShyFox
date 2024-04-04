@@ -99,7 +99,7 @@
     
     background-color: transparent !important;
     
-    border-radius: var(--rounding);
+    border-radius: var(--big-rounding);
     
     /* hover target */
     &::before{
