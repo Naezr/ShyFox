@@ -1,7 +1,11 @@
-# ShyFox 3.1
+# ShyFox 3.1.1
 
 <details><summary>Release notes</summary></summary> 
  
+3.1.1: 
+- Improved rounded corners
+- Fixed notification panel
+
 3.1:           
  - Panels in the hidden state are now floating and do not touch the window edge        
  - Findbar rework        
@@ -109,3 +113,5 @@ Here you can place all the buttons you need, such as the history button, downloa
   [MrOtherGuy](https://github.com/MrOtherGuy) -  Thanks for the fx-autoconfig (not used here anymore) and the repository with cool css's.                  
   [MightyFox concept](https://www.reddit.com/r/FirefoxCSS/comments/195n51c/mightyfox_an_idea_need_help_to_build_it_up/)  -  Thanks for the cool concept and main idea.                     
   [arcticfox-theme](https://github.com/sirlan-ff00ff/arcticfox-theme)  -   I used this theme as a base to create my own, but there was a bit of commonality left in the process.                 
+
+Ты думал здесь что-то будет?
