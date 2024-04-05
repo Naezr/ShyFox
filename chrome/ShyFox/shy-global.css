@@ -93,6 +93,7 @@ menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_mo
   position: fixed !important;
   z-index: 999 !important;
   vbox {background-color: transparent !important;}
+  background-color: transparent !important;
   
   width: calc(100vw 
     - var(--left-margin)
@@ -111,7 +112,7 @@ menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_mo
 
 #main-window:has(
   .global-notificationbox notification-message,
-  #tab-notification-deck notification-message
+  #tab-notification-deck:not([selected-view=""]) notification-message
 ) {
   #browser > #appcontent{
     padding-top: 50px
