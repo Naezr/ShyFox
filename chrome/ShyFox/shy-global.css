@@ -40,17 +40,20 @@
 
 
 /* apply colors to context menus */
-menupopup{
+#contentAreaContextMenu, 
+#toolbar-context-menu,
+#toolbar-menubar menupopup
+{
   --panel-background: var(--bg-col)!important;                        
   --panel-border-color: var(--tb-col) !important;                    
   --toolbar-field-focus-background-color: var(--bt-col) !important;
-  --panel-color: var(--bt-col) !important;                                  
+  --panel-color: var(--bt-col) !important;  
+  
+  menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+    background-color: var(--tb-col) !important;
+    color: var(--bt-col) !important;
+  }
 }     
-
-menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
-  background-color: var(--tb-col) !important;
-  color: var(--bt-col) !important;
-}
 
 
 /* some important things */
