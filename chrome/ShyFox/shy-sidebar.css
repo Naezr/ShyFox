@@ -59,10 +59,9 @@
     var(--sdbr-wdt) 
     - var(--buttonbox-left-wdt)
   ) !important;
-  
-  & > .toolbarbutton-1 .toolbarbutton-icon{
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+  padding-top: 3px !important;
+  padding-bottom: 3px !important;
+
   }
   
   &[collapsed="true"] {display: none}
