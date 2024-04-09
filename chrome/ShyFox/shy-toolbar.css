@@ -159,12 +159,18 @@
       background-color: var(--bt-col);
       opacity: var(--hide-bar-opct);
     }
-    
+  }
+  
+  #TabsToolbar,
+  #PanelUI-menu-button,
+  #unified-extensions-button
+  {
     & > * {
       transition: var(--transition) !important;
       opacity: 0;
     }
   }
+  
   
   #TabsToolbar-customization-target{
     position: relative !important;
