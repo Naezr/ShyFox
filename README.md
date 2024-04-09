@@ -1,6 +1,7 @@
 # ShyFox 3.1.2
 
 <details><summary>Release notes</summary></summary> 
+ 
 3.1.2:
 - Fixed transparent context menus in some places
 - Bookmarks toolbar improvements
