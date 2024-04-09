@@ -52,7 +52,8 @@ Inspired by Arc, adapted for Firefox
     </details>
 
     Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
-
+    Or manually copy the style from `sidebery-style.css` and paste it into Style editor in Sidebery settings.
+    
     <details>
     <summary>Important notes</summary>
          
@@ -62,10 +63,10 @@ Inspired by Arc, adapted for Firefox
     </details>
 
 
-3. Close Firefox.
-4. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
-5. Launch Firefox and open Sidebery in sidebar
-6. Go to the customizing page and move buttons to something like that
+4. Close Firefox.
+5. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
+6. Launch Firefox and open Sidebery in sidebar
+7. Go to the customizing page and move buttons to something like that
    <details><summary>Customize</summary>
    
    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/f13f96ff-4edd-4980-92a6-8f943b300cd7)
