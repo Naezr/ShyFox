@@ -55,8 +55,7 @@ Inspired by Arc, adapted for Firefox
 
     <details>
     <summary>Important notes</summary>
-     
-    * If you really don't like Adaptive Tab Bar color you can use [this](https://addons.mozilla.org/ru/firefox/addon/shy-dark/) custom color theme or make own with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/). The standard color themes don't look solid, because everything has been optimized for the Adaptive Tab Bar Color.       
+         
     * When importing styles, Sidebery does not delete the old style, but inserts the new one after the old one. To make the ShyFox style for Sidebery work, go to the Style editor page in Sidebery settings and delete everything from the text box on the right. Then re-import the file from ShyFox.
     * In general, you can use any style for Sidebery, not necessarily the one that comes with ShyFox. But I'm not responsible for how it will fit together.        
     
