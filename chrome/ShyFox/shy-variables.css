@@ -41,7 +41,7 @@
 :root{
   
   /* pick browser colors */
-  --bg-col: var(--lwt-accent-color-inactive, var(--lwt-accent-color));
+  --bg-col: var(--lwt-accent-color);
   --tb-col: var(--toolbar-bgcolor);
   --bt-col: var(--toolbarbutton-icon-fill);
   --st-col: var(--sidebar-background-color);   /* it is page header color, applyed by "adaptive tab bar color", sidebar background overrided btw */
