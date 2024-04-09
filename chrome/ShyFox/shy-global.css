@@ -14,7 +14,7 @@
 }
 
 /* remove all margins in popups like "login with Google" or Bitwarden window */
-#main-window:not([chromehidden=""]){
+#main-window:is(:not([chromehidden=""]), [inDOMFullscreen="true"]){
   #navigator-toolbox {display: none !important;}
   --margin: 0px !important;
 }
