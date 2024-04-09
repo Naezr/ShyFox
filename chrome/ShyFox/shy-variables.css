@@ -61,7 +61,7 @@
   --top-margin: 0px;
   --bottom-margin: 0px; 
   
-  &:not([inFullscreen="true"]){
+  &:not(:is([inFullscreen="true"], [inDOMFullscreen="true"])){
     --left-margin: var(--margin);
     --right-margin: var(--margin);
     --top-margin: var(--margin);
