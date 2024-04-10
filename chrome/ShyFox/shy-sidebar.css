@@ -61,8 +61,6 @@
   ) !important;
   padding-top: 3px !important;
   padding-bottom: 3px !important;
-
-  }
   
   &[collapsed="true"] {display: none}
 }
