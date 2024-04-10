@@ -241,7 +241,17 @@
   #browser::before{
     content: "Open Sidebery!";
     position: fixed;
-    z-index: 10;
+    z-index: 9999;
+    
+    font-weight: bold;
+    
+    top: calc(var(--margin) + var(--toolbar-item-hgt));
+    left: calc(var(--margin) * 2);
+    
+    background-color: #252525;
+    outline: 3px solid red;
+    
+    border-radius: var(--big-rounding);
+    padding: 10px;
   }
 }
-
