@@ -1,7 +1,12 @@
-# ShyFox 3.1.2
+# ShyFox 3.2
 
 <details><summary>Release notes</summary></summary> 
- 
+
+3.2
+- Code comments rework
+- Enchanced readability
+- Lot of bugfixes
+
 3.1.2:
 - Fixed transparent context menus in some places
 - Bookmarks toolbar improvements
