@@ -10,8 +10,6 @@ Navigation bar on top of the window
 /* local variables */
 :root{
   --navbar-real-wdt: var(--navbar-wdt);
-  
-  --right-margin: 0px; /* idk why it there but without it f11 fullscreen breaks */
 }
 
 /* if navbar is not hidden, this window is not floating popup and not in fullscreen video */
