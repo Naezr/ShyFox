@@ -85,8 +85,8 @@ Area where website is displayed
 */
 
 /* apply dynamic colors to context menus and menubar*/
-#contentAreaContextMenu,
-#contentAreaContextMenu menupopup,
+#contentAreaContextMenu[showservicesmenu="true"],
+#contentAreaContextMenu[showservicesmenu="true"] menupopup,
 #toolbar-context-menu,
 #toolbar-menubar menupopup
 {
