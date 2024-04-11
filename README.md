@@ -2,7 +2,7 @@
 
 <details><summary>Release notes</summary></summary> 
 
-3.2
+3.2:
 - Code comments rework
 - Enchanced readability
 - Lot of bugfixes
