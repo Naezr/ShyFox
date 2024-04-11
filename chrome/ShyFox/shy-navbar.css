@@ -168,10 +168,10 @@ Navigation bar on top of the window
   
   /* adaptive navbar width */
   @media (max-width: 1000px) {
-    :root{--navbar-real-wdt: 98vw !important;}
     #nav-bar{
+      --navbar-real-wdt: calc(100vw - var(--margin) * 2) !important;
       max-width: none !important;
-      left: calc((100vw - var(--navbar-real-wdt)) / 2) !important;
+      left: var(--margin) !important;
     }
   }
 }
