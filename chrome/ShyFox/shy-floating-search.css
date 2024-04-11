@@ -1,4 +1,9 @@
-/* ShyFox Floating Search */
+/*== ShyFox Floating Search =========================================================================================================================
+
+Cool floating search panel
+
+
+*/
 
 #urlbar:is([breakout][breakout-extend]){
   #urlbar-input {font-size: 20px !important;}
@@ -15,6 +20,7 @@
   right: 18vw !important;
   width: 64vw !important;
   
+  /* cool translucent background */
   &:before{
     content: "";
     position: fixed;

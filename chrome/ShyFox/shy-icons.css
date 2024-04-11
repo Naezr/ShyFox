@@ -1,6 +1,11 @@
-/* ShyFox Icons */
+/*== ShyFox Icons ===================================================================================================================================
 
-/* bookmarks toolbar */
+Adding icons to all sorts of places
+
+
+--- BOOKMARKS TOOLBAR -------------------------------------------------------------------------------------------------------------------------------
+
+*/
 
 /* overflow */  
 #PlacesChevron {list-style-image: url("../icons/bookmarks-toolbar.svg") !important;}
@@ -17,7 +22,22 @@
   list-style-image: url("../icons/book.svg") !important;
 }
 
-/* monochrome extensions */
+.openintabs-menuitem{
+  .menu-text{
+    padding-inline-start: 25px !important;
+    background-image: url("../icons/bookmark-multiple.svg") !important;
+    background-repeat: no-repeat;
+  }
+}
+
+/* 
+
+--- MONOCHROME EXTENSIONS ---------------------------------------------------------------------------------------------------------------------------
+
+Monochrome icons for some extensions
+
+
+*/
 
 /* Userchrome Toggle => sidebar icon */
 :is(.webextension-browser-action,
@@ -61,7 +81,14 @@
 }
 
 
-/* menus */
+/* 
+
+--- MENU --------------------------------------------------------------------------------------------------------------------------------------------
+
+In menu button
+
+
+*/
 
 /* icons color */
 #appMenu-multiView .subviewbutton::before,
@@ -181,3 +208,5 @@
   
 #downloadsHistory {list-style-image: url("chrome://browser/skin/downloads/downloads.svg");}
 
+/* context menu 
+         coming soon... */

@@ -1,4 +1,10 @@
-/* findbar */
+/*== ShyFox Findbar =================================================================================================================================
+
+Ctrl + F
+
+
+*/
+
 findbar{
   --findbar-pad: 8px;
   --fndbr-btn-wdt: 30px;
@@ -20,6 +26,7 @@ findbar{
   padding-top: var(--toolbar-item-hgt) !important;
   width: var(--findbar-wdt);
   
+  /* styles for input textbox */
   .findbar-textbox{
     position: absolute;
     top: var(--findbar-pad);
@@ -31,6 +38,7 @@ findbar{
     ) !important;
   }
   
+  /* put buttons to right place */
   .findbar-closebutton,
   .findbar-find-next,
   .findbar-find-previous
@@ -44,6 +52,7 @@ findbar{
   .findbar-find-next {right: calc(var(--fndbr-btn-wdt) + var(--findbar-pad) / 2 )}
   .findbar-find-previous {right: calc(var(--fndbr-btn-wdt) * 2 + var(--findbar-pad) / 2 )}
   
+  /* some design */
   background: var(--tb-col) !important;
   transition: var(--transition) !important;
   
@@ -58,7 +67,7 @@ findbar{
   {border-radius: var(--rounding) !important;}
 }
 
-/* adaptive to small window width */
+/* adaptive findbar width */
 @media (max-width: 1500px) {
    :root{
      --findbar-wdt: calc(

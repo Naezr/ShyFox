@@ -1,10 +1,17 @@
-/* ShyFox Variables */
+/*== ShyFox Variables ===============================================================================================================================
 
-/* Settings */
+This is where most of variables are located
+
+
+--- SETTINGS ----------------------------------------------------------------------------------------------------------------------------------------
+
+Values of these variables can be changed safely and most likely nothing will break.
+
+*/
 
 :root{ 
   
-  /* border thickness */
+  /* window border thickness and size of many margins */
   --margin: 0.8rem;
   
   /* rounded corners radius of most elements */
@@ -14,48 +21,52 @@
   /* animations time */
   --trans-dur: 0.25s;
   
+  /* width of some elements. 1vw is one hundredth of the screen width */
   --sdbr-wdt: 300px;
   
   --navbar-wdt: 60vw;
   
   --findbar-wdt: 70vw;
   
-  /* how much thinner hidden panels bars than window border */
-  --hide-bar-padding: 3px;
-  
-  /* transparency of theese bars */
+  /* transparency of indicator bars showing the position of hidden panels */
   --hide-bar-opct: 0.2;
   
-  /* рow much shorter these bars than panels */
+  /* how much shorter these bars than panels */
   --hide-bar-wdt-pad: 10px;
   
   /* colors */
-  --shadow-col: #00000020;
-  --private-col: #6e00bc80;
-  --debug-col: transparent; /* rgba(0, 0, 255, 0.2) */
+  --shadow-col:  #00000020;  /* color of the translucent outline that imitates a shadow                                                 */
+  --private-col: #6e00bc80;  /* private mode outline color                                                                              */
+  --debug-col: transparent;  /* should be transparent, but you can change it to rgba(0, 0, 255, 0.2) if you want to see all the secrets */
 }
 
+/* 
 
-/* Variables */
+--- VARIABLES ----------------------------------------------------------------------------------------------------------------------------------
+
+Reserved values and all sorts of dynamic variables. You should not touch them.
+
+*/
 
 :root{
   
-  /* pick browser colors */
-  --bg-col: var(--lwt-accent-color);
-  --tb-col: var(--toolbar-bgcolor);
-  --bt-col: var(--toolbarbutton-icon-fill);
-  --st-col: var(--sidebar-background-color);   /* it is page header color, applyed by "adaptive tab bar color", sidebar background overrided btw */
+  /* pick browser colors */                     /* used for:          */
+  --bg-col: var(--lwt-accent-color);            /* darker background  */
+  --tb-col: var(--toolbar-bgcolor);             /* lighter background */
+  --bt-col: var(--toolbarbutton-icon-fill);     /* text or icons      */
+  --st-col: var(--sidebar-background-color);    /* not used now       */
   
-  /* shared shortcuts */
-  --outline: 1px solid var(--arrowpanel-background);
-  --shadow: 2px solid var(--shadow-col);
-  --transition: all var(--trans-dur) ease-out;
+  /* shared shortcuts for commonly used parameters */
+  --outline: 1px solid var(--arrowpanel-background);      /* outline around almost anything              */
+  --shadow: 2px solid var(--shadow-col);                  /* translucent outline that imitates a shadow  */
+  --transition: all var(--trans-dur) ease-out;            /* animation for smooth transitions            */
   
-  /* constant variables  */
-  --toolbar-item-hgt: 40px;
-  --toolbar-button-wdt: 45px;
+  /* constant variables */
+  --toolbar-item-hgt: 40px;       /* height of all panels elements: buttons, urlbar, etc.                                   */
+  --toolbar-button-wdt: 45px;     /* width of all panels buttons                                                            */
+  --hide-bar-padding: 3px;        /* how much indicator bars showing the position of hidden panels is thinner than --margin */
   
-  /* dynamic margin */
+  /* hiding the window border in fullscreen mode and assigning --margin to it in windowed mode */
   --left-margin: 0px;
   --right-margin 0px;
   --top-margin: 0px;
@@ -69,24 +80,22 @@
   }
   
   /* hide indication bars in fullscreen */
-  &[inFullscreen="true"]{
+  &:is([inFullscreen="true"], [inDOMFullscreen="true"]){
     --hide-bar-opct: 0 !important;
   }
   
-  /* hidden panel ledge management */
+  /* as is no window border in fullscreen mode add 1 pixel which can be hovered over */
   --panel-hide-ldg: 1px;
   &:not([inFullscreen="true"]){
     --panel-hide-ldg: 0px;
   }
-}
-
-/* Rounded buttons */
-:root{
+  
+  /* override built-in roundings with custom */
   --tab-border-radius: var(--rounding) !important;
   --toolbarbutton-border-radius: var(--rounding) !important;
   --arrowpanel-menuitem-border-radius: var(--rounding) !important;
   --arrowpanel-border-radius: var(--big-rounding) !important;
   
-  /* padding tweak */
+  /* override one padding in navbar to match style */
   --toolbar-start-end-padding: calc(var(--margin) / 2) !important;
 }

@@ -1,22 +1,32 @@
-/* ShyFox Toolbar */
+/*== ShyFox Toolbar =================================================================================================================================
 
+Tab bar has been transformed into vertical toolbar on the right side of the window
+
+
+--- JUST IMPORTANT THINGS ---------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* if toolbar is not hidden, this window is not floating popup and not in fullscreen video */
 #main-window:not([titlepreface*="="])[chromehidden=""]:not([inDOMFullscreen="true"]){
+  /* set right margin to toolbar width */
   --right-margin: var(--toolbar-button-wdt);
 }
 
-/* hide */
+/* hide some things */
+#tabbrowser-tabs,                       /* native tabs            */
+#alltabs-button,                        /* all tabs button        */
+#private-browsing-indicator-with-label  /* private mode indicator */
 
-/* native tabs */
-#tabbrowser-tabs,
-#alltabs-button,
-
-/* private indicator */
-#private-browsing-indicator-with-label
-
-/*  */
 {display: none}
 
-/* initial setup */
+/* 
+
+--- TOOLBAR SHOWN -----------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* styles for tabs toolbar and buttons */
 #TabsToolbar,
 #PanelUI-menu-button,
 #unified-extensions-button 
@@ -30,6 +40,7 @@
   transition: var(--transition) !important;
 }
 
+/* styles for menu button */
 #PanelUI-menu-button{
   top: 2px;
   
@@ -43,6 +54,7 @@
   }
 }
 
+/* styles for extensions button */
 #unified-extensions-button{
   top: var(--toolbar-item-hgt);
   opacity: 1 !important;
@@ -56,6 +68,7 @@
   }
 }
 
+/* styles for tabs toolbar */
 #TabsToolbar{
   bottom: 2px;
   top: calc(var(--toolbar-item-hgt) * 2);
@@ -63,10 +76,7 @@
   background-color: var(--bg-col) !important;
 }
 
-/* fullscreen padding */
-#main-window[inFullscreen=true]:not([titlepreface*="="]) #TabsToolbar{right: 0px !important;}
-
-/* vertical orientation */
+/* vertical tabs toolbar orientation */
 #TabsToolbar-customization-target{
   position: absolute;
   
@@ -81,9 +91,7 @@
   & > * {padding: 3px !important;}
 }
 
-
-
-/* margins for window controls */
+/* space for window controls */
 #main-window:not([titlepreface*="="]){
   #TabsToolbar,
   #PanelUI-menu-button,
@@ -93,12 +101,15 @@
   }
 }
 
-/* hidden mode */
+/* 
+
+--- TOOLBAR HIDDEN ----------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
 #main-window[titlepreface*="="]:not([customizing]){
   
-  --toolbar-real-wdt: 0px !important;
-  
-  
+  /* styles for tabs toolbar and buttons */
   #TabsToolbar,
   #PanelUI-menu-button,
   #unified-extensions-button
@@ -118,6 +129,7 @@
     z-index: 3 !important;
   }
   
+  /* styles for tabs toolbar */
   #TabsToolbar{
     top: calc(
       var(--margin) 
@@ -131,7 +143,7 @@
     
     border-radius: var(--big-rounding);
     
-    /* hover target */
+    /* hover target (invisible box between window edge and panel) */
     &::before{
       content: "";
       position: absolute;
@@ -144,7 +156,7 @@
       top: 0px;
     }
     
-    /* indication bar */
+    /* indication bar (line on window edge) */
     &::after{
       content: "";
       position: absolute;
@@ -161,6 +173,7 @@
     }
   }
   
+  /* make all panel content invisible (it will visible when hover) */
   #TabsToolbar,
   #PanelUI-menu-button,
   #unified-extensions-button
@@ -171,8 +184,8 @@
     }
   }
   
-  
   #TabsToolbar-customization-target{
+    /* make the toolbar height dynamic */
     position: relative !important;
     
     /* styled spacer */
@@ -184,11 +197,15 @@
       scale: 0.7;
       opacity: 0.1;
     }
+    
+    /* limit toolbar items width */
+    & > * {max-width: var(--toolbar-button-wdt) !important;}
   }
   
+  /* styles for extensions button */
   #unified-extensions-button {margin-top: var(--toolbar-item-hgt) !important;}
 
-  /* show on hover or focus */
+  /* show toolbar on hover or focus */
   &:has(
     #TabsToolbar:hover
     .titlebar-buttonbox-container:not(:hover),
@@ -202,7 +219,6 @@
     #PanelUI-menu-button,
     #unified-extensions-button
     {
-      display: visible !important;
       right: calc(var(--right-margin) + var(--margin));
       
       & > * {opacity: 1 !important;}
@@ -226,12 +242,12 @@
   }
 }
 
-/* limit toolbar items width */
-#TabsToolbar-customization-target > * {
-  max-width: var(--toolbar-button-wdt) !important;
-}
+/*
 
-/* customize page */
+--- CUSTOMIZING PAGE --------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
 #main-window[customizing]{
   #TabsToolbar{
     min-width: 0px !important;

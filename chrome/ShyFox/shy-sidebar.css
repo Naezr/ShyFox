@@ -1,22 +1,34 @@
-/* ShyFox Sidebar */
+/*== ShyFox Sidebar =================================================================================================================================
 
-/* variables */
+Styles for sidebar
+
+
+--- JUST IMPORTANT THINGS ---------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* local variables */
 :root{
   --little-gap: calc(var(--margin) / 1.5);
   --bookmarks-hgt: var(--toolbar-item-hgt);
 }
 
-/* set left margin to sidebar width */
+/* if sidebar is not hidden, this window is not floating popup and not in fullscreen video */
 #main-window:not([titlepreface*="-"])[chromehidden=""]:not([inDOMFullscreen="true"]){
+  /* set left margin to sidebar width */
   --left-margin: var(--sdbr-wdt) !important;
 }
 
-/* hide splitter */
+/* hide sidebar splitter */
 #sidebar-splitter {display: none}
 
-/* initial */
+/* 
 
-/* sidebar + bookmarks */
+--- SIDEBAR SHOWN -----------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* styles for both sidebar and bookmarks toolbar */
 #sidebar-box,
 #PersonalToolbar
 {
@@ -35,7 +47,7 @@
   & > * {transition: var(--transition); !important}
 }
 
-/* sidebar */
+/* styles for sidebar */
 #sidebar-box{
   
   top: calc(
@@ -47,7 +59,7 @@
   width: var(--sdbr-wdt) !important;
 }
 
-/* bookmarks */
+/* styles for bookmarks toolbar */
 #PersonalToolbar{
   visibility: visible !important;
   height: var(--toolbar-item-hgt) !important;
@@ -73,11 +85,16 @@
   --little-gap: 0px;
 }
 
-/* hidden mode */
+/* 
+
+--- SIDEBAR HIDDEN ----------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
 #main-window[titlepreface*="-"]:not([customizing]){
   --sdbr-real-wdt: 0px;
   
-  /* sidebar + bookmaarks */
+  /* styles for both sidebar and bookmaarks toolbar */
   #sidebar-box,
   #PersonalToolbar
   {
@@ -98,7 +115,7 @@
     
     border-radius: var(--big-rounding);
     
-    /* hover target */
+    /* hover target (invisible box between window edge and panel) */
     &::before{
       content: "";
       position: absolute;
@@ -111,14 +128,14 @@
       top: 0px;
     }
     
-    /* hide content */
+    /* make all panel content invisible (it will visible when hover) */
     & * {
       transition: var(--transition) !important;
       opacity: 0;
     }
   }
   
-  /* sidebar */
+  /* styles for sidebar */
   #sidebar-box{
     height: calc(
       100vh
@@ -135,7 +152,7 @@
       + var(--bookmarks-hgt) + var(--little-gap)
     );
     
-    /* indication bar */
+    /* indication bar (line on window edge) */
     &::after{
       content: "";
       position: absolute;
@@ -158,7 +175,7 @@
     }
   }
   
-  /* bookmarks */
+  /* styles for bookmarks */
   #PersonalToolbar{
     top: calc(var(--top-margin) + var(--margin));
     margin-left: 0px !important;
@@ -166,7 +183,7 @@
 
     padding-inline: 0px !important;
     
-    /* fill gap between sidebar and bookmarks with transparent thing */
+    /* hover target between sidebar and bookmarks toolbar */
     &::after{
       content: "";
       z-index: 1;
@@ -184,7 +201,7 @@
     }
   }
 
-  /* show on hover or focus */
+  /* show sidebar on hover or focus */
   &:has(
     #sidebar-box:hover,
     #sidebar-box:focus-within,
@@ -209,7 +226,12 @@
   }
 }
 
-/* customization page */
+/*
+
+--- CUSTOMIZING PAGE --------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
 #main-window[customizing]{
   #PersonalToolbar{
     top: 65px !important;
@@ -218,22 +240,28 @@
     
     border-radius: var(--rounding) !important;
   }
+  
   #bookmarks-toolbar-placeholder .toolbarbutton-text {display: none !important;}
 }
 
-/* hide sidebar button and header when Sidebery opened */
+
+/*
+
+--- SIDEBERY ----------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* hide sidebar button on toolbar and sidebar header when Sidebery opened */
 #main-window:has(
   #sidebar-box:not([hidden])[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
-) {
-  #sidebar-header,
-  #sidebar-button
-  {display: none}
+) { 
+  #sidebar-header, #sidebar-button {display: none} 
 }
 
-/* red colored sidebar button (when it visible)*/
+/* color the sidebar button red */
 #sidebar-button .toolbarbutton-icon{background-color: red !important;}
 
-/* text when Sidebery not opened */
+/* notification when Sidebery is not opened */
 #main-window:has( 
   #sidebar-box[hidden="true"],
   #sidebar-box:not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"])

@@ -1,8 +1,11 @@
-/* ShyFox window control buttons */
+/*== ShyFox Window Controls =========================================================================================================================
+
+Styles for Min Max Close buttons
 
 
-/* default (if system not detected) */
-:root {--window-control-wdt: 140px;}
+--- JUST IMPORTANT THINGS ---------------------------------------------------------------------------------------------------------------------------
+
+*/
 
 /* move buttons to correct position */
 .titlebar-buttonbox-container{
@@ -18,6 +21,55 @@
   top: 8px;
 }
 
+/* 
+
+--- VARIABLES ----------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* paddings */
+:root{
+  --buttonbox-right-wdt: var(--window-control-wdt);
+  --buttonbox-right-hgt: 35px;
+  
+  --buttonbox-left-wdt: 0px;
+  --buttonbox-left-hgt: 0px;
+}
+
+/* useful variables */
+:root{
+  --nav-rgt-btnbx-margin: var(--margin);
+  --nav-rgt-btnbx-button: var(--toolbar-button-wdt);
+  
+  --nav-lft-btnbx-margin: 0px;
+  --nav-lft-btnbx-button: 0px;
+}
+
+/* remove window controls in f11 fullscreen */
+:root[sizemode="fullscreen"] {
+  --window-control-wdt: 0px;
+  
+  --buttonbox-left-hgt: 0px;
+  --buttonbox-right-hgt: 0px;
+  
+  --nav-rgt-btnbx-margin: 0px;
+  --nav-rgt-btnbx-button: 0px;
+    
+  --nav-lft-btnbx-margin: 0px;
+  --nav-lft-btnbx-button: 0px;
+  
+  .titlebar-buttonbox-container {display: none}
+}
+
+/*
+
+--- DETECT SYSTEM AND CALCULATE VALUES  -------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* default (if system not detected) */
+:root {--window-control-wdt: 140px;}
+
 /* Windows */
 
 @media (-moz-platform: windows) {
@@ -27,6 +79,7 @@
     height: var(--toolbar-item-hgt);
   }
   
+  /* style when not enough space - merged into window border */
   #main-window[titlepreface*="="][titlepreface*="+"] {
     .titlebar-button {padding: calc(var(--margin) / 2) 15px !important;}
     .titlebar-buttonbox-container{
@@ -36,6 +89,8 @@
       &:hover{opacity: 1}
     }
   }
+  
+  /* style when right toolbar is visible but navbar hidden */
   #main-window:not([titlepreface*="="])[titlepreface*="+"] {  
     .titlebar-button {padding: calc(var(--margin) / 2) 1.1px !important;}
     .titlebar-buttonbox-container{
@@ -48,9 +103,7 @@
   }
 }
 
-
-
-/* Linux GTK */
+/* Linux (GTK) */
 
 :root{
   --window-control-gtk-max-wdt: 0px;
@@ -73,7 +126,8 @@
       + var(--window-control-gtk-max-wdt)
     );
   }
-  /* restore original buttons design */
+  
+  /* restore original GTK buttons design */
   .titlebar-button{
     list-style-image: none !important;
     appearance: auto !important;
@@ -94,9 +148,11 @@
   }
 }
 
-
+/* if GTK buttons position is right */
 @media (-moz-gtk-csd-available){
 @media not (-moz-gtk-csd-reversed-placement){
+  
+  /* style when not enough space - merged into window border */
   #main-window[titlepreface*="="][titlepreface*="+"]:not([customizing]){
     .titlebar-buttonbox-container{
       top: 0px;
@@ -106,6 +162,8 @@
       height: var(--margin)
     }
   }
+  
+  /* style when right toolbar is visible but navbar hidden - remove Min and Max */
   #main-window:not([titlepreface*="="])[titlepreface*="+"]:not([customizing]){
     .titlebar-min, .titlebar-restore, .titlebar-max {display: none}
   }
@@ -117,26 +175,13 @@
   :root {--window-control-wdt: 72px;}
 }
 
-/* paddings */
-:root{
-  --buttonbox-right-wdt: var(--window-control-wdt);
-  --buttonbox-right-hgt: 35px;
-  
-  --buttonbox-left-wdt: 0px;
-  --buttonbox-left-hgt: 0px;
-}
+/*
+--- CONTROLS ON LEFT ---------------------------------------------------------------------------------------------------------------------------
 
-/* useful variables */
-:root{
-  --nav-rgt-btnbx-margin: var(--margin);
-  --nav-rgt-btnbx-button: var(--toolbar-button-wdt);
-  
-  --nav-lft-btnbx-margin: 0px;
-  --nav-lft-btnbx-button: 0px;
-}
+Styles when GTK window controls on left or system is MacOS 
 
+*/
 
-/* Rules for window controls on left */
 @media (-moz-gtk-csd-reversed-placement), (-moz-platform: macos){
   :root{
     --buttonbox-right-wdt: 0px;
@@ -158,6 +203,7 @@
     right: auto !important;
   }
   
+  /* style when not enough space - merged into window border */
   #main-window[titlepreface*="-"][titlepreface*="+"]:not([customizing]){
     .titlebar-buttonbox-container{
       top: 0px;
@@ -168,20 +214,4 @@
       overflow: clip !important;
     }
   }
-}
-
-/* fullscreen */
-:root[sizemode="fullscreen"] {
-  --window-control-wdt: 0px;
-  
-  --buttonbox-left-hgt: 0px;
-  --buttonbox-right-hgt: 0px;
-  
-  --nav-rgt-btnbx-margin: 0px;
-  --nav-rgt-btnbx-button: 0px;
-    
-  --nav-lft-btnbx-margin: 0px;
-  --nav-lft-btnbx-button: 0px;
-  
-  .titlebar-buttonbox-container {display: none}
 }

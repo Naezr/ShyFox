@@ -1,6 +1,12 @@
-/* ShyFox compact menus */
+/*== ShyFox Compact Menus ===========================================================================================================================
 
-/* compact context menu */
+Shrink some things so they take up less space
+
+
+--- CONTEXT MENU ------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
 .menupopup-arrowscrollbox,
 #context-navigation > .menuitem-iconic {border-radius: var(--big-rounding) !important;}
 
@@ -15,7 +21,12 @@ menupopup > :is(menuitem, menu){
 
 :is(.bookmark-item, #PlacesChevron) :is(menuitem, menu) {margin-inline: 5px !important;}
 
-/*  compact extensions menu */
+/* 
+
+--- EXTENSIONS MENU ---------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
 #unified-extensions-panel #unified-extensions-view 
 {width: 100% !important;}
 

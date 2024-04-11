@@ -1,18 +1,42 @@
-/* ShyFox Navbar - Top */
+/*== ShyFox Navbar ==================================================================================================================================
 
-/* variables */
+Navigation bar on top of the window
+
+
+--- JUST IMPORTANT THINGS ---------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* local variables */
 :root{
   --navbar-real-wdt: var(--navbar-wdt);
   
-  /* idk why in needed here, but without it all breaks */
-  --right-margin: 0px;
+  --right-margin: 0px; /* idk why it there but without it f11 fullscreen breaks */
 }
 
+/* if navbar is not hidden, this window is not floating popup and not in fullscreen video */
 #main-window:not([titlepreface*="+"])[chromehidden=""]:not([inDOMFullscreen="true"]){
+  /* set top margin to navbar height */
   --top-margin: calc(var(--toolbar-item-hgt)) !important;
 }
 
-/* initial */
+/* padding tweak */
+.toolbaritem-combined-buttons:not([widget-type="button-and-view"], [widget-type="custom"]), .toolbaritem-menu-buttons {
+  margin-inline-end: var(--toolbar-start-end-padding) !important;
+}
+
+/* rounded urlbar */
+#urlbar-background {border-radius: calc(var(--rounding))!important;}
+
+/* limit items height */
+#nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
+
+/* 
+
+--- NAVBAR SHOWN ------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
 #nav-bar{
   position: fixed !important;
   z-index: 1 !important;
@@ -35,7 +59,7 @@
   #urlbar-input {text-align: center !important}
 }
 
-/* margins for window controls */
+/* space for window controls */
 #main-window:not([inFullscreen])[titlepreface*="="]:not([titlepreface*="+"])
 { #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));}}
 
@@ -45,9 +69,12 @@
 #main-window:not([inFullscreen])[titlepreface*="-"]:not([titlepreface*="+"])
 { #nav-bar{margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));}}
 
+/* 
 
+--- NAVBAR HIDDEN -----------------------------------------------------------------------------------------------------------------------------------
 
-/* hidden state */
+*/
+
 #main-window[titlepreface*="+"]:not([customizing]){
   
   #nav-bar{
@@ -81,17 +108,14 @@
     );
     
     right: auto;
-    
-    #nav-bar-customization-target{
-      overflow: visible !important;
-    }
-    
+        
+    /* make all panel content invisible (it will visible when hover) */
     #nav-bar-customization-target > *{
        transition: var(--transition) !important;
        opacity: 0;
     }
     
-    /* hover target */
+    /* hover target (invisible box between window edge and panel) */
     #nav-bar-customization-target::before{
       content: "";
       position: absolute;
@@ -102,7 +126,7 @@
       bottom: 0px;
     }
     
-    /* indication bar */
+    /* indication bar (line on window edge) */
     &::before{
       content: "";
       position: absolute;
@@ -119,7 +143,7 @@
     }
   }
   
-  /* show on hover or focus */
+  /* show navbar on hover or focus */
   &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
     #nav-bar-customization-target *:not(#unified-extensions-button)[open],
@@ -144,7 +168,7 @@
     }
   }
   
-  /* adaptive to small window width */
+  /* adaptive navbar width */
   @media (max-width: 1000px) {
     :root{--navbar-real-wdt: 98vw !important;}
     #nav-bar{
@@ -153,14 +177,13 @@
     }
   }
 }
-  
-/* rounded urlbar */
-#urlbar-background {border-radius: calc(var(--rounding))!important;}
 
-/* limit items height */
-#nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
+/*
 
-/* customization page */
+--- CUSTOMIZING PAGE --------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
 #main-window[customizing]{
   #nav-bar{
     left: 120px !important;
@@ -171,9 +194,4 @@
   }
   
   #urlbar-background, #searchbar {background-color: var(--tb-col) !important;}
-}
-
-/* padding tweak */
-.toolbaritem-combined-buttons:not([widget-type="button-and-view"], [widget-type="custom"]), .toolbaritem-menu-buttons {
-  margin-inline-end: var(--toolbar-start-end-padding) !important;
 }
