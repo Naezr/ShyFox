@@ -1,0 +1,262 @@
+/*== ShyFox Global Styles ===========================================================================================================================
+
+All sorts of important tweaks that don't belong in any category
+
+
+--- BROWSER CONTENT ---------------------------------------------------------------------------------------------------------------------------------
+
+Area where website is displayed 
+
+*/
+
+/* set background color */
+#appcontent .browserStack, #browser, .browserContainer {background: var(--bg-col)}
+
+#browser > #appcontent {
+  /* shift website content relative to panels */
+  margin-left: var(--left-margin);
+  margin-right: var(--right-margin);
+  margin-top: var(--top-margin);
+  margin-bottom: var(--bottom-margin);
+  
+  /* add smoothness to it */
+  transition: var(--transition) !important;
+}
+
+/* completely remove the browser interface in fullscreen videos and popups like login with Google or in a floating Bitwarden window */
+#main-window:is(:not([chromehidden=""]), [inDOMFullscreen="true"]){
+  #navigator-toolbox {display: none !important;}
+  --margin: 0px !important;
+}
+
+/* if it not fullscreen video or floating window */
+#main-window:not([inDOMFullscreen="true"])[chromehidden=""]{
+    
+  /* if navbar is not hidden in f11 fullscreen */
+  &:not([titlepreface*="+"][inFullscreen="true"]){
+    
+    /* add rounded corners to browser content */
+    #appcontent browser {border-radius: var(--big-rounding);}
+  }
+  
+  /* if it not f11 fullscreen */
+  &:not([inFullscreen="true"]){
+    
+    /* add small outline to browser content */
+    #appcontent browser {border: var(--outline);}
+  }
+}
+
+/* private mode outline */
+#main-window[privatebrowsingmode="temporary"]
+{--outline: 2px solid var(--private-col) !important;}
+
+/* drag window using top border */
+#browser::after {
+  position: fixed;
+  pointer-events: none;
+  -moz-window-dragging: drag;
+  z-index: 1;
+  
+  height: calc(var(--margin) + 2px);
+  top: -1px;
+  width: 100vw;
+  
+  content: "";
+  background-color: var(--debug-col);
+}
+
+/* statuspanel (that thing at the bottom of the screen that shows the address of the link you're hovering over) */
+#statuspanel #statuspanel-label {
+  padding-inline: 6px !important;
+  border-radius: var(--big-rounding) !important;
+  
+  background-color: var(--tb-col) !important;
+  color: var(--bt-col) !important;
+  
+  border: var(--outline) !important;
+  outline: var(--shadow) !important;
+}
+
+/*
+
+--- CONTEXT MENU ------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* apply dynamic colors to context menus and menubar*/
+#contentAreaContextMenu,
+#contentAreaContextMenu menupopup,
+#toolbar-context-menu,
+#toolbar-menubar menupopup
+{
+  --panel-background: var(--bg-col)!important;                        
+  --panel-border-color: var(--tb-col) !important;                    
+  --toolbar-field-focus-background-color: var(--bt-col) !important;
+  --panel-color: var(--bt-col) !important;  
+  
+  menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+    background-color: var(--tb-col) !important;
+    color: var(--bt-col) !important;
+  }
+}     
+
+/*
+
+--- CUSTOMIZING PAGE --------------------------------------------------------------------------------------------------------------------------------
+
+Right click > Customize toolbar
+
+*/
+
+#main-window[customizing]{
+  #customization-palette-container {padding-top: 100px}
+  
+  #customization-panelWrapper{
+    margin-top: 60px;
+    margin-right: 50px;
+  }
+  
+  .panel-arrowbox {right: 25px;}
+  .panel-arrowcontent{border-radius: var(--rounding) !important;}
+  
+  #customization-footer{
+    position: fixed !important;
+
+    bottom: 10px;   
+    right: 70px;
+    left: 10px;
+    
+    background-color: var(--bg-col) !important;
+    border-radius: var(--rounding) !important;
+  }
+}
+
+:root[customizing] .customization-target:not(#widget-overflow-fixed-list) {
+  min-width: 0px !important;
+}
+
+/*
+
+--- NOTIFICATION BAR --------------------------------------------------------------------------------------------------------------------------------
+
+Sometimes Firefox shows notifications at the top of the window suggesting, for example, to restore tabs from a previous session
+
+*/
+
+#tab-notification-deck, .global-notificationbox{
+  position: fixed !important;
+  z-index: 2 !important;
+  vbox {background-color: transparent !important;}
+  background-color: transparent !important;
+  
+  width: calc(100vw 
+    - var(--left-margin)
+    - var(--right-margin)
+  ) !important;
+  
+  top: var(--top-margin);
+  left: var(--left-margin);
+  
+  notification-message{
+    border-radius: var(--big-rounding) !important;
+    
+    &::before {display: none !important;}
+  }
+}
+
+/* shift browser content down to make space for notification */
+#main-window:has(
+  .global-notificationbox notification-message,
+  #tab-notification-deck:not([selected-view=""]) notification-message
+) {
+  #browser > #appcontent{
+    padding-top: 50px
+  }
+}
+
+/*
+
+--- MENUBAR ----------------------------------------------------------------------------------------------------------------------------------------
+
+File Edit View History Bookmarks Tools Help
+
+*/
+
+@media not (-moz-platform: macos) {
+  
+  #toolbar-menubar {
+    
+    position: fixed;
+    overflow: clip;
+    visibility: visible !important;
+    z-index: 5;
+    
+    width: -fit-content;
+    max-height: 0px;
+    padding-bottom: 0 !important;
+    
+    transition: var(--transition) !important;
+    
+    top: var(--top-margin);
+    left: var(--left-margin);
+    
+    border-radius: var(--rounding);
+    background-color: var(--tb-col) !important;
+    
+    /* outline only when visible */
+    &:not([inactive="true"]) {
+      border: var(--outline) !important;
+      outline: var(--shadow) !important;
+    }
+  }
+
+  #main-menubar * {padding-top: 0px !important;}
+}
+
+/*
+
+--- DEVTOOLS ---------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+.browserSidebarContainer, .responsive-mode {background-color: var(--bg-col) !important;}
+
+.devtools-side-splitter, .devtools-horizontal-splitter {
+  background-color: transparent !important;
+  margin-inline: 0px !important;
+  margin: 0px !important;
+}
+
+.devtools-side-splitter       { min-width: calc(var(--margin) / 1.5) !important;}
+.devtools-horizontal-splitter {min-height: calc(var(--margin) / 1.5) !important;}
+
+.rdm-toolbar {
+  margin-top: var(--margin) !important;
+  width: 95% !important;
+  margin-left: 3% !important;
+}
+
+.rdm-toolbar, .devtools-button, .user-agent {border-radius: var(--rounding) !important;}
+
+.user-agent {border: 1px solid grey !important;}
+
+/*
+
+--- FIXES ------------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* fix some items dissapearing */
+#titlebar {opacity: 1 !important;}
+
+:root[tabsintitlebar] #titlebar:-moz-window-inactive {
+  opacity: 1 !important;
+}
+
+/* remove annoying line at the top of the window */
+#navigator-toolbox {
+  margin-top: -1px !important;
+  position: relative;
+  z-index: 3;
+}

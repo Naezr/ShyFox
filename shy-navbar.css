@@ -1,0 +1,197 @@
+/*== ShyFox Navbar ==================================================================================================================================
+
+Navigation bar on top of the window
+
+
+--- JUST IMPORTANT THINGS ---------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+/* local variables */
+:root{
+  --navbar-real-wdt: var(--navbar-wdt);
+  
+  --right-margin: 0px; /* idk why it there but without it f11 fullscreen breaks */
+}
+
+/* if navbar is not hidden, this window is not floating popup and not in fullscreen video */
+#main-window:not([titlepreface*="+"])[chromehidden=""]:not([inDOMFullscreen="true"]){
+  /* set top margin to navbar height */
+  --top-margin: calc(var(--toolbar-item-hgt)) !important;
+}
+
+/* padding tweak */
+.toolbaritem-combined-buttons:not([widget-type="button-and-view"], [widget-type="custom"]), .toolbaritem-menu-buttons {
+  margin-inline-end: var(--toolbar-start-end-padding) !important;
+}
+
+/* rounded urlbar */
+#urlbar-background {border-radius: calc(var(--rounding))!important;}
+
+/* limit items height */
+#nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
+
+/* 
+
+--- NAVBAR SHOWN ------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+#nav-bar{
+  position: fixed !important;
+  z-index: 1 !important;
+  
+  transition: var(--transition) !important;
+  
+  background-color: var(--bg-col) !important;
+  
+  top: 0px;
+  left: var(--left-margin);
+  right: var(--right-margin) !important;;
+  
+}
+
+/* centered navbar text */
+#urlbar:not(:is(
+  [breakout][breakout-extend],
+  :focus-within
+) ) {
+  #urlbar-input {text-align: center !important}
+}
+
+/* space for window controls */
+#main-window:not([inFullscreen])[titlepreface*="="]:not([titlepreface*="+"])
+{ #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));}}
+
+#main-window:not([inFullscreen]):not([titlepreface*="="]):not([titlepreface*="+"])
+{ #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button));}}
+
+#main-window:not([inFullscreen])[titlepreface*="-"]:not([titlepreface*="+"])
+{ #nav-bar{margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));}}
+
+/* 
+
+--- NAVBAR HIDDEN -----------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+#main-window[titlepreface*="+"]:not([customizing]){
+  
+  #nav-bar{
+    overflow: visible !important;
+    z-index: 3 !important;
+    
+    background-color: transparent !important;
+    
+    border-radius: var(--big-rounding);
+    
+    width: var(--navbar-real-wdt);
+    max-width: calc(
+      100vw 
+      - var(--left-margin)
+      - var(--right-margin)
+    );
+    
+    top: calc(
+      var(--margin) 
+      + var(--panel-hide-ldg) 
+      - var(--toolbar-item-hgt) 
+    );
+    
+    left: calc(
+      (
+        100vw 
+        - var(--navbar-real-wdt) 
+        + var(--left-margin) 
+        - var(--right-margin) 
+      ) / 2 
+    );
+    
+    right: auto;
+        
+    /* make all panel content invisible (it will visible when hover) */
+    #nav-bar-customization-target > *{
+       transition: var(--transition) !important;
+       opacity: 0;
+    }
+    
+    /* hover target (invisible box between window edge and panel) */
+    #nav-bar-customization-target::before{
+      content: "";
+      position: absolute;
+      z-index: -999;
+      background-color: var(--debug-col);
+      height: 500%;
+      width: 100%;
+      bottom: 0px;
+    }
+    
+    /* indication bar (line on window edge) */
+    &::before{
+      content: "";
+      position: absolute;
+      transition: var(--transition);
+      
+      bottom: var(--hide-bar-padding);
+      height: calc(var(--margin) - var(--hide-bar-padding) * 2);
+      width: calc(100% - var(--hide-bar-wdt-pad));
+      left: calc(var(--hide-bar-wdt-pad) / 2);
+      
+      border-radius: var(--rounding);
+      background-color: var(--bt-col);
+      opacity: var(--hide-bar-opct);
+    }
+  }
+  
+  /* show navbar on hover or focus */
+  &:has(
+    #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
+    #nav-bar-customization-target *:not(#unified-extensions-button)[open],
+    #urlbar:focus-within,
+    #urlbar[breakout][breakout-extend],
+    #nav-bar-overflow-button[open],
+    #nav-bar-overflow-button:hover
+  ) {
+    #nav-bar{
+      top: calc(var(--top-margin) + var(--margin));
+      
+      background-color: var(--tb-col) !important;
+      
+      /* corners, shadow */
+      border: var(--outline) !important;
+      outline: var(--shadow) !important;
+      
+      #nav-bar-customization-target > *:not([disabled="true"]) {opacity: 1 !important;}
+      #nav-bar-customization-target > *[disabled="true"] {opacity: auto !important;}
+      
+      &::before {opacity: 0}
+    }
+  }
+  
+  /* adaptive navbar width */
+  @media (max-width: 1000px) {
+    :root{--navbar-real-wdt: 98vw !important;}
+    #nav-bar{
+      max-width: none !important;
+      left: calc((100vw - var(--navbar-real-wdt)) / 2) !important;
+    }
+  }
+}
+
+/*
+
+--- CUSTOMIZING PAGE --------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+#main-window[customizing]{
+  #nav-bar{
+    left: 120px !important;
+    right: 120px !important;
+    
+    top: var(--margin) !important;
+    border-radius: var(--rounding) !important;
+  }
+  
+  #urlbar-background, #searchbar {background-color: var(--tb-col) !important;}
+}
