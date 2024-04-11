@@ -68,7 +68,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   
   /* hiding the window border in fullscreen mode and assigning --margin to it in windowed mode */
   --left-margin: 0px;
-  --right-margin 0px;
+  --right-margin: 0px;
   --top-margin: 0px;
   --bottom-margin: 0px; 
   
