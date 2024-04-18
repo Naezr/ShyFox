@@ -178,7 +178,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
   #PanelUI-menu-button,
   #unified-extensions-button
   {
-    & > * {
+    & > *:not(.titlebar-buttonbox-container) {
       transition: var(--transition) !important;
       opacity: 0;
     }
