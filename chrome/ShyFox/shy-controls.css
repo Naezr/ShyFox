@@ -129,6 +129,11 @@ Styles for Min Max Close buttons
   
   /* restore original GTK buttons design */
   .titlebar-button{
+    & > .toolbarbutton-icon{background-image: none !important;}
+    &:hover > .toolbarbutton-icon {
+      background-color: color-mix(in srgb, currentColor 12%, transparent) !important;
+    }
+    margin-inline: 8px !important;
     list-style-image: none !important;
     appearance: auto !important;
     background-color: var(--bt-col);
@@ -155,11 +160,11 @@ Styles for Min Max Close buttons
   /* style when not enough space - merged into window border */
   #main-window[titlepreface*="="][titlepreface*="+"]:not([customizing]){
     .titlebar-buttonbox-container{
-      top: 0px;
+      top: -6px;
       right: -10px;
       opacity: 0.1;
-      &:hover{opacity: 1}
-      height: var(--margin)
+      &:hover{opacity: 1};
+      height: calc(var(--margin) + 6px);
     }
   }
   
@@ -206,11 +211,11 @@ Styles when GTK window controls on left or system is MacOS
   /* style when not enough space - merged into window border */
   #main-window[titlepreface*="-"][titlepreface*="+"]:not([customizing]){
     .titlebar-buttonbox-container{
-      top: 0px;
+      top: -6px;
       left: -10px;
       opacity: 0.1;
-      &:hover{opacity: 1}
-      height: var(--margin) !important;
+      &:hover{opacity: 1};
+      height: calc(var(--margin) + 6px) !important;
       overflow: clip !important;
     }
   }
