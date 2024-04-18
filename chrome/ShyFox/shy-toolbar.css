@@ -221,7 +221,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     {
       right: calc(var(--right-margin) + var(--margin));
       
-      & > * {opacity: 1 !important;}
+      & > *:not(.titlebar-buttonbox-container) {opacity: 1 !important;}
     }
     #TabsToolbar{
       width: calc(var(--toolbar-button-wdt) + 4px) !important;;
