@@ -1,6 +1,10 @@
-# ShyFox 3.2
+# ShyFox 3.2.1
 
 <details><summary>Release notes</summary></summary> 
+ 
+3.2.1:
+- Fix window controls on linux broken in Firefox 125
+- Now if you hover over the right toolbar window controls are not highlighted
 
 3.2:
 - Code comments rework
