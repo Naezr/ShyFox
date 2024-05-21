@@ -45,12 +45,13 @@ Inspired by Arc, adapted for Firefox
 ### Install
 0. If you migrating from 2.0 you need delete fx-autoconfig. To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder. If you new user, skip it.
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
-2. Install and configure theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle](https://addons.mozilla.org/en-US/firefox/addon/userchrome-toggle), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
+2. Install and configure theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
     <details><summary>Userchrome toggle settings</summary> 
     
     Make sure you click each "Apply changes" button, preferably several times
-    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/bbcf2954-7b41-41d1-af34-0f5bbf952898)
-    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/9022e0d5-8655-49c0-b435-93ccf1bb4e09)
+    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/ddc7fbcb-ee97-43be-b2c9-81ff2f948ef4)
+    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/49d593e4-aa26-47b0-8a9a-4a6f2964a919)
+
     
     </details>     
      
