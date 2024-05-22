@@ -208,5 +208,26 @@ In menu button
   
 #downloadsHistory {list-style-image: url("chrome://browser/skin/downloads/downloads.svg");}
 
-/* context menu 
-         coming soon... */
+/* 
+
+--- CONTEXT MENU ------------------------------------------------------------------------------------------------------------------------------------
+
+
+*
+
+#contentAreaContextMenu menuitem{
+  fill: currentColor !important;
+  fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
+  -moz-context-properties: fill, fill-opacity, stroke !important;
+  background-repeat: no-repeat;
+  background-position-x: 5px;
+  background-position-y: 1px;
+}
+
+
+#context-viewimage {background-image: url("../icons/image.svg") !important;}
+#context-saveimage {background-image: url("chrome://browser/skin/downloads/downloads.svg") !important;}
+#context-copyimage-contents {background-image: url("../icons/tab-copy.svg") !important;}
+#context-copyimage {background-image: url("../icons/link.svg") !important;}
+#context-sendimage {background-image: url("../icons/mail.svg") !important;}
+#context-setDesktopBackground {background-image: url("../icons/tab.svg") !important;}

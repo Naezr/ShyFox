@@ -162,7 +162,12 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
       position: absolute;
       transition: var(--transition);
       
-      left: var(--hide-bar-padding);
+      right: calc(
+        100% 
+        - var(--panel-hide-ldg) 
+        - var(--margin) 
+        + var(--hide-bar-padding)
+      );
       width: calc(var(--margin) - var(--hide-bar-padding) * 2);
       height: calc(100% - var(--hide-bar-wdt-pad));
       top: calc(var(--hide-bar-wdt-pad) / 2);
@@ -276,7 +281,3 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     opacity: 1 !important;
   }
 }
-
-
-
-

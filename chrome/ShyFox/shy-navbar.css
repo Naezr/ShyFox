@@ -24,7 +24,7 @@ Navigation bar on top of the window
 }
 
 /* rounded urlbar */
-#urlbar-background {border-radius: calc(var(--rounding))!important;}
+#urlbar-background {border-radius: var(--rounding) !important}
 
 /* limit items height */
 #nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
@@ -108,9 +108,9 @@ Navigation bar on top of the window
     right: auto;
         
     /* make all panel content invisible (it will visible when hover) */
-    #nav-bar-customization-target > *{
+    #nav-bar-customization-target > *:not(#unified-extensions-button){
        transition: var(--transition) !important;
-       opacity: 0;
+       opacity: 0 !important;
     }
     
     /* hover target (invisible box between window edge and panel) */
@@ -130,7 +130,13 @@ Navigation bar on top of the window
       position: absolute;
       transition: var(--transition);
       
-      bottom: var(--hide-bar-padding);
+      top: calc(
+        100% 
+        - var(--panel-hide-ldg) 
+        - var(--margin) 
+        + var(--hide-bar-padding)
+      );
+      
       height: calc(var(--margin) - var(--hide-bar-padding) * 2);
       width: calc(100% - var(--hide-bar-wdt-pad));
       left: calc(var(--hide-bar-wdt-pad) / 2);
@@ -160,7 +166,7 @@ Navigation bar on top of the window
       outline: var(--shadow) !important;
       
       #nav-bar-customization-target > *:not([disabled="true"]) {opacity: 1 !important;}
-      #nav-bar-customization-target > *[disabled="true"] {opacity: auto !important;}
+      #nav-bar-customization-target > *[disabled="true"] {opacity: 0.5 !important;}
       
       &::before {opacity: 0}
     }

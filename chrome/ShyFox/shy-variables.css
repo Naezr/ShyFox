@@ -34,6 +34,15 @@ Values of these variables can be changed safely and most likely nothing will bre
   /* how much shorter these bars than panels */
   --hide-bar-wdt-pad: 10px;
   
+  /* size of the panel hitbox outside the window border */
+  --panel-hide-ldg: 1px;            /* f11 fullscreen   */
+  &:not([inFullscreen="true"]){
+    --panel-hide-ldg: 0px;          /* maximized window */ 
+    &[sizemode="normal"]{
+      --panel-hide-ldg: 9px;        /* floating window  */
+    }
+  }
+  
   /* colors */
   --shadow-col:  #00000020;  /* color of the translucent outline that imitates a shadow                                                 */
   --private-col: #6e00bc80;  /* private mode outline color                                                                              */
@@ -84,17 +93,13 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
     --hide-bar-opct: 0 !important;
   }
   
-  /* as is no window border in fullscreen mode add 1 pixel which can be hovered over */
-  --panel-hide-ldg: 1px;
-  &:not([inFullscreen="true"]){
-    --panel-hide-ldg: 0px;
-  }
-  
   /* override built-in roundings with custom */
   --tab-border-radius: var(--rounding) !important;
   --toolbarbutton-border-radius: var(--rounding) !important;
   --arrowpanel-menuitem-border-radius: var(--rounding) !important;
   --arrowpanel-border-radius: var(--big-rounding) !important;
+  --button-border-radius: var(--rounding) !important;
+  --border-radius-small: var(--rounding) !important;
   
   /* override one padding in navbar to match style */
   --toolbar-start-end-padding: calc(var(--margin) / 2) !important;

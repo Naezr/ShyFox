@@ -35,15 +35,22 @@ Area where website is displayed
   /* if navbar is not hidden in f11 fullscreen */
   &:not([titlepreface*="+"][inFullscreen="true"]){
     
-    /* add rounded corners to browser content */
-    #appcontent browser {border-radius: var(--big-rounding);}
-  }
-  
-  /* if it not f11 fullscreen */
-  &:not([inFullscreen="true"]){
+    /* add rounded corners and outline to browser content */
+    #appcontent browser {
+      border-radius: var(--big-rounding) !important;
+      border: var(--outline);
+    }
     
-    /* add small outline to browser content */
-    #appcontent browser {border: var(--outline);}
+    #appcontent .browserStack::after {
+      content: "";
+      border: var(--outline);
+      position: absolute;
+      inset: 0;
+      border-radius: var(--big-rounding);
+      box-shadow: 0 0 0 100px var(--bg-col) !important;
+      clip-path: inset(0);
+      pointer-events: none;
+    }
   }
 }
 
@@ -77,6 +84,10 @@ Area where website is displayed
   border: var(--outline) !important;
   outline: var(--shadow) !important;
 }
+
+/* rounded buttons */
+menulist, button {border-radius: var(--rounding) !important}
+
 
 /*
 
@@ -147,31 +158,17 @@ Sometimes Firefox shows notifications at the top of the window suggesting, for e
 #tab-notification-deck, .global-notificationbox{
   position: fixed !important;
   z-index: 2 !important;
+  
   vbox {background-color: transparent !important;}
   background-color: transparent !important;
-  
-  width: calc(100vw 
-    - var(--left-margin)
-    - var(--right-margin)
-  ) !important;
-  
-  top: var(--top-margin);
-  left: var(--left-margin);
+  width: auto;
+  top: calc(var(--top-margin) + var(--margin) / 2);
+  left: calc(var(--left-margin) + var(--margin) / 2);
   
   notification-message{
     border-radius: var(--big-rounding) !important;
     
     &::before {display: none !important;}
-  }
-}
-
-/* shift browser content down to make space for notification */
-#main-window:has(
-  .global-notificationbox notification-message,
-  #tab-notification-deck:not([selected-view=""]) notification-message
-) {
-  #browser > #appcontent{
-    padding-top: 50px
   }
 }
 

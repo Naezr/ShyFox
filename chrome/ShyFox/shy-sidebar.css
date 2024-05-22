@@ -22,6 +22,8 @@ Styles for sidebar
 /* hide sidebar splitter */
 #sidebar-splitter {display: none}
 
+#sidebar-box {border-radius: var(--rounding) !important; }
+
 /* 
 
 --- SIDEBAR SHOWN -----------------------------------------------------------------------------------------------------------------------------------
@@ -158,7 +160,13 @@ Styles for sidebar
       position: absolute;
       transition: var(--transition);
       
-      right: var(--hide-bar-padding);
+      left: calc(
+        100% 
+        - var(--panel-hide-ldg) 
+        - var(--margin) 
+        + var(--hide-bar-padding)
+      );
+      
       width: calc(var(--margin) - var(--hide-bar-padding) * 2 );
       height: calc(
         100% 
