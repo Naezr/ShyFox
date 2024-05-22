@@ -51,6 +51,8 @@
   
   /* central box background */
   main{
+    margin-top: 15% !important;
+    height: 50%;
     /* background-color: rgba(43, 42, 51, 0.3); */
     background-color: rgba(130, 130, 130, 0.3) ;
     border-radius: 20px
