@@ -39,16 +39,37 @@
 
 </details>
 
-Inspired by Arc, adapted for Firefox
-------
+## Shy on surface, but heavy inside
 
-![изображение](https://github.com/Naezr/ShyFox/assets/95460152/8ecadda0-ca5b-4874-9c95-53fdfac51626)
-![изображение](https://github.com/Naezr/ShyFox/assets/95460152/b7cd7f41-d0c7-4a86-9116-5f22c88f74ac)
+![shy-all-visible](https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd)
+![shy-all-hidden](https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036)
 
-------
+<details><summary> Video showcase </summary>
+
+
+[shy-toggles.webm](https://github.com/Naezr/ShyFox/assets/95460152/90bf4860-4200-49fe-aede-9be777f80cb9)                
+
+[shy-floating-panels.webm](https://github.com/Naezr/ShyFox/assets/95460152/eb4de9b8-2268-43c8-b006-53c1494b4ec2)                  
+
+[shy-new-tab.webm](https://github.com/Naezr/ShyFox/assets/95460152/8e7837bf-ce58-4657-a3c6-9edb4b293f3b)                   
+
+[shy-window-controls.webm](https://github.com/Naezr/ShyFox/assets/95460152/95d4432f-6c49-4556-9432-7ebd69dd6b15)                   
+
+[shy-customize.webm](https://github.com/Naezr/ShyFox/assets/95460152/2029830e-8c20-4dfb-ac54-33a62c07d715)                  
+
+
+</details>
 
 ### Install
-0. If you migrating from 2.0 you need delete fx-autoconfig. To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder. If you new user, skip it.
+
+<details><summary>0. Migrate from 2.0 </summary>
+   <br/>
+   If you migrating from 2.0 you need delete fx-autoconfig.                     
+   To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder.               
+   If you new user, skip it.                  
+   <br/><br/>
+</details>
+
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
 2. Install and configure theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
     <details><summary>Userchrome toggle settings</summary> 
@@ -94,7 +115,7 @@ Also you can disable floating search bar. To do it go to the userChrome.css file
 ### Additional information     
 
  * Doesn't work on Firefox ESR and forks based on it (Waterfox, Floorp, etc.) because `:has()` selector and css nesting not supported there. When the next ESR release comes out and forks move to its base, then it will work.
- * Tested and work well only with Windows (10 or 11) and Linux with GNOME. MacOS, KDE, or something else probably will work, but window controls (close, min, max) maybe be broken.
+ * Tested and work well only with Linux with GNOME. Windows, MacOS, KDE, or something else probably will work, bun something maybe be broken.
 
 ### Features
 
@@ -125,6 +146,7 @@ Here you can place all the buttons you need, such as the history button, downloa
  * Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebey cannot be transparent)
  * Add icons to menubar and context menu
  * Add navbar on bottom support
+ * Make it clearer when a window is in focus and when it is not
 
 ### Thanks
 
