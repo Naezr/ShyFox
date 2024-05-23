@@ -5,6 +5,7 @@
 [3.2.2](https://youtu.be/7lY8sna1B_Q?si=vdh6M2hZF1-GDH76):
 - Rounded corners don't break from the blur on the site
 - Increased hover hitboxes on hidden panels
+- Added blur to new tab
  
 3.2.1:
 - Fix window controls on linux broken in Firefox 125
