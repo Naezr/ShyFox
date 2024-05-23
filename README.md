@@ -1,6 +1,11 @@
-# ShyFox [3.2.2](https://youtu.be/7lY8sna1B_Q?si=vdh6M2hZF1-GDH76)
+# ShyFox 3.2.3
 
 <details><summary>Release notes</summary></summary> 
+
+3.2.3:
+- Added accent colors support
+- Added rounded corners to Firefox settings page
+- Small bugfixes
  
 [3.2.2](https://youtu.be/7lY8sna1B_Q?si=vdh6M2hZF1-GDH76):
 - Rounded corners don't break from the blur on the site
@@ -107,10 +112,12 @@
    
    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/f13f96ff-4edd-4980-92a6-8f943b300cd7)
 
-   
    </summary>
-Optional. You can change `wallpaper.png` in `chrome` folder to you own image or remove it at all.
-Also you can disable floating search bar. To do it go to the userChrome.css file and comment line that imports `shy-floating-search.css`. Btw, you can remove all imports from `addons` section, they are optional.
+   
+### Optional
+- You can change new tab `wallpaper.png` in `chrome` folder to you own image or remove it at all.
+- You can disable floating search bar. To do it go to the userChrome.css file and comment line that imports `shy-floating-search.css`.
+- You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css` and `userContent.css`
 
 ### Additional information     
 
