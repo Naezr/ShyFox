@@ -115,7 +115,7 @@ Also you can disable floating search bar. To do it go to the userChrome.css file
 ### Additional information     
 
  * Doesn't work on Firefox ESR and forks based on it (Waterfox, Floorp, etc.) because `:has()` selector and css nesting not supported there. When the next ESR release comes out and forks move to its base, then it will work.
- * Tested and work well only with Linux with GNOME. Windows, MacOS, KDE, or something else probably will work, bun something maybe be broken.
+ * Tested and work well only with Linux with GNOME. Windows, MacOS, KDE, or something else probably will work, but something maybe be broken.
 
 ### Features
 
