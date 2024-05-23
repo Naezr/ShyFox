@@ -130,7 +130,7 @@
   }
 }
 
-@-moz-document url-prefix("about:preferences"), url-prefix("about:addons") {
+@-moz-document url-prefix("about:"){
   
   /* accent color */
   :root, panel, dialog, window {
@@ -156,6 +156,8 @@
   }
   
   moz-message-bar {background-color: var(--in-content-button-background) !important;}
+  .cpu {background: linear-gradient(to left, var(--shy-color) calc(var(--bar-width) * 1%), transparent calc(var(--bar-width) * 1%)) !important;}
+  
   
   /* rounded corners */
   .category,
@@ -164,8 +166,14 @@
   .web-appearance-choice,
   moz-message-bar,
   tree,
+  table,
+  select,
   .qr-code-box,
   .card,
+  body[dir],
+  .action-box, 
+  .info-box,
+  #ping-picker,
   #translations-manage-install-list
   {border-radius: var(--big-rounding) !important;}
   
