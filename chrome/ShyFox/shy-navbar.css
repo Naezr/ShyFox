@@ -108,7 +108,9 @@ Navigation bar on top of the window
     right: auto;
         
     /* make all panel content invisible (it will visible when hover) */
-    #nav-bar-customization-target > *:not(#unified-extensions-button){
+    #nav-bar-customization-target > *:not(#unified-extensions-button),
+    #nav-bar-overflow-button
+    {
        transition: var(--transition) !important;
        opacity: 0 !important;
     }
@@ -165,7 +167,8 @@ Navigation bar on top of the window
       border: var(--outline) !important;
       outline: var(--shadow) !important;
       
-      #nav-bar-customization-target > *:not([disabled="true"]) {opacity: 1 !important;}
+      #nav-bar-customization-target > *:not([disabled="true"]),
+      #nav-bar-overflow-button {opacity: 1 !important;}
       #nav-bar-customization-target > *[disabled="true"] {opacity: 0.5 !important;}
       
       &::before {opacity: 0}

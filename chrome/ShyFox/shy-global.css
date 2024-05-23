@@ -158,7 +158,6 @@ Sometimes Firefox shows notifications at the top of the window suggesting, for e
 #tab-notification-deck, .global-notificationbox{
   position: fixed !important;
   z-index: 2 !important;
-  
   vbox {background-color: transparent !important;}
   background-color: transparent !important;
   width: auto;
@@ -256,4 +255,63 @@ File Edit View History Bookmarks Tools Help
   margin-top: -1px !important;
   position: relative;
   z-index: 3;
+}
+
+
+/*
+
+--- ACCENT COLOR ----------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+.text-link, a {color: var(--shy-color) !important;}
+
+.footer-button {
+  &:not([disabled]) {
+    &[default], &.primary {
+      background-color: var(--shy-color) !important;;
+      &:hover {
+        background-color: color-mix(in srgb, black 10%,var(--shy-color)) !important;
+      }
+    }
+  }
+}
+
+::selection {
+    color: White !important;
+    background: var(--shy-color) !important;
+}
+
+#tracking-protection-icon-box[active]{
+  fill: var(--shy-color) !important;
+  list-style-image: url(chrome://browser/skin/tracking-protection.svg) !important;
+}
+
+.urlbarView-url {
+  .urlbarView-row:not([selected]) & {
+    color: var(--shy-color) !important;
+  }
+}
+
+.urlbarView-row[selected] {background-color: var(--shy-color) !important;}
+
+:root, panel, dialog, window {
+  --toolbar-field-focus-border-color: var(--shy-color) !important;
+  --color-accent-primary: var(--shy-color) !important;
+  --color-accent-primary-hover: var(--shy-color) !important;
+  --color-accent-primary-active: var(--shy-color) !important;
+  --toolbarbutton-icon-fill-attention: var(--shy-color) !important;
+  --focus-outline-color: var(--shy-color) !important;
+  --lwt-toolbarbutton-icon-fill-attention: var(--shy-color) !important;
+  --button-primary-bgcolor: var(--shy-color) !important;
+  --button-primary-hover-bgcolor: var(--shy-color) !important;
+  --button-primary-active-bgcolor: var(--shy-color) !important;
+  --in-content-primary-button-background: var(--shy-color) !important;
+  --in-content-primary-button-background-hover: var(--shy-color) !important;
+  --in-content-primary-button-background-active: var(--shy-color) !important;
+  --input-border-color: var(--shy-color) !important;
+  --uc-checkbox-checked-bgcolor: var(--shy-color) !important;
+  --checkbox-checked-bgcolor: var(--shy-color) !important;
+  --focus-outline-color: var(--shy-color) !important;
+  --in-content-link-color: var(--shy-color) !important;
 }

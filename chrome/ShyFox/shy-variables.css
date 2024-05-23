@@ -10,6 +10,8 @@ Values of these variables can be changed safely and most likely nothing will bre
 */
 
 :root{ 
+  /* accent color */
+  --shy-color: #3584E4;
   
   /* window border thickness and size of many margins */
   --margin: 0.8rem;

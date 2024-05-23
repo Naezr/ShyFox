@@ -65,6 +65,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     height: var(--toolbar-item-hgt) !important;
     scale: 0.88;
     padding: 10.5px !important;
+    border-radius: calc(var(--rounding) * 1.136363636) !important;
   }
 }
 

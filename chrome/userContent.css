@@ -1,16 +1,23 @@
+:root{
+  /* accent color */
+  --shy-color: #3584E4;
+  
+  --tr-col: rgba(66, 65, 77, 0.4);
+  --tr-hov-col: rgba(86, 85, 97, 0.4);
+  --tr-dark-col: rgba(36, 35, 47, 0.4);
+
+  --rounding: 11.5px;
+  --big-rounding: 15px;
+  --giant-rounding: 30px;
+
+  --blur-radius: 10px;
+}
+
 @-moz-document url("about:home"),url("about:newtab") {
   
   :root{
-    --shy-color: #3584E4;
-    --tr-col: rgba(66, 65, 77, 0.4);
-    --tr-hov-col: rgba(86, 85, 97, 0.4);
-    --tr-dark-col: rgba(36, 35, 47, 0.4);
-    
-    --rounding: 11.5px;
-    --big-rounding: 15px;
-    --giant-rounding: 30px;
-    
-    --blur-radius: 10px;
+    --newtab-primary-action-background: var(--shy-color) !important;
+    --newtab-primary-action-background-pocket: var(--shy-color) !important;
   }
   
   /* sites shortcuts */
@@ -123,8 +130,60 @@
   }
 }
 
-
-
-
-
-
+@-moz-document url-prefix("about:preferences"), url-prefix("about:addons") {
+  
+  /* accent color */
+  :root, panel, dialog, window {
+    --in-content-accent-color: var(--shy-color) !important;
+    --toolbar-field-focus-border-color: var(--shy-color) !important;
+    --color-accent-primary: var(--shy-color) !important;
+    --color-accent-primary-hover: var(--shy-color) !important;
+    --color-accent-primary-active: var(--shy-color) !important;
+    --toolbarbutton-icon-fill-attention: var(--shy-color) !important;
+    --focus-outline-color: var(--shy-color) !important;
+    --lwt-toolbarbutton-icon-fill-attention: var(--shy-color) !important;
+    --button-primary-bgcolor: var(--shy-color) !important;
+    --button-primary-hover-bgcolor: var(--shy-color) !important;
+    --button-primary-active-bgcolor: var(--shy-color) !important;
+    --in-content-primary-button-background: var(--shy-color) !important;
+    --in-content-primary-button-background-hover: var(--shy-color) !important;
+    --in-content-primary-button-background-active: var(--shy-color) !important;
+    --input-border-color: var(--shy-color) !important;
+    --uc-checkbox-checked-bgcolor: var(--shy-color) !important;
+    --checkbox-checked-bgcolor: var(--shy-color) !important;
+    --focus-outline-color: var(--shy-color) !important;
+    --in-content-link-color: var(--shy-color) !important;
+  }
+  
+  moz-message-bar {background-color: var(--in-content-button-background) !important;}
+  
+  /* rounded corners */
+  .category,
+  .sidebar-footer-link,
+  .info-box-container,
+  .web-appearance-choice,
+  moz-message-bar,
+  tree,
+  .qr-code-box,
+  .card,
+  #translations-manage-install-list
+  {border-radius: var(--big-rounding) !important;}
+  
+  button, menulist, input, search-textbox{
+    border-radius: var(--rounding) !important;
+  }
+  
+  .card-heading-image{
+    border-top-left-radius: var(--big-rounding) !important;
+    border-top-right-radius: var(--big-rounding) !important;
+  }
+  
+  listheader{
+    border-top-left-radius: var(--rounding) !important;
+    border-top-right-radius: var(--rounding) !important;
+  }
+  richlistbox{
+    border-bottom-left-radius: var(--rounding) !important;
+    border-bottom-right-radius: var(--rounding) !important;
+  }
+}
