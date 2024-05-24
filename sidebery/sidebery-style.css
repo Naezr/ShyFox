@@ -23,21 +23,21 @@
   );
 }
 
-/* when one tab in bottom row */
+/* 4 tabs in bottom row */
 
-.PinnedTabsBar .tab-wrapper:is(
+.PinnedTabsBar:has(.tab-wrapper:is(
   :nth-child(1), :nth-child(4), :nth-child(7), :nth-child(10),
   :nth-child(13), :nth-child(16), :nth-child(19), :nth-child(22),
   :nth-child(25), :nth-child(28), :nth-child(31), :nth-child(34),
   :nth-child(37), :nth-child(40), :nth-child(43), :nth-child(46)
-):last-child{
-  
-  width: -moz-available; 
-
-  .Tab {height: calc(var(--tabs-pinned-height) / 1.4);}
+):last-child){
+  .tab-wrapper:nth-last-child(-n + 4){
+    width: calc(100% / 4 - var(--tabs-margin) + 1.6px);
+    .Tab {height: calc(var(--tabs-pinned-height) / 1.3);}
+  }
 }
 
-/* when two tabs in bottom row */
+/* 2 tabs in bottom row */
 
 .PinnedTabsBar:has(.tab-wrapper:is(
   :nth-child(2), :nth-child(5), :nth-child(8), :nth-child(11),
@@ -47,12 +47,11 @@
 ):last-child){
   .tab-wrapper:nth-last-child(-n + 2){
     width: calc(100% / 2 - var(--tabs-margin) + 3.5px);
-    
     .Tab {height: calc(var(--tabs-pinned-height) / 1.2);}
   }
 }
 
-/* when 3 tabs in any row */
+/* 3 tabs in any row */
 
 .PinnedTabsBar .tab-wrapper{
   width: calc(100% / 3 - var(--tabs-margin) + 2.3px);
