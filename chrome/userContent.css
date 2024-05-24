@@ -153,11 +153,12 @@
     --checkbox-checked-bgcolor: var(--shy-color) !important;
     --focus-outline-color: var(--shy-color) !important;
     --in-content-link-color: var(--shy-color) !important;
+    --fxview-primary-action-background: var(--shy-color) !important;
   }
   
   moz-message-bar {background-color: var(--in-content-button-background) !important;}
   .cpu {background: linear-gradient(to left, var(--shy-color) calc(var(--bar-width) * 1%), transparent calc(var(--bar-width) * 1%)) !important;}
-  
+  button[role="tab"][selected]::before {display: none !important;}
   
   /* rounded corners */
   .category,
@@ -170,6 +171,8 @@
   select,
   .qr-code-box,
   .card,
+  section,
+  details,
   body[dir],
   .action-box, 
   .info-box,
@@ -177,9 +180,13 @@
   #translations-manage-install-list
   {border-radius: var(--big-rounding) !important;}
   
-  button, menulist, input, search-textbox{
-    border-radius: var(--rounding) !important;
-  }
+  button,
+  menulist,
+  input,
+  search-textbox,
+  .search-container,
+  a, span
+  {border-radius: var(--rounding) !important;}
   
   .card-heading-image{
     border-top-left-radius: var(--big-rounding) !important;
