@@ -197,7 +197,7 @@ Navigation bar on top of the window
     right: 120px !important;
     
     top: var(--margin) !important;
-    border-radius: var(--rounding) !important;
+    border-radius: var(--big-rounding) !important;
   }
   
   #urlbar-background, #searchbar {background-color: var(--tb-col) !important;}

@@ -155,24 +155,26 @@ Styles for Min Max Close buttons
 
 /* if GTK buttons position is right */
 @media (-moz-gtk-csd-available){
-@media not (-moz-gtk-csd-reversed-placement){
-  
-  /* style when not enough space - merged into window border */
-  #main-window[titlepreface*="="][titlepreface*="+"]:not([customizing]){
-    .titlebar-buttonbox-container{
-      top: -6px;
-      right: -10px;
-      opacity: 0.1;
-      &:hover{opacity: 1};
-      height: calc(var(--margin) + 6px);
+  @media not (-moz-gtk-csd-reversed-placement){
+    
+    .titlebar-buttonbox-container{padding-right: 3px}
+    
+    /* style when not enough space - merged into window border */
+    #main-window[titlepreface*="="][titlepreface*="+"]:not([customizing]){
+      .titlebar-buttonbox-container{
+        top: -6px;
+        right: -10px;
+        opacity: 0.1;
+        &:hover{opacity: 1};
+        height: calc(var(--margin) + 6px);
+      }
+    }
+
+    /* style when right toolbar is visible but navbar hidden - remove Min and Max */
+    #main-window:not([titlepreface*="="])[titlepreface*="+"]:not([customizing]){
+      .titlebar-min, .titlebar-restore, .titlebar-max {display: none}
     }
   }
-  
-  /* style when right toolbar is visible but navbar hidden - remove Min and Max */
-  #main-window:not([titlepreface*="="])[titlepreface*="+"]:not([customizing]){
-    .titlebar-min, .titlebar-restore, .titlebar-max {display: none}
-  }
-}
 }
 
 /* MacOS */

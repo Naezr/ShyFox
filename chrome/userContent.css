@@ -40,8 +40,8 @@
   .title {
     background-color: var(--newtab-background-color-secondary);
     & > span {
-      padding-left: 5px;
-      padding-right: 5px;
+      padding-left: 8px;
+      padding-right: 8px;
     }
   }
   
@@ -58,6 +58,8 @@
     border-radius: var(--big-rounding) !important;
     button {border-radius: var(--rounding) !important;}
   }
+  
+  .top-site-outer:not(:hover) .icon-pin-small{display: none !important;}
   
   /* searchbar */
   .search-handoff-button {

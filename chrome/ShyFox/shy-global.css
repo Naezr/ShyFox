@@ -129,7 +129,8 @@ Right click > Customize toolbar
   }
   
   .panel-arrowbox {right: 25px;}
-  .panel-arrowcontent{border-radius: var(--rounding) !important;}
+  .panel-arrowcontent{border-radius: var(--big-rounding) !important;}
+  toolbarspring {border-radius: var(--rounding) !important;}
   
   #customization-footer{
     position: fixed !important;
@@ -139,7 +140,7 @@ Right click > Customize toolbar
     left: 10px;
     
     background-color: var(--bg-col) !important;
-    border-radius: var(--rounding) !important;
+    border-radius: var(--big-rounding) !important;
   }
 }
 

@@ -23,10 +23,17 @@
   );
 }
 
+/* 1 pinned tab */
+
+.PinnedTabsBar .tab-wrapper:nth-child(1):last-child{
+  width: -moz-available !important;
+  .Tab{height: calc(var(--tabs-pinned-height) / 1.4);}
+}
+
 /* 4 tabs in bottom row */
 
 .PinnedTabsBar:has(.tab-wrapper:is(
-  :nth-child(1), :nth-child(4), :nth-child(7), :nth-child(10),
+  :nth-child(4), :nth-child(7), :nth-child(10),
   :nth-child(13), :nth-child(16), :nth-child(19), :nth-child(22),
   :nth-child(25), :nth-child(28), :nth-child(31), :nth-child(34),
   :nth-child(37), :nth-child(40), :nth-child(43), :nth-child(46)

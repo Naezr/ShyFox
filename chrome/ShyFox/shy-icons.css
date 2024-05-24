@@ -11,15 +11,17 @@ Adding icons to all sorts of places
 #PlacesChevron {list-style-image: url("../icons/bookmarks-toolbar.svg") !important;}
 
 /* hide folders icons */
-.bookmark-item[container="true"] .toolbarbutton-icon{
-  display: none
-}
+.bookmark-item[container="true"] .toolbarbutton-icon {display: none}
 
 /* other bookmarks */
 #OtherBookmarks{
   & > label {display: none !important;}
   & > image {margin-inline: 0px !important;}
-  list-style-image: url("../icons/book.svg") !important;
+  background-repeat: no-repeat;
+  background-position-x: 2px;
+  background-position-y: 7px;
+  width: 20px !important;
+  background-image: url("../icons/book.svg") !important;
 }
 
 .openintabs-menuitem{

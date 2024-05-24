@@ -246,7 +246,7 @@ Styles for sidebar
     left: 20px !important;
     margin-left: 0px !important;
     
-    border-radius: var(--rounding) !important;
+    border-radius: var(--big-rounding) !important;
   }
   
   #bookmarks-toolbar-placeholder .toolbarbutton-text {display: none !important;}

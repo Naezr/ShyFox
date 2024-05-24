@@ -261,8 +261,8 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     bottom: 10px !important;
     right: 10px !important;
     
-    border-bottom-left-radius: var(--rounding);
-    border-bottom-right-radius: var(--rounding);
+    border-bottom-left-radius: var(--big-rounding);
+    border-bottom-right-radius: var(--big-rounding);
   }
   
   #PanelUI-menu-button{
@@ -270,15 +270,16 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     right: 10px !important;
     
     background-color: var(--bg-col) !important;
-    border-top-left-radius: var(--rounding) !important;
-    border-top-right-radius: var(--rounding) !important;
+    border-top-left-radius: var(--big-rounding) !important;
+    border-top-right-radius: var(--big-rounding) !important;
   }
+  
+  #wrapper-unified-extensions-button {opacity: 1 !important;}
   
   #unified-extensions-button{
     top: 90px !important;
     right: 10px !important;
-    
     background-color: var(--bg-col) !important;
-    opacity: 1 !important;
+    .toolbarbutton-icon {opacity: 0.5 !important;}
   }
 }
