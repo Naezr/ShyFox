@@ -5,6 +5,7 @@
 3.2.3:
 - Added accent colors support
 - Added rounded corners to Firefox settings page
+- Instead of leaving one long pinned tab at the bottom, the pinned tabs in the last row are now grouped 4 at a time.
 - Small bugfixes
  
 [3.2.2](https://youtu.be/7lY8sna1B_Q?si=vdh6M2hZF1-GDH76):
