@@ -68,11 +68,15 @@
 ### Install
 
 <details><summary>0. Migrate from 2.0 </summary>
+ 
    <br/>
+   
    If you migrating from 2.0 you need delete fx-autoconfig.                     
    To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder.               
-   If you new user, skip it.                  
-   <br/><br/>
+   If you new user, skip it.      
+   
+   <br/>
+   
 </details>
 
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
@@ -92,13 +96,13 @@
     
     </details>
 
-    Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).
-    Or manually copy the style from `sidebery-style.css` and paste it into Style editor in Sidebery settings.
+    Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).                 
+    When updating Sidebery style, it is better to insert it from `sidebery-style.css` file manually. (Sidebery settings > Style editor)
     
     <details>
     <summary>Important notes</summary>
          
-    * When importing styles, Sidebery does not delete the old style, but inserts the new one after the old one. To make the ShyFox style for Sidebery work, go to the Style editor page in Sidebery settings and delete everything from the text box on the right. Then re-import the file from ShyFox.
+    * When importing styles fron json, Sidebery does not delete the old style, but inserts the new one after the old one. So if you have used Sidebery before, reset the extension's settings to default, making a backup before doing so. 
     * In general, you can use any style for Sidebery, not necessarily the one that comes with ShyFox. But I'm not responsible for how it will fit together.        
     
     </details>
