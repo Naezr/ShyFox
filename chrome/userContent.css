@@ -132,8 +132,10 @@
   }
 }
 
-@-moz-document url-prefix("about:"){
-  
+@-moz-document url-prefix("about:"):not(:is(
+  url("about:newtab"), url("about:home")
+  )){
+    
   /* accent color */
   :root, panel, dialog, window {
     --in-content-accent-color: var(--shy-color) !important;
@@ -166,8 +168,10 @@
   .category,
   .sidebar-footer-link,
   .info-box-container,
+  .sidebar-item--tall,
   .web-appearance-choice,
   moz-message-bar,
+  panel-list,
   tree,
   table,
   select,
@@ -182,7 +186,7 @@
   #translations-manage-install-list
   {border-radius: var(--big-rounding) !important;}
   
-  button,
+  button:not(:is([class*="devtools"], [class*="tab"])),
   menulist,
   input,
   search-textbox,

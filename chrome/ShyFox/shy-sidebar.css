@@ -66,7 +66,7 @@ Styles for sidebar
   visibility: visible !important;
   height: var(--toolbar-item-hgt) !important;
   top: 0px;
-  
+  border-radius: var(--rounding);
   margin-left: var(--buttonbox-left-wdt);
   
   width: calc(

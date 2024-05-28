@@ -162,15 +162,38 @@ Sometimes Firefox shows notifications at the top of the window suggesting, for e
   vbox {background-color: transparent !important;}
   background-color: transparent !important;
   width: auto;
-  top: calc(var(--top-margin) + var(--margin) / 2);
-  left: calc(var(--left-margin) + var(--margin) / 2);
+  
+  max-width: calc(
+    100vw 
+    - var(--margin)
+    - var(--right-margin)
+    - var(--left-margin)
+  );
+  
+  top: calc(
+    var(--top-margin) 
+    + var(--margin) / 2
+  );
+  
+  left: calc(
+    var(--left-margin) 
+    + var(--margin) / 2
+  );
   
   notification-message{
     border-radius: var(--big-rounding) !important;
+    background-color: var(--tb-col) !important;
+    color: var(--bt-col) !important;
     
     &::before {display: none !important;}
   }
+  
+  .footer-button {margin: 4px !important;}
 }
+
+/* notification close button color */
+button[type~="icon"][type~="ghost"][part="button"][size="small"] {fill: var(--bt-col) !important;}
+
 
 /*
 

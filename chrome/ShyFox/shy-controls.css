@@ -90,16 +90,16 @@ Styles for Min Max Close buttons
     }
   }
   
-  /* style when right toolbar is visible but navbar hidden */
-  #main-window:not([titlepreface*="="])[titlepreface*="+"] {  
-    .titlebar-button {padding: calc(var(--margin) / 2) 1.1px !important;}
-    .titlebar-buttonbox-container{
-      width: var(--toolbar-button-wdt) !important;
-      justify-content: right !important;
-      top: 0px;
-      opacity: 0.3;
-      &:hover{opacity: 1}
+  /* style when right toolbar is visible but navbar hidden - vertical orientation */
+  #main-window:not([titlepreface*="="])[titlepreface*="+"]:not([customizing]){
+    .titlebar-buttonbox-container{height: 85px}
+    .titlebar-buttonbox{
+      display: flex;
+      flex-direction: column-reverse;
     }
+    
+    --buttonbox-right-wdt: 0px  !important;
+    --buttonbox-right-hgt: 85px !important;
   }
 }
 
@@ -110,13 +110,8 @@ Styles for Min Max Close buttons
   --window-control-gtk-min-wdt: 0px;
 }
 
-@media (-moz-gtk-csd-maximize-button) {
-  :root {--window-control-gtk-max-wdt: 40px;}
-}
-
-@media (-moz-gtk-csd-minimize-button) {
-  :root {--window-control-gtk-min-wdt: 40px;}
-}
+@media (-moz-gtk-csd-maximize-button) { :root {--window-control-gtk-max-wdt: 40px;} }
+@media (-moz-gtk-csd-minimize-button) { :root {--window-control-gtk-min-wdt: 40px;} }
 
 @media (-moz-gtk-csd-available) {
   :root {
@@ -127,31 +122,32 @@ Styles for Min Max Close buttons
     );
   }
   
-  /* restore original GTK buttons design */
+  /* GTK buttons design */
   .titlebar-button{
-    & > .toolbarbutton-icon{background-image: none !important;}
-    &:hover > .toolbarbutton-icon {
-      background-color: color-mix(in srgb, currentColor 12%, transparent) !important;
+    .toolbarbutton-icon {
+      background-image: none !important;
+      stroke: none !important;
+      appearance: none !important;
+      border-radius: 100%;
+      padding: 4px;
+      -moz-context-properties: fill, fill-opacity !important;
+      background-color: color-mix(in srgb, var(--bt-col) 5%, transparent);
     }
-    margin-inline: 8px !important;
-    list-style-image: none !important;
-    appearance: auto !important;
-    background-color: var(--bt-col);
+    
+    &:hover .toolbarbutton-icon {background-color: color-mix(in srgb, var(--bt-col) 15%, transparent) !important;}
+
+    margin: 0 4px !important;
+    fill: var(--bt-col) !important;
+    color: var(--bt-col) !important;
   }
 
-  .titlebar-min {
-    -moz-default-appearance: -moz-window-button-minimize !important;
-  }
-  .titlebar-max {
-    -moz-default-appearance: -moz-window-button-maximize !important;
-  }
-  .titlebar-restore {
-    -moz-default-appearance: -moz-window-button-restore !important;
-  }
-  .titlebar-close {
-    -moz-default-appearance: -moz-window-button-close !important;
-  }
+  
+  .titlebar-close   {list-style-image: url("../icons/gtk-window-close-symbolic.svg")    !important;}
+  .titlebar-min     {list-style-image: url("../icons/gtk-window-minimize-symbolic.svg") !important;}
+  .titlebar-max     {list-style-image: url("../icons/gtk-window-maximize-symbolic.svg") !important;}
+  .titlebar-restore {list-style-image: url("../icons/gtk-window-restore-symbolic.svg")  !important;}
 }
+
 
 /* if GTK buttons position is right */
 @media (-moz-gtk-csd-available){
@@ -162,17 +158,35 @@ Styles for Min Max Close buttons
     /* style when not enough space - merged into window border */
     #main-window[titlepreface*="="][titlepreface*="+"]:not([customizing]){
       .titlebar-buttonbox-container{
-        top: -6px;
-        right: -10px;
+        top: 0px;
         opacity: 0.1;
         &:hover{opacity: 1};
-        height: calc(var(--margin) + 6px);
+        height: var(--margin);
+        right: 5px;
+        
+        .titlebar-button{
+          margin: 0px !important;
+          .toolbarbutton-icon {border-radius: 0 !important;}
+        }
       }
     }
 
-    /* style when right toolbar is visible but navbar hidden - remove Min and Max */
+    /* style when right toolbar is visible but navbar hidden - vertical orientation */
     #main-window:not([titlepreface*="="])[titlepreface*="+"]:not([customizing]){
-      .titlebar-min, .titlebar-restore, .titlebar-max {display: none}
+      
+      .titlebar-buttonbox{
+        display: flex;
+        flex-direction: column-reverse;
+        top: -6px;
+
+        & * {
+          margin-top: 3px !important;
+          margin-bottom: 3px !important;
+        }
+      }
+      
+      --buttonbox-right-wdt: 0px !important;
+      --buttonbox-right-hgt: 110px !important;
     }
   }
 }
@@ -204,6 +218,8 @@ Styles when GTK window controls on left or system is MacOS
     --nav-lft-btnbx-button: var(--toolbar-button-wdt);
   }
   
+  .titlebar-buttonbox-container{padding-left: 3px}
+  
   /* set position to left */
   .titlebar-buttonbox-container{
     left: 0px;
@@ -212,13 +228,17 @@ Styles when GTK window controls on left or system is MacOS
   
   /* style when not enough space - merged into window border */
   #main-window[titlepreface*="-"][titlepreface*="+"]:not([customizing]){
-    .titlebar-buttonbox-container{
-      top: -6px;
-      left: -10px;
-      opacity: 0.1;
-      &:hover{opacity: 1};
-      height: calc(var(--margin) + 6px) !important;
-      overflow: clip !important;
-    }
+      .titlebar-buttonbox-container{
+        top: 0px;
+        opacity: 0.1;
+        &:hover{opacity: 1};
+        height: var(--margin);
+        left: 5px;
+        
+        .titlebar-button{
+          margin: 0px !important;
+          .toolbarbutton-icon {border-radius: 0 !important;}
+        }
+      }
   }
 }

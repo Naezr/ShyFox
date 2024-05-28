@@ -178,9 +178,19 @@ Navigation bar on top of the window
   /* adaptive navbar width */
   @media (max-width: 1000px) {
     #nav-bar{
-      --navbar-real-wdt: calc(100vw - var(--margin) * 2) !important;
+      --navbar-real-wdt: calc(
+        100vw 
+        - var(--margin) * 2
+        - var(--right-margin)
+        - var(--buttonbox-left-wdt)
+        - var(--buttonbox-right-wdt)
+      ) !important;
+      
       max-width: none !important;
-      left: var(--margin) !important;
+      left: calc(
+        var(--margin)
+        + var(--buttonbox-left-wdt)
+      ) !important;
     }
   }
 }
@@ -193,8 +203,8 @@ Navigation bar on top of the window
 
 #main-window[customizing]{
   #nav-bar{
-    left: 120px !important;
-    right: 120px !important;
+    left: 140px !important;
+    right: 140px !important;
     
     top: var(--margin) !important;
     border-radius: var(--big-rounding) !important;

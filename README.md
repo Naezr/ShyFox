@@ -1,6 +1,12 @@
-# ShyFox 3.2.3
+# ShyFox 3.2.4
 
-<details><summary>Release notes</summary></summary> 
+<details><summary>Release notes</summary>
+
+3.2.4:
+- Notifications are now colored in the color of the theme
+- Window controls are now positioned vertically when appropriate
+- GTK window controls now adapt to theme colors
+- Minor fixes and improvements
 
 3.2.3:
 - Added accent colors support
@@ -19,7 +25,7 @@
 
 3.2:
 - Code comments rework
-- Enchanced readability
+- Enhanced readability
 - Lot of bugfixes
 
 3.1.2:
@@ -36,7 +42,7 @@
  - If you disable bookmarks toolbar all still look fine     
 
 3.0:
- - Navigtion bar now on top. I plan to add the ability to move it down like I did in version 2.0 but I don't want to delay this update any longer     
+ - Navigation bar now on top. I plan to add the ability to move it down like I did in version 2.0 but I don't want to delay this update any longer     
  - Bookmarks toolbar used now and putted above sidebar. Since it's quite short, it will be more convenient to use folders with short names and emoji instead of regular links         
  - Thin sidebar mode are removed. This mode was rather inconvenient and I didn't use it. Maybe I'll bring it back someday if someone asks for it         
  - All panels can be shown or hidden independently. Interestingly enough, I tried to implement it with various crutches for a long time, but nothing worked. It turned out that in userChrome Toggle settings it was possible to enable this functionality         
@@ -103,7 +109,7 @@
     <details>
     <summary>Important notes</summary>
          
-    * When importing styles fron json, Sidebery does not delete the old style, but inserts the new one after the old one. So if you have used Sidebery before, reset the extension's settings to default, making a backup before doing so. 
+    * When importing styles from json, Sidebery does not delete the old style, but inserts the new one after the old one. So if you have used Sidebery before, reset the extension's settings to default, making a backup before doing so. 
     * In general, you can use any style for Sidebery, not necessarily the one that comes with ShyFox. But I'm not responsible for how it will fit together.        
     
     </details>
@@ -155,7 +161,7 @@ Here you can place all the buttons you need, such as the history button, downloa
 
 ### To-Do
 
- * Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebey cannot be transparent)
+ * Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebery cannot be transparent)
  * Add icons to menubar and context menu
  * Add navbar on bottom support
  * Make it clearer when a window is in focus and when it is not
