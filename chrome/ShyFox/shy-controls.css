@@ -186,7 +186,11 @@ Styles for Min Max Close buttons
       }
       
       --buttonbox-right-wdt: 0px !important;
-      --buttonbox-right-hgt: 110px !important;
+      --buttonbox-right-hgt: calc(
+        35px
+        + var(--window-control-gtk-max-wdt)
+        + var(--window-control-gtk-min-wdt)
+      ) !important;
     }
   }
 }
