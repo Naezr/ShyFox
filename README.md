@@ -63,9 +63,11 @@
 
 [shy-floating-panels.webm](https://github.com/Naezr/ShyFox/assets/95460152/eb4de9b8-2268-43c8-b006-53c1494b4ec2)                  
 
-[shy-new-tab.webm](https://github.com/Naezr/ShyFox/assets/95460152/8e7837bf-ce58-4657-a3c6-9edb4b293f3b)                   
+[shy-new-tab.webm](https://github.com/Naezr/ShyFox/assets/95460152/8e7837bf-ce58-4657-a3c6-9edb4b293f3b)      
 
-[shy-window-controls.webm](https://github.com/Naezr/ShyFox/assets/95460152/95d4432f-6c49-4556-9432-7ebd69dd6b15)                   
+[shy-pins.webm](https://github.com/Naezr/ShyFox/assets/95460152/851c2ddd-5fc7-465d-a0bd-60b0b755bbe3)
+                
+[shy-controls.webm](https://github.com/Naezr/ShyFox/assets/95460152/10fc8ea0-c571-44b5-8e69-4e8486c71dc2)
 
 [shy-customize.webm](https://github.com/Naezr/ShyFox/assets/95460152/2029830e-8c20-4dfb-ac54-33a62c07d715)                  
 
