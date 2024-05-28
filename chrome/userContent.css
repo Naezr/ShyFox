@@ -132,10 +132,8 @@
   }
 }
 
-@-moz-document url-prefix("about:"):not(:is(
-  url("about:newtab"), url("about:home")
-  )){
-    
+@-moz-document url-prefix("about:"){
+
   /* accent color */
   :root, panel, dialog, window {
     --in-content-accent-color: var(--shy-color) !important;
@@ -186,7 +184,7 @@
   #translations-manage-install-list
   {border-radius: var(--big-rounding) !important;}
   
-  button:not(:is([class*="devtools"], [class*="tab"])),
+  button:not(:is([class*="devtools"], [class*="tab"], [class*="search"])),
   menulist,
   input,
   search-textbox,

@@ -88,6 +88,16 @@ Area where website is displayed
 /* rounded buttons */
 menulist, button {border-radius: var(--rounding) !important}
 
+/* dialog */
+
+#commonDialogWindow, #commonDialogWindow .titleIcon{
+  background-color: var(--tb-col) !important;
+  color: var(--bt-col) !important;
+}
+
+.dialogTemplate{
+  background-color: color-mix(in srgb, var(--bg-col) 80%, transparent) !important;
+}
 
 /*
 
