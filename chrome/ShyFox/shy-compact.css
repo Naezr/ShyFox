@@ -27,34 +27,44 @@ menupopup > :is(menuitem, menu){
 
 */
 
-#unified-extensions-panel #unified-extensions-view 
-{width: 100% !important;}
-
 #unified-extensions-view{
-    --uei-icon-size: 22px; 
-    --extensions-in-row: 4;
+  
+  --uei-icon-size: 24px;
+  --extensions-in-row: 4;
+
+  width: 100% !important;
+  :is(
+    toolbarseparator,
+    .unified-extensions-item-menu-button.subviewbutton,
+    .unified-extensions-item-action-button .unified-extensions-item-contents
+  ) {display: none !important;}
+
+  :is(
+    #overflowed-extensions-list,
+    #unified-extensions-area,
+    .unified-extensions-list 
+  ){
+    display: grid !important;
+    grid-template-columns: repeat(var(--extensions-in-row),auto);
+    justify-items: center !important;
+    align-items: center !important;
+  }
+
+  :is(
+    :is(
+      #unified-extensions-area,
+      .unified-extensions-list
+    ) .unified-extensions-item,
+    .unified-extensions-list
+  ){max-width: max-content;}
+
+  #unified-extensions-area {
+    margin-bottom: 5px !important;
+    border-top: 1px solid var(--panel-separator-color);
+    border-bottom: 1px solid var(--panel-separator-color);
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+
+  .unified-extensions-item-action-button {padding-right: 3px !important;}
 }
-
-#unified-extensions-view .panel-subview-body + toolbarseparator,
-#unified-extensions-view .unified-extensions-item-menu-button.subviewbutton,
-#unified-extensions-view .unified-extensions-item-action-button .unified-extensions-item-contents
-{display:none !important;}
-
-#unified-extensions-view #overflowed-extensions-list,
-#unified-extensions-view #unified-extensions-area,
-#unified-extensions-view .unified-extensions-list {
-  display: grid !important;
-  grid-template-columns: repeat(var(--extensions-in-row),auto);
-  justify-items: center !important;
-  align-items: center !important;
-}
-
-#unified-extensions-view .unified-extensions-list .unified-extensions-item,
-#unified-extensions-view .unified-extensions-list
-{max-width: max-content;}
-
-#unified-extensions-view #unified-extensions-area {
-  padding-bottom: 5px !important;
-  border-bottom: 1px solid var(--panel-separator-color);
-}
-

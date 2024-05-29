@@ -73,7 +73,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 #TabsToolbar{
   bottom: 2px;
   top: calc(var(--toolbar-item-hgt) * 2);
-  border-radius: var(--rounding);
+  border-bottom-right-radius: var(--rounding);
   background-color: var(--bg-col) !important;
 }
 
