@@ -95,8 +95,23 @@ menulist, button {border-radius: var(--rounding) !important}
   color: var(--bt-col) !important;
 }
 
+.dialogBox {border-radius: var(--big-rounding) !important;}
+
 .dialogTemplate{
-  background-color: color-mix(in srgb, var(--bg-col) 80%, transparent) !important;
+  background-color: transparent !important;
+  :before{
+    content: "";
+    position: fixed;
+    z-index: -1;
+    
+    width: 100vw;
+    height: 100vh;
+    
+    left: 0px;
+    top: 0px;
+    
+    background-color: color-mix(in srgb, var(--bg-col) 80%, transparent);
+  }
 }
 
 /*

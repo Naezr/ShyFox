@@ -195,13 +195,13 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     position: relative !important;
     
     /* styled spacer */
-    #customizableui-special-spring98{
-      background-color: var(--bt-col);
-      border-radius: var(--rounding);
+    toolbarspring{
+      background-color: var(--bt-col) !important;
+      border-radius: var(--rounding) !important;
       max-height: 1px !important;
       padding: 1px !important;
-      scale: 0.7;
-      opacity: 0.1;
+      scale: 0.75;
+      opacity: 0.15;
     }
     
     /* limit toolbar items width */

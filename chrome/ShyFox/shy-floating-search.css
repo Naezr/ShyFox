@@ -32,8 +32,7 @@ Cool floating search panel
     top: 0px;
     left: 0px;
     
-    background-color: var(--bg-col);
-    opacity: 0.8;
+    background-color: color-mix(in srgb, var(--bg-col) 80%, transparent);
   }
 }
 

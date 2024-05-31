@@ -115,7 +115,7 @@ Styles for sidebar
     
     background-color: transparent !important;
     
-    border-radius: var(--big-rounding);
+    border-radius: var(--big-rounding) !important;
     
     /* hover target (invisible box between window edge and panel) */
     &::before{
