@@ -110,7 +110,7 @@ In menu button
 #unified-extensions-manage-extensions .toolbarbutton-text,
 #widget-overflow .toolbarbutton-text,
 #protections-popup-tp-switch-breakage-link .toolbarbutton-text,
-#downloadsPanel .button-text,
+#downloadsPanel #downloadsHistory .button-text,
 .protections-popup-footer-button-label
 {padding-left: 6px !important;}
 

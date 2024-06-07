@@ -1,17 +1,40 @@
+/*== ShyFox Contents ================================================================================================================================
+
+Styles for some in-browser pages like settings or new tab
+
+
+--- SETTINGS ----------------------------------------------------------------------------------------------------------------------------------------
+
+Global variables for all content
+
+*/
+
 :root{
   /* accent color */
   --shy-color: #3584E4;
   
+  /* semi-transparent colors (used in new tab) */
   --tr-col: rgba(66, 65, 77, 0.4);
   --tr-hov-col: rgba(86, 85, 97, 0.4);
   --tr-dark-col: rgba(36, 35, 47, 0.4);
-
+  
+  /* roundings */
   --rounding: 11.5px;
   --big-rounding: 15px;
   --giant-rounding: 30px;
-
+  
+  /* intensity of blur (new tab) */
   --blur-radius: 10px;
 }
+
+/*
+
+--- NEW TAB -----------------------------------------------------------------------------------------------------------------------------------------
+
+Styles for new tab
+
+*/
+
 
 @-moz-document url("about:home"),url("about:newtab") {
   
@@ -132,10 +155,20 @@
   }
 }
 
-@-moz-document url-prefix("about:"){
+
+/*
+
+--- ABOUT: PAGES ------------------------------------------------------------------------------------------------------------------------------------
+
+Styles for settings, Firefox View, etc.
+
+*/
+
+
+@-moz-document url-prefix("about:"), url-prefix("chrome:"){
 
   /* accent color */
-  :root, panel, dialog, window {
+  :root, panel, dialog, window{
     --in-content-accent-color: var(--shy-color) !important;
     --toolbar-field-focus-border-color: var(--shy-color) !important;
     --color-accent-primary: var(--shy-color) !important;
@@ -158,6 +191,7 @@
     --fxview-primary-action-background: var(--shy-color) !important;
   }
   
+  :is(.icon, img)[src="chrome://global/skin/icons/info-filled.svg"] {fill: var(--shy-color) !important;}
   moz-message-bar {background-color: var(--in-content-button-background) !important;}
   .cpu {background: linear-gradient(to left, var(--shy-color) calc(var(--bar-width) * 1%), transparent calc(var(--bar-width) * 1%)) !important;}
   button[role="tab"][selected]::before {display: none !important;}
@@ -180,6 +214,7 @@
   body[dir],
   .action-box, 
   .info-box,
+  .dialogBox,
   #ping-picker,
   #translations-manage-install-list
   {border-radius: var(--big-rounding) !important;}
@@ -206,3 +241,4 @@
     border-bottom-right-radius: var(--rounding) !important;
   }
 }
+

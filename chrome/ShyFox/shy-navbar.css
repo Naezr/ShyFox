@@ -23,11 +23,19 @@ Navigation bar on top of the window
   margin-inline-end: var(--toolbar-start-end-padding) !important;
 }
 
-/* rounded urlbar */
-#urlbar-background {border-radius: var(--rounding) !important}
+/* rounded things */
+#urlbar-background,
+panel tree,
+richlistitem 
+{border-radius: var(--rounding) !important}
 
 /* limit items height */
 #nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
+
+#downloadsFooterButtons toolbarseparator {
+  margin-top: 6px !important;
+  padding-bottom: 2px !important;
+}
 
 /* 
 

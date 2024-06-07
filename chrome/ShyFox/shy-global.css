@@ -219,6 +219,8 @@ Sometimes Firefox shows notifications at the top of the window suggesting, for e
 /* notification close button color */
 button[type~="icon"][type~="ghost"][part="button"][size="small"] {fill: var(--bt-col) !important;}
 
+/* icon color */ 
+:is(.icon, img)[src="chrome://global/skin/icons/info-filled.svg"] {fill: var(--shy-color) !important;}
 
 /*
 
