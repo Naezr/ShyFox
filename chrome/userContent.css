@@ -14,9 +14,10 @@ Global variables for all content
   --shy-color: #3584E4;
   
   /* semi-transparent colors (used in new tab) */
-  --tr-col: rgba(66, 65, 77, 0.4);
-  --tr-hov-col: rgba(86, 85, 97, 0.4);
-  --tr-dark-col: rgba(36, 35, 47, 0.4);
+  --tr-col:       rgba(66, 65, 77, 0.4);
+  --tr-hov-col:   rgba(86, 85, 97, 0.4);
+  --tr-dark-col:  rgba(36, 35, 47, 0.4);
+  --tr-light-col: rgba(140, 140, 150, 0.4);
   
   /* roundings */
   --rounding: 11.5px;
@@ -36,26 +37,50 @@ Styles for new tab
 */
 
 
-@-moz-document url("about:home"),url("about:newtab") {
+@-moz-document url("about:home"), url("about:newtab") {
   
+  /* accent color */
   :root{
     --newtab-primary-action-background: var(--shy-color) !important;
     --newtab-primary-action-background-pocket: var(--shy-color) !important;
   }
   
-  /* sites shortcuts */
-  .top-site-button{
-    background-color: var(--newtab-background-color-secondary);
-    border-radius: var(--rounding) !important;
-    overflow: clip;
+  .toggle-button[aria-pressed="true"] {
+    background: var(--shy-color) !important;
+    border-color: transparent;
   }
+  
+  .home-section .section .sponsored-checkbox:checked {
+    background-color: var(--shy-color) !important;
+  }
+  
+  .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
+    border: 1px solid var(--shy-color) !important;
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--shy-color) 20%, transparent) !important;
+  }
+  
+  /* rounded corners */
+  .top-site-button,
+  .context-menu button,
+  .close-button,
+  .home-section .section .selector
+  {border-radius: var(--rounding) !important;}
+  
+  .top-site-outer, 
+  .top-site-inner,
+  .context-menu,
+  .icon-settings
+  {border-radius: var(--big-rounding) !important;}
+  
+  /* pinned links */
+  .top-site-button {overflow: clip;}
   
   .tile, .top-site-icon{
     background-color: transparent !important;
     box-shadow: none !important;
   }
   
-  .top-site-button{
+  .top-site-button, .customize-menu{
     background-color: var(--tr-col) !important;
     backdrop-filter: blur(var(--blur-radius));
   }
@@ -68,32 +93,22 @@ Styles for new tab
     }
   }
   
-  .top-site-outer:is(.active, :focus, :hover)
-  {background: rgba(150, 150, 170, 0.3) !important;}
-  
-  .top-site-outer, .top-site-inner {
-    & > a {padding: 0px 0px 0px !important;}
-    padding: 5px;
-    border-radius: var(--big-rounding) !important;
+  .top-site-outer:is(.active, :focus, :hover){
+    background: var(--tr-light-col) !important;
   }
   
-  .context-menu{
-    border-radius: var(--big-rounding) !important;
-    button {border-radius: var(--rounding) !important;}
+  .top-site-outer, .top-site-inner {
+    & > a {padding: 0 !important;}
+    padding: 5px;
   }
   
   .top-site-outer:not(:hover) .icon-pin-small{display: none !important;}
   
-  /* searchbar */
+  /* search box */
   .search-handoff-button {
     border-radius: 100px !important;
     background-color: var(--tr-dark-col) !important;
     backdrop-filter: blur(var(--blur-radius));
-  }
-  
-  .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
-    border: 1px solid var(--shy-color) !important;
-    box-shadow: 0 0 0 2px color-mix(in srgb, var(--shy-color) 20%, transparent) !important;
   }
   
   @media (height > 700px) {
@@ -115,44 +130,44 @@ Styles for new tab
     background-attachment: fixed !important;
   }
   
-  /* central box background */
+  /* central box */
   main{
     margin-top: 15% !important;
     height: 50%;
-    /* background-color: rgba(43, 42, 51, 0.3); */
-    background-color: rgba(130, 130, 130, 0.3);
+    background-color: var(--tr-light-col);
     border-radius: var(--giant-rounding);
   }
   
   /* settings */
-  .icon-settings{
-    border-radius: var(--big-rounding) !important;
-    &:hover{background-color: var(--tr-hov-col) !important;}
-  }
-  
-  .customize-menu{
-    background-color: var(--tr-col) !important;
-    backdrop-filter: blur(var(--blur-radius));
-  }
-  
-  .toggle-button[aria-pressed="true"] {
-    background: var(--shy-color) !important;
-    border-color: transparent;
-  }
-  
-  .home-section .section .sponsored-checkbox:checked {
-    background-color: var(--shy-color) !important;
-  }
-  
-  .close-button{
-    border-radius: var(--rounding) !important;
-  }
-  
+  .icon-settings:hover {background-color: var(--tr-hov-col) !important;}
+    
   .home-section .section .selector{
-    border-radius: var(--rounding) !important;
     background-color: var(--tr-col) !important;
     &:hover{background-color: var(--tr-hov-col) !important;}
   }
+  
+  /* autograph */
+  .activity-stream::before,
+  .activity-stream::after
+  {
+    font-family: monospace;
+    color: white;
+    opacity: 0.042;
+    position: fixed;
+    z-index: 99999;
+    bottom: 10px;
+  }
+  
+  .activity-stream::before{
+    content: "ShyFox by N2ezr";
+    left: 10px;
+  }
+  
+  .activity-stream::after{
+    content: "42 🤙";
+    right: 10px;
+  }
+  
 }
 
 
@@ -169,64 +184,82 @@ Styles for settings, Firefox View, etc.
 
   /* accent color */
   :root, panel, dialog, window{
-    --in-content-accent-color: var(--shy-color) !important;
-    --toolbar-field-focus-border-color: var(--shy-color) !important;
-    --color-accent-primary: var(--shy-color) !important;
-    --color-accent-primary-hover: var(--shy-color) !important;
-    --color-accent-primary-active: var(--shy-color) !important;
-    --toolbarbutton-icon-fill-attention: var(--shy-color) !important;
-    --focus-outline-color: var(--shy-color) !important;
-    --lwt-toolbarbutton-icon-fill-attention: var(--shy-color) !important;
-    --button-primary-bgcolor: var(--shy-color) !important;
-    --button-primary-hover-bgcolor: var(--shy-color) !important;
-    --button-primary-active-bgcolor: var(--shy-color) !important;
-    --in-content-primary-button-background: var(--shy-color) !important;
-    --in-content-primary-button-background-hover: var(--shy-color) !important;
     --in-content-primary-button-background-active: var(--shy-color) !important;
-    --input-border-color: var(--shy-color) !important;
-    --uc-checkbox-checked-bgcolor: var(--shy-color) !important;
-    --checkbox-checked-bgcolor: var(--shy-color) !important;
-    --focus-outline-color: var(--shy-color) !important;
-    --in-content-link-color: var(--shy-color) !important;
-    --fxview-primary-action-background: var(--shy-color) !important;
+    --in-content-primary-button-background-hover:  var(--shy-color) !important;
+    --lwt-toolbarbutton-icon-fill-attention:       var(--shy-color) !important;
+    --in-content-primary-button-background:        var(--shy-color) !important;
+    --toolbarbutton-icon-fill-attention:           var(--shy-color) !important;
+    --fxview-primary-action-background:            var(--shy-color) !important;
+    --toolbar-field-focus-border-color:            var(--shy-color) !important;
+    --button-primary-active-bgcolor:               var(--shy-color) !important;
+    --button-primary-hover-bgcolor:                var(--shy-color) !important;
+    --uc-checkbox-checked-bgcolor:                 var(--shy-color) !important;
+    --color-accent-primary-active:                 var(--shy-color) !important;
+    --color-accent-primary-hover:                  var(--shy-color) !important;
+    --checkbox-checked-bgcolor:                    var(--shy-color) !important;
+    --in-content-accent-color:                     var(--shy-color) !important;
+    --button-primary-bgcolor:                      var(--shy-color) !important;
+    --in-content-link-color:                       var(--shy-color) !important;
+    --color-accent-primary:                        var(--shy-color) !important;
+    --focus-outline-color:                         var(--shy-color) !important;
+    --input-border-color:                          var(--shy-color) !important;
   }
   
   :is(.icon, img)[src="chrome://global/skin/icons/info-filled.svg"] {fill: var(--shy-color) !important;}
   moz-message-bar {background-color: var(--in-content-button-background) !important;}
-  .cpu {background: linear-gradient(to left, var(--shy-color) calc(var(--bar-width) * 1%), transparent calc(var(--bar-width) * 1%)) !important;}
+  
+  .cpu{
+    background: linear-gradient(
+      to left,
+      var(--shy-color) 
+      calc(var(--bar-width) * 1%),
+      transparent 
+      calc(var(--bar-width) * 1%)
+    ) !important;
+  }
+  
   button[role="tab"][selected]::before {display: none !important;}
   
-  /* rounded corners */
+  /* big rounded corners */
+  .menupopup-arrowscrollbox,     moz-message-bar,
+  .web-appearance-choice,        panel-list,
+  .sidebar-footer-link,          body[dir],
+  .info-box-container,           menupopup,
+  .sidebar-item--tall,           section,
+  .qr-code-box,                  details,
+  .action-box,                   select,
+  .dialogBox,                    table,
+  .info-box,                     tree,
   .category,
-  .sidebar-footer-link,
-  .info-box-container,
-  .sidebar-item--tall,
-  .web-appearance-choice,
-  moz-message-bar,
-  panel-list,
-  tree,
-  table,
-  select,
-  .qr-code-box,
   .card,
-  section,
-  details,
-  body[dir],
-  .action-box, 
-  .info-box,
-  .dialogBox,
+
   #ping-picker,
   #translations-manage-install-list
+  
   {border-radius: var(--big-rounding) !important;}
   
-  button:not(:is([class*="devtools"], [class*="tab"], [class*="search"])),
-  menulist,
-  input,
-  search-textbox,
+  /* small rounded corners */
+  button:not(
+    :is(
+      [class*="devtools"],
+      [class*="search"],
+      [class*="tab"]
+    )
+  ),
+  
+  input:not([type="checkbox"]),
+  
   .search-container,
-  a, span
+  search-textbox,
+  menulist,
+  span,
+  a, 
+  
+  #activeLanguages
+  
   {border-radius: var(--rounding) !important;}
   
+  /* only top or bottom corners */
   .card-heading-image{
     border-top-left-radius: var(--big-rounding) !important;
     border-top-right-radius: var(--big-rounding) !important;
@@ -236,9 +269,15 @@ Styles for settings, Firefox View, etc.
     border-top-left-radius: var(--rounding) !important;
     border-top-right-radius: var(--rounding) !important;
   }
+  
   richlistbox{
     border-bottom-left-radius: var(--rounding) !important;
     border-bottom-right-radius: var(--rounding) !important;
   }
 }
 
+
+/* extensions popups rounding */
+@-moz-document url-prefix("moz-extension:"){
+  body {border-radius: var(--big-rounding) !important;}
+}

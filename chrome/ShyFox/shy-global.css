@@ -366,3 +366,8 @@ File Edit View History Bookmarks Tools Help
   --focus-outline-color: var(--shy-color) !important;
   --in-content-link-color: var(--shy-color) !important;
 }
+
+#historySwipeAnimationPreviousArrow,#historySwipeAnimationNextArrow {
+	--swipe-nav-icon-primary-color: color-mix(in srgb, var(--shy-color) 95%, white) !important;
+	--swipe-nav-icon-accent-color:  color-mix(in srgb, var(--shy-color) 30%, #241F3150) !important;
+}

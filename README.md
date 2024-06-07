@@ -1,6 +1,10 @@
-# ShyFox 3.2.4
+# ShyFox 3.2.5
 
 <details><summary>Release notes</summary>
+
+3.2.5
+- Applied accent color to Sidebery
+- Just small fixes
 
 3.2.4:
 - Notifications are now colored in the color of the theme
@@ -130,7 +134,7 @@
 ### Optional
 - You can change new tab `wallpaper.png` in `chrome` folder to you own image or remove it at all.
 - You can disable floating search bar. To do it go to the userChrome.css file and comment line that imports `shy-floating-search.css`.
-- You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css` and `userContent.css`
+- You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`, `userContent.css` and in Sidebery style.
 
 ### Additional information     
 

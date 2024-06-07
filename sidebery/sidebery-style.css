@@ -1,18 +1,25 @@
+
 /* manual variables */
 
-#root.root {--general-border-radius: 11.5px;}
-#root.root {--general-margin: 4px;}
+#root.root {
+  --general-border-radius: 11.5px;
+  --general-margin: 4px;
 
-#root.root {--nav-btn-margin: 8px;}
-#root.root {--nav-btn-width: 35px;}
-#root.root {--nav-btn-height: 35px;}
-#root.root {--nav-btn-len-margin: 3px;}
+  --nav-btn-margin: 8px;
+  --nav-btn-width: 35px;
+  --nav-btn-height: 35px;
+  --nav-btn-len-margin: 3px;
 
-#root.root {--tabs-audio-btn-width: 22px;}
-#root.root {--tabs-margin: 7px;}
-#root.root {--tabs-height: 35px;}
-#root.root {--tabs-inner-gap: 5px;}
-#root.root {--tabs-border-radius: 15px;}
+  --tabs-audio-btn-width: 22px;
+  --tabs-margin: 7px;
+  --tabs-height: 35px;
+  --tabs-inner-gap: 5px;
+  --tabs-border-radius: 15px;
+
+  --shy-color: #3584E4;
+
+  --accent: var(--shy-color);
+}
 
 /* PINNED TABS */
 
@@ -62,7 +69,7 @@
 
 .PinnedTabsBar .tab-wrapper{
   width: calc(100% / 3 - var(--tabs-margin) + 2.3px);
-  
+
   .Tab {width: -moz-available;}
 }
 
@@ -90,7 +97,7 @@
 
 /* shadow, outline and background */
 .Tab[data-pin="true"] .body {
-	box-shadow: 0px 0px 9px #00000030;
+  box-shadow: 0px 0px 9px #00000030;
   border: 1px solid var(--s-frame-bg);
   background-color: var(--toolbar-bg);
 }
@@ -112,12 +119,12 @@
   content: "";
   position: absolute;
   z-index: -999;
-  
+
   border-radius: 5px;
 
   width: 100%;
   height: 100%;
-  
+
   background-color: rgba(80, 80, 80, 0.2);
 }
 
@@ -126,3 +133,11 @@
 #nav_bar{
   padding-top: 0px !important
 }
+
+/* popup */
+.popup {margin: 6px !important}
+.popup-container {background-color: transparent}
+
+/* search */
+#search_bar {margin: 4px}
+
