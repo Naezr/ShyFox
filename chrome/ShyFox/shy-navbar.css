@@ -66,7 +66,7 @@ richlistitem
 }
 
 /* space for window controls and magic width calculations (это пиздец) */
-#main-window:not([inFullscreen])[titlepreface*="="]:not([titlepreface*="+"]){
+#main-window[titlepreface*="="]:not([titlepreface*="+"]){
   #nav-bar{
     margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));
     width: calc(
@@ -79,7 +79,7 @@ richlistitem
   }
 }
 
-#main-window:not([inFullscreen]):not([titlepreface*="="]):not([titlepreface*="+"]){
+#main-window:not([titlepreface*="="]):not([titlepreface*="+"]){
   #nav-bar{
     margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button));
     width: calc(
@@ -92,7 +92,7 @@ richlistitem
   }
 }
 
-#main-window:not([inFullscreen])[titlepreface*="-"]:not([titlepreface*="+"]){
+#main-window[titlepreface*="-"]:not([titlepreface*="+"]){
   #nav-bar{
     margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));
     width: calc(
@@ -107,7 +107,7 @@ richlistitem
   }
 }
 
-#main-window:not([inFullscreen])[titlepreface*="-"][titlepreface*="="]:not([titlepreface*="+"]){
+#main-window[titlepreface*="-"][titlepreface*="="]:not([titlepreface*="+"]){
   #nav-bar{
     width: calc(
       100vw
