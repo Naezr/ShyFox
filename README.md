@@ -4,6 +4,7 @@
 
 3.2.5
 - Applied accent color to Sidebery
+- Better show/hide animations for panels
 - Just small fixes
 
 3.2.4:

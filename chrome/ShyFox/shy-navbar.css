@@ -22,6 +22,7 @@ Navigation bar on top of the window
 .toolbaritem-combined-buttons:not([widget-type="button-and-view"], [widget-type="custom"]), .toolbaritem-menu-buttons {
   margin-inline-end: var(--toolbar-start-end-padding) !important;
 }
+#nav-bar-overflow-button {margin-inline-end: calc(var(--toolbar-start-end-padding) / 2) !important;}
 
 /* rounded things */
 #urlbar-background,
@@ -49,12 +50,11 @@ richlistitem
   
   transition: var(--transition) !important;
   
-  background-color: var(--bg-col) !important;
+  background-color: transparent !important;
   
   top: 0px;
-  left: var(--left-margin);
-  right: var(--right-margin) !important;;
-  
+  left: var(--left-margin) !important;
+  right: auto !important;
 }
 
 /* centered navbar text */
@@ -65,15 +65,61 @@ richlistitem
   #urlbar-input {text-align: center !important}
 }
 
-/* space for window controls */
-#main-window:not([inFullscreen])[titlepreface*="="]:not([titlepreface*="+"])
-{ #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));}}
+/* space for window controls and magic width calculations (это пиздец) */
+#main-window:not([inFullscreen])[titlepreface*="="]:not([titlepreface*="+"]){
+  #nav-bar{
+    margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));
+    width: calc(
+      100vw
+      - var(--left-margin)
+      - var(--right-margin)
+      - var(--buttonbox-right-wdt) 
+      + var(--nav-rgt-btnbx-margin)
+    ) !important;
+  }
+}
 
-#main-window:not([inFullscreen]):not([titlepreface*="="]):not([titlepreface*="+"])
-{ #nav-bar{margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button));}}
+#main-window:not([inFullscreen]):not([titlepreface*="="]):not([titlepreface*="+"]){
+  #nav-bar{
+    margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button));
+    width: calc(
+      100vw
+      - var(--left-margin)
+      - var(--right-margin)
+      - var(--buttonbox-right-wdt) 
+      + var(--nav-rgt-btnbx-button)
+    ) !important;
+  }
+}
 
-#main-window:not([inFullscreen])[titlepreface*="-"]:not([titlepreface*="+"])
-{ #nav-bar{margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));}}
+#main-window:not([inFullscreen])[titlepreface*="-"]:not([titlepreface*="+"]){
+  #nav-bar{
+    margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));
+    width: calc(
+      100vw
+      - var(--left-margin)
+      - var(--right-margin)
+      - var(--buttonbox-left-wdt) 
+      + var(--nav-lft-btnbx-margin)
+      - var(--buttonbox-right-wdt) 
+      + var(--nav-rgt-btnbx-button)
+    ) !important;
+  }
+}
+
+#main-window:not([inFullscreen])[titlepreface*="-"][titlepreface*="="]:not([titlepreface*="+"]){
+  #nav-bar{
+    width: calc(
+      100vw
+      - var(--left-margin)
+      - var(--right-margin)
+      - var(--buttonbox-left-wdt) 
+      + var(--nav-lft-btnbx-margin)
+      - var(--buttonbox-right-wdt) 
+      + var(--nav-rgt-btnbx-margin)
+    ) !important;
+  }
+}
 
 /* 
 
@@ -87,11 +133,9 @@ richlistitem
     overflow: visible !important;
     z-index: 3 !important;
     
-    background-color: transparent !important;
-    
     border-radius: var(--big-rounding);
     
-    width: var(--navbar-real-wdt);
+    width: var(--navbar-real-wdt) !important;
     max-width: calc(
       100vw 
       - var(--left-margin)
@@ -111,10 +155,8 @@ richlistitem
         + var(--left-margin) 
         - var(--right-margin) 
       ) / 2 
-    );
+    ) !important;
     
-    right: auto;
-        
     /* make all panel content invisible (it will visible when hover) */
     #nav-bar-customization-target > *:not(#unified-extensions-button),
     #nav-bar-overflow-button
@@ -216,6 +258,8 @@ richlistitem
     
     top: var(--margin) !important;
     border-radius: var(--big-rounding) !important;
+    
+    background-color: var(--bg-col) !important;
   }
   
   #urlbar-background, #searchbar {background-color: var(--tb-col) !important;}

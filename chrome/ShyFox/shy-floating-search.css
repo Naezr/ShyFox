@@ -5,7 +5,7 @@ Cool floating search panel
 
 */
 
-#urlbar:is([breakout][breakout-extend]){
+#urlbar[breakout-extend]{
   #urlbar-input {font-size: 24px !important;}
   #urlbar-input-container {height: 55px !important;}
   #urlbar-background {border-radius: 20px !important;}

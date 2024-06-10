@@ -78,15 +78,15 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --hide-bar-padding: 3px;        /* how much indicator bars showing the position of hidden panels is thinner than --margin */
   
   /* hiding the window border in fullscreen mode and assigning --margin to it in windowed mode */
-  --left-margin: 0px;
-  --right-margin: 0px;
-  --top-margin: 0px;
+  --left-margin:   0px;
+  --right-margin:  0px;
+  --top-margin:    0px;
   --bottom-margin: 0px; 
   
   &:not(:is([inFullscreen="true"], [inDOMFullscreen="true"])){
-    --left-margin: var(--margin);
-    --right-margin: var(--margin);
-    --top-margin: var(--margin);
+    --left-margin:   var(--margin);
+    --right-margin:  var(--margin);
+    --top-margin:    var(--margin);
     --bottom-margin: var(--margin);
   }
   
@@ -96,12 +96,13 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   }
   
   /* override built-in roundings with custom */
-  --tab-border-radius: var(--rounding) !important;
-  --toolbarbutton-border-radius: var(--rounding) !important;
-  --arrowpanel-menuitem-border-radius: var(--rounding) !important;
   --arrowpanel-border-radius: var(--big-rounding) !important;
-  --button-border-radius: var(--rounding) !important;
-  --border-radius-small: var(--rounding) !important;
+  
+  --arrowpanel-menuitem-border-radius: var(--rounding) !important;
+  --toolbarbutton-border-radius:       var(--rounding) !important;
+  --button-border-radius:              var(--rounding) !important;
+  --border-radius-small:               var(--rounding) !important;
+  --tab-border-radius:                 var(--rounding) !important;
   
   /* override one padding in navbar to match style */
   --toolbar-start-end-padding: calc(var(--margin) / 2) !important;

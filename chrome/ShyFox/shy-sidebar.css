@@ -7,10 +7,16 @@ Styles for sidebar
 
 */
 
-/* local variables */
+/* reserve space for bookmarks toolbar */
 :root{
   --little-gap: calc(var(--margin) / 1.5);
   --bookmarks-hgt: var(--toolbar-item-hgt);
+}
+
+/* remove space reserved for bookmarks toolbar if it hidden */
+#main-window:has(#PersonalToolbar[collapsed="true"]) {
+  --little-gap: 0px;
+  --bookmarks-hgt: 0px;
 }
 
 /* if sidebar is not hidden, this window is not floating popup and not in fullscreen video */
@@ -21,8 +27,6 @@ Styles for sidebar
 
 /* hide sidebar splitter */
 #sidebar-splitter {display: none}
-
-#sidebar-box {border-radius: var(--rounding) !important; }
 
 /* 
 
@@ -44,9 +48,11 @@ Styles for sidebar
   left: 0px;
 
   transition: var(--transition) !important;
-  background-color: var(--bg-col) !important;
+  background-color: transparent !important;
   
-  & > * {transition: var(--transition); !important}
+  padding-top: 0 !important;
+  
+  & > * {transition: var(--transition) !important;}
 }
 
 /* styles for sidebar */
@@ -56,8 +62,14 @@ Styles for sidebar
     var(--margin) / 2 
     + var(--bookmarks-hgt)
   );
+
+  height: calc(
+    100vh
+    - var(--margin) * 2
+    + var(--margin) / 2 
+    - var(--bookmarks-hgt)
+  )!important;
   
-  bottom: var(--margin);
   width: var(--sdbr-wdt) !important;
 }
 
@@ -73,18 +85,11 @@ Styles for sidebar
     var(--sdbr-wdt) 
     - var(--buttonbox-left-wdt)
   ) !important;
+  
   padding-top: 3px !important;
   padding-bottom: 3px !important;
   
   &[collapsed="true"] {display: none}
-}
-
-/* remove space reserved for bookmarks toolbar if it hidden */
-#main-window:has(
-  #PersonalToolbar[collapsed="true"]
-) {
-  --bookmarks-hgt: 0px;
-  --little-gap: 0px;
 }
 
 /* 
@@ -94,7 +99,6 @@ Styles for sidebar
 */
 
 #main-window[titlepreface*="-"]:not([customizing]){
-  --sdbr-real-wdt: 0px;
   
   /* styles for both sidebar and bookmaarks toolbar */
   #sidebar-box,
@@ -104,17 +108,15 @@ Styles for sidebar
     
     width: var(--sdbr-wdt) !important;
     
-    padding-top: calc(var(--margin) / 2);
-    padding-bottom: calc(var(--margin) / 2);
+    padding-top: calc(var(--margin) / 2 + 1px) !important;
+    padding-bottom: calc(var(--margin) / 2 + 1px) !important;
     
     left: calc(
       var(--left-margin) 
       + var(--panel-hide-ldg) 
       - var(--sdbr-wdt)
     ) !important;
-    
-    background-color: transparent !important;
-    
+
     border-radius: var(--big-rounding) !important;
     
     /* hover target (invisible box between window edge and panel) */
@@ -247,6 +249,8 @@ Styles for sidebar
     margin-left: 0px !important;
     
     border-radius: var(--big-rounding) !important;
+    
+    background-color: var(--bg-col) !important;
   }
   
   #bookmarks-toolbar-placeholder .toolbarbutton-text {display: none !important;}

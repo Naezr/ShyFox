@@ -153,7 +153,7 @@ Right click > Customize toolbar
     margin-right: 50px;
   }
   
-  .panel-arrowbox {right: 25px;}
+  .panel-arrowbox {opacity: 0 !important;}
   .panel-arrowcontent{border-radius: var(--big-rounding) !important;}
   toolbarspring {border-radius: var(--rounding) !important;}
   
@@ -346,28 +346,29 @@ File Edit View History Bookmarks Tools Help
 
 .urlbarView-row[selected] {background-color: var(--shy-color) !important;}
 
-:root, panel, dialog, window {
-  --toolbar-field-focus-border-color: var(--shy-color) !important;
-  --color-accent-primary: var(--shy-color) !important;
-  --color-accent-primary-hover: var(--shy-color) !important;
-  --color-accent-primary-active: var(--shy-color) !important;
-  --toolbarbutton-icon-fill-attention: var(--shy-color) !important;
-  --focus-outline-color: var(--shy-color) !important;
-  --lwt-toolbarbutton-icon-fill-attention: var(--shy-color) !important;
-  --button-primary-bgcolor: var(--shy-color) !important;
-  --button-primary-hover-bgcolor: var(--shy-color) !important;
-  --button-primary-active-bgcolor: var(--shy-color) !important;
-  --in-content-primary-button-background: var(--shy-color) !important;
-  --in-content-primary-button-background-hover: var(--shy-color) !important;
+:root, panel, dialog, window{
   --in-content-primary-button-background-active: var(--shy-color) !important;
-  --input-border-color: var(--shy-color) !important;
-  --uc-checkbox-checked-bgcolor: var(--shy-color) !important;
-  --checkbox-checked-bgcolor: var(--shy-color) !important;
-  --focus-outline-color: var(--shy-color) !important;
-  --in-content-link-color: var(--shy-color) !important;
+  --in-content-primary-button-background-hover:  var(--shy-color) !important;
+  --lwt-toolbarbutton-icon-fill-attention:       var(--shy-color) !important;
+  --in-content-primary-button-background:        var(--shy-color) !important;
+  --toolbarbutton-icon-fill-attention:           var(--shy-color) !important;
+  --fxview-primary-action-background:            var(--shy-color) !important;
+  --toolbar-field-focus-border-color:            var(--shy-color) !important;
+  --button-primary-active-bgcolor:               var(--shy-color) !important;
+  --button-primary-hover-bgcolor:                var(--shy-color) !important;
+  --uc-checkbox-checked-bgcolor:                 var(--shy-color) !important;
+  --color-accent-primary-active:                 var(--shy-color) !important;
+  --color-accent-primary-hover:                  var(--shy-color) !important;
+  --checkbox-checked-bgcolor:                    var(--shy-color) !important;
+  --in-content-accent-color:                     var(--shy-color) !important;
+  --button-primary-bgcolor:                      var(--shy-color) !important;
+  --in-content-link-color:                       var(--shy-color) !important;
+  --color-accent-primary:                        var(--shy-color) !important;
+  --focus-outline-color:                         var(--shy-color) !important;
+  --input-border-color:                          var(--shy-color) !important;
 }
 
 #historySwipeAnimationPreviousArrow,#historySwipeAnimationNextArrow {
-	--swipe-nav-icon-primary-color: color-mix(in srgb, var(--shy-color) 95%, white) !important;
-	--swipe-nav-icon-accent-color:  color-mix(in srgb, var(--shy-color) 30%, #241F3150) !important;
+	--swipe-nav-icon-primary-color: color-mix(in srgb, var(--shy-color) 80%, #FFFFFF50) !important;
+	--swipe-nav-icon-accent-color:  color-mix(in srgb, var(--shy-color) 20%, #00000050) !important;
 }
