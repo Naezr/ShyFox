@@ -80,6 +80,7 @@
 
 [shy-customize.webm](https://github.com/Naezr/ShyFox/assets/95460152/2029830e-8c20-4dfb-ac54-33a62c07d715)                  
 
+[shy-downloads.webm](https://github.com/Naezr/ShyFox/assets/95460152/f5a4adc2-ee2d-44f0-bc53-44b3b0297792)
 
 </details>
 
