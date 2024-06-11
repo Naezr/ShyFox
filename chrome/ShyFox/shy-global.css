@@ -33,7 +33,7 @@ Area where website is displayed
 #main-window:not([inDOMFullscreen="true"])[chromehidden=""]{
     
   /* if navbar is not hidden in f11 fullscreen */
-  &:not([titlepreface*="+"][inFullscreen="true"]){
+  &:not(:is([titlepreface*="+"], [titlepreface*="-"][titlepreface*="="])[inFullscreen="true"]){
     
     /* add rounded corners and outline to browser content */
     #appcontent browser {

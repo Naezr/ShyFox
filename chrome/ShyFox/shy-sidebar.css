@@ -216,7 +216,7 @@ Styles for sidebar
     #sidebar-box:hover,
     #sidebar-box:focus-within,
     #PersonalToolbar:hover,
-    #PersonalToolbar *[open]
+    #PersonalToolbar *:not(#firefox-view-button)[open]
   ) {
     #sidebar-box,
     #PersonalToolbar

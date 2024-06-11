@@ -211,7 +211,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
   &:has(
     #TabsToolbar:hover
     .titlebar-buttonbox-container:not(:hover),
-    #TabsToolbar-customization-target *[open],
+    #TabsToolbar-customization-target *:not(#firefox-view-button)[open],
     #PanelUI-menu-button[open],
     #PanelUI-menu-button:hover,
     #unified-extensions-button[open],
@@ -240,6 +240,17 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     #PanelUI-menu-button,
     #unified-extensions-button{
       margin-right: 2px !important;
+    }
+  }
+  
+  /* downloads indicator bar */
+  &:has(#downloads-button[progress="true"]){
+    #TabsToolbar::after{
+      background: linear-gradient(
+        to top,
+        var(--shy-color) 0 var(--shy-download-pcent),
+        var(--bt-col) var(--shy-download-pcent) 100%
+      ) !important;
     }
   }
 }

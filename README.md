@@ -1,6 +1,10 @@
-# ShyFox 3.2.5
+# ShyFox 3.3
 
 <details><summary>Release notes</summary>
+3.3:
+- Hidden panels no longer pop out if the Firefox View button located on them is active
+- Downloads indicator on hidden right toolbar
+- Using a bit of clownish code
 
 3.2.5
 - Applied accent color to Sidebery
