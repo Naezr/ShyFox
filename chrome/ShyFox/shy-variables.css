@@ -108,6 +108,14 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --toolbar-start-end-padding: calc(var(--margin) / 2) !important;
 }
 
+/* current tab loading progress */
+#main-window{
+  &:has(.tabbrowser-tab[selected][busy]                        ){--shy-tab-load-pcent: 20%;}
+  &:has(.tabbrowser-tab[selected][busy][pendingicon]           ){--shy-tab-load-pcent: 50%;}
+  &:has(.tabbrowser-tab[selected][busy][pendingicon][progress] ){--shy-tab-load-pcent: 85%;}
+  &:has(.tabbrowser-tab[selected][busy][progress]              ){--shy-tab-load-pcent: 95%;}
+}
+
 /* globalise download percentages (yes, i am a clown) */
 #main-window{
   &:has(#downloads-indicator-progress-inner[style="--download-progress-pcent: 0%;"]){--shy-download-pcent: 0%;}

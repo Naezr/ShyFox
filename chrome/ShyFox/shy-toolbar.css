@@ -243,7 +243,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     }
   }
   
-  /* downloads indicator bar */
+  /* downloads progress indicator bar */
   &:has(#downloads-button[progress="true"]){
     #TabsToolbar::after{
       background: linear-gradient(

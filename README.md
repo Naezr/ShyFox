@@ -1,10 +1,13 @@
-# ShyFox 3.3
+# ShyFox 3.3.1
 
 <details><summary>Release notes</summary>
- 
+
+3.3.1:
+- Fake tab loading progress on navbar
+
 3.3:
 - Hidden panels no longer pop out if the Firefox View button located on them is active
-- Downloads indicator on hidden right toolbar
+- Downloads progress indicator on hidden right toolbar
 - Using a bit of clownish code
 
 3.2.5

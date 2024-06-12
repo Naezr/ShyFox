@@ -65,6 +65,15 @@ richlistitem
   #urlbar-input {text-align: center !important}
 }
 
+/* tab loading progress in urlbar background */
+#main-window:not([titlepreface*="+"]):has(.tabbrowser-tab[selected][busy]) #urlbar-background{
+  background: linear-gradient(
+    to right,
+    color-mix(in srgb, var(--shy-color) 10%, transparent) 0 var(--shy-tab-load-pcent),
+    color-mix(in srgb, var(--bt-col) 10%, transparent) var(--shy-tab-load-pcent) 100%
+  ) !important;
+}
+
 /* space for window controls and magic width calculations (это пиздец) */
 #main-window[titlepreface*="="]:not([titlepreface*="+"]){
   #nav-bar{
@@ -199,6 +208,33 @@ richlistitem
     }
   }
   
+  /* tab loading progress bar */
+  &:has(.tabbrowser-tab[selected][busy]) #nav-bar::before{
+    background: linear-gradient(
+      to right,
+      var(--shy-color) 0 var(--shy-tab-load-pcent),
+      var(--bt-col) var(--shy-tab-load-pcent) 100%
+    ) !important;
+  }
+  
+  /* tab loading progress on whole panel */
+  &:has(.tabbrowser-tab[selected][busy]) #nav-bar::after{
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    z-index: -999;
+    width: 100%;
+    height: 100%;
+    bottom: 0px;
+    border-radius: var(--big-rounding);
+    opacity: 0;
+    background: linear-gradient(
+      to right,
+      var(--shy-color) 0 var(--shy-tab-load-pcent),
+      transparent var(--shy-tab-load-pcent) 100%
+    );
+  }
+  
   /* show navbar on hover or focus */
   &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
@@ -221,7 +257,8 @@ richlistitem
       #nav-bar-overflow-button {opacity: 1 !important;}
       #nav-bar-customization-target > *[disabled="true"] {opacity: 0.5 !important;}
       
-      &::before {opacity: 0}
+      &::before {opacity: 0;}
+      &::after {opacity: 0.1;} /* opacity of tab load progress indicator */
     }
   }
   
