@@ -86,6 +86,8 @@
 
 [shy-downloads.webm](https://github.com/Naezr/ShyFox/assets/95460152/f5a4adc2-ee2d-44f0-bc53-44b3b0297792)
 
+[shy-page-load.webm](https://github.com/Naezr/ShyFox/assets/95460152/23aaa483-14ee-4976-9fc6-a6803e3f5826)
+
 </details>
 
 ### Install
