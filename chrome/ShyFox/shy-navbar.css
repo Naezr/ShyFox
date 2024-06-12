@@ -24,12 +24,6 @@ Navigation bar on top of the window
 }
 #nav-bar-overflow-button {margin-inline-end: calc(var(--toolbar-start-end-padding) / 2) !important;}
 
-/* rounded things */
-#urlbar-background,
-panel tree,
-richlistitem 
-{border-radius: var(--rounding) !important}
-
 /* limit items height */
 #nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
 

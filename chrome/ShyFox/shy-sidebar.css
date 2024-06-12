@@ -105,11 +105,7 @@ Styles for sidebar
   #PersonalToolbar
   {
     z-index: 3 !important;
-    
     width: var(--sdbr-wdt) !important;
-    
-    padding-top: calc(var(--margin) / 2 + 1px) !important;
-    padding-bottom: calc(var(--margin) / 2 + 1px) !important;
     
     left: calc(
       var(--left-margin) 
@@ -141,6 +137,9 @@ Styles for sidebar
   
   /* styles for sidebar */
   #sidebar-box{
+    padding-top: calc(var(--margin) / 2 + 1px) !important;
+    padding-bottom: calc(var(--margin) / 2 + 1px) !important;
+    
     height: calc(
       100vh
       - var(--bookmarks-hgt)

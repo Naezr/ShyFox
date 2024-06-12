@@ -52,6 +52,21 @@ Area where website is displayed
       pointer-events: none;
     }
   }
+  
+  /* if in f11 fullscreen sidebar active but navbar not */
+  &:not([titlepreface*="-"])[titlepreface*="+"][inFullscreen="true"]{
+    #appcontent browser {border-left: var(--outline);}
+  }
+  
+  /* if in f11 fullscreen toolbar active but navbar not */
+  &:not([titlepreface*="="])[titlepreface*="+"][inFullscreen="true"]{
+    #appcontent browser {border-right: var(--outline);}
+  }
+  
+  /* if in f11 fullscreen nor toolbar or sidebar active but navbar is */
+  &[titlepreface*="-"][titlepreface*="="]:not([titlepreface*="+"])[inFullscreen="true"]{
+    #appcontent browser {border-top: var(--outline);}
+  }
 }
 
 /* private mode outline */
@@ -85,11 +100,19 @@ Area where website is displayed
   outline: var(--shadow) !important;
 }
 
-/* rounded buttons */
-menulist, button {border-radius: var(--rounding) !important}
+/* rounded things */
+richlistitem,
+panel tree,
+menulist,
+button,
+input:not([type="checkbox"]),
+#urlbar-background
+
+{border-radius: var(--rounding) !important}
+
+richlistbox{border-radius: var(--big-rounding) !important;}
 
 /* dialog */
-
 #commonDialogWindow, #commonDialogWindow .titleIcon{
   background-color: var(--tb-col) !important;
   color: var(--bt-col) !important;
