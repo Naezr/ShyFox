@@ -106,7 +106,8 @@ panel tree,
 menulist,
 button,
 input:not([type="checkbox"]),
-#urlbar-background
+#urlbar-background,
+#preview-image
 
 {border-radius: var(--rounding) !important}
 
@@ -114,11 +115,15 @@ richlistbox{border-radius: var(--big-rounding) !important;}
 
 /* dialog */
 #commonDialogWindow, #commonDialogWindow .titleIcon{
-  background-color: var(--tb-col) !important;
+  background-color: transparent !important;
   color: var(--bt-col) !important;
 }
 
-.dialogBox {border-radius: var(--big-rounding) !important;}
+.dialogBox {
+  border-radius: var(--big-rounding) !important;
+  border: var(--outline) !important;
+  background-color: var(--tb-col) !important;
+}
 
 .dialogTemplate{
   background-color: transparent !important;
@@ -136,6 +141,71 @@ richlistbox{border-radius: var(--big-rounding) !important;}
     background-color: color-mix(in srgb, var(--bg-col) 80%, transparent);
   }
 }
+
+.dialogBox {margin-top: var(--margin) !important;}
+
+/*
+
+--- SCREENSHOTS -------------------------------------------------------------------------------------------------------------------------------------
+
+Ctrl + Shift + S
+
+*/
+
+#screenshotsPagePanel{
+  --vert-offset: 8px;
+  --hor-offset: 10px;
+  
+  position: fixed !important;
+  transition: var(--transition);
+  
+  bottom: calc(
+    var(--bottom-margin) 
+    - var(--vert-offset)
+    + var(--screenshot-tool-hgt)
+  );
+  
+  left: var(--hor-offset);
+  
+  z-index: -1 !important;
+  width: var(--sdbr-wdt) !important;
+}
+
+#screenshotsPagePanel[hidden]{
+  display: flex !important;
+  opacity: 0;
+  pointer-events: none !important;
+  bottom: 0px !important;
+}
+
+screenshots-buttons{
+  background-color: transparent !important;
+  transition: var(--transition);
+  position: absolute !important;
+  display: flex !important;
+  height: var(--screenshot-tool-hgt) !important;
+  width: var(--sdbr-wdt) !important;
+}
+
+/* when sidebar hidden */
+#main-window[titlepreface*="-"]{
+  #screenshotsPagePanel{
+    bottom: calc(
+      var(--bottom-margin)
+      + var(--margin)
+      - var(--vert-offset)
+      + var(--screenshot-tool-hgt)
+      );
+
+    left: calc(
+      var(--left-margin)
+      + var(--margin) * 2
+    );
+  }
+  
+  screenshots-buttons {background-color: var(--bg-col) !important;}
+}
+
 
 /*
 
@@ -206,6 +276,7 @@ Sometimes Firefox shows notifications at the top of the window suggesting, for e
 
 #tab-notification-deck, .global-notificationbox{
   position: fixed !important;
+  transition: var(--transition) !important;
   z-index: 2 !important;
   vbox {background-color: transparent !important;}
   background-color: transparent !important;

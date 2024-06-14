@@ -222,6 +222,7 @@ Styles for settings, Firefox View, etc.
   
   /* big rounded corners */
   .menupopup-arrowscrollbox,     moz-message-bar,
+  .addon-detail-contribute,
   .web-appearance-choice,        panel-list,
   .sidebar-footer-link,          body[dir],
   .info-box-container,           menupopup,
@@ -231,6 +232,7 @@ Styles for settings, Firefox View, etc.
   .dialogBox,                    table,
   .info-box,                     tree,
   .category,
+  .toolbar,
   .modal,
   .card,
 
@@ -281,4 +283,19 @@ Styles for settings, Firefox View, etc.
 /* extensions popups rounding */
 @-moz-document url-prefix("moz-extension:"){
   body {border-radius: var(--big-rounding) !important;}
+}
+
+/* screenshots */
+/* variables aren't used because they don't work here for some reason */
+
+#screenshots-component{
+  button {border-radius: 11.5px !important;}
+  #buttons-container {border-radius: 15px !important;}
+
+  .screenshots-button {
+    --in-content-primary-button-background: #3584E4 !important;
+    --in-content-primary-button-background-hover: color-mix(in oklab, var(--in-content-primary-button-background), white 10%);
+    --in-content-primary-button-background-active: color-mix(in oklab, var(--in-content-primary-button-background), white 20%);
+    --in-content-focus-outline-color: #3584E4;
+  }
 }

@@ -92,6 +92,17 @@ Styles for sidebar
   &[collapsed="true"] {display: none}
 }
 
+/* padding for screenshot control buttons */
+#main-window:not([titlepreface*="-"]):has(#screenshotsPagePanel:not([hidden])){
+  #sidebar-box{
+    padding-bottom: calc(
+      var(--screenshot-tool-hgt)
+      - var(--margin)
+      + var(--bottom-margin)
+    ) !important;
+  }
+}
+
 /* 
 
 --- SIDEBAR HIDDEN ----------------------------------------------------------------------------------------------------------------------------------

@@ -76,6 +76,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --toolbar-item-hgt: 40px;       /* height of all panels elements: buttons, urlbar, etc.                                   */
   --toolbar-button-wdt: 45px;     /* width of all panels buttons                                                            */
   --hide-bar-padding: 3px;        /* how much indicator bars showing the position of hidden panels is thinner than --margin */
+  --screenshot-tool-hgt: 145px;   
   
   /* hiding the window border in fullscreen mode and assigning --margin to it in windowed mode */
   --left-margin:   0px;

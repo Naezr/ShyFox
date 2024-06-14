@@ -67,6 +67,19 @@ findbar{
   {border-radius: var(--rounding) !important;}
 }
 
+findbar[hidden]{
+  margin-bottom: unset !important;
+  transition-delay: unset !important;
+  visibility: visible !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  bottom: calc(
+    0px 
+    - var(--toolbar-item-hgt) * 2
+    - var(--margin) * 2
+  ) !important;
+}
+
 /* adaptive findbar width */
 @media (max-width: 1500px) {
    :root{

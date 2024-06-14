@@ -1,6 +1,9 @@
-# ShyFox 3.3.1
+# ShyFox 3.3.2
 
 <details><summary>Release notes</summary>
+
+3.3.2:
+- Integrating screenshot tool with the theme (ctrl + shift + s)
 
 3.3.1:
 - Fake tab loading progress on navbar
