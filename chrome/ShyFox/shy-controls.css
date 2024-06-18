@@ -45,8 +45,8 @@ Styles for Min Max Close buttons
   --nav-lft-btnbx-button: 0px;
 }
 
-/* remove window controls in f11 fullscreen */
-:root[sizemode="fullscreen"] {
+/* remove window controls in f11 fullscreen and in clean mode */
+#main-window:is([sizemode="fullscreen"], [titlepreface*="?"]) {
   --window-control-wdt: 0px;
   
   --buttonbox-left-hgt: 0px;
@@ -156,10 +156,10 @@ Styles for Min Max Close buttons
     .titlebar-buttonbox-container{padding-right: 5px}
     
     /* style when not enough space - merged into window border */
-    #main-window[titlepreface*="="][titlepreface*="+"]:not([customizing]){
+    #main-window:is([titlepreface*="="][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
       .titlebar-buttonbox-container{
         top: 0px;
-        opacity: 0.1;
+        opacity: calc(var(--hide-bar-opct) / 2 );
         &:hover{opacity: 1};
         height: var(--margin);
         right: 5px;
@@ -231,10 +231,10 @@ Styles when GTK window controls on left or system is MacOS
   }
   
   /* style when not enough space - merged into window border */
-  #main-window[titlepreface*="-"][titlepreface*="+"]:not([customizing]){
+  #main-window:is([titlepreface*="-"][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
       .titlebar-buttonbox-container{
         top: 0px;
-        opacity: 0.1;
+        opacity: calc(var(--hide-bar-opct) / 2 );
         &:hover{opacity: 1};
         height: var(--margin);
         left: 5px;

@@ -25,6 +25,7 @@ Cool floating search panel
     content: "";
     position: fixed;
     pointer-events: none;
+    border-radius: var(--rounding);
     
     width: 100vw;
     height: 100vh;
