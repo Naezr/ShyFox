@@ -1,6 +1,16 @@
-# ShyFox 3.3.2
+# ShyFox
+
+<div>
+ <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
+ <a href='https://github.com/Naezr/ShyFox'><img src='https://img.shields.io/badge/version-3.3.2-blue'></a>
+ <a href='https://github.com/Naezr/ShyFox/commits'><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Naezr/ShyFox"></a>
+</div>
+
+<br/>
 
 <details><summary>Release notes</summary>
+
+</br>
 
 3.3.2:
 - Integrating screenshot tool with the theme (ctrl + shift + s)
@@ -65,12 +75,17 @@
 
 2.0 version still available [here](https://github.com/Naezr/ShyFox/tree/2.0-old)
 
+</br>
+
 </details>
 
 ## Shy on surface, but heavy inside
 
-![shy-all-visible](https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd)
-![shy-all-hidden](https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036)
+<div align="center">
+ <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036'>
+</div>
+
+[Video showcase](showcase.md)
 
 ### Install
 
