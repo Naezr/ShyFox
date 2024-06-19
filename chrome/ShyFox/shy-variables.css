@@ -47,10 +47,10 @@ Values of these variables can be changed safely and most likely nothing will bre
   }
   
   /* colors */
-  --shadow-col:  #00000020;  /* color of the translucent outline that imitates a shadow                                                 */
-  --private-col: #6e00bc80;  /* private mode outline color                                                                              */
-  --debug-col: rgba(0, 0, 255, 0.2);    /* rgba(0, 0, 255, 0.2); color of hidden panels hover hitboxes */
-  --debug-col-2: rgba(0, 255, 0, 0.2);  /* rgba(0, 255, 0, 0.2); color of window dragging hitboxes */
+  --shadow-col:  #00000020;    /* color of the translucent outline that imitates a shadow     */
+  --private-col: #6e00bc80;    /* private mode outline color                                  */
+  --debug-col: transparent;    /* rgba(0, 0, 255, 0.2); color of hidden panels hover hitboxes */
+  --debug-col-2: transparent;  /* rgba(0, 255, 0, 0.2); color of window dragging hitboxes     */
 }
 
 /* 

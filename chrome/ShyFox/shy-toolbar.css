@@ -193,12 +193,11 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     top: 0px !important;
     /* styled spacer */
     toolbarspring{
-      background-color: var(--bt-col) !important;
+      background-color: color-mix(in srgb, var(--bt-col) 15%, var(--debug-col-2)) !important;
       border-radius: var(--rounding) !important;
       max-height: 1px !important;
       padding: 1px !important;
       scale: 0.75;
-      opacity: 0.15;
     }
     
     /* limit toolbar items width */

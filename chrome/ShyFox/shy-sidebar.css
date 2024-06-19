@@ -76,6 +76,7 @@ Styles for sidebar
 /* drag window by empty space in bookmarks toolbar */
 #PersonalToolbar > *, #PlacesToolbarItems .bookmark-item[style="visibility: hidden;"]{
   -moz-window-dragging: drag !important;
+  background-color: var(--debug-col-2) !important;
 }
 
 /* styles for bookmarks toolbar */
@@ -294,7 +295,7 @@ Styles for sidebar
   #sidebar-box[hidden="true"],
   #sidebar-box:not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"])
  ) {
-  #browser::before{
+  &::before{
     content: "Open Sidebery!";
     position: fixed;
     z-index: 9999;

@@ -45,7 +45,7 @@ Styles for Min Max Close buttons
   --nav-lft-btnbx-button: 0px;
 }
 
-/* remove window controls in f11 fullscreen and in clean mode */
+/* remove window controls in f11 fullscreen or in clean mode */
 #main-window:is([sizemode="fullscreen"], [titlepreface*="?"]) {
   --window-control-wdt: 0px;
   
