@@ -11,7 +11,7 @@
 
 <details><summary>Release notes</summary>
 
-</br>
+<br/>
 
 3.3.2:
 - Integrating screenshot tool with the theme (ctrl + shift + s)
@@ -76,11 +76,11 @@
 
 2.0 version still available [here](https://github.com/Naezr/ShyFox/tree/2.0-old)
 
-</br>
+<br/>
 
 </details>
 
-## Shy on surface, but heavy inside
+### Shy on surface, but heavy inside
 
 <div align="center">
  <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036'>
@@ -88,70 +88,106 @@
 
 [Video showcase](showcase.md)
 
-### Install
+## Install
 
-<details><summary>0. Migrate from 2.0 </summary>
+<details><summary>Migrate from 2.0 </summary>
  
    <br/>
    
    If you migrating from 2.0 you need delete fx-autoconfig.                     
-   To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder.               
-   If you new user, skip it.      
+   To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder.      
    
-   <br/>
+   If you new user, skip it.      
    
 </details>
 
+### Minimal
+
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
-2. Install and configure theese extensions [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery), [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/), [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour).
-    <details><summary>Userchrome toggle settings</summary> 
-    
-    Make sure you click each "Apply changes" button, preferably several times
-    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/ddc7fbcb-ee97-43be-b2c9-81ff2f948ef4)
-    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/49d593e4-aa26-47b0-8a9a-4a6f2964a919)
+2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/)
+   
+   <details><summary>Userchrome toggle settings</summary> 
+   
+   <br/>
+   
+   Make sure you click each "Apply changes" button, preferably several times
+   
+   ![settings1](https://github.com/Naezr/ShyFox/assets/95460152/ddc7fbcb-ee97-43be-b2c9-81ff2f948ef4)
+   ![settings2](https://github.com/Naezr/ShyFox/assets/95460152/87f4f31f-183a-4643-8dc5-9c56ca8b3ba7)
+   ![settings4](https://github.com/Naezr/ShyFox/assets/95460152/e0b823db-f235-4e37-9de1-c6a7d30def2a)
 
-    
-    </details>     
-     
-    <details><summary>Adaptive Tab Bar Color settings</summary>  
-    
-    ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
-    
-    </details>
-
+   It would also be nice to customize the shortcuts for toggles. I recommend these:
+   
+   ![how to](https://github.com/Naezr/ShyFox/assets/95460152/a945e58b-0eb5-40d3-8d2a-20cc103543ea)
+   ![shortcuts](https://github.com/Naezr/ShyFox/assets/95460152/44878112-8503-45a7-9fc1-a753033160d5)
+   
+   <br/>
+   
+   </details>    
+   
+4. Install and configure [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
+ 
     Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).                 
     When updating Sidebery style, it is better to insert it from `sidebery-style.css` file manually. (Sidebery settings > Style editor)
     
-    <details>
-    <summary>Important notes</summary>
-         
-    * When importing styles from json, Sidebery does not delete the old style, but inserts the new one after the old one. So if you have used Sidebery before, reset the extension's settings to default, making a backup before doing so. 
-    * In general, you can use any style for Sidebery, not necessarily the one that comes with ShyFox. But I'm not responsible for how it will fit together.        
-    
-    </details>
+    > NOTES
+    > 
+    > When importing styles from json, Sidebery does not delete the old style,but inserts the new one after the old one.
+    > So if you have used Sidebery before, reset the extension's settings to default, making a backup before doing so.
+    > 
+    > In general, you can use any style for Sidebery, not necessarily the one that comes with ShyFox.
+    > But I'm not responsible for how it will fit together.        
 
-
-4. Close Firefox.
-5. Put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
-6. Launch Firefox and open Sidebery in sidebar
-7. Go to the customizing page and move buttons to something like that
-   <details><summary>Customize</summary>
+5. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
+6. Launch Firefox and open Sidebery in the sidebar
+7. Go to the customizing page (right click on blank space > customize toolbar) and move buttons to something like that
    
-   ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/f13f96ff-4edd-4980-92a6-8f943b300cd7)
-
+   <details><summary>Buttons layout</summary>
+   
+   <br/>
+   
+   ![layout](https://github.com/Naezr/ShyFox/assets/95460152/ea349f5c-bfc4-4af0-bd55-4715d7bf6755)
+   
+   <br/>
+   
    </summary>
+
+### Extra
+
+If you don't like the way the standard dark and light themes look, you can colorize your ShyFox!
+
+There are three ways you can do it, choose one:
+- Install some theme from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/themes/) (not all will be well compatible)
+- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/)
+- Install the [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) extension and then ShyFox will adapt to the colors of the currently open website.
+ 
+   <details><summary> Recommended Adaptive Tab Bar Color settings</summary>  
    
-### Optional
-- You can change new tab `wallpaper.png` in `chrome` folder to you own image or remove it at all.
-- You can disable floating search bar. To do it go to the userChrome.css file and comment line that imports `shy-floating-search.css`.
-- You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`, `userContent.css` and in Sidebery style.
+   <br/>
+   
+   ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
+   
+   <br/>
+   
+   > NOTE                    
+   > If you make the `Tab bar` and `Toolbar` `Background` colors the same, the pull-down hidden panels will have a transparent background.
+   
+   <br/>
+   
+   </details>
 
-### Additional information     
+If you don't like the wallpaper on the new tab, you can change it to your own. Just rename your picture to `wallpaper.png` and put in into `chrome` folder. There's also `wallpaper-alt.png` - same picture, but in the daytime.
 
- * Doesn't work on Firefox ESR and forks based on it (Waterfox, Floorp, etc.) because `:has()` selector and css nesting not supported there. When the next ESR release comes out and forks move to its base, then it will work.
- * Tested and work well only with Linux with GNOME. Windows, MacOS, KDE, or something else probably will work, but something maybe be broken.
+You can disable floating search bar. To do it go to the `userChrome.css` file and comment line that imports `shy-floating-search.css`.
 
-### Features
+You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`, `userContent.css` and in Sidebery style.
+
+## Additional information     
+
+ * The theme works and is only tested on the latest version of Firefox. Firefox-based browsers, ESR versions, or just older versions are not supported. It may work, but I am not responsible for it.
+ * I don't know if this theme works on macOS. I don't have a mac to test it. I have made the control buttons work on both left and right (thanks Linux and GTK), but I can't test this on mac.
+
+## Features (REQUIRES IMPROVEMENT)
 
 The browser interface is divided into three panels: Sidebar on the left, Navbar on the top and Toolbar on the right. Each of these panels can stay visible or be hidden individually. To hide a panel you can press a preconfigured keyboard shortcut or click on the UserChrome Toggle extension button. In the hidden state, a bar appears where the panel was. When you move the cursor over this bar, the panel moves out. 
 
@@ -175,17 +211,18 @@ Here you can place all the buttons you need, such as the history button, downloa
 ![shy-toolbar](https://github.com/Naezr/ShyFox/assets/95460152/6bbf5410-598a-4486-a26f-334e8c5cf19c)
 
 
-### To-Do
+## To-Do
 
  * Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebery cannot be transparent)
  * Add icons to menubar and context menu
  * Add navbar on bottom support
  * Make it clearer when a window is in focus and when it is not
 
-### Thanks
+## Thanks
 
   [MrOtherGuy](https://github.com/MrOtherGuy) -  Thanks for the fx-autoconfig (not used here anymore) and the repository with cool css's.                  
   [MightyFox concept](https://www.reddit.com/r/FirefoxCSS/comments/195n51c/mightyfox_an_idea_need_help_to_build_it_up/)  -  Thanks for the cool concept and main idea.                     
   [arcticfox-theme](https://github.com/sirlan-ff00ff/arcticfox-theme)  -   I used this theme as a base to create my own, but there was a bit of commonality left in the process.                 
+  [minearchive](https://t.me/kartoshka_vpered) - That's where I got this wallpaper
 
 Ты думал здесь что-то будет?
