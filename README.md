@@ -15,6 +15,11 @@
 
 <br/>
 
+3.4:
+- Added Clean Mode
+- README redesign
+- Some Fixes
+
 3.3.2:
 - Integrating screenshot tool with the theme (ctrl + shift + s)
 
