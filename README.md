@@ -1,8 +1,7 @@
-# ShyFox
+# ShyFox 3.4
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
- <a href='https://github.com/Naezr/ShyFox'><img src='https://img.shields.io/badge/version-3.3.2-blue'></a>
  <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-127-orange?logo=firefox"></a>
  <a href='https://github.com/Naezr/ShyFox/commits'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/main">
 </a>
@@ -151,6 +150,9 @@
    
    ![layout](https://github.com/Naezr/ShyFox/assets/95460152/ea349f5c-bfc4-4af0-bd55-4715d7bf6755)
    
+   > NOTE                                 
+   > If you don't add `Flexible Space` to the right toolbar, all buttons except `Menu` and `Extensions` will be centered on the panel
+   
    <br/>
    
    </summary>
@@ -168,9 +170,7 @@ There are three ways you can do it, choose one:
    
    <br/>
    
-   ![изображение](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
-   
-   <br/>
+   ![settings](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
    
    > NOTE                    
    > If you make the `Tab bar` and `Toolbar` `Background` colors the same, the pull-down hidden panels will have a transparent background.
@@ -194,11 +194,29 @@ You can change browser accent color. To do it change value of `--shy-color` vari
 
 ### Panels
 
-aboba
+The browser interface has been divided into three panels:
+- On left - Sidebar - Just Sideberry. Functionality of this extension is incredible. It is in charge of managing tabs and bookmarks. Above the main sidebar is a small bookmarks bar.
+- On top - Navbar - panel where you can find the address bar and everything related to it
+- On right - Toolbar - a panel with customizable buttons
 
 ### Toggles
 
-The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized. Each of the three panels can be toggled
+The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized.                            
+
+Each of three panels has two states - visible and hidden. This state can be toggled independently for each panel.             
+
+The visible state is normal state, panel is just there on the screen.                   
+
+In hidden state panel moves out of the window border and a bar appears on the border, when hovering over it panel moves out. The first three toggles are responsible for this case.                      
+
+There is also a fourth toggle - Clean Mode. When Clean Mode is activated, the previous toggles are ignored and entire browser interface is hidden without any possibility to interact with it. Simply put, Clean Mode removes everything unnecessary, leaving you alone with the currently open website. Note that you can only exit it with a keyboard shortcut.                   
+
+| № | Name | Recommended shortcut |
+| --- | --- | --- |
+| 1 | Hide Sidebar | Ctrl + Alt + A |
+| 2 | Hide Toolbar | Ctrl + Alt + D |
+| 3 | Hide Navbar  | Ctrl + Alt + S |
+| 4 | Clean Mode   | Ctrl + Alt + X |
 
 ## To-Do
 
