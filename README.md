@@ -190,29 +190,15 @@ You can change browser accent color. To do it change value of `--shy-color` vari
  * The theme works and is only tested on the latest version of Firefox. Firefox-based browsers, ESR versions, or just older versions are not supported. It may work, but I am not responsible for it.
  * I don't know if this theme works on macOS. I don't have a mac to test it. I have made the control buttons work on both left and right (thanks Linux and GTK), but I can't test this on mac.
 
-## Features (REQUIRES IMPROVEMENT)
+## Features
 
-The browser interface is divided into three panels: Sidebar on the left, Navbar on the top and Toolbar on the right. Each of these panels can stay visible or be hidden individually. To hide a panel you can press a preconfigured keyboard shortcut or click on the UserChrome Toggle extension button. In the hidden state, a bar appears where the panel was. When you move the cursor over this bar, the panel moves out. 
+### Panels
 
-Purpose of the panels: 
+aboba
 
- - Sidebar                
-Here is the Sidebery extension interface, where you can control your tabs in many different ways. See the Sidebery documentation if you're interested. There is also a bookmarks panel above the Sidebar. Since it is quite short, it is recommended to place a few folders or icons without captions on it. For more complex bookmark management, use Sidebery.
+### Toggles
 
-![shy-sidebar](https://github.com/Naezr/ShyFox/assets/95460152/d377ce1a-a962-4cd3-b0a2-67d60006fbd2)
-
-
- - Navbar             
-Here you can find the address bar, back, forward and reload buttons. It is recommended to place these buttons to the left of the address bar, and place the page zoom buttons to the right for symmetry.
-
-![shy-navbar](https://github.com/Naezr/ShyFox/assets/95460152/88076c0b-579b-45a4-b071-742290a77ece)
-
-
- - Toolbar         
-Here you can place all the buttons you need, such as the history button, download button, buttons of your favorite extensions, in general any buttons that can be added to your Firefox.
-
-![shy-toolbar](https://github.com/Naezr/ShyFox/assets/95460152/6bbf5410-598a-4486-a26f-334e8c5cf19c)
-
+The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized. Each of the three panels can be toggled
 
 ## To-Do
 
