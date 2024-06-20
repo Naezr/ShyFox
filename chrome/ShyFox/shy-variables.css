@@ -32,6 +32,7 @@ Values of these variables can be changed safely and most likely nothing will bre
   
   /* transparency of indicator bars showing the position of hidden panels */
   --hide-bar-opct: 0.2;
+  &[titlepreface*="?"]{--hide-bar-opct: 0;} /* clean mode */
   
   /* how much shorter these bars than panels */
   --hide-bar-wdt-pad: 10px;
@@ -40,15 +41,16 @@ Values of these variables can be changed safely and most likely nothing will bre
   --panel-hide-ldg: 1px;            /* f11 fullscreen   */
   &:not([inFullscreen="true"]){
     --panel-hide-ldg: 0px;          /* maximized window */ 
-    &[sizemode="normal"]{
+    &[sizemode="normal"]:not([titlepreface*="?"]){
       --panel-hide-ldg: 9px;        /* floating window  */
     }
   }
   
   /* colors */
-  --shadow-col:  #00000020;  /* color of the translucent outline that imitates a shadow                                                 */
-  --private-col: #6e00bc80;  /* private mode outline color                                                                              */
-  --debug-col: transparent;  /* should be transparent, but you can change it to rgba(0, 0, 255, 0.2) if you want to see all the secrets */
+  --shadow-col:  #00000020;    /* color of the translucent outline that imitates a shadow     */
+  --private-col: #6e00bc80;    /* private mode outline color                                  */
+  --debug-col: transparent;    /* rgba(0, 0, 255, 0.2); color of hidden panels hover hitboxes */
+  --debug-col-2: transparent;  /* rgba(0, 255, 0, 0.2); color of window dragging hitboxes     */
 }
 
 /* 
@@ -84,7 +86,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --top-margin:    0px;
   --bottom-margin: 0px; 
   
-  &:not(:is([inFullscreen="true"], [inDOMFullscreen="true"])){
+  &:not(:is([inFullscreen="true"], [inDOMFullscreen="true"], [titlepreface*="?"][sizemode="maximized"])){
     --left-margin:   var(--margin);
     --right-margin:  var(--margin);
     --top-margin:    var(--margin);
@@ -98,6 +100,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   
   /* override built-in roundings with custom */
   --arrowpanel-border-radius: var(--big-rounding) !important;
+  --panel-border-radius:      var(--big-rounding) !important;
   
   --arrowpanel-menuitem-border-radius: var(--rounding) !important;
   --toolbarbutton-border-radius:       var(--rounding) !important;

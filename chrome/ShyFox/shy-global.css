@@ -32,8 +32,12 @@ Area where website is displayed
 /* if it not fullscreen video or floating window */
 #main-window:not([inDOMFullscreen="true"])[chromehidden=""]{
     
-  /* if navbar is not hidden in f11 fullscreen */
-  &:not(:is([titlepreface*="+"], [titlepreface*="-"][titlepreface*="="])[inFullscreen="true"]){
+  /* if navbar is not hidden in f11 fullscreen or not only navbar is visible in f11 or window is not maximized in clean mode */
+  &:not(
+    :is(
+      :is([titlepreface*="+"], [titlepreface*="-"][titlepreface*="="])[inFullscreen="true"]),
+      [titlepreface*="?"]:is([sizemode="maximized"], [inFullscreen="true"])
+  ){
     
     /* add rounded corners and outline to browser content */
     #appcontent browser {
@@ -54,38 +58,67 @@ Area where website is displayed
   }
   
   /* if in f11 fullscreen sidebar active but navbar not */
-  &:not([titlepreface*="-"])[titlepreface*="+"][inFullscreen="true"]{
+  &:not([titlepreface*="?"]):not([titlepreface*="-"])[titlepreface*="+"][inFullscreen="true"]{
     #appcontent browser {border-left: var(--outline);}
   }
   
   /* if in f11 fullscreen toolbar active but navbar not */
-  &:not([titlepreface*="="])[titlepreface*="+"][inFullscreen="true"]{
+  &:not([titlepreface*="?"]):not([titlepreface*="="])[titlepreface*="+"][inFullscreen="true"]{
     #appcontent browser {border-right: var(--outline);}
   }
   
   /* if in f11 fullscreen nor toolbar or sidebar active but navbar is */
-  &[titlepreface*="-"][titlepreface*="="]:not([titlepreface*="+"])[inFullscreen="true"]{
+  &:not([titlepreface*="?"])[titlepreface*="-"][titlepreface*="="]:not([titlepreface*="+"])[inFullscreen="true"]{
     #appcontent browser {border-top: var(--outline);}
   }
 }
 
 /* private mode outline */
 #main-window[privatebrowsingmode="temporary"]
-{--outline: 2px solid var(--private-col) !important;}
+{--outline: 1px solid var(--private-col) !important;}
 
-/* drag window using top border */
-#browser::after {
+/* drag window using border */
+
+/* shared */
+#browser::before,
+#browser::after,
+#navigator-toolbox::before,
+#navigator-toolbox::after
+{
   position: fixed;
   pointer-events: none;
   -moz-window-dragging: drag;
-  z-index: 1;
-  
-  height: calc(var(--margin) + 2px);
+    
+  content: "";
+  background-color: var(--debug-col-2);
+}
+
+/* top */
+#browser::after {
+  height: calc(var(--top-margin) + 2px);
   top: -1px;
   width: 100vw;
-  
-  content: "";
-  background-color: var(--debug-col);
+}
+
+/* bottom */
+#browser::before {
+  height: calc(var(--bottom-margin) + 2px);
+  bottom: -1px;
+  width: 100vw;
+}
+
+/* left */
+#navigator-toolbox::before{
+  width: calc(var(--bottom-margin) + 2px);
+  left: -1px;
+  height: 100vw;
+}
+
+/* right */
+#navigator-toolbox::after{
+  width: calc(var(--right-margin) + 2px);
+  right: -1px;
+  height: 100vw;
 }
 
 /* statuspanel (that thing at the bottom of the screen that shows the address of the link you're hovering over) */
@@ -107,11 +140,16 @@ menulist,
 button,
 input:not([type="checkbox"]),
 #urlbar-background,
-#preview-image
+#preview-image,
+.ctrlTab-canvas,
+.ctrlTab-canvas *
 
 {border-radius: var(--rounding) !important}
 
-richlistbox{border-radius: var(--big-rounding) !important;}
+.ctrlTab-preview .ctrlTab-preview-inner,
+#ctrlTab-showAll,
+richlistbox
+{border-radius: var(--big-rounding) !important;}
 
 /* dialog */
 #commonDialogWindow, #commonDialogWindow .titleIcon{
@@ -143,6 +181,15 @@ richlistbox{border-radius: var(--big-rounding) !important;}
 }
 
 .dialogBox {margin-top: var(--margin) !important;}
+
+/* disable pointer events in clean mode */ 
+#main-window[titlepreface*="?"]{
+  #nav-bar:not(:has(#urlbar[breakout-extend])),
+  #sidebar,
+  #TabsToolbar,
+  #PersonalToolbar
+  {pointer-events: none !important;}
+}
 
 /*
 
@@ -188,7 +235,7 @@ screenshots-buttons{
 }
 
 /* when sidebar hidden */
-#main-window[titlepreface*="-"]{
+#main-window:is([titlepreface*="-"], [titlepreface*="?"]){
   #screenshotsPagePanel{
     bottom: calc(
       var(--bottom-margin)
@@ -439,6 +486,8 @@ File Edit View History Bookmarks Tools Help
 }
 
 .urlbarView-row[selected] {background-color: var(--shy-color) !important;}
+
+.ctrlTab-preview:focus > .ctrlTab-preview-inner, #ctrlTab-showAll:focus {border-color: var(--shy-color) !important;}
 
 :root, panel, dialog, window{
   --in-content-primary-button-background-active: var(--shy-color) !important;

@@ -19,8 +19,8 @@ Styles for sidebar
   --bookmarks-hgt: 0px;
 }
 
-/* if sidebar is not hidden, this window is not floating popup and not in fullscreen video */
-#main-window:not([titlepreface*="-"])[chromehidden=""]:not([inDOMFullscreen="true"]){
+/* if sidebar is not hidden or clean mode not enabled, this window is not floating popup and not in fullscreen video */
+#main-window:not(:is([titlepreface*="-"], [titlepreface*="?"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
   /* set left margin to sidebar width */
   --left-margin: var(--sdbr-wdt) !important;
 }
@@ -73,6 +73,12 @@ Styles for sidebar
   width: var(--sdbr-wdt) !important;
 }
 
+/* drag window by empty space in bookmarks toolbar */
+#PersonalToolbar > *, #PlacesToolbarItems .bookmark-item[style="visibility: hidden;"]{
+  -moz-window-dragging: drag !important;
+  background-color: var(--debug-col-2) !important;
+}
+
 /* styles for bookmarks toolbar */
 #PersonalToolbar{
   visibility: visible !important;
@@ -109,13 +115,14 @@ Styles for sidebar
 
 */
 
-#main-window[titlepreface*="-"]:not([customizing]){
+/* activate style when sidebar hidden or clean mode enabled (and not in customizing page) */
+#main-window:is([titlepreface*="-"], [titlepreface*="?"]):not([customizing]){
   
   /* styles for both sidebar and bookmaarks toolbar */
   #sidebar-box,
   #PersonalToolbar
   {
-    z-index: 3 !important;
+    z-index: 2 !important;
     width: var(--sdbr-wdt) !important;
     
     left: calc(
@@ -221,8 +228,8 @@ Styles for sidebar
     }
   }
 
-  /* show sidebar on hover or focus */
-  &:has(
+  /* show sidebar on hover or focus (if not in clean mode) */
+  &:not([titlepreface*="?"]):has(
     #sidebar-box:hover,
     #sidebar-box:focus-within,
     #PersonalToolbar:hover,
@@ -288,7 +295,7 @@ Styles for sidebar
   #sidebar-box[hidden="true"],
   #sidebar-box:not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"])
  ) {
-  #browser::before{
+  &::before{
     content: "Open Sidebery!";
     position: fixed;
     z-index: 9999;

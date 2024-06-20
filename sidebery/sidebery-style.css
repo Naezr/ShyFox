@@ -19,6 +19,7 @@
   --shy-color: #3584E4;
 
   --accent: var(--shy-color);
+  --frame-el-overlay-selected-border: var(--accent);
 }
 
 /* PINNED TABS */
