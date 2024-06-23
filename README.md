@@ -99,7 +99,7 @@
  <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036'>
 </div>
 
-[Video showcase](showcase.md)
+🎦 [Video showcase](showcase.md)
 
 ## Install
 
@@ -154,7 +154,7 @@
 3. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
 4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
 5. Launch Firefox and and if you seeing "Open Sidebery" notification just open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
-6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that
+6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that:
    
    <details><summary>Buttons layout</summary>
    
@@ -170,7 +170,7 @@
    </summary>
 
 > [!NOTE]
-> Do not use "System theme - auto" in Firefox settings. It can cause problems
+> Do not use `System theme - auto` in Firefox settings. It can cause problems
 
 ### Extra
 
@@ -196,7 +196,7 @@ There are three ways you can do it, choose one:
 
 If you don't like the wallpaper on the new tab, you can change it to your own. Just rename your picture to `wallpaper.png` and put in into `chrome` folder. There's also `wallpaper-alt.png` - same picture, but in the daytime.
 
-You can found my Sidebery config in `sidebery` folder. You can import it to get the same experience I had. Or if Sidebery is behaving strangely
+You can found my Sidebery config in `sidebery` folder. You can import it to get the same experience I had. Or if Sidebery is behaving strangely.
 
 You can disable floating search bar. To do it go to the `userChrome.css` file and comment line that imports `shy-floating-search.css`.
 
