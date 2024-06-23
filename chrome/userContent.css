@@ -3,6 +3,7 @@
 @import url("ShyFox/content/shy-sideberry.css");
 @import url("ShyFox/content/shy-about.css");
 @import url("ShyFox/content/shy-global-content.css");
+@import url("ShyFox/shy-variables.css");
 
 :root{
   /* accent color */
