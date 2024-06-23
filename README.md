@@ -132,7 +132,7 @@
    
    </details>    
    
-4. Install and configure [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
+3. Install and configure [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
  
     Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).                 
     When updating Sidebery style, it is better to insert it from `sidebery-style.css` file manually. (Sidebery settings > Style editor)
@@ -145,9 +145,9 @@
     > In general, you can use any style for Sidebery, not necessarily the one that comes with ShyFox.
     > But I'm not responsible for how it will fit together.        
 
-5. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
-6. Launch Firefox and open Sidebery in the sidebar
-7. Go to the customizing page (right click on blank space > customize toolbar) and move buttons to something like that
+4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
+5. Launch Firefox and open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
+6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that
    
    <details><summary>Buttons layout</summary>
    
