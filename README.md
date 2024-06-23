@@ -153,7 +153,7 @@
    
 3. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
 4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
-5. Launch Firefox and open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
+5. Launch Firefox and and if you seeing "Open Sidebery" notification just open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
 6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that
    
    <details><summary>Buttons layout</summary>
