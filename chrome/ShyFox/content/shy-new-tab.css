@@ -10,6 +10,11 @@ Styles for new tab
   :root{
     --newtab-primary-action-background: var(--shy-color) !important;
     --newtab-primary-action-background-pocket: var(--shy-color) !important;
+
+    --tr-col:       rgba(66, 65, 77, 0.4);
+    --tr-hov-col:   rgba(86, 85, 97, 0.4);
+    --tr-dark-col:  rgba(36, 35, 47, 0.4);
+    --tr-light-col: rgba(140, 140, 150, 0.4);
   }
   
   .toggle-button[aria-pressed="true"] {

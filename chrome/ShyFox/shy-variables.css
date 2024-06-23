@@ -19,6 +19,8 @@ Values of these variables can be changed safely and most likely nothing will bre
   /* rounded corners radius of most elements */
   --rounding: 11.5px;
   --big-rounding: 15px;
+  --bigger-rounding: 20px;
+  --giant-rounding: 30px;
   
   /* animations time */
   --trans-dur: 0.25s;
@@ -29,6 +31,9 @@ Values of these variables can be changed safely and most likely nothing will bre
   --navbar-wdt: 60vw;
   
   --findbar-wdt: 70vw;
+  
+  /* intensity of blur (new tab) */
+  --blur-radius: 10px;
   
   /* transparency of indicator bars showing the position of hidden panels */
   --hide-bar-opct: 0.2;

@@ -4,23 +4,3 @@
 @import url("ShyFox/content/shy-about.css");
 @import url("ShyFox/content/shy-global-content.css");
 @import url("ShyFox/shy-variables.css");
-
-:root{
-  /* accent color */
-  --shy-color: #3584E4;
-  
-  /* semi-transparent colors (used in new tab) */
-  --tr-col:       rgba(66, 65, 77, 0.4);
-  --tr-hov-col:   rgba(86, 85, 97, 0.4);
-  --tr-dark-col:  rgba(36, 35, 47, 0.4);
-  --tr-light-col: rgba(140, 140, 150, 0.4);
-  
-  /* roundings */
-  --rounding: 11.5px;
-  --big-rounding: 15px;
-  --giant-rounding: 30px;
-  
-  /* intensity of blur (new tab) */
-  --blur-radius: 10px;
-}
-
