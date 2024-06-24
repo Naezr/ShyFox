@@ -192,12 +192,13 @@ Styles for sidebar
       );
       
       bottom: calc(var(--hide-bar-wdt-pad) / 2);
+      border-radius: var(--rounding);
       background-color: var(--bt-col);
       opacity: var(--hide-bar-opct);
     }
   }
   
-  #sidebar{border-radius: var(--big-rounding) !important;}
+  #sidebar {border-radius: var(--big-rounding) !important;}
   
   /* styles for bookmarks */
   #PersonalToolbar{

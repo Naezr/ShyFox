@@ -32,6 +32,7 @@ Styles for Sidebery extension
     --accent: var(--shy-color) !important;
     --frame-el-overlay-selected-border: var(--accent) !important;
     --toolbar-el-overlay-selected-border: var(--accent) !important;
+    --status-notice: var(--accent) !important;
   }
 
 /*
@@ -150,7 +151,14 @@ Styles for Sidebery extension
   /* search */
   #search_bar {margin: 4px !important;}
   #search_bar[data-showed="false"]{display: none !important;}
+  #search_bar .clear-btn{margin-inline-end: var(--general-margin)}
   
   .NavigationBar{box-shadow: none !important}
+  
+  /* accent colored selection */
+  ::selection {
+    color: White !important;
+    background: var(--accent) !important;
+  }
 
 } /* wrap end */

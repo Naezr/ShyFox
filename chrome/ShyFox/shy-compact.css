@@ -17,6 +17,7 @@ menupopup > :is(menuitem, menu){
   min-height: 20px !important;
   border-radius: var(--rounding) !important;
   margin: 0 !important;
+  margin-block: 1px !important;
 }
 
 :is(.bookmark-item, #PlacesChevron) :is(menuitem, menu) {margin-inline: 5px !important;}
