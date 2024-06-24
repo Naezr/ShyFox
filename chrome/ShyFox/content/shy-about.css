@@ -101,4 +101,8 @@ Styles for settings, Firefox View, etc.
     border-bottom-left-radius: var(--rounding) !important;
     border-bottom-right-radius: var(--rounding) !important;
   }
+  
+  /* dropdown menu margin */
+  panel-list[role="menu"] panel-item {margin-inline: 5px}
+  
 }

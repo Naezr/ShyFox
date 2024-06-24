@@ -9,7 +9,7 @@ Values of these variables can be changed safely and most likely nothing will bre
 
 */
 
-:root{ 
+:root, #screenshots-component *{
   /* accent color */
   --shy-color: #3584E4;
   

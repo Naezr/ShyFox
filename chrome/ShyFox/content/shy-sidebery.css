@@ -11,19 +11,23 @@ Styles for Sidebery extension
 @-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html"){ /* wrap start */
 
   #root.root {
-    --general-border-radius: 11.5px !important;
+    --general-border-radius: var(--rounding) !important;
     --general-margin: 4px !important;
+    
+    --button-size: 35px;
 
-    --nav-btn-margin: 8px !important;
-    --nav-btn-width: 35px !important;
-    --nav-btn-height: 35px !important;
-    --nav-btn-len-margin: 3px !important;
+    --nav-btn-margin: calc(var(--margin) / 2) !important;
+    --nav-btn-width: var(--button-size) !important;
+    --nav-btn-height: var(--button-size) !important;
+    --nav-btn-len-margin: calc(var(--rounding) / 4) !important;
+    
+    --audio-btn-round-margin: calc(var(--big-rounding) / 2) !important;
 
     --tabs-audio-btn-width: 22px !important;
-    --tabs-margin: 7px !important;
-    --tabs-height: 35px !important;
-    --tabs-inner-gap: 5px !important;
-    --tabs-border-radius: 15px !important;
+    --tabs-margin: calc(var(--margin) / 2) !important;
+    --tabs-height: var(--button-size) !important;
+    --tabs-inner-gap: calc(var(--margin) / 2) !important;
+    --tabs-border-radius: var(--big-rounding) !important;
 
     --accent: var(--shy-color) !important;
     --frame-el-overlay-selected-border: var(--accent) !important;
@@ -46,9 +50,30 @@ Styles for Sidebery extension
   /* 1 pinned tab */
 
   .PinnedTabsBar .tab-wrapper:nth-child(1):last-child{
-    width: -moz-available !important;
-    .Tab{height: calc(var(--tabs-pinned-height) / 1.4) !important;}
+    
+    .Tab{
+      width: calc(100vw - var(--tabs-margin) * 2) !important;
+      height: calc(var(--tabs-pinned-height) / 1.4) !important;}
   }
+  
+  /* 2 tabs in bottom row */
+
+  .PinnedTabsBar:has(.tab-wrapper:is(
+    :nth-child(2), :nth-child(5), :nth-child(8), :nth-child(11),
+    :nth-child(14), :nth-child(17), :nth-child(20), :nth-child(23),
+    :nth-child(26), :nth-child(29), :nth-child(32), :nth-child(35),
+    :nth-child(38), :nth-child(41), :nth-child(44), :nth-child(47)
+  ):last-child){
+    .tab-wrapper:nth-last-child(-n + 2){
+      .Tab {
+        width: calc(100vw / 2 - var(--tabs-margin) * 1.5) !important;
+        height: calc(var(--tabs-pinned-height) / 1.2) !important;
+      }
+    }
+  }
+  
+  /* 3 tabs in any row */
+  .PinnedTabsBar .tab-wrapper .Tab {width: calc(100vw / 3 - var(--tabs-margin) * 1.4) !important}
 
   /* 4 tabs in bottom row */
 
@@ -59,39 +84,19 @@ Styles for Sidebery extension
     :nth-child(37), :nth-child(40), :nth-child(43), :nth-child(46)
   ):last-child){
     .tab-wrapper:nth-last-child(-n + 4){
-      width: calc(100% / 4 - var(--tabs-margin) + 1.6px) !important;
-      .Tab {height: calc(var(--tabs-pinned-height) / 1.3) !important;}
+      .Tab {
+        width: calc(100vw / 4 - var(--tabs-margin) * 1.3) !important;
+        height: calc(var(--tabs-pinned-height) / 1.3) !important;
+      }
     }
   }
-
-  /* 2 tabs in bottom row */
-
-  .PinnedTabsBar:has(.tab-wrapper:is(
-    :nth-child(2), :nth-child(5), :nth-child(8), :nth-child(11),
-    :nth-child(14), :nth-child(17), :nth-child(20), :nth-child(23),
-    :nth-child(26), :nth-child(29), :nth-child(32), :nth-child(35),
-    :nth-child(38), :nth-child(41), :nth-child(44), :nth-child(47)
-  ):last-child){
-    .tab-wrapper:nth-last-child(-n + 2){
-      width: calc(100% / 2 - var(--tabs-margin) + 3.5px) !important;
-      .Tab {height: calc(var(--tabs-pinned-height) / 1.2) !important;}
-    }
-  }
-
-  /* 3 tabs in any row */
-
-  .PinnedTabsBar .tab-wrapper{
-    width: calc(100% / 3 - var(--tabs-margin) + 2.3px) !important;
-
-    .Tab {width: -moz-available !important;}
-  }
-
+  
   /* audio icon */
   .Tab[data-pin="true"] > .body > .audio { 
     background: transparent !important;
     box-shadow: none !important;
-    right: 7px !important;
-    top: 7px !important;
+    right: var(--audio-btn-round-margin) !important;
+    top: var(--audio-btn-round-margin) !important;
   }
 
   /* bigger favicon */
@@ -110,7 +115,6 @@ Styles for Sidebery extension
 
   /* shadow, outline and background */
   .Tab[data-pin="true"] .body {
-    box-shadow: 0px 0px 9px #00000030 !important;
     border: 1px solid var(--s-frame-bg) !important;
     background-color: var(--toolbar-bg) !important;
   }
@@ -121,8 +125,7 @@ Styles for Sidebery extension
 
   /* remove bottom margin */
   .PinnedTabsBar {margin-bottom: 0px !important;}
-
-
+  
 /* 
 
 --- OTHER -------------------------------------------------------------------------------------------------------------------------------------------
@@ -132,14 +135,22 @@ Styles for Sidebery extension
   /* consistent navbar background */
   #nav_bar {background-color: transparent !important;}
 
-  /* remove padding on top */
-  #nav_bar {padding-top: 0px !important;}
+  /* padding */
+  #nav_bar {
+    padding-top: var(--nav-btn-margin) !important;
+    padding-bottom: var(--general-margin) !important;
+  }
+  
+  .BottomBar {padding: var(--nav-btn-margin) !important;}
 
   /* popup */
-  .popup {margin: 6px !important;}
+  .popup {margin: var(--tabs-margin) !important;}
   .popup-container {background-color: transparent !important;}
 
   /* search */
   #search_bar {margin: 4px !important;}
+  #search_bar[data-showed="false"]{display: none !important;}
+  
+  .NavigationBar{box-shadow: none !important}
 
 } /* wrap end */

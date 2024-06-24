@@ -8,16 +8,15 @@ Styles for some other things stylable in userContent.css
 }
 
 /* screenshots */
-/* variables aren't used because they don't work here for some reason */
 
 #screenshots-component{
-  button {border-radius: 11.5px !important;}
-  #buttons-container {border-radius: 15px !important;}
+  button {border-radius: var(--rounding) !important;}
+  #buttons-container {border-radius: var(--big-rounding) !important;}
 
   .screenshots-button {
-    --in-content-primary-button-background: #3584E4 !important;
-    --in-content-primary-button-background-hover: color-mix(in oklab, var(--in-content-primary-button-background), white 10%);
-    --in-content-primary-button-background-active: color-mix(in oklab, var(--in-content-primary-button-background), white 20%);
-    --in-content-focus-outline-color: #3584E4;
+    --in-content-primary-button-background: var(--shy-color) !important;
+    --in-content-primary-button-background-hover: color-mix(in oklab, var(--in-content-primary-button-background), white 10%) !important;
+    --in-content-primary-button-background-active: color-mix(in oklab, var(--in-content-primary-button-background), white 20%) !important;
+    --in-content-focus-outline-color: var(--shy-color) !important;
   }
 }
