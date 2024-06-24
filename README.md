@@ -1,4 +1,4 @@
-# ShyFox 3.4
+# ShyFox 3.5
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -119,10 +119,12 @@
    <br/>
    
    If you migrating from 3.4 you need delete Sidebery styles from its settings.                     
-   To do it go to the Sidebery settings and delete Sidebery settings > style editor
+   To do it go to the Sidebery settings > Styles editor 
    <div align="center">
-    <img width="48%" src='https://github.com/Naezr/ShyFox/assets/95460152/4a45a7db-ab88-4f24-a5a6-5fbbaf418224'><a>⟹</a><img width="48%" src='https://github.com/Naezr/ShyFox/assets/95460152/38aef588-15a6-44ad-8908-95d10ea055e3'>
+    <a>Before | After</a><br/>
+    <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/4a45a7db-ab88-4f24-a5a6-5fbbaf418224'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/38aef588-15a6-44ad-8908-95d10ea055e3'>
    </div>
+   
    If you new user, skip it.      
    
 </details>
@@ -152,6 +154,9 @@
    </details>    
    
 3. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
+   > NOTE                   
+   > This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
+ 
 4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
 5. Launch Firefox and and if you seeing "Open Sidebery" notification just open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
 6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that:
@@ -195,8 +200,6 @@ There are three ways you can do it, choose one:
    </details>
 
 If you don't like the wallpaper on the new tab, you can change it to your own. Just rename your picture to `wallpaper.png` and put in into `chrome` folder. There's also `wallpaper-alt.png` - same picture, but in the daytime.
-
-You can found my Sidebery config in `sidebery` folder. You can import it to get the same experience I had. Or if Sidebery is behaving strangely.
 
 You can disable floating search bar. To do it go to the `userChrome.css` file and comment line that imports `shy-floating-search.css`.
 
