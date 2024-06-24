@@ -1,0 +1,22 @@
+/*== ShyFox Contents ================================================================================================================================
+
+Styles for some other things stylable in userContent.css
+
+/* extensions popups rounding */
+@-moz-document url-prefix("moz-extension:"){
+  body {border-radius: var(--big-rounding) !important;}
+}
+
+/* screenshots */
+
+#screenshots-component{
+  button {border-radius: var(--rounding) !important;}
+  #buttons-container {border-radius: var(--big-rounding) !important;}
+
+  .screenshots-button {
+    --in-content-primary-button-background: var(--shy-color) !important;
+    --in-content-primary-button-background-hover: color-mix(in oklab, var(--in-content-primary-button-background), white 10%) !important;
+    --in-content-primary-button-background-active: color-mix(in oklab, var(--in-content-primary-button-background), white 20%) !important;
+    --in-content-focus-outline-color: var(--shy-color) !important;
+  }
+}

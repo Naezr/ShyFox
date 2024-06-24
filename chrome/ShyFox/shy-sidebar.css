@@ -154,10 +154,7 @@ Styles for sidebar
   }
   
   /* styles for sidebar */
-  #sidebar-box{
-    padding-top: calc(var(--margin) / 2 + 1px) !important;
-    padding-bottom: calc(var(--margin) / 2 + 1px) !important;
-    
+  #sidebar-box{    
     height: calc(
       100vh
       - var(--bookmarks-hgt)
@@ -195,12 +192,13 @@ Styles for sidebar
       );
       
       bottom: calc(var(--hide-bar-wdt-pad) / 2);
-      
       border-radius: var(--rounding);
       background-color: var(--bt-col);
       opacity: var(--hide-bar-opct);
     }
   }
+  
+  #sidebar {border-radius: var(--big-rounding) !important;}
   
   /* styles for bookmarks */
   #PersonalToolbar{
@@ -208,7 +206,7 @@ Styles for sidebar
     margin-left: 0px !important;
     overflow: visible !important;
 
-    padding-inline: 0px !important;
+    padding-inline: 2px !important;
     
     /* hover target between sidebar and bookmarks toolbar */
     &::after{

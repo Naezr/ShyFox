@@ -1,4 +1,4 @@
-# ShyFox 3.4
+# ShyFox 3.5
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -14,6 +14,12 @@
 <details><summary>Release notes</summary>
 
 <br/>
+
+3.5:
+- Moved Sidebery styles from its own settings to `userContent.css`
+- Splitting `userContent.css` to separate files, just like is it in `userChrome.css`
+- To change the accent color, you now only need to change it in `shy-variables.css`. Same with the other variables
+- Some little improvements
 
 3.4:
 - Added Clean Mode
@@ -93,7 +99,7 @@
  <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036'>
 </div>
 
-[Video showcase](showcase.md)
+🎦 [Video showcase](showcase.md)
 
 ## Install
 
@@ -103,6 +109,21 @@
    
    If you migrating from 2.0 you need delete fx-autoconfig.                     
    To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder.      
+   
+   If you new user, skip it.      
+   
+</details>
+
+<details><summary>Migrate from 3.4 </summary>
+ 
+   <br/>
+   
+   If you migrating from 3.4 you need delete Sidebery styles from its settings.                     
+   To do it go to the Sidebery settings > Styles editor 
+   <div align="center">
+    <a>Before | After</a><br/>
+    <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/4a45a7db-ab88-4f24-a5a6-5fbbaf418224'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/38aef588-15a6-44ad-8908-95d10ea055e3'>
+   </div>
    
    If you new user, skip it.      
    
@@ -132,22 +153,13 @@
    
    </details>    
    
-3. Install and configure [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
+3. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
+   > NOTE                   
+   > This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
  
-    Import `sidebery/sidebery-data.json` into Sidebery (Sidebery settings > help > import addon data).                 
-    When updating Sidebery style, it is better to insert it from `sidebery-style.css` file manually. (Sidebery settings > Style editor)
-    
-    > NOTES
-    > 
-    > When importing styles from json, Sidebery does not delete the old style,but inserts the new one after the old one.
-    > So if you have used Sidebery before, reset the extension's settings to default, making a backup before doing so.
-    > 
-    > In general, you can use any style for Sidebery, not necessarily the one that comes with ShyFox.
-    > But I'm not responsible for how it will fit together.        
-
 4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
-5. Launch Firefox and open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
-6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that
+5. Launch Firefox and and if you seeing "Open Sidebery" notification just open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
+6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that:
    
    <details><summary>Buttons layout</summary>
    
@@ -161,6 +173,9 @@
    <br/>
    
    </summary>
+
+> [!NOTE]
+> Do not use `System theme - auto` in Firefox settings. It can cause problems
 
 ### Extra
 
@@ -188,7 +203,7 @@ If you don't like the wallpaper on the new tab, you can change it to your own. J
 
 You can disable floating search bar. To do it go to the `userChrome.css` file and comment line that imports `shy-floating-search.css`.
 
-You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`, `userContent.css` and in Sidebery style.
+You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`.
 
 ## Additional information     
 
@@ -200,7 +215,7 @@ You can change browser accent color. To do it change value of `--shy-color` vari
 ### Panels
 
 The browser interface has been divided into three panels:
-- On left - Sidebar - Just Sideberry. Functionality of this extension is incredible. It is in charge of managing tabs and bookmarks. Above the main sidebar is a small bookmarks bar.
+- On left - Sidebar - Just Sidebery. Functionality of this extension is incredible. It is in charge of managing tabs and bookmarks. Above the main sidebar is a small bookmarks bar.
 - On top - Navbar - panel where you can find the address bar and everything related to it
 - On right - Toolbar - a panel with customizable buttons
 

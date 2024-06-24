@@ -9,7 +9,7 @@ Values of these variables can be changed safely and most likely nothing will bre
 
 */
 
-:root{ 
+:root, #screenshots-component *{
   /* accent color */
   --shy-color: #3584E4;
   
@@ -19,6 +19,8 @@ Values of these variables can be changed safely and most likely nothing will bre
   /* rounded corners radius of most elements */
   --rounding: 11.5px;
   --big-rounding: 15px;
+  --bigger-rounding: 20px;
+  --giant-rounding: 30px;
   
   /* animations time */
   --trans-dur: 0.25s;
@@ -29,6 +31,9 @@ Values of these variables can be changed safely and most likely nothing will bre
   --navbar-wdt: 60vw;
   
   --findbar-wdt: 70vw;
+  
+  /* intensity of blur (new tab) */
+  --blur-radius: 10px;
   
   /* transparency of indicator bars showing the position of hidden panels */
   --hide-bar-opct: 0.2;
@@ -63,9 +68,9 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
 
 :root{
   
-  /* pick browser colors */                     /* used for:          */
-  --bg-col: var(--lwt-accent-color);            /* darker background  */
-  --tb-col: var(--toolbar-bgcolor);             /* lighter background */
+  /* pick browser colors */                     /* used for:          */ 
+  --bg-col: var(--lwt-accent-color, tomato);    /* darker background  */       /* tomato is the fallback color */
+  --tb-col: var(--toolbar-bgcolor, tomato);     /* lighter background */       /* meaning something went wrong */
   --bt-col: var(--toolbarbutton-icon-fill);     /* text or icons      */
   --st-col: var(--sidebar-background-color);    /* not used now       */
   

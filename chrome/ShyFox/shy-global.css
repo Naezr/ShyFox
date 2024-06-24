@@ -199,25 +199,22 @@ Ctrl + Shift + S
 
 */
 
-#screenshotsPagePanel{
-  --vert-offset: 8px;
-  --hor-offset: 10px;
-  
+#screenshotsPagePanel{  
   position: fixed !important;
   transition: var(--transition);
   
   bottom: calc(
     var(--bottom-margin) 
-    - var(--vert-offset)
     + var(--screenshot-tool-hgt)
   );
   
-  left: var(--hor-offset);
+  left: 0;
   
   z-index: -1 !important;
   width: var(--sdbr-wdt) !important;
 }
 
+/* for smooth transition */
 #screenshotsPagePanel[hidden]{
   display: flex !important;
   opacity: 0;
@@ -232,6 +229,21 @@ screenshots-buttons{
   display: flex !important;
   height: var(--screenshot-tool-hgt) !important;
   width: var(--sdbr-wdt) !important;
+  padding: calc(var(--margin) / 2) !important;
+  
+  top: 0px !important;
+  inset-inline-end: 0px !important;
+}
+
+.screenshot-button{
+  width: calc(
+    var(--sdbr-wdt) / 2
+    - var(--margin) * 1.5
+  )!important;
+  
+  margin: calc(var(--margin) / 2) !important;
+  padding-top: 56px !important;
+  background-position-y: 10px !important;
 }
 
 /* when sidebar hidden */
@@ -240,9 +252,8 @@ screenshots-buttons{
     bottom: calc(
       var(--bottom-margin)
       + var(--margin)
-      - var(--vert-offset)
       + var(--screenshot-tool-hgt)
-      );
+    );
 
     left: calc(
       var(--left-margin)
@@ -324,7 +335,7 @@ Sometimes Firefox shows notifications at the top of the window suggesting, for e
 #tab-notification-deck, .global-notificationbox{
   position: fixed !important;
   transition: var(--transition) !important;
-  z-index: 2 !important;
+  z-index: 1 !important;
   vbox {background-color: transparent !important;}
   background-color: transparent !important;
   width: auto;

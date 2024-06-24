@@ -1,0 +1,164 @@
+/*== ShyFox Sidebery ===============================================================================================================================
+
+Styles for Sidebery extension
+
+
+--- VARIABLES ---------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+
+@-moz-document regexp("^moz-extension://.*?/sidebar/sidebar.html"){ /* wrap start */
+
+  #root.root {
+    --general-border-radius: var(--rounding) !important;
+    --general-margin: 4px !important;
+    
+    --button-size: 35px;
+
+    --nav-btn-margin: calc(var(--margin) / 2) !important;
+    --nav-btn-width: var(--button-size) !important;
+    --nav-btn-height: var(--button-size) !important;
+    --nav-btn-len-margin: calc(var(--rounding) / 4) !important;
+    
+    --audio-btn-round-margin: calc(var(--big-rounding) / 2) !important;
+
+    --tabs-audio-btn-width: 22px !important;
+    --tabs-margin: calc(var(--margin) / 2) !important;
+    --tabs-height: var(--button-size) !important;
+    --tabs-inner-gap: calc(var(--margin) / 2) !important;
+    --tabs-border-radius: var(--big-rounding) !important;
+
+    --accent: var(--shy-color) !important;
+    --frame-el-overlay-selected-border: var(--accent) !important;
+    --toolbar-el-overlay-selected-border: var(--accent) !important;
+    --status-notice: var(--accent) !important;
+  }
+
+/*
+
+--- PINNED TABS -------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+  /* height calculation */
+  #root.root {
+    --tabs-pinned-height: calc(
+      ( 100vw - var(--tabs-margin) ) / 3.6 
+    ) !important;
+  }
+
+  /* 1 pinned tab */
+
+  .PinnedTabsBar .tab-wrapper:nth-child(1):last-child{
+    
+    .Tab{
+      width: calc(100vw - var(--tabs-margin) * 2) !important;
+      height: calc(var(--tabs-pinned-height) / 1.4) !important;}
+  }
+  
+  /* 2 tabs in bottom row */
+
+  .PinnedTabsBar:has(.tab-wrapper:is(
+    :nth-child(2), :nth-child(5), :nth-child(8), :nth-child(11),
+    :nth-child(14), :nth-child(17), :nth-child(20), :nth-child(23),
+    :nth-child(26), :nth-child(29), :nth-child(32), :nth-child(35),
+    :nth-child(38), :nth-child(41), :nth-child(44), :nth-child(47)
+  ):last-child){
+    .tab-wrapper:nth-last-child(-n + 2){
+      .Tab {
+        width: calc(100vw / 2 - var(--tabs-margin) * 1.5) !important;
+        height: calc(var(--tabs-pinned-height) / 1.2) !important;
+      }
+    }
+  }
+  
+  /* 3 tabs in any row */
+  .PinnedTabsBar .tab-wrapper .Tab {width: calc(100vw / 3 - var(--tabs-margin) * 1.4) !important}
+
+  /* 4 tabs in bottom row */
+
+  .PinnedTabsBar:has(.tab-wrapper:is(
+    :nth-child(4), :nth-child(7), :nth-child(10),
+    :nth-child(13), :nth-child(16), :nth-child(19), :nth-child(22),
+    :nth-child(25), :nth-child(28), :nth-child(31), :nth-child(34),
+    :nth-child(37), :nth-child(40), :nth-child(43), :nth-child(46)
+  ):last-child){
+    .tab-wrapper:nth-last-child(-n + 4){
+      .Tab {
+        width: calc(100vw / 4 - var(--tabs-margin) * 1.3) !important;
+        height: calc(var(--tabs-pinned-height) / 1.3) !important;
+      }
+    }
+  }
+  
+  /* audio icon */
+  .Tab[data-pin="true"] > .body > .audio { 
+    background: transparent !important;
+    box-shadow: none !important;
+    right: var(--audio-btn-round-margin) !important;
+    top: var(--audio-btn-round-margin) !important;
+  }
+
+  /* bigger favicon */
+  .Tab[data-pin="true"] > .body > .fav > .fav-icon { 
+    width: 30px !important;
+    height: 30px !important;
+    top: -7.5px !important;
+    left: -6.5px !important; 
+  }
+
+  /* match badge to bigger icon */
+  .Tab[data-pin="true"] > .body > .fav > .badge{
+    right: -8.5px !important;
+    bottom: -7px !important;
+  }
+
+  /* shadow, outline and background */
+  .Tab[data-pin="true"] .body {
+    border: 1px solid var(--s-frame-bg) !important;
+    background-color: var(--toolbar-bg) !important;
+  }
+
+  /* selected tab outline */
+  .Tab[data-pin="true"][data-active="true"] .body 
+  {border: 1px solid var(--s-frame-fg) !important;}
+
+  /* remove bottom margin */
+  .PinnedTabsBar {margin-bottom: 0px !important;}
+  
+/* 
+
+--- OTHER -------------------------------------------------------------------------------------------------------------------------------------------
+
+*/
+
+  /* consistent navbar background */
+  #nav_bar {background-color: transparent !important;}
+
+  /* padding */
+  #nav_bar {
+    padding-top: var(--nav-btn-margin) !important;
+    padding-bottom: var(--general-margin) !important;
+  }
+  
+  .BottomBar {padding: var(--nav-btn-margin) !important;}
+
+  /* popup */
+  .popup {margin: var(--tabs-margin) !important;}
+  .popup-container {background-color: transparent !important;}
+
+  /* search */
+  #search_bar {margin: 4px !important;}
+  #search_bar[data-showed="false"]{display: none !important;}
+  #search_bar .clear-btn{margin-inline-end: var(--general-margin)}
+  
+  .NavigationBar{box-shadow: none !important}
+  
+  /* accent colored selection */
+  ::selection {
+    color: White !important;
+    background: var(--accent) !important;
+  }
+
+} /* wrap end */

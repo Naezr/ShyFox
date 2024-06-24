@@ -6,9 +6,16 @@ Cool floating search panel
 */
 
 #urlbar[breakout-extend]{
-  #urlbar-input {font-size: 24px !important;}
-  #urlbar-input-container {height: 55px !important;}
-  #urlbar-background {border-radius: 20px !important;}
+  #urlbar-input {font-size: 23.5px !important;}
+  #urlbar-input-container {height: 50px !important;}
+  #urlbar-background {border-radius: var(--bigger-rounding) !important;}
+  
+  #urlbar-input-container {
+    & > box{
+      height: 28px !important;
+      margin-block: calc((50px - 28px) / 4) !important;
+    }
+  }
   
   position: fixed !important;
   z-index: 999999 !important;
