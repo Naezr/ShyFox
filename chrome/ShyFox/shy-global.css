@@ -335,7 +335,7 @@ Sometimes Firefox shows notifications at the top of the window suggesting, for e
 #tab-notification-deck, .global-notificationbox{
   position: fixed !important;
   transition: var(--transition) !important;
-  z-index: 2 !important;
+  z-index: 1 !important;
   vbox {background-color: transparent !important;}
   background-color: transparent !important;
   width: auto;

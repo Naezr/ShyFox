@@ -15,6 +15,7 @@ Styles for Min Max Close buttons
   z-index: -1 !important;
   
   transition: var(--transition) !important;
+  & *{transition: var(--transition) !important;}
   
   /* set position to right */
   right: 0px;
