@@ -67,4 +67,6 @@ menupopup > :is(menuitem, menu){
     padding-top: 5px !important;
     padding-bottom: 5px !important;
   }
+  
+  .unified-extensions-item-action-button {padding-right: 3px !important;}
 }
