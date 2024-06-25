@@ -157,7 +157,7 @@
    > NOTE                   
    > This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
  
-4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).
+4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data). 
 5. Launch Firefox and and if you seeing "Open Sidebery" notification just open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
 6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that:
    
@@ -176,6 +176,9 @@
 
 > [!NOTE]
 > Do not use `System theme - auto` in Firefox settings. It can cause problems
+
+> [!NOTE]
+> Redo the step 4 is enough for updating to new version
 
 ### Extra
 
