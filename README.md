@@ -178,7 +178,7 @@
 > Do not use `System theme - auto` in Firefox settings. It can cause problems
 
 > [!NOTE]
-> Redo the step 4 is enough for updating to new version
+> Redo the steps 1 and 4 is enough for updating to new version
 
 ### Extra
 
