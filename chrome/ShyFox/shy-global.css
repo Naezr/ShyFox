@@ -436,7 +436,7 @@ File Edit View History Bookmarks Tools Help
   margin-left: 3% !important;
 }
 
-.rdm-toolbar, .devtools-button, .user-agent {border-radius: var(--rounding) !important;}
+.rdm-toolbar, .user-agent {border-radius: var(--rounding) !important;}
 
 .user-agent {border: 1px solid grey !important;}
 

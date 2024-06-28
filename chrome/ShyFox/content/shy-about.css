@@ -61,6 +61,8 @@ Styles for settings, Firefox View, etc.
   .card,
 
   #ping-picker,
+  #reportBox,
+  #reportBox #comments,
   #translations-manage-install-list
   
   {border-radius: var(--big-rounding) !important;}
@@ -82,6 +84,7 @@ Styles for settings, Firefox View, etc.
   span,
   a, 
   
+  .tooltip-container .tooltip-panel,
   #activeLanguages
   
   {border-radius: var(--rounding) !important;}
@@ -103,6 +106,7 @@ Styles for settings, Firefox View, etc.
   }
   
   /* dropdown menu margin */
+  .tooltip-container .tooltip-panel .menuitem,
   panel-list[role="menu"] panel-item {margin-inline: 5px}
   
 }

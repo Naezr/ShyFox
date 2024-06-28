@@ -76,6 +76,11 @@ Styles for new tab
   
   .top-site-outer:not(:hover) .icon-pin-small{display: none !important;}
   
+  .context-menu-item{
+    padding-inline: 5px !important;
+    padding-block: 1px !important;
+  }
+  
   /* search box */
   .search-handoff-button {
     border-radius: 100px !important;
