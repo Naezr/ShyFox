@@ -16,7 +16,8 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 /* hide some things */
 #tabbrowser-tabs,                       /* native tabs            */
 #alltabs-button,                        /* all tabs button        */
-#private-browsing-indicator-with-label  /* private mode indicator */
+#private-browsing-indicator-with-label, /* private mode indicator */
+.titlebar-spacer
 
 {display: none}
 
@@ -88,6 +89,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
+  align-content: center !important;
   
   & > * {padding: 3px !important;}
 }
@@ -191,6 +193,8 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     /* make the toolbar height dynamic */
     position: relative !important;
     top: 0px !important;
+    padding-bottom: 3px !important;
+    
     /* styled spacer */
     toolbarspring{
       background-color: color-mix(in srgb, var(--bt-col) 15%, var(--debug-col-2)) !important;
@@ -201,6 +205,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     }
     
     /* limit toolbar items width */
+    & > toolbarbutton {margin-left: 1px !important;}
     & > * {max-width: var(--toolbar-button-wdt) !important;}
   }
   

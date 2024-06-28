@@ -112,7 +112,8 @@ Styles for new tab
   
   /* settings */
   .icon-settings:hover {background-color: var(--tr-hov-col) !important;}
-    
+  .close-button-wrapper {background-color: transparent !important;}
+  
   .home-section .section .selector{
     background-color: var(--tr-col) !important;
     &:hover{background-color: var(--tr-hov-col) !important;}
