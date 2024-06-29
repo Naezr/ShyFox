@@ -18,9 +18,9 @@ Adding icons to all sorts of places
   & > label {display: none !important;}
   & > image {margin-inline: 0px !important;}
   background-repeat: no-repeat;
-  background-position-x: 2px;
-  background-position-y: 7px;
-  width: 20px !important;
+  background-position-x: 4px;
+  background-position-y: 8px;
+  width: 25px !important;
   background-image: url("../icons/book.svg") !important;
 }
 
