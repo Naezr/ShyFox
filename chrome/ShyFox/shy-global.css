@@ -266,7 +266,7 @@ screenshots-buttons{
 
     left: calc(
       var(--left-margin)
-      + var(--margin) * 2
+      + var(--margin)
     );
   }
   

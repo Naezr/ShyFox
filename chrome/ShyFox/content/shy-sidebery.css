@@ -160,5 +160,14 @@ Styles for Sidebery extension
     color: White !important;
     background: var(--accent) !important;
   }
+  
+  /* notification */
+  .notification{
+    border-radius: var(--rounding) !important;
+    &::after{
+      top: calc(var(--rounding) / 4 + 3px) !important;
+      right: calc(var(--rounding) / 4 + 3px) !important; 
+    }
+  }
 
 } /* wrap end */
