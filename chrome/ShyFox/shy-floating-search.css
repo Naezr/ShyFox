@@ -11,7 +11,7 @@ Cool floating search panel
   #urlbar-background {border-radius: var(--bigger-rounding) !important;}
   
   #urlbar-input-container {
-    & > box{
+    & > :is(box, image){
       height: 28px !important;
       margin-block: calc((50px - 28px) / 4) !important;
     }

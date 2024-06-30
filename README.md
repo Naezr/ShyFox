@@ -1,4 +1,4 @@
-# ShyFox 3.5
+# ShyFox 3.5.1
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -14,6 +14,11 @@
 <details><summary>Release notes</summary>
 
 <br/>
+
+3.5.1:
+- Ton of small paddings/margins fixes
+- Print dialog fix
+- Sidebery drag-n-drop fix for Linux
 
 3.5:
 - Moved Sidebery styles from its own settings to `userContent.css`

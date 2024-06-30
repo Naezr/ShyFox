@@ -26,6 +26,7 @@ Navigation bar on top of the window
 
 /* limit items height */
 #nav-bar-customization-target > * {max-height: var(--toolbar-item-hgt) !important;}
+#nav-bar-customization-target {height: var(--toolbar-item-hgt) !important;}
 
 #downloadsFooterButtons toolbarseparator {
   margin-top: 6px !important;

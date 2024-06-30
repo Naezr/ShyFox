@@ -138,6 +138,7 @@ richlistitem,
 panel tree,
 menulist,
 button,
+select,
 input:not([type="checkbox"]),
 #urlbar-background,
 #preview-image,
@@ -181,6 +182,14 @@ richlistbox
 }
 
 .dialogBox {margin-top: var(--margin) !important;}
+
+/* print dialog */
+print-preview::before,
+print-preview .previewStack::before,
+.printPreviewNavigation::before
+{display: none !important;}
+
+.printDialogBox::before {border-radius: var(--rounding) !important;}
 
 /* disable pointer events in clean mode */ 
 #main-window[titlepreface*="?"]{
@@ -257,7 +266,7 @@ screenshots-buttons{
 
     left: calc(
       var(--left-margin)
-      + var(--margin) * 2
+      + var(--margin)
     );
   }
   
@@ -436,7 +445,7 @@ File Edit View History Bookmarks Tools Help
   margin-left: 3% !important;
 }
 
-.rdm-toolbar, .devtools-button, .user-agent {border-radius: var(--rounding) !important;}
+.rdm-toolbar, .user-agent {border-radius: var(--rounding) !important;}
 
 .user-agent {border: 1px solid grey !important;}
 
