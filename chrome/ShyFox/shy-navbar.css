@@ -236,6 +236,7 @@ Navigation bar on top of the window
   &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
     #nav-bar-customization-target *:not(:is(#unified-extensions-button, #firefox-view-button))[open],
+    #nav-bar-customization-target #searchbar:focus-within,
     #urlbar:focus-within,
     #urlbar[breakout][breakout-extend],
     #nav-bar-overflow-button[open],

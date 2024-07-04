@@ -92,6 +92,40 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
   align-content: center !important;
   
   & > * {padding: 3px !important;}
+  
+  /* bookmarks inside toolbar */
+  #PlacesToolbar {width: 40px !important;}
+  
+  /* searchbar inside toolbar */
+  --searchbar-hgt: 170px;
+  #search-container{
+    margin-inline: 0px !important;
+    margin-block: 2px !important;
+    padding: 5px !important;
+    padding-block: 0px !important;
+    
+    min-width: var(--toolbar-button-wdt) !important;
+    width: var(--toolbar-button-wdt) !important;
+    min-height: var(--toolbar-item-hgt) !important;
+    max-height: var(--searchbar-hgt) !important;
+    
+    #searchbar {height: var(--searchbar-hgt) !important;}
+    
+    .searchbar-search-button, .search-go-container {position: absolute}
+    .searchbar-search-button {margin-top: 5px !important;}
+    .search-go-container {
+      margin-top: calc(var(--searchbar-hgt) - 35px ) !important;
+      margin-left: 1.48px !important; 
+    }
+    
+    .searchbar-textbox{
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      padding-inline-start: 25px !important;
+      padding-inline-end: 35px !important;
+      cursor: vertical-text !important;
+    }
+  }
 }
 
 /* space for window controls */
@@ -217,6 +251,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     #TabsToolbar:hover
     .titlebar-buttonbox-container:not(:hover),
     #TabsToolbar-customization-target *:not(#firefox-view-button)[open],
+    #TabsToolbar-customization-target #searchbar:focus-within
     #PanelUI-menu-button[open],
     #PanelUI-menu-button:hover,
     #unified-extensions-button[open],
@@ -283,6 +318,8 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     right: 10px !important;
   }
   
+  #TabsToolbar-customization-target toolbarpaletteitem {width: 46px !important;}
+  #wrapper-search-container {max-height: var(--searchbar-hgt) !important;}
   #wrapper-unified-extensions-button {opacity: 1 !important;}
   
   #unified-extensions-button{

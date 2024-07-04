@@ -183,6 +183,8 @@ richlistbox
 
 .dialogBox {margin-top: var(--margin) !important;}
 
+#searchbar-anon-search-settings {margin-inline-end: 4px !important;}
+
 /* print dialog */
 print-preview::before,
 print-preview .previewStack::before,
