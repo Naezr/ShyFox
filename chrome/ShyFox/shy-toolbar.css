@@ -251,7 +251,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     #TabsToolbar:hover
     .titlebar-buttonbox-container:not(:hover),
     #TabsToolbar-customization-target *:not(#firefox-view-button)[open],
-    #TabsToolbar-customization-target #searchbar:focus-within
+    #TabsToolbar-customization-target #searchbar:focus-within,
     #PanelUI-menu-button[open],
     #PanelUI-menu-button:hover,
     #unified-extensions-button[open],
