@@ -11,7 +11,7 @@
 
 <br/>
 
-<details><summary>Release notes</summary>
+<details><summary>🚩 Release notes</summary>
 
 <br/>
 
@@ -106,7 +106,7 @@
 
 🎦 [Video showcase](showcase.md)
 
-## Install
+## 💾 Install
 
 <details><summary>Migrate from 2.0 </summary>
  
@@ -134,7 +134,7 @@
    
 </details>
 
-### Minimal
+### 📖 Minimal
 
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
 2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/)
@@ -174,8 +174,8 @@
    
    ![layout](https://github.com/Naezr/ShyFox/assets/95460152/ea349f5c-bfc4-4af0-bd55-4715d7bf6755)
    
-> [!NOTE]                                 
-> If you don't add `Flexible Space` to the right toolbar, all buttons except `Menu` and `Extensions` will be centered on the panel
+   > NOTE                                 
+   > If you don't add `Flexible Space` to the right toolbar, all buttons except `Menu` and `Extensions` will be centered on the panel
    
    <br/>
    
@@ -186,13 +186,10 @@
 >              
 > ![System theme - auto](https://github.com/Naezr/ShyFox/assets/95460152/944e9200-ccc1-4cac-8d6e-d1c8f19db375)
 
-
-
-
 > [!NOTE]
 > Redo the steps 1 and 4 is enough for updating to new version
 
-### Extra
+### 💡 Extra
 
 If you don't like the way the standard dark and light themes look, you can colorize your ShyFox!
 
@@ -207,8 +204,8 @@ There are three ways you can do it, choose one:
    
    ![settings](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
    
-> [!NOTE]
-> If you make the `Tab bar` and `Toolbar` `Background` colors the same, the pull-down hidden panels will have a transparent background.
+   > NOTE
+   > If you make the `Tab bar` and `Toolbar` `Background` colors the same, the pull-down hidden panels will have a transparent background.
    
    <br/>
    
@@ -220,12 +217,12 @@ You can disable floating search bar. To do it go to the `userChrome.css` file an
 
 You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`.
 
-## Additional information     
+## ⁉️ Additional information     
 
  * The theme works and is only tested on the latest version of Firefox. Firefox-based browsers, ESR versions, or just older versions are not supported. It may work, but I am not responsible for it.
  * I don't know if this theme works on macOS. I don't have a mac to test it. I have made the control buttons work on both left and right (thanks Linux and GTK), but I can't test this on mac.
 
-## Features
+## ⚙️ Features
 
 ### Panels
 
@@ -234,7 +231,7 @@ The browser interface has been divided into three panels:
 - On top - Navbar - panel where you can find the address bar and everything related to it
 - On right - Toolbar - a panel with customizable buttons
 
-### Toggles
+### 🆒 Toggles
 
 The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized.                            
 
