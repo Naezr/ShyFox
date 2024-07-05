@@ -179,8 +179,13 @@
    
    </summary>
 
-> [!NOTE]
+> [!IMPORTANT]
 > Do not use `System theme - auto` in Firefox settings. It can cause problems
+>              
+> ![System theme - auto](https://github.com/Naezr/ShyFox/assets/95460152/944e9200-ccc1-4cac-8d6e-d1c8f19db375)
+
+
+
 
 > [!NOTE]
 > Redo the steps 1 and 4 is enough for updating to new version
