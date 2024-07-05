@@ -250,14 +250,14 @@ There is also a fourth toggle - Clean Mode. When Clean Mode is activated, the pr
 | 3 | Hide Navbar  | Ctrl + Alt + S |
 | 4 | Clean Mode   | Ctrl + Alt + X |
 
-## To-Do
+## 🔜 To-Do
 
  * Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebery cannot be transparent)
  * Add icons to menubar and context menu
  * Add navbar on bottom support
  * Make it clearer when a window is in focus and when it is not
 
-## Thanks
+## ❤️‍🔥 Thanks
 
   [MrOtherGuy](https://github.com/MrOtherGuy) -  Thanks for the fx-autoconfig (not used here anymore) and the repository with cool css's.                  
   [MightyFox concept](https://www.reddit.com/r/FirefoxCSS/comments/195n51c/mightyfox_an_idea_need_help_to_build_it_up/)  -  Thanks for the cool concept and main idea.                     

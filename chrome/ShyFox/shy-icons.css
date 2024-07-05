@@ -97,7 +97,9 @@ In menu button
 #appMenu-proton-update-banner::before,
 #protections-popup-tp-switch-breakage-link::before,
 #downloadsHistory .button-icon,
-.subviewbutton:not(#appMenu-proton-update-banner) > image {
+#PanelUI-fxa-menu-syncnow-button::before,
+.subviewbutton:not(#appMenu-proton-update-banner) > image 
+{
   fill: currentColor !important;
   fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
   -moz-context-properties: fill, fill-opacity, stroke !important;
