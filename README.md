@@ -106,7 +106,7 @@
 
 🎦 [Video showcase](showcase.md)
 
-## 💾 Install
+## Install
 
 <details><summary>Migrate from 2.0 </summary>
  
@@ -134,7 +134,7 @@
    
 </details>
 
-### 📖 Minimal
+### Minimal
 
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
 2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/)
@@ -189,7 +189,7 @@
 > [!NOTE]
 > Redo the steps 1 and 4 is enough for updating to new version
 
-### 💡 Extra
+### Extra
 
 If you don't like the way the standard dark and light themes look, you can colorize your ShyFox!
 
@@ -217,12 +217,12 @@ You can disable floating search bar. To do it go to the `userChrome.css` file an
 
 You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`.
 
-## ⁉️ Additional information     
+## Additional information     
 
  * The theme works and is only tested on the latest version of Firefox. Firefox-based browsers, ESR versions, or just older versions are not supported. It may work, but I am not responsible for it.
  * I don't know if this theme works on macOS. I don't have a mac to test it. I have made the control buttons work on both left and right (thanks Linux and GTK), but I can't test this on mac.
 
-## ⚙️ Features
+## Features
 
 ### Panels
 
@@ -231,7 +231,7 @@ The browser interface has been divided into three panels:
 - On top - Navbar - panel where you can find the address bar and everything related to it
 - On right - Toolbar - a panel with customizable buttons
 
-### 🆒 Toggles
+### Toggles
 
 The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized.                            
 
@@ -250,14 +250,14 @@ There is also a fourth toggle - Clean Mode. When Clean Mode is activated, the pr
 | 3 | Hide Navbar  | Ctrl + Alt + S |
 | 4 | Clean Mode   | Ctrl + Alt + X |
 
-## 🔜 To-Do
+## To-Do
 
  * Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebery cannot be transparent)
  * Add icons to menubar and context menu
  * Add navbar on bottom support
  * Make it clearer when a window is in focus and when it is not
 
-## ❤️‍🔥 Thanks
+## Thanks
 
   [MrOtherGuy](https://github.com/MrOtherGuy) -  Thanks for the fx-autoconfig (not used here anymore) and the repository with cool css's.                  
   [MightyFox concept](https://www.reddit.com/r/FirefoxCSS/comments/195n51c/mightyfox_an_idea_need_help_to_build_it_up/)  -  Thanks for the cool concept and main idea.                     
