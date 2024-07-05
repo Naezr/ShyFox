@@ -1,4 +1,4 @@
-# ShyFox 3.5.1
+![menu](https://github.com/Naezr/ShyFox/assets/95460152/79348b9b-da1e-4c04-92b8-ad0875b1df7d)![menu](https://github.com/Naezr/ShyFox/assets/95460152/8e6baef1-8209-4e33-b137-5fba2363577a)# ShyFox 3.5.1
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -159,12 +159,13 @@
    </details>    
    
 3. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
-   > NOTE                   
-   > This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
+> [!NOTE]                   
+> This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
  
 4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data). 
 5. Launch Firefox and and if you seeing "Open Sidebery" notification just open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
-6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that:
+
+6. Go to the customizing page ( <img src="https://github.com/Naezr/ShyFox/assets/95460152/acaf55c3-6c7c-41cd-8fc5-320f80efe88d" align="bottom"> > more tools > customize toolbar) and move buttons to something like that:
    
    <details><summary>Buttons layout</summary>
    
@@ -172,8 +173,8 @@
    
    ![layout](https://github.com/Naezr/ShyFox/assets/95460152/ea349f5c-bfc4-4af0-bd55-4715d7bf6755)
    
-   > NOTE                                 
-   > If you don't add `Flexible Space` to the right toolbar, all buttons except `Menu` and `Extensions` will be centered on the panel
+> [!NOTE]                                 
+> If you don't add `Flexible Space` to the right toolbar, all buttons except `Menu` and `Extensions` will be centered on the panel
    
    <br/>
    
@@ -205,8 +206,8 @@ There are three ways you can do it, choose one:
    
    ![settings](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
    
-   > NOTE                    
-   > If you make the `Tab bar` and `Toolbar` `Background` colors the same, the pull-down hidden panels will have a transparent background.
+> [!NOTE]
+> If you make the `Tab bar` and `Toolbar` `Background` colors the same, the pull-down hidden panels will have a transparent background.
    
    <br/>
    
