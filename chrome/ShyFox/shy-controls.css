@@ -47,7 +47,7 @@ Styles for Min Max Close buttons
 }
 
 /* remove window controls in f11 fullscreen or in clean mode */
-#main-window:is([sizemode="fullscreen"], [titlepreface*="?"]) {
+#main-window:is([sizemode="fullscreen"], [titlepreface*="?"]:not([customizing])) {
   --window-control-wdt: 0px;
   
   --buttonbox-left-hgt: 0px;
