@@ -280,16 +280,17 @@ screenshots-buttons{
 
 --- CONTEXT MENU ------------------------------------------------------------------------------------------------------------------------------------
 
+Apply theme colors to context menus and menubar
+
 */
 
-/* apply dynamic colors to context menus and menubar*/
+/* in page context menu */
 #contentAreaContextMenu[showservicesmenu="true"],
-#contentAreaContextMenu[showservicesmenu="true"] menupopup,
-#toolbar-context-menu,
-#toolbar-menubar menupopup
+#contentAreaContextMenu[showservicesmenu="true"] menupopup
 {
-  --panel-background: var(--bg-col)!important;                        
-  --panel-border-color: var(--tb-col) !important;                    
+  --panel-background: var(--bg-col)!important;
+  --panel-border-color: var(--tb-col) !important;
+  
   --toolbar-field-focus-background-color: var(--bt-col) !important;
   --panel-color: var(--bt-col) !important;  
   
@@ -297,7 +298,24 @@ screenshots-buttons{
     background-color: var(--tb-col) !important;
     color: var(--bt-col) !important;
   }
-}     
+}
+
+/* toolbar menu */
+#toolbar-context-menu,
+#toolbar-context-menu menupopup,
+#toolbar-menubar menupopup
+{
+  --panel-background: var(--tb-col)!important;  
+  --panel-border-color: var(--bg-col) !important;
+  
+  --toolbar-field-focus-background-color: var(--bt-col) !important;
+  --panel-color: var(--bt-col) !important;  
+  
+  menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+    background-color: var(--bg-col) !important;
+    color: var(--bt-col) !important;
+  }
+}
 
 /*
 
