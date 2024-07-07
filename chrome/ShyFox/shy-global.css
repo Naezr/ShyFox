@@ -349,9 +349,9 @@ Right click > Customize toolbar
   }
 }
 
-:root[customizing] .customization-target:not(#widget-overflow-fixed-list) {
-  min-width: 0px !important;
-}
+toolbarpaletteitem#wrapper-search-container[place="palette"] #searchbar {background-color: var(--bg-col) !important;}
+
+:root[customizing] .customization-target:not(#widget-overflow-fixed-list) {min-width: 0px !important;}
 
 /*
 

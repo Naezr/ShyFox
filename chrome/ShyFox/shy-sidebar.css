@@ -279,14 +279,14 @@ Styles for sidebar
 */
 
 /* hide sidebar button on toolbar and sidebar header when Sidebery opened */
-#main-window:has(
+#main-window:not([customizing]):has(
   #sidebar-box:not([hidden])[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
 ) { 
   #sidebar-header, #sidebar-button {display: none} 
 }
 
 /* color the sidebar button red */
-#sidebar-button .toolbarbutton-icon{background-color: red !important;}
+#sidebar-button .toolbarbutton-icon {background-color: red !important;}
 
 /* notification when Sidebery is not opened */
 #main-window:has( 
