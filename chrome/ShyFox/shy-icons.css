@@ -128,6 +128,7 @@ In menu button
 #unified-extensions-manage-extensions {list-style-image: url("chrome://mozapps/skin/extensions/extension.svg");}
 
 /* main menu */
+#appMenu-fxa-separator{border-image: none !important;}
 #appMenu-proton-update-banner::before {content: url("../icons/whatsnew.svg");}
 #appMenu-new-tab-button2 {list-style-image: url("../icons/new-tab.svg");}
 #appMenu-new-window-button2 {list-style-image: url("../icons/window.svg");}
@@ -228,24 +229,38 @@ In menu button
   background-position-y: 2px;
   background-size: 16px;
   
-  &:not(.menuitem-iconic, .menu-iconic) > label {margin-inline-start: 21px !important;}
+  &:not(.menuitem-iconic, .menu-iconic, [type="checkbox"]) > label {margin-inline-start: 21px !important;}
   &:not(menu) {padding-right: 0px !important;}
 }
 
 #context-openlinkincurrent {background-image: url("../icons/tab.svg") !important;}
+#context-openlinkintab {background-image: url("../icons/new-tab.svg") !important;}
+#context-openlinkinusercontext-menu {background-image: url("../icons/container-openin-16.svg") !important;}
+#context-openlink {background-image: url("../icons/window.svg") !important;}
+#context-openlinkprivate {background-image: url("../icons/private-favicon.svg") !important;}
+
+#spell-add-to-dictionary {background-image: url("../icons/book-add.svg") !important;}
+
+#context-undo {background-image: url("../icons/undo.svg") !important;}
+#context-redo {background-image: url("../icons/redo.svg") !important;}
 
 #context-savepage {background-image: url("chrome://browser/skin/downloads/downloads.svg") !important;}
 #context-pocket {background-image: url("../icons/pocket-outline.svg") !important;}
 #context-sendpagetodevice {background-image: url("../icons/send-to-device.svg") !important;}
+#context-cut {background-image: url("../icons/edit-cut.svg") !important;}
+#context-copy {background-image: url("../icons/edit-copy.svg") !important;}
+#context-print-selection {background-image: url("chrome://global/skin/icons/print.svg") !important;}
+#context-paste {background-image: url("../icons/edit-paste.svg") !important;}
+#context-delete {background-image: url("../icons/trash.svg") !important;}
 #context-selectall {background-image: url("../icons/select-all-on.svg") !important;}
 
 #context-viewimage {background-image: url("../icons/image.svg") !important;}
 #context-saveimage {background-image: url("chrome://browser/skin/downloads/downloads.svg") !important;}
-#context-copyimage-contents {background-image: url("../icons/tab-copy.svg") !important;}
+#context-copyimage-contents {background-image: url("../icons/image-copy.svg") !important;}
 #context-copyimage {background-image: url("../icons/link.svg") !important;}
 #context-sendimage {background-image: url("../icons/mail.svg") !important;}
 
-#context-setDesktopBackground {background-image: url("../icons/tab.svg") !important;}
+#context-setDesktopBackground {background-image: url("../icons/device-desktop.svg") !important;}
 
 #context-take-screenshot {background-image: url("chrome://browser/skin/screenshot.svg") !important;}
 
@@ -258,6 +273,9 @@ In menu button
 
 #context-searchselect {background-image: url(chrome://global/skin/icons/search-glass.svg); !important;}
 
+#spell-dictionaries {background-image: url("../icons/translate.svg"); !important;}
+
+#context-viewpartialsource-selection {background-image: url("../icons/code.svg") !important;}
 #context-viewsource {background-image: url("../icons/document-search.svg") !important;}
 #context-inspect-a11y {background-image: url("../icons/window-dev-tools.svg") !important;}
 #context-inspect {background-image: url("../icons/developer.svg") !important;}
@@ -270,7 +288,7 @@ menuitem[id*="ublock0_raymondhill_net-menuitem-_uBlock0-"]{
 }
 
 /* simple translate */
-menuitem[id*="simple-translate_sienori-menuitem-"] {
+:is(menu, menuitem):not(menu *)[id*="simple-translate_sienori-menuitem-"] {
   .menu-iconic-icon {opacity: 0 !important;}
   background-image: url("../icons/translate.svg"); !important;
 }

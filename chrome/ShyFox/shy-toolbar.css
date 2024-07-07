@@ -114,7 +114,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     .searchbar-search-button, .search-go-container {position: absolute}
     .searchbar-search-button {margin-top: 5px !important;}
     .search-go-container {
-      margin-top: calc(var(--searchbar-hgt) - 35px ) !important;
+      margin-top: calc(var(--searchbar-hgt) - 33px ) !important;
       margin-left: 1.48px !important; 
     }
     
