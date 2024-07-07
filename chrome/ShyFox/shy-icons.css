@@ -219,7 +219,7 @@ In menu button
 
 */
 
-#contentAreaContextMenu :is(menuitem, menu){
+#contentAreaContextMenu > :is(menuitem, menu){
   fill: currentColor !important;
   fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
   -moz-context-properties: fill, fill-opacity, stroke !important;
@@ -227,6 +227,9 @@ In menu button
   background-position-x: 5px;
   background-position-y: 2px;
   background-size: 16px;
+  
+  &:not(.menuitem-iconic, .menu-iconic) > label {margin-inline-start: 21px !important;}
+  &:not(menu) {padding-right: 0px !important;}
 }
 
 #context-openlinkincurrent {background-image: url("../icons/tab.svg") !important;}

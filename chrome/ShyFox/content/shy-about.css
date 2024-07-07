@@ -63,6 +63,7 @@ Styles for settings, Firefox View, etc.
   #ping-picker,
   #reportBox,
   #reportBox #comments,
+  #migrationWizardDialog,
   #translations-manage-install-list
   
   {border-radius: var(--big-rounding) !important;}
