@@ -1,4 +1,4 @@
-# ShyFox 3.5.1
+# ShyFox 3.6
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -14,6 +14,12 @@
 <details><summary>🚩 Release notes</summary>
 
 <br/>
+
+3.6:
+- Searcbar can now be putted into vertical toolbar
+- Bookmark toolbar items can be placed on a vertical toolbar and will be a single button
+- The wallpaper in a new tab now depends on the theme. `wallpaper.png` for dark theme and `wallpaper-light.png` for light theme
+- Some context menu items now have icons
 
 3.5.1:
 - Ton of small paddings/margins fixes
