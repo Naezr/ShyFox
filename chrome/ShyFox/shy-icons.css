@@ -238,6 +238,8 @@ Monochrome icons for some extensions
 #context-openlinkprivate {background-image: url("../icons/private-favicon.svg") !important;}
 
 #spell-add-to-dictionary {background-image: url("../icons/book-add.svg") !important;}
+#spell-add-dictionaries-main {background-image: url("../icons/book-add.svg") !important;}
+#spell-dictionaries {background-image: url("../icons/book.svg") !important;}
 
 #context-undo {background-image: url("../icons/undo.svg") !important;}
 #context-redo {background-image: url("../icons/redo.svg") !important;}
@@ -249,8 +251,21 @@ Monochrome icons for some extensions
 #context-copy {background-image: url("../icons/edit-copy.svg") !important;}
 #context-print-selection {background-image: url("chrome://global/skin/icons/print.svg") !important;}
 #context-paste {background-image: url("../icons/edit-paste.svg") !important;}
+#context-paste-no-formatting {background-image: url("../icons/paste-text.svg") !important;}
 #context-delete {background-image: url("../icons/trash.svg") !important;}
 #context-selectall {background-image: url("../icons/select-all-on.svg") !important;}
+
+#context-media-play {background-image: url("chrome://global/skin/media/play-fill.svg") !important;}
+#context-media-pause {background-image: url("chrome://global/skin/media/pause-fill.svg") !important;}
+#context-media-mute {background-image: url("chrome://global/skin/media/audio-muted.svg") !important;}
+#context-media-unmute {background-image: url("chrome://global/skin/media/audio.svg") !important;}
+#context-media-playbackrate {background-image: url("../icons/performance.svg") !important;}
+#context-video-fullscreen {background-image: url("chrome://browser/skin/fullscreen.svg") !important;}
+#context-leave-dom-fullscreen {background-image: url("chrome://global/skin/media/fullscreenExitButton.svg"); !important;}
+#context-media-showcontrols {background-image: url("../icons/eye-show.svg"); !important;}
+#context-media-hidecontrols {background-image: url("../icons/eye-hide.svg"); !important;}
+
+#context-viewvideo {background-image: url("../icons/new-tab-forward.svg") !important;}
 
 #context-viewimage {background-image: url("../icons/image.svg") !important;}
 #context-saveimage {background-image: url("chrome://browser/skin/downloads/downloads.svg") !important;}
@@ -266,17 +281,21 @@ Monochrome icons for some extensions
 #context-savelink {background-image: url("chrome://browser/skin/downloads/downloads.svg") !important;}
 #context-savelinktopocket {background-image: url("../icons/pocket-outline.svg") !important;}
 #context-copylink {background-image: url("../icons/link.svg") !important;}
-#context-stripOnShareLink {background-image: url("../icons/eraser.svg") !important;}
+#context-stripOnShareLink {background-image: url("../icons/link-no-tracking.svg") !important;}
 #context-sendlinktodevice {background-image: url("../icons/send-to-device.svg") !important;}
 
 #context-searchselect {background-image: url(chrome://global/skin/icons/search-glass.svg); !important;}
+#context-searchselect-private {background-image: url("../icons/private-favicon.svg") !important;}
 
-#spell-dictionaries {background-image: url("../icons/translate.svg"); !important;}
+#context-translate-selection {background-image: url("../icons/translate.svg"); !important;}
+
+#context-bidi-text-direction-toggle {background-image: url("../icons/text-direction-horizontal-ltr.svg") !important;}
+#context-bidi-page-direction-toggle {background-image: url("../icons/document-landscape-split-hint.svg") !important;}
 
 #context-viewpartialsource-selection {background-image: url("../icons/code.svg") !important;}
 #context-viewsource {background-image: url("../icons/document-search.svg") !important;}
-#context-inspect-a11y {background-image: url("../icons/window-dev-tools.svg") !important;}
-#context-inspect {background-image: url("../icons/developer.svg") !important;}
+#context-inspect-a11y {background-image: url("../icons/tool-accessibility.svg"); !important;}
+#context-inspect {background-image: url("../icons/command-pick.svg"); !important;}
 
 
 /* ublock */
