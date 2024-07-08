@@ -1,4 +1,4 @@
-# ShyFox 3.5.1
+# ShyFox 3.6
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -14,6 +14,12 @@
 <details><summary>🚩 Release notes</summary>
 
 <br/>
+
+3.6:
+- Searcbar can now be putted into vertical toolbar
+- Bookmark toolbar items can be placed on a vertical toolbar and will be a single button
+- The wallpaper in a new tab now depends on the theme. `wallpaper.png` for dark theme and `wallpaper-light.png` for light theme
+- Some context menu items now have icons
 
 3.5.1:
 - Ton of small paddings/margins fixes
@@ -166,7 +172,7 @@
 4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data). 
 5. Launch Firefox and and if you seeing "Open Sidebery" notification just open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
 
-6. Go to the customizing page ( <img src="https://github.com/Naezr/ShyFox/assets/95460152/acaf55c3-6c7c-41cd-8fc5-320f80efe88d"> > more tools > customize toolbar) and move buttons to something like that:
+6. Go to the customizing page ( <img src="https://github.com/Naezr/ShyFox/assets/95460152/49d963a3-ccb4-48f9-8892-f206894315d7"> > more tools > customize toolbar) and move buttons to something like that:
    
    <details><summary>Buttons layout</summary>
    
