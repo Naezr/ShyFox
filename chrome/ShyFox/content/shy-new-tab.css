@@ -121,8 +121,8 @@ Styles for new tab
   /* dark wallpaper */
   :root[lwt-newtab-brighttext] body {background-image: url("../../wallpaper.png") !important;}
   
-  /* light wallpaper */
-  :root:not([lwt-newtab-brighttext]) body {background-image: url("../../wallpaper-light.png") !important;}
+  /* light wallpaper */                                      /* `wallpaper.png` will be used when `-light` one does not exist */
+  :root:not([lwt-newtab-brighttext]) body {background-image: url("../../wallpaper-light.png"), url("../../wallpaper.png") !important;}
   
   /* central box */
   main{

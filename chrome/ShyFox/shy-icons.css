@@ -82,6 +82,31 @@ Monochrome icons for some extensions
   background-color: rgba(102, 102, 102, 1) !important;
 }
 
+/* context menu */
+
+/* ublock */
+menuitem[id*="ublock0_raymondhill_net-menuitem-_uBlock0-"]{
+  .menu-iconic-icon {opacity: 0 !important;}
+  background-image: url("../icons/ublock.svg"); !important;
+}
+
+/* simple translate */
+:is(menu, menuitem):not(menu *)[id*="simple-translate_sienori-menuitem-"] {
+  .menu-iconic-icon {opacity: 0 !important;}
+  background-image: url("../icons/translate.svg"); !important;
+}
+
+/* bitwarden */
+#_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root{
+  .menu-iconic-icon {opacity: 0 !important;}
+  background-image: url("../icons/bitwarden.svg"); !important;
+}
+
+/* clean url */
+#_74145f27-f039-47ce-a470-a662b129930a_-menuitem-_copy-link-to-clipboard{
+  .menu-iconic-icon {opacity: 0 !important;}
+  background-image: url("../icons/eraser.svg"); !important;
+}
 
 /* 
 
@@ -298,26 +323,3 @@ Monochrome icons for some extensions
 #context-inspect {background-image: url("../icons/command-pick.svg"); !important;}
 
 
-/* ublock */
-menuitem[id*="ublock0_raymondhill_net-menuitem-_uBlock0-"]{
-  .menu-iconic-icon {opacity: 0 !important;}
-  background-image: url("../icons/ublock.svg"); !important;
-}
-
-/* simple translate */
-:is(menu, menuitem):not(menu *)[id*="simple-translate_sienori-menuitem-"] {
-  .menu-iconic-icon {opacity: 0 !important;}
-  background-image: url("../icons/translate.svg"); !important;
-}
-
-/* bitwarden */
-#_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root{
-  .menu-iconic-icon {opacity: 0 !important;}
-  background-image: url("../icons/bitwarden.svg"); !important;
-}
-
-/* clean url */
-#_74145f27-f039-47ce-a470-a662b129930a_-menuitem-_copy-link-to-clipboard{
-  .menu-iconic-icon {opacity: 0 !important;}
-  background-image: url("../icons/eraser.svg"); !important;
-}

@@ -210,16 +210,20 @@ There are three ways you can do it, choose one:
    
    ![settings](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
    
-   > NOTE
+   > NOTE                        
    > If you make the `Tab bar` and `Toolbar` `Background` colors the same, the pull-down hidden panels will have a transparent background.
    
    <br/>
    
    </details>
 
-If you don't like the wallpaper on the new tab, you can change it to your own. Just rename your picture to `wallpaper.png` and put in into `chrome` folder. There's also `wallpaper-alt.png` - same picture, but in the daytime.
+If you don't like new tab wallpaper, you can change it to your own. There is two wallpaper files in `chrome` folder:
+ - `wallpaper.png` for dark theme                   
+ - `wallpaper-light.png` for light theme             
+  
+To use one image for all themes just delete `wallpaper-light.png`.
 
-You can disable floating search bar. To do it go to the `userChrome.css` file and comment line that imports `shy-floating-search.css`.
+You can disable floating search bar. To do it go to the `about:config` page and set `shyfox.disable.floating.search` to `true`
 
 You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`.
 
