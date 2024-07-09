@@ -234,6 +234,7 @@ Settings that can be toggled in `about:config`
 | :--- | :--- | :--- |
 | `shyfox.disable.floating.search` | Floating search disabled | Floating search enabled |
 | `shyfox.disable.compact.unified.extensions` | Using default extensions menu | Using compact extensions menu |
+| `shyfox.remove.window.controls` | `min` `max` `close` buttons removed at all | These buttons removed only in fullscreen |
 | `shyfox.enable.ext.mono.toolbar.icons` | Supported* extensions get monochrome icons as toolbar buttons | Standard icons used |
 | `shyfox.enable.ext.mono.context.icons` | Supported* extensions get monochrome icons as context menu items** | Standard icons used |
 | `shyfox.enable.context.menu.icons` | Many context menu items get icons** | No icons in context menus |
