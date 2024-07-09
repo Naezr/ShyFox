@@ -112,7 +112,9 @@
 
 🎦 [Video showcase](showcase.md)
 
-## Install
+## Usage
+
+### Install
 
 <details><summary>Migrate from 2.0 </summary>
  
@@ -140,7 +142,7 @@
    
 </details>
 
-### Minimal
+<br/>
 
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
 2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/)
@@ -195,7 +197,7 @@
 > [!NOTE]
 > Redo the steps 1 and 4 is enough for updating to new version
 
-### Extra
+### Colors
 
 If you don't like the way the standard dark and light themes look, you can colorize your ShyFox!
 
@@ -217,15 +219,25 @@ There are three ways you can do it, choose one:
    
    </details>
 
-If you don't like new tab wallpaper, you can change it to your own. There is two wallpaper files in `chrome` folder:
- - `wallpaper.png` for dark theme                   
- - `wallpaper-light.png` for light theme             
+You can change new tab wallpaper to your own. There is two wallpaper files in `chrome` folder:
+ - `wallpaper.png` - for dark theme                   
+ - `wallpaper-light.png` - for light theme             
   
 To use one image for all themes just delete `wallpaper-light.png`.
 
-You can disable floating search bar. To do it go to the `about:config` page and set `shyfox.disable.floating.search` to `true`
-
 You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`.
+
+### Options
+
+Settings that can be toggled in `about:config`
+
+| Setting | true | false / not exist (default) |
+| :--- | :--- | :--- |
+| `shyfox.disable.floating.search` | Floating search disabled | Floating search enabled |
+| `shyfox.enable.ext.mono.toolbar.icons` | Supported extensions get monochrome icons as toolbar buttons | Standard icons used |
+| `shyfox.enable.ext.mono.context.icons` | Supported extensions get monochrome icons as context menu items | Standard icons used |
+| `shyfox.enable.context.menu.icons` | Many context menu items get icons | No icons in context menus |
+
 
 ## Additional information     
 

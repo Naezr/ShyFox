@@ -7,8 +7,10 @@ Shrink some things so they take up less space
 
 */
 
-.menupopup-arrowscrollbox,
-#context-navigation > .menuitem-iconic {border-radius: var(--big-rounding) !important;}
+@media not (-moz-platform: macos) {
+  .menupopup-arrowscrollbox,
+  #context-navigation > .menuitem-iconic {border-radius: var(--big-rounding) !important;}
+}
 
 #context-navigation > .menuitem-iconic[disabled="true"] {background-color: transparent !important;}
 
