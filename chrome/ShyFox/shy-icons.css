@@ -250,6 +250,8 @@ Monochrome icons for some extensions
 */
 
 #contentAreaContextMenu > :is(menuitem, menu){
+  
+  /* icons color and position */
   fill: currentColor !important;
   fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
   -moz-context-properties: fill, fill-opacity, stroke !important;
@@ -258,7 +260,16 @@ Monochrome icons for some extensions
   background-position-y: 2px;
   background-size: 16px;
   
+  /* various paddings/margins tweaks */
   &:not(.menuitem-iconic, .menu-iconic, [type="checkbox"]) > label {margin-inline-start: 21px !important;}
+  &[type="checkbox"]{
+    .menu-iconic-left{
+      width: 22px !important;
+      padding-inline-end: 6px !important;
+      margin-inline: 0px !important;
+    }
+  }
+  .menu-iconic-text {margin-inline-start: -1px !important;}
   &:not(menu) {padding-right: 0px !important;}
 }
 

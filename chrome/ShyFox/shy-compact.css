@@ -21,6 +21,9 @@ menupopup > :is(menuitem, menu){
   border-radius: var(--rounding) !important;
   margin: 0 !important;
   margin-block: 1px !important;
+  
+  padding-block: 0px !important;
+  padding-inline-start: 5px !important;
 }
 
 :is(.bookmark-item, #PlacesChevron) :is(menuitem, menu) {margin-inline: 5px !important;}
