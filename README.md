@@ -19,7 +19,8 @@
 - Searcbar can now be putted into vertical toolbar
 - Bookmark toolbar items can be placed on a vertical toolbar and will be a single button
 - The wallpaper in a new tab now depends on the theme. `wallpaper.png` for dark theme and `wallpaper-light.png` for light theme
-- Some context menu items now have icons
+- Some context menu items now have icons (disabled by default)
+- Added bunch of `about:config` settings
 
 3.5.1:
 - Ton of small paddings/margins fixes
@@ -142,8 +143,6 @@
    
 </details>
 
-<br/>
-
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
 2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/)
    
@@ -197,7 +196,7 @@
 > [!NOTE]
 > Redo the steps 1 and 4 is enough for updating to new version
 
-### Colors
+### Customization
 
 If you don't like the way the standard dark and light themes look, you can colorize your ShyFox!
 
@@ -234,15 +233,33 @@ Settings that can be toggled in `about:config`
 | Setting | true | false / not exist (default) |
 | :--- | :--- | :--- |
 | `shyfox.disable.floating.search` | Floating search disabled | Floating search enabled |
-| `shyfox.enable.ext.mono.toolbar.icons` | Supported extensions get monochrome icons as toolbar buttons | Standard icons used |
-| `shyfox.enable.ext.mono.context.icons` | Supported extensions get monochrome icons as context menu items | Standard icons used |
+| `shyfox.enable.ext.mono.toolbar.icons` | Supported* extensions get monochrome icons as toolbar buttons | Standard icons used |
+| `shyfox.enable.ext.mono.context.icons` | Supported* extensions get monochrome icons as context menu items | Standard icons used |
 | `shyfox.enable.context.menu.icons` | Many context menu items get icons | No icons in context menus |
+
+<details><summary>* - Supported extensions:</summary>
+   
+   <br/>
+   
+   - Userchrome Toggle Extended - toolbar button (panels icon)
+   - Bitwarden - both toolbar and context menu
+   - uBlock Origin - both toolbar and context menu
+   - Simple Translate - only context menu item
+   - Dark Reader - toolbar button (moon icon)
+   - Privacy Badger - toolbar button (ugly extension's own icon, looking for fancy svg)
+   - Clear URLs - only context menu item (eraser icon)
+   
+   Feel free to suggest icons for other extensions
+   
+   <br/>
+   
+</details>
 
 
 ## Additional information     
 
  * The theme works and is only tested on the latest version of Firefox. Firefox-based browsers, ESR versions, or just older versions are not supported. It may work, but I am not responsible for it.
- * I don't know if this theme works on macOS. I don't have a mac to test it. I have made the control buttons work on both left and right (thanks Linux and GTK), but I can't test this on mac.
+ * Support for macOS is limited. Theme works, but I personally can't test it there, because I don't have a mac. 
 
 ## Features
 
@@ -274,8 +291,6 @@ There is also a fourth toggle - Clean Mode. When Clean Mode is activated, the pr
 
 ## To-Do
 
- * Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebery cannot be transparent)
- * Add icons to menubar and context menu
  * Add navbar on bottom support
  * Make it clearer when a window is in focus and when it is not
 
