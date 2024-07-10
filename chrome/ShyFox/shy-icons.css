@@ -104,6 +104,19 @@ Monochrome icons for some extensions
     #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root{
       .menu-iconic-icon {opacity: 0 !important;}
       background-image: url("../icons/bitwarden.svg"); !important;
+      & > menupopup{
+        & > *[id*="-menuitem-_autofill"] {background-image: url("chrome://browser/skin/login.svg")!important;}
+        & > *[id*="-menuitem-_copy-username"] {background-image: url("../icons/edit-copy.svg") !important;}
+        & > *[id*="-menuitem-_copy-password"] {background-image: url("../icons/password.svg") !important;}
+
+        & > *[id*="-menuitem-_autofill-identity"] {background-image: url("chrome://browser/skin/fxa/avatar-empty.svg") !important;}
+        & > *[id*="-menuitem-_autofill-card"] {background-image: url("../icons/credit-card.svg") !important;}
+
+        & > *[id*="-menuitem-_generate-password"] {background-image: url("../icons/reload-auto.svg") !important;}
+        & > *[id*="-menuitem-_copy-identifier"] {background-image: url("../icons/edit-copy.svg") !important;}
+        
+        *[id*="_create-"] {background-image: url("chrome://global/skin/icons/plus.svg") !important;}
+      }
     }
 
     /* clean url */
@@ -249,7 +262,7 @@ Monochrome icons for some extensions
 
 */
 
-#contentAreaContextMenu > :is(menuitem, menu){
+#contentAreaContextMenu :is(menuitem, menu){
   
   /* icons color and position */
   fill: currentColor !important;
@@ -262,13 +275,13 @@ Monochrome icons for some extensions
   
   /* various paddings/margins tweaks */
   &:not(.menuitem-iconic, .menu-iconic, [type="checkbox"]) > label {margin-inline-start: 21px !important;}
-  &[type="checkbox"]{
-    .menu-iconic-left{
-      width: 22px !important;
-      padding-inline-end: 6px !important;
-      margin-inline: 0px !important;
-    }
+
+  .menu-iconic-left{
+    width: 22px !important;
+    padding-inline-end: 6px !important;
+    margin-inline: 0px !important;
   }
+  
   .menu-iconic-text {margin-inline-start: -1px !important;}
   &:not(menu) {padding-right: 0px !important;}
 }

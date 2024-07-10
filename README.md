@@ -244,7 +244,7 @@ Settings that can be toggled in `about:config`
    <br/>
    
    - Userchrome Toggle Extended - toolbar button (panels icon)
-   - Bitwarden - both toolbar and context menu
+   - Bitwarden - both toolbar and context menu (+ submenu items)
    - uBlock Origin - both toolbar and context menu
    - Simple Translate - only context menu item
    - Dark Reader - toolbar button (moon icon)
