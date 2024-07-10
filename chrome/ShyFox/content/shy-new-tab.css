@@ -164,3 +164,8 @@ Styles for new tab
   }
   
 }
+
+@-moz-document url("about:privatebrowsing") {
+  .search-handoff-button {border-radius: 100px !important;}
+  .info {border-radius: var(--big-rounding) !important;}
+}

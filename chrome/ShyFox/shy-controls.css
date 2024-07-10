@@ -164,7 +164,7 @@ Styles for Min Max Close buttons
 @media (-moz-gtk-csd-available){
   @media not (-moz-gtk-csd-reversed-placement){
     
-    .titlebar-buttonbox-container{padding-right: 5px}
+    .titlebar-buttonbox-container{padding-right: 4px}
     
     /* style when not enough space - merged into window border */
     #main-window:is([titlepreface*="="][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
