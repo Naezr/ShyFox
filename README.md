@@ -108,7 +108,11 @@
 ### Shy on surface, but heavy inside
 
 <div align="center">
- <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036'>
+ <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/af82fb35-9375-4ab0-b31a-6f3368a5497f'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/147e77df-3fa4-4949-9e0b-6f518de41083'>
+</div>
+<div align="center">
+ <img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/4a4b204a-8e43-4adc-b9d5-4f1c6e35d239'><img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/d9ff2b05-5c9a-4dc4-b8ec-5f5faed1b57b'><img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/a3fec52f-dba5-43c7-8e60-058b33f43adc'>
+
 </div>
 
 🎦 [Video showcase](showcase.md)
