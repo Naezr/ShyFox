@@ -61,7 +61,7 @@ Navigation bar on top of the window
 }
 
 /* tab loading progress in urlbar background */
-#main-window:not([titlepreface*="+"]):has(.tabbrowser-tab[selected][busy]) #urlbar-background{
+#main-window:not([customizing]):not([titlepreface*="+"]):has(.tabbrowser-tab[selected][busy]) #urlbar-background{
   background: linear-gradient(
     to right,
     color-mix(in srgb, var(--shy-color) 10%, transparent) 0 var(--shy-tab-load-pcent),
@@ -70,7 +70,7 @@ Navigation bar on top of the window
 }
 
 /* space for window controls and magic width calculations (это пиздец) */
-#main-window[titlepreface*="="]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing])[titlepreface*="="]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
   #nav-bar{
     margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));
     width: calc(
@@ -83,7 +83,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window:not([titlepreface*="="]):not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing]):not([titlepreface*="="]):not(:is([titlepreface*="+"], [titlepreface*="?"])){
   #nav-bar{
     margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button));
     width: calc(
@@ -96,7 +96,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window[titlepreface*="-"]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing])[titlepreface*="-"]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
   #nav-bar{
     margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));
     width: calc(
@@ -111,7 +111,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window[titlepreface*="-"][titlepreface*="="]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing])[titlepreface*="-"][titlepreface*="="]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
   #nav-bar{
     width: calc(
       100vw
@@ -236,6 +236,7 @@ Navigation bar on top of the window
   &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
     #nav-bar-customization-target *:not(:is(#unified-extensions-button, #firefox-view-button))[open],
+    #nav-bar-customization-target #searchbar:focus-within,
     #urlbar:focus-within,
     #urlbar[breakout][breakout-extend],
     #nav-bar-overflow-button[open],
@@ -294,6 +295,8 @@ Navigation bar on top of the window
   #nav-bar{
     left: 140px !important;
     right: 140px !important;
+    
+    width: calc(100vw - 280px) !important;
     
     top: var(--margin) !important;
     border-radius: var(--big-rounding) !important;

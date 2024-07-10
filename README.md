@@ -1,8 +1,8 @@
-# ShyFox 3.5.1
+# ShyFox 3.6
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
- <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-127-orange?logo=firefox"></a>
+ <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-128-orange?logo=firefox"></a>
  <a href='https://github.com/Naezr/ShyFox/commits'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/main">
 </a>
  <a href='https://github.com/Naezr/ShyFox/commits/nightly'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/nightly?label=last%20nightly%20commit&color=purple"></a>
@@ -11,9 +11,16 @@
 
 <br/>
 
-<details><summary>Release notes</summary>
+<details><summary>🚩 Release notes</summary>
 
 <br/>
+
+3.6:
+- Searcbar can now be putted into vertical toolbar
+- Bookmark toolbar items can be placed on a vertical toolbar and will be a single button
+- The wallpaper in a new tab now depends on the theme. `wallpaper.png` for dark theme and `wallpaper-light.png` for light theme
+- Some context menu items now have icons (disabled by default)
+- Added bunch of `about:config` settings
 
 3.5.1:
 - Ton of small paddings/margins fixes
@@ -101,12 +108,18 @@
 ### Shy on surface, but heavy inside
 
 <div align="center">
- <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036'>
+ <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/af82fb35-9375-4ab0-b31a-6f3368a5497f'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/147e77df-3fa4-4949-9e0b-6f518de41083'>
+</div>
+<div align="center">
+ <img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/4a4b204a-8e43-4adc-b9d5-4f1c6e35d239'><img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/d9ff2b05-5c9a-4dc4-b8ec-5f5faed1b57b'><img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/a3fec52f-dba5-43c7-8e60-058b33f43adc'>
+
 </div>
 
 🎦 [Video showcase](showcase.md)
 
-## Install
+## Usage
+
+### Install
 
 <details><summary>Migrate from 2.0 </summary>
  
@@ -134,8 +147,6 @@
    
 </details>
 
-### Minimal
-
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
 2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/)
    
@@ -159,12 +170,14 @@
    </details>    
    
 3. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
-   > NOTE                   
-   > This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
+
+> [!NOTE]                   
+> This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
  
 4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data). 
 5. Launch Firefox and and if you seeing "Open Sidebery" notification just open Sidebery in the sidebar. To do this, click on the Sidebery icon. It's most likely in the extensions menu.
-6. Go to the customizing page (menu button > more tools > customize toolbar) and move buttons to something like that:
+
+6. Go to the customizing page ( <img src="https://github.com/Naezr/ShyFox/assets/95460152/49d963a3-ccb4-48f9-8892-f206894315d7"> > more tools > customize toolbar) and move buttons to something like that:
    
    <details><summary>Buttons layout</summary>
    
@@ -179,19 +192,21 @@
    
    </summary>
 
-> [!NOTE]
+> [!IMPORTANT]
 > Do not use `System theme - auto` in Firefox settings. It can cause problems
+>              
+> ![System theme - auto](https://github.com/Naezr/ShyFox/assets/95460152/944e9200-ccc1-4cac-8d6e-d1c8f19db375)
 
 > [!NOTE]
 > Redo the steps 1 and 4 is enough for updating to new version
 
-### Extra
+### Customization
 
 If you don't like the way the standard dark and light themes look, you can colorize your ShyFox!
 
 There are three ways you can do it, choose one:
 - Install some theme from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/themes/) (not all will be well compatible)
-- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/)
+- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/). Presets from screenshots: [pink](https://color.firefox.com/?theme=XQAAAAItAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPsqvXkIar4KdrumPOaRpoqhRtylP5n4Zfpe_3lMuBvgYbla0qT1QOs34oqRKJ__vCF6FKTI9i1CVNq28mKrlpbA8ZNH7GFcuP0Rpgycr-fRDXvVIf5Azp6HEjVD0AkSXEHSvbCGdTf5T_DiruA1oJu51K1Tq5463Tp_TUR3et-H8QZB3LVUmH47iHoiv0ArOfMUCQdp_ReUx15gcB_9_w9i), [turquoise](https://color.firefox.com/?theme=XQAAAAI0AQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPrv2Sw35312EPwz49WPR2-KqLVciULUNG8hT47EAt7OFG0PM9EP_FOrqm0ZcrcuiqO7AJ4ZtOtYZJYmJW2UQbLGqUwsxZZlqzQg5ljrBr22wQRHG74BnkZTZXKA9FV2uP7Z0yOf_y-Z0l7DPBlPoa21LYK1SjFsfIWVNevNDd3N3kGoYFj-vEdiReRjz_444_tbcATHH0jZbK4OH1YjmozJHzMhWWL9XTK5)
 - Install the [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) extension and then ShyFox will adapt to the colors of the currently open website.
  
    <details><summary> Recommended Adaptive Tab Bar Color settings</summary>  
@@ -200,23 +215,58 @@ There are three ways you can do it, choose one:
    
    ![settings](https://github.com/Naezr/ShyFox/assets/95460152/36480217-8209-4f7d-9d54-1a07f6f2752c)
    
-   > NOTE                    
+   > NOTE                        
    > If you make the `Tab bar` and `Toolbar` `Background` colors the same, the pull-down hidden panels will have a transparent background.
    
    <br/>
    
    </details>
 
-If you don't like the wallpaper on the new tab, you can change it to your own. Just rename your picture to `wallpaper.png` and put in into `chrome` folder. There's also `wallpaper-alt.png` - same picture, but in the daytime.
-
-You can disable floating search bar. To do it go to the `userChrome.css` file and comment line that imports `shy-floating-search.css`.
+You can change new tab wallpaper to your own. There is two wallpaper files in `chrome` folder:
+ - `wallpaper.png` - for dark theme                   
+ - `wallpaper-light.png` - for light theme             
+  
+To use one image for all themes just delete `wallpaper-light.png`.
 
 You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`.
+
+### Options
+
+Settings that can be toggled in `about:config`
+
+| Setting | true | false / not exist (default) |
+| :--- | :--- | :--- |
+| `shyfox.disable.floating.search` | Floating search disabled | Floating search enabled |
+| `shyfox.disable.compact.unified.extensions` | Using default extensions menu | Using compact extensions menu |
+| `shyfox.remove.window.controls` | `min` `max` `close` buttons removed at all | These buttons removed only in fullscreen |
+| `shyfox.enable.ext.mono.toolbar.icons` | Supported* extensions get monochrome icons as toolbar buttons | Standard icons used |
+| `shyfox.enable.ext.mono.context.icons` | Supported* extensions get monochrome icons as context menu items** | Standard icons used |
+| `shyfox.enable.context.menu.icons` | Many context menu items get icons** | No icons in context menus |
+
+<details><summary>* - Supported extensions</summary>
+   
+   <br/>
+   
+   - Userchrome Toggle Extended - toolbar button (panels icon)
+   - Bitwarden - both toolbar and context menu (+ submenu items)
+   - uBlock Origin - both toolbar and context menu
+   - Simple Translate - only context menu item
+   - Dark Reader - toolbar button (moon icon)
+   - Privacy Badger - toolbar button (ugly extension's own icon, looking for fancy svg)
+   - Clear URLs - only context menu item (eraser icon)
+   
+   Feel free to suggest icons for other extensions
+   
+   <br/>
+   
+</details>
+
+** - On macOS you need to disable native context menus to see icons. `widget.macos.native-context-menus` => `false`
 
 ## Additional information     
 
  * The theme works and is only tested on the latest version of Firefox. Firefox-based browsers, ESR versions, or just older versions are not supported. It may work, but I am not responsible for it.
- * I don't know if this theme works on macOS. I don't have a mac to test it. I have made the control buttons work on both left and right (thanks Linux and GTK), but I can't test this on mac.
+ * Support for macOS is limited. Theme works, but I personally can't test it there, because I don't have a mac. 
 
 ## Features
 
@@ -248,8 +298,6 @@ There is also a fourth toggle - Clean Mode. When Clean Mode is activated, the pr
 
 ## To-Do
 
- * Make the background colors less flat, add a glow, a blur or something like that (almost impossible because Sidebery cannot be transparent)
- * Add icons to menubar and context menu
  * Add navbar on bottom support
  * Make it clearer when a window is in focus and when it is not
 

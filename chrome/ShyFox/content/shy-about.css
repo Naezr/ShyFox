@@ -47,6 +47,7 @@ Styles for settings, Firefox View, etc.
   /* big rounded corners */
   .menupopup-arrowscrollbox,     moz-message-bar,
   .addon-detail-contribute,      panel-list,
+  .trr-message-container,
   .web-appearance-choice,        body[dir],
   .sidebar-footer-link,          menupopup,
   .info-box-container,           section,
@@ -63,6 +64,7 @@ Styles for settings, Firefox View, etc.
   #ping-picker,
   #reportBox,
   #reportBox #comments,
+  #migrationWizardDialog,
   #translations-manage-install-list
   
   {border-radius: var(--big-rounding) !important;}

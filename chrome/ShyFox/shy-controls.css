@@ -47,19 +47,29 @@ Styles for Min Max Close buttons
 }
 
 /* remove window controls in f11 fullscreen or in clean mode */
-#main-window:is([sizemode="fullscreen"], [titlepreface*="?"]) {
-  --window-control-wdt: 0px;
-  
-  --buttonbox-left-hgt: 0px;
-  --buttonbox-right-hgt: 0px;
-  
-  --nav-rgt-btnbx-margin: 0px;
-  --nav-rgt-btnbx-button: 0px;
-    
-  --nav-lft-btnbx-margin: 0px;
-  --nav-lft-btnbx-button: 0px;
-  
+#main-window:is([sizemode="fullscreen"], [titlepreface*="?"]:not([customizing])) {
+  --window-control-wdt:   0px !important;
+  --buttonbox-left-hgt:   0px !important;
+  --buttonbox-right-hgt:  0px !important;
+  --nav-rgt-btnbx-margin: 0px !important;
+  --nav-rgt-btnbx-button: 0px !important;
+  --nav-lft-btnbx-margin: 0px !important;
+  --nav-lft-btnbx-button: 0px !important;
   .titlebar-buttonbox-container {display: none}
+}
+
+/* remove window controls by setting */
+@media (-moz-bool-pref: "shyfox.remove.window.controls") { 
+  #main-window{
+    --window-control-wdt:   0px !important;
+    --buttonbox-left-hgt:   0px !important;
+    --buttonbox-right-hgt:  0px !important;
+    --nav-rgt-btnbx-margin: 0px !important;
+    --nav-rgt-btnbx-button: 0px !important;
+    --nav-lft-btnbx-margin: 0px !important;
+    --nav-lft-btnbx-button: 0px !important;
+    .titlebar-buttonbox-container {display: none !important;}
+  }
 }
 
 /*
@@ -99,8 +109,8 @@ Styles for Min Max Close buttons
       flex-direction: column-reverse;
     }
     
-    --buttonbox-right-wdt: 0px  !important;
-    --buttonbox-right-hgt: 85px !important;
+    --buttonbox-left-wdt: 0px  !important;
+    --buttonbox-right-hgt: 85px;
   }
 }
 
@@ -154,7 +164,7 @@ Styles for Min Max Close buttons
 @media (-moz-gtk-csd-available){
   @media not (-moz-gtk-csd-reversed-placement){
     
-    .titlebar-buttonbox-container{padding-right: 5px}
+    .titlebar-buttonbox-container{padding-right: 4px}
     
     /* style when not enough space - merged into window border */
     #main-window:is([titlepreface*="="][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
@@ -191,7 +201,7 @@ Styles for Min Max Close buttons
         35px
         + var(--window-control-gtk-max-wdt)
         + var(--window-control-gtk-min-wdt)
-      ) !important;
+      );
     }
   }
 }

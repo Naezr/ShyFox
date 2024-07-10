@@ -183,6 +183,8 @@ richlistbox
 
 .dialogBox {margin-top: var(--margin) !important;}
 
+#searchbar-anon-search-settings {margin-inline-end: 4px !important;}
+
 /* print dialog */
 print-preview::before,
 print-preview .previewStack::before,
@@ -278,16 +280,17 @@ screenshots-buttons{
 
 --- CONTEXT MENU ------------------------------------------------------------------------------------------------------------------------------------
 
+Apply theme colors to context menus and menubar
+
 */
 
-/* apply dynamic colors to context menus and menubar*/
+/* in page context menu */
 #contentAreaContextMenu[showservicesmenu="true"],
-#contentAreaContextMenu[showservicesmenu="true"] menupopup,
-#toolbar-context-menu,
-#toolbar-menubar menupopup
+#contentAreaContextMenu[showservicesmenu="true"] menupopup
 {
-  --panel-background: var(--bg-col)!important;                        
-  --panel-border-color: var(--tb-col) !important;                    
+  --panel-background: var(--bg-col)!important;
+  --panel-border-color: var(--tb-col) !important;
+  
   --toolbar-field-focus-background-color: var(--bt-col) !important;
   --panel-color: var(--bt-col) !important;  
   
@@ -295,7 +298,26 @@ screenshots-buttons{
     background-color: var(--tb-col) !important;
     color: var(--bt-col) !important;
   }
-}     
+}
+
+/* toolbar menu */
+#toolbar-menubar menupopup,
+#toolbar-context-menu, #toolbar-context-menu menupopup,
+#unified-extensions-context-menu, #unified-extensions-context-menu menupopup,
+#placesContext, #placesContext menupopup,
+#downloadsContextMenu, #downloadsContextMenu menupopup
+{
+  --panel-background: var(--tb-col)!important;  
+  --panel-border-color: var(--bg-col) !important;
+  
+  --toolbar-field-focus-background-color: var(--bt-col) !important;
+  --panel-color: var(--bt-col) !important;  
+  
+  menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
+    background-color: var(--bg-col) !important;
+    color: var(--bt-col) !important;
+  }
+}
 
 /*
 
@@ -329,9 +351,9 @@ Right click > Customize toolbar
   }
 }
 
-:root[customizing] .customization-target:not(#widget-overflow-fixed-list) {
-  min-width: 0px !important;
-}
+toolbarpaletteitem#wrapper-search-container[place="palette"] #searchbar {background-color: var(--bg-col) !important;}
+
+:root[customizing] .customization-target:not(#widget-overflow-fixed-list) {min-width: 0px !important;}
 
 /*
 
