@@ -206,7 +206,7 @@ If you don't like the way the standard dark and light themes look, you can color
 
 There are three ways you can do it, choose one:
 - Install some theme from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/themes/) (not all will be well compatible)
-- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/)
+- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/). Presets from screenshots: [pink](https://color.firefox.com/?theme=XQAAAAItAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPsqvXkIar4KdrumPOaRpoqhRtylP5n4Zfpe_3lMuBvgYbla0qT1QOs34oqRKJ__vCF6FKTI9i1CVNq28mKrlpbA8ZNH7GFcuP0Rpgycr-fRDXvVIf5Azp6HEjVD0AkSXEHSvbCGdTf5T_DiruA1oJu51K1Tq5463Tp_TUR3et-H8QZB3LVUmH47iHoiv0ArOfMUCQdp_ReUx15gcB_9_w9i), [turquoise](https://color.firefox.com/?theme=XQAAAAI0AQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPrv2Sw35312EPwz49WPR2-KqLVciULUNG8hT47EAt7OFG0PM9EP_FOrqm0ZcrcuiqO7AJ4ZtOtYZJYmJW2UQbLGqUwsxZZlqzQg5ljrBr22wQRHG74BnkZTZXKA9FV2uP7Z0yOf_y-Z0l7DPBlPoa21LYK1SjFsfIWVNevNDd3N3kGoYFj-vEdiReRjz_444_tbcATHH0jZbK4OH1YjmozJHzMhWWL9XTK5)
 - Install the [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) extension and then ShyFox will adapt to the colors of the currently open website.
  
    <details><summary> Recommended Adaptive Tab Bar Color settings</summary>  
