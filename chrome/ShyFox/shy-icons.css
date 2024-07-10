@@ -262,7 +262,13 @@ Monochrome icons for some extensions
 
 */
 
-:is(#toolbar-context-menu, #contentAreaContextMenu, #unified-extensions-context-menu) :is(menuitem, menu){
+:is(
+  #toolbar-context-menu,
+  #contentAreaContextMenu,
+  #unified-extensions-context-menu,
+  #downloadsContextMenu,
+  #placesContext
+) :is(menuitem, menu){
   
   /* icons color and position */
   fill: currentColor !important;
@@ -399,6 +405,41 @@ Monochrome icons for some extensions
   
   /* bookmarks context menu */
   #placesContext{
+    #placesContext_open {background-image: url("../icons/link-square.svg") !important;}
+    #placesContext_openBookmarkContainer\:tabs, #placesContext_openBookmarkLinks\:tabs {background-image: url("../icons/movetowindow-16.svg") !important;}
+    #placesContext_open\:newtab, #placesContext_openContainer\:tabs, #placesContext_openLinks\:tabs {background-image: url("../icons/new-tab.svg") !important;}
+    #placesContext_open\:newcontainertab {background-image: url("../icons/container-openin-16.svg") !important;}
+    #placesContext_open\:newwindow {background-image: url("chrome://browser/skin/window.svg") !important;}
+    #placesContext_open\:newprivatewindow {background-image: url("chrome://browser/skin/privateBrowsing.svg") !important;}
+    #placesContext_show_bookmark\:info, #placesContext_show\:info, #placesContext_show_folder\:info {background-image: url("../icons/edit-active.svg") !important;}
+    #placesContext_deleteBookmark, #placesContext_deleteFolder, #placesContext_delete, #placesContext_delete_history {background-image: url("../icons/trash.svg") !important;}
+    #placesContext_deleteHost {background-image: url("../icons/eye-hide.svg") !important;}
+    #placesContext_sortBy\:name {background-image: url("../icons/text-sort-ascending.svg") !important;}
     
+    #placesContext_cut {background-image: url("../icons/edit-cut.svg") !important;}
+    #placesContext_copy {background-image: url("../icons/edit-copy.svg") !important;}
+    #placesContext_paste_group, #placesContext_paste {background-image: url("../icons/edit-paste.svg") !important;}
+    #placesContext_new\:separator {background-image: url("../icons/vertical-line.svg") !important;}
+    #placesContext_new\:bookmark {background-image: url("chrome://browser/skin/bookmark.svg") !important;}
+    #placesContext_new\:folder {background-image: url("chrome://global/skin/icons/folder.svg") !important;}
+    #placesContext_showAllBookmarks {background-image: url("chrome://browser/skin/bookmark-star-on-tray.svg") !important;}
+    #toggle_PersonalToolbar {background-image: url("../icons/bookmarks-toolbar-alt.svg") !important;}
+  }
+  
+  /* downloads context menu */
+  #downloadsContextMenu{
+    .downloadPauseMenuItem {background-image: url("chrome://global/skin/media/pause-fill.svg") !important;}
+    .downloadResumeMenuItem {background-image: url("chrome://global/skin/media/play-fill.svg") !important;}
+    .downloadUnblockMenuItem {background-image: url("../icons/checkmark-circle.svg") !important;}
+    .downloadUseSystemDefaultMenuItem {background-image: url("../icons/toolbarButton-upload.svg") !important;}
+    .downloadShowMenuItem {background-image: url("chrome://global/skin/icons/folder.svg") !important;}
+    
+    .downloadOpenReferrerMenuItem {background-image: url("../icons/link-square.svg") !important;}
+    .downloadCopyLocationMenuItem {background-image: url("../icons/link.svg") !important;}
+    
+    .downloadDeleteFileMenuItem {background-image: url("../icons/trash.svg") !important;}
+    .downloadRemoveFromHistoryMenuItem {background-image: url("../icons/eraser.svg") !important;}
+    
+    menuitem[command="downloadsCmd_clearList"],  menuitem[command="downloadsCmd_clearDownloads"] {background-image: url("../icons/broom.svg") !important;}
   }
 }

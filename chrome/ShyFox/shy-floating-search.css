@@ -12,10 +12,10 @@ Cool floating search panel
   #urlbar[breakout-extend]{
 
     #urlbar-input {font-size: 23.5px !important;}
-    #urlbar-input-container {height: 50px !important;}
+    #urlbar-input-container, .urlbar-input-container {height: 50px !important;}
     #urlbar-background {border-radius: var(--bigger-rounding) !important;}
 
-    #urlbar-input-container {
+    #urlbar-input-container, .urlbar-input-container {
       & > :is(box, image){
         height: 28px !important;
         margin-block: calc((50px - 28px) / 4) !important;
