@@ -87,7 +87,7 @@ Monochrome icons for some extensions
 /* context menu */
 
 @media (-moz-bool-pref: "shyfox.enable.ext.mono.context.icons") {
-  #contentAreaContextMenu {
+  #contentAreaContextMenu, #toolbar-context-menu, #unified-extensions-context-menu{
     /* ublock */
     menuitem[id*="ublock0_raymondhill_net-menuitem-_uBlock0-"]{
       .menu-iconic-icon {opacity: 0 !important;}
@@ -262,19 +262,19 @@ Monochrome icons for some extensions
 
 */
 
-#contentAreaContextMenu :is(menuitem, menu){
+:is(#toolbar-context-menu, #contentAreaContextMenu, #unified-extensions-context-menu) :is(menuitem, menu){
   
   /* icons color and position */
   fill: currentColor !important;
   fill-opacity: var(--toolbarbutton-icon-fill-opacity) !important;
   -moz-context-properties: fill, fill-opacity, stroke !important;
-  background-repeat: no-repeat;
-  background-position-x: 5px;
-  background-position-y: 2px;
-  background-size: 16px;
+  background-repeat: no-repeat !important;
+  background-position-x: 5px !important;
+  background-position-y: 2px !important;
+  background-size: 16px !important;
   
   /* various paddings/margins tweaks */
-  &:not(.menuitem-iconic, .menu-iconic, [type="checkbox"]) > label {margin-inline-start: 21px !important;}
+  &:not(.menuitem-iconic, .menu-iconic, [type="checkbox"], [type="radio"]) > label {margin-inline-start: 21px !important;}
 
   .menu-iconic-left{
     width: 22px !important;
@@ -287,6 +287,8 @@ Monochrome icons for some extensions
 }
 
 @media (-moz-bool-pref: "shyfox.enable.context.menu.icons") {
+  
+  /* in page context menu */
   #contentAreaContextMenu{
     & > #context-back {background-image: url("chrome://browser/skin/back.svg") !important;}
     & > #context-forward {background-image: url("chrome://browser/skin/forward.svg") !important;}
@@ -379,5 +381,24 @@ Monochrome icons for some extensions
     #manage-saved-logins {background-image: url("../icons/key-multiple.svg") !important;}
     #use-relay-mask {background-image: url("../icons/relay-logo.svg") !important;}
     #context-reveal-password {background-image: url("../icons/eye-show.svg") !important;}
+  }
+  
+  /* toolbar context menu */
+  #toolbar-context-menu, #unified-extensions-context-menu{
+    .customize-context-manageExtension, .unified-extensions-context-menu-manage-extension {background-image: url("chrome://global/skin/icons/settings.svg") !important;}
+    .customize-context-removeExtension, .unified-extensions-context-menu-remove-extension {background-image: url("../icons/trash.svg") !important;}
+    .customize-context-reportExtension, .unified-extensions-context-menu-report-extension {background-image: url("chrome://global/skin/icons/warning.svg") !important;}
+    .customize-context-moveToPanel {background-image: url("../icons/pin-tab.svg") !important;}
+    .customize-context-removeFromToolbar {background-image: url("../icons/trash.svg") !important;}
+    #toggle_PersonalToolbar {background-image: url("../icons/bookmarks-toolbar-alt.svg") !important;}
+    .viewCustomizeToolbar {background-image: url("chrome://browser/skin/customize.svg") !important;}
+    
+    .unified-extensions-context-menu-move-widget-up {background-image: url("../icons/up-arrow.svg") !important;}
+    .unified-extensions-context-menu-move-widget-down {background-image: url("../icons/down-arrow.svg") !important;}
+  }
+  
+  /* bookmarks context menu */
+  #placesContext{
+    
   }
 }

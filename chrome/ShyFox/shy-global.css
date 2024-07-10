@@ -303,7 +303,10 @@ Apply theme colors to context menus and menubar
 /* toolbar menu */
 #toolbar-context-menu,
 #toolbar-context-menu menupopup,
-#toolbar-menubar menupopup
+#toolbar-menubar menupopup,
+#unified-extensions-context-menu,
+#unified-extensions-context-menu menupopup,
+#placesContext, #placesContext menupopup
 {
   --panel-background: var(--tb-col)!important;  
   --panel-border-color: var(--bg-col) !important;
