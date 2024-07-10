@@ -2,7 +2,7 @@
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
- <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-127-orange?logo=firefox"></a>
+ <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-128-orange?logo=firefox"></a>
  <a href='https://github.com/Naezr/ShyFox/commits'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/main">
 </a>
  <a href='https://github.com/Naezr/ShyFox/commits/nightly'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/nightly?label=last%20nightly%20commit&color=purple"></a>
@@ -108,7 +108,11 @@
 ### Shy on surface, but heavy inside
 
 <div align="center">
- <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/c8c1318d-0d50-45ae-8e52-41c51da5e6bd'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/a69b5d65-22b5-46d5-bdf1-3aa7e7003036'>
+ <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/af82fb35-9375-4ab0-b31a-6f3368a5497f'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/147e77df-3fa4-4949-9e0b-6f518de41083'>
+</div>
+<div align="center">
+ <img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/4a4b204a-8e43-4adc-b9d5-4f1c6e35d239'><img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/d9ff2b05-5c9a-4dc4-b8ec-5f5faed1b57b'><img width="33%" src='https://github.com/Naezr/ShyFox/assets/95460152/a3fec52f-dba5-43c7-8e60-058b33f43adc'>
+
 </div>
 
 🎦 [Video showcase](showcase.md)
@@ -202,7 +206,7 @@ If you don't like the way the standard dark and light themes look, you can color
 
 There are three ways you can do it, choose one:
 - Install some theme from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/themes/) (not all will be well compatible)
-- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/)
+- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/). Presets from screenshots: [pink](https://color.firefox.com/?theme=XQAAAAItAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPsqvXkIar4KdrumPOaRpoqhRtylP5n4Zfpe_3lMuBvgYbla0qT1QOs34oqRKJ__vCF6FKTI9i1CVNq28mKrlpbA8ZNH7GFcuP0Rpgycr-fRDXvVIf5Azp6HEjVD0AkSXEHSvbCGdTf5T_DiruA1oJu51K1Tq5463Tp_TUR3et-H8QZB3LVUmH47iHoiv0ArOfMUCQdp_ReUx15gcB_9_w9i), [turquoise](https://color.firefox.com/?theme=XQAAAAI0AQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPrv2Sw35312EPwz49WPR2-KqLVciULUNG8hT47EAt7OFG0PM9EP_FOrqm0ZcrcuiqO7AJ4ZtOtYZJYmJW2UQbLGqUwsxZZlqzQg5ljrBr22wQRHG74BnkZTZXKA9FV2uP7Z0yOf_y-Z0l7DPBlPoa21LYK1SjFsfIWVNevNDd3N3kGoYFj-vEdiReRjz_444_tbcATHH0jZbK4OH1YjmozJHzMhWWL9XTK5)
 - Install the [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) extension and then ShyFox will adapt to the colors of the currently open website.
  
    <details><summary> Recommended Adaptive Tab Bar Color settings</summary>  
