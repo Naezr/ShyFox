@@ -181,7 +181,7 @@ richlistbox
   }
 }
 
-.dialogBox {margin-top: var(--margin) !important;}
+#window-modal-dialog {margin-top: var(--margin) !important;}
 
 #searchbar-anon-search-settings {margin-inline-end: 4px !important;}
 
