@@ -46,6 +46,7 @@ Navigation bar on top of the window
   transition: var(--transition) !important;
   
   background-color: transparent !important;
+  border-top: none !important;
   
   top: 0px;
   left: var(--left-margin) !important;
