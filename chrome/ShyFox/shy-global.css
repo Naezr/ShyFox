@@ -182,7 +182,7 @@ richlistbox
 }
 
 #window-modal-dialog {margin-top: var(--margin) !important;}
-
+.sizeDetermined #infoBody {min-height: 20px !important;}
 #searchbar-anon-search-settings {margin-inline-end: 4px !important;}
 
 /* print dialog */
