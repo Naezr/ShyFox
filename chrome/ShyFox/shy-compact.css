@@ -26,7 +26,7 @@ menupopup > :is(menuitem, menu){
   padding-inline-start: 5px !important;
 }
 
-:is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button) :is(menuitem, menu) {margin-inline: 5px !important;}
+:is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button, #sidebarMenu-popup) :is(menuitem, menu) {margin-inline: 5px !important;}
 
 /* 
 

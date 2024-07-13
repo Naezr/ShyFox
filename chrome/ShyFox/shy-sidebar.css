@@ -231,7 +231,8 @@ Styles for sidebar
     #sidebar-box:hover,
     #sidebar-box:focus-within,
     #PersonalToolbar:hover,
-    #PersonalToolbar *:not(#firefox-view-button)[open]
+    #PersonalToolbar *:not(#firefox-view-button)[open],
+    #sidebar-switcher-target[aria-expanded="true"]
   ) {
     #sidebar-box,
     #PersonalToolbar
@@ -274,27 +275,33 @@ Styles for sidebar
 
 /*
 
---- SIDEBERY ----------------------------------------------------------------------------------------------------------------------------------------
+--- WARNINGS AND NOTIFICATIONS ---------------------------------------------------------------------------------------------------------------------
 
 */
 
-/* hide sidebar button on toolbar and sidebar header when Sidebery opened */
+/* hide sidebar header when Sidebery opened */
 #main-window:not([customizing]):has(
   #sidebar-box:not([hidden])[sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]
 ) { 
-  #sidebar-header, #sidebar-button {display: none} 
+  #sidebar-header {display: none} 
+}
+
+/* hide sidebar button on toolbar when sidebar opened */
+#main-window:not([customizing]):has(
+  #sidebar-box:not([hidden])
+) { 
+  #sidebar-button {display: none}
 }
 
 /* color the sidebar button red */
 #sidebar-button .toolbarbutton-icon {background-color: red !important;}
 
-/* notification when Sidebery is not opened */
+/* notification when sidebar is not opened */
 #main-window:has( 
   #sidebar-box[hidden="true"],
-  #sidebar-box:not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"])
- ) {
+) {
   &::before{
-    content: "Open Sidebery!";
+    content: "Open sidebar!";
     position: fixed;
     z-index: 9999;
     
@@ -308,5 +315,27 @@ Styles for sidebar
     
     border-radius: var(--big-rounding);
     padding: 10px;
+  }
+}
+
+/* notification when Sidebery is not opened */
+#main-window:has( 
+  #sidebar-box:not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"])
+) {
+  #sidebar-header{
+    padding-bottom: 40px !important;
+    
+    &::before{
+      content: "^^^";
+      position: absolute;
+      top: 35px
+    }
+    
+    &::after{
+      content: "To manage tabs, open Sidebery in this menu.";
+      position: absolute;
+      top: 50px;
+      font-size: 13px;
+    }
   }
 }
