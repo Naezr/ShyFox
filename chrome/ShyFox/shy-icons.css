@@ -306,7 +306,7 @@ Monochrome icons for some extensions
     #context-openlinkintab {background-image: url("../icons/new-tab.svg") !important;}
     context-openlinkincontainertab, #context-openlinkinusercontext-menu {background-image: url("../icons/container-openin-16.svg") !important;}
     #context-openlink {background-image: url("../icons/window.svg") !important;}
-    #context-openlinkprivate {background-image: url("chrome://browser/skin/privateBrowsing.svg"); !important;}
+    #context-openlinkprivate {background-image: url("chrome://browser/skin/privateBrowsing.svg") !important;}
     
     #spell-no-suggestions {background-image: url("../icons/text-proofing-tools.svg") !important;}
     #spell-add-to-dictionary, #spell-add-dictionaries, #spell-add-dictionaries-main {background-image: url("../icons/book-add.svg") !important;}
