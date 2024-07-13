@@ -37,7 +37,6 @@ Values of these variables can be changed safely and most likely nothing will bre
   
   /* transparency of indicator bars showing the position of hidden panels */
   --hide-bar-opct: 0.2;
-  &[titlepreface*="?"]{--hide-bar-opct: 0;} /* clean mode */
   
   /* how much shorter these bars than panels */
   --hide-bar-wdt-pad: 10px;
@@ -98,8 +97,8 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
     --bottom-margin: var(--margin);
   }
   
-  /* hide indication bars in fullscreen */
-  &:is([inFullscreen="true"], [inDOMFullscreen="true"]){
+  /* hide indication bars in fullscreen or clean mode */
+  &:is([inFullscreen="true"], [inDOMFullscreen="true"], [titlepreface*="?"]){
     --hide-bar-opct: 0 !important;
   }
   
