@@ -91,19 +91,19 @@ Monochrome icons for some extensions
     /* ublock */
     menuitem[id*="ublock0_raymondhill_net-menuitem-_uBlock0-"]{
       .menu-iconic-icon {opacity: 0 !important;}
-      background-image: url("../icons/ublock.svg"); !important;
+      background-image: url("../icons/ublock.svg") !important;
     }
 
     /* simple translate */
     :is(menu, menuitem):not(menu *)[id*="simple-translate_sienori-menuitem-"] {
       .menu-iconic-icon {opacity: 0 !important;}
-      background-image: url("../icons/translate.svg"); !important;
+      background-image: url("../icons/translate.svg") !important;
     }
 
     /* bitwarden */
     #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root{
       .menu-iconic-icon {opacity: 0 !important;}
-      background-image: url("../icons/bitwarden.svg"); !important;
+      background-image: url("../icons/bitwarden.svg") !important;
       & > menupopup{
         & > *[id*="-menuitem-_autofill"] {background-image: url("chrome://browser/skin/login.svg")!important;}
         & > *[id*="-menuitem-_copy-username"] {background-image: url("../icons/edit-copy.svg") !important;}
@@ -122,7 +122,7 @@ Monochrome icons for some extensions
     /* clean url */
     #_74145f27-f039-47ce-a470-a662b129930a_-menuitem-_copy-link-to-clipboard{
       .menu-iconic-icon {opacity: 0 !important;}
-      background-image: url("../icons/eraser.svg"); !important;
+      background-image: url("../icons/eraser.svg") !important;
     }
   }
 }
@@ -358,8 +358,8 @@ Monochrome icons for some extensions
 
     #context-take-screenshot {background-image: url("chrome://browser/skin/screenshot.svg") !important;}
 
-    #context-bookmarklink {background-image: url("chrome://browser/skin/bookmark.svg"); !important;}
-    #context-savelink {background-image: url("../icons/toolbarButton-download.svg"); !important;}
+    #context-bookmarklink {background-image: url("chrome://browser/skin/bookmark.svg") !important;}
+    #context-savelink {background-image: url("../icons/toolbarButton-download.svg") !important;}
     #context-savelinktopocket {background-image: url("../icons/pocket-outline.svg") !important;}
     #context-copyemail {background-image: url("../icons/mail.svg") !important;}
     #context-copyphone {background-image: url("../icons/device-phone.svg") !important;}
@@ -367,7 +367,7 @@ Monochrome icons for some extensions
     #context-stripOnShareLink {background-image: url("../icons/link-no-tracking.svg") !important;}
     #context-sendlinktodevice {background-image: url("../icons/send-to-device.svg") !important;}
 
-    #context-searchselect {background-image: url(chrome://global/skin/icons/search-glass.svg); !important;}
+    #context-searchselect {background-image: url(chrome://global/skin/icons/search-glass.svg) !important;}
     #context-searchselect-private {background-image: url("../icons/private-favicon.svg") !important;}
     #context-keywordfield {background-image: url("chrome://browser/skin/bookmark.svg") !important;}
     
