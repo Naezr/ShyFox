@@ -28,6 +28,8 @@ menupopup > :is(menuitem, menu){
 
 :is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button, #sidebarMenu-popup) :is(menuitem, menu) {margin-inline: 5px !important;}
 
+/* remove some items from sidebar header menu */
+#sidebarMenu-popup :is(#sidebar-reverse-position, menuitem[data-l10n-id="sidebar-menu-close"], #sidebar-extensions-separator, menuseparator:nth-last-of-type(1)) {display: none}
 /* 
 
 --- EXTENSIONS MENU ---------------------------------------------------------------------------------------------------------------------------------

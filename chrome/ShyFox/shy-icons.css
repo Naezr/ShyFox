@@ -267,7 +267,9 @@ Monochrome icons for some extensions
   #contentAreaContextMenu,
   #unified-extensions-context-menu,
   #downloadsContextMenu,
-  #placesContext
+  #placesContext,
+  #sidebarMenu-popup,
+  #BMB_bookmarksPopup
 ) :is(menuitem, menu){
   
   /* icons color and position */
@@ -289,7 +291,7 @@ Monochrome icons for some extensions
   }
   
   .menu-iconic-text {margin-inline-start: -1px !important;}
-  &:not(menu) {padding-right: 0px !important;}
+  &:not(:is(menu, [acceltext])) {padding-right: 0px !important;}
 }
 
 @media (-moz-bool-pref: "shyfox.enable.context.menu.icons") {
@@ -441,5 +443,15 @@ Monochrome icons for some extensions
     .downloadRemoveFromHistoryMenuItem {background-image: url("../icons/eraser.svg") !important;}
     
     menuitem[command="downloadsCmd_clearList"],  menuitem[command="downloadsCmd_clearDownloads"] {background-image: url("../icons/broom.svg") !important;}
+  }
+  
+  /* sidebar header menu */
+  #sidebarMenu-popup{
+    
+  }
+  
+  /* bookmarks button menu */
+  #BMB_bookmarksPopup{
+    
   }
 }

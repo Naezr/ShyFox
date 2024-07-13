@@ -73,6 +73,8 @@ Styles for sidebar
   width: var(--sdbr-wdt) !important;
 }
 
+#sidebar {border-radius: var(--big-rounding) !important;}
+
 /* drag window by empty space in bookmarks toolbar */
 #PersonalToolbar > *, #PlacesToolbarItems .bookmark-item[style="visibility: hidden;"]{
   -moz-window-dragging: drag !important;
@@ -198,8 +200,6 @@ Styles for sidebar
     }
   }
   
-  #sidebar {border-radius: var(--big-rounding) !important;}
-  
   /* styles for bookmarks */
   #PersonalToolbar{
     top: calc(var(--top-margin) + var(--margin));
@@ -275,7 +275,9 @@ Styles for sidebar
 
 /*
 
---- WARNINGS AND NOTIFICATIONS ---------------------------------------------------------------------------------------------------------------------
+--- NOT SIDEBERY -----------------------------------------------------------------------------------------------------------------------------------
+
+Styles when Sidebery is not opened
 
 */
 
@@ -318,13 +320,21 @@ Styles for sidebar
   }
 }
 
-/* notification when Sidebery is not opened */
-#main-window:has( 
-  #sidebar-box:not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"])
-) {
+/* styles when Sidebery is not opened but sidebar is */
+#sidebar-box:not([hidden]):not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]){
+  
+  #sidebar {
+    border: var(--outline) !important;
+    margin: 0 calc(var(--margin) / 1.5) !important;
+  }
+  
   #sidebar-header{
-    padding-bottom: 30px !important;
+    #sidebar-close {display: none}
     
+    padding-bottom: 30px !important;
+    border: none !important;
+    
+    /* info text */
     &::before{
       content: "";
       width: 20px;
@@ -336,6 +346,7 @@ Styles for sidebar
       mask-repeat: no-repeat;
       
       top: 44px;
+      left: 10px;
     }
     
     &::after{
