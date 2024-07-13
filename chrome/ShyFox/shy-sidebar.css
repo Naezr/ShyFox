@@ -323,19 +323,28 @@ Styles for sidebar
   #sidebar-box:not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"])
 ) {
   #sidebar-header{
-    padding-bottom: 40px !important;
+    padding-bottom: 30px !important;
     
     &::before{
-      content: "^^^";
+      content: "";
+      width: 20px;
+      height: 20px;
       position: absolute;
-      top: 35px
+      
+      mask-image: url("chrome://global/skin/icons/info.svg");
+      background-color: var(--shy-color);
+      mask-repeat: no-repeat;
+      
+      top: 44px;
     }
     
     &::after{
       content: "To manage tabs, open Sidebery in this menu.";
       position: absolute;
-      top: 50px;
-      font-size: 13px;
+      top: 45px;
+      font-size: 12px;
+      
+      padding-left: 22px;
     }
   }
 }
