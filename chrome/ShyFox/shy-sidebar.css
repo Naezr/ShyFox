@@ -300,7 +300,7 @@ Styles when Sidebery is not opened
 
 /* notification when sidebar is not opened */
 #main-window:has( 
-  #sidebar-box[hidden="true"],
+  #sidebar-box[hidden="true"]
 ) {
   &::before{
     content: "Open sidebar!";
@@ -321,12 +321,16 @@ Styles when Sidebery is not opened
 }
 
 /* styles when Sidebery is not opened but sidebar is */
-#sidebar-box:not([hidden]):not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]){
+#main-window:has(
+  #sidebar-box:not([hidden]):not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) 
+) {
   
   #sidebar {
     border: var(--outline) !important;
     margin: 0 calc(var(--margin) / 1.5) !important;
   }
+  
+  &[titlepreface*="-"] {#sidebar {margin-bottom: calc(var(--margin) / 1.5) !important;}}
   
   #sidebar-header{
     #sidebar-close {display: none}
