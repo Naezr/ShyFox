@@ -304,8 +304,11 @@ Styles when Sidebery is not opened
 #main-window:has( 
   #sidebar-box[hidden="true"]
 ) {
+  --shyfox-string-open-sidebar: "Open sidebar!";
+  &[lang="ru"]{--shyfox-string-open-sidebar: "Откройте боковую панель!";}
+  
   &::before{
-    content: "Open sidebar!";
+    content: var(--shyfox-string-open-sidebar);
     position: fixed;
     z-index: 9999;
     
@@ -326,6 +329,9 @@ Styles when Sidebery is not opened
 #main-window:has(
   #sidebar-box:not([hidden]):not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) 
 ) {
+  
+  --shyfox-string-to-manage-tabs-open-sidebery: "To manage tabs, open Sidebery in this menu";
+  &[lang="ru"]{--shyfox-string-to-manage-tabs-open-sidebery: "Для работы с вкладками откройте Sidebery";}
   
   #sidebar {
     border: var(--outline) !important;
@@ -356,7 +362,7 @@ Styles when Sidebery is not opened
     }
     
     &::after{
-      content: "To manage tabs, open Sidebery in this menu.";
+      content: var(--shyfox-string-to-manage-tabs-open-sidebery);
       position: absolute;
       top: 45px;
       font-size: 12px;
@@ -373,20 +379,22 @@ Styles when Sidebery is not opened
   #sidebar-box:not([hidden]):not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) 
 ) {
   
+  --shyfox-string-enable-native-tabs: "Enable native tabs";
+  &[lang="ru"]{--shyfox-string-enable-native-tabs: "Включить нативные вкладки";}
   
   #sidebarMenu-popup #sidebar-reverse-position{
     /* remove original text from this button */
     .menu-text {display: none !important;}
     
     &::after{
-      content: "Enable native tabs for emergency" !important;
+      content: var(--shyfox-string-enable-native-tabs) !important;
       padding-inline: 5px;
     }
   }
   
   /* sidebar on left (native tabs disabled, default) */
   &:has(#sidebar-box[style*="order: 2"]){
-    
+    /* there is no styles */
   }
   
   /* sidebar on right (native tabs enabled) */
@@ -395,6 +403,7 @@ Styles when Sidebery is not opened
     /* add checkmark to button to indicate state */
     #sidebarMenu-popup #sidebar-reverse-position {background-image: url("../icons/menu-check.svg") !important;}
     
+    /* native tabs styling */
     #tabbrowser-tabs{
       --tabsbar-wdt: calc(
         (
@@ -409,6 +418,8 @@ Styles when Sidebery is not opened
       position: fixed !important;
       
       width: var(--tabsbar-wdt) !important;
+      height: 45px !important;
+      padding: 0 !important;
       
       left: calc(var(--left-margin) + var(--margin)) !important;
       top:  calc(var(--top-margin)  + var(--margin)) !important;
@@ -421,7 +432,7 @@ Styles when Sidebery is not opened
       /* pinned tabs */
       .tabbrowser-tab[pinned]{
         position: absolute !important;
-        top: 55px !important;
+        top: 50px !important;
         
         .tab-background {
           background-color: var(--tb-col) !important;
