@@ -73,9 +73,6 @@ Styles for sidebar
   width: var(--sdbr-wdt) !important;
 }
 
-/* add rounded corners to sidebar content */
-#sidebar {border-radius: var(--big-rounding) !important;}
-
 /* drag window by empty space in bookmarks toolbar */
 #PersonalToolbar > *, #PlacesToolbarItems .bookmark-item[style="visibility: hidden;"]{
   -moz-window-dragging: drag !important;
@@ -201,6 +198,9 @@ Styles for sidebar
     }
   }
   
+  /* add rounded corners to sidebar content */
+  #sidebar {border-radius: var(--big-rounding) !important;}
+  
   /* styles for bookmarks */
   #PersonalToolbar{
     top: calc(var(--top-margin) + var(--margin));
@@ -298,7 +298,10 @@ Styles when Sidebery is not opened
 }
 
 /* color the sidebar button red */
-#sidebar-button .toolbarbutton-icon {background-color: red !important;}
+#sidebar-button .toolbarbutton-icon {
+  background-color: red !important;
+  fill: white !important;
+}
 
 /* notification when sidebar is not opened */
 #main-window:has( 
@@ -317,7 +320,8 @@ Styles when Sidebery is not opened
     top: calc(var(--margin) + var(--toolbar-item-hgt));
     left: calc(var(--margin) * 2);
     
-    background-color: #252525;
+    background-color: var(--tb-col);
+    color: var(--bt-col);
     outline: 3px solid red;
     
     border-radius: var(--big-rounding);
@@ -365,7 +369,7 @@ Styles when Sidebery is not opened
       content: var(--shyfox-string-to-manage-tabs-open-sidebery);
       position: absolute;
       top: 45px;
-      font-size: 12px;
+      font-size: 11.8px;
       
       padding-left: 22px;
     }
@@ -391,6 +395,9 @@ Styles when Sidebery is not opened
       padding-inline: 5px;
     }
   }
+  
+  /* add rounded corners to sidebar content */
+  #sidebar {border-radius: var(--big-rounding) !important;}
   
   /* sidebar on left (native tabs disabled, default) */
   &:has(#sidebar-box[style*="order: 2"]){
@@ -427,7 +434,10 @@ Styles when Sidebery is not opened
       background-color: var(--tb-col) !important;
       border-radius: var(--big-rounding) !important;
       border: var(--outline) !important;
+      outline: var(--shadow) !important;
       transition: var(--transition) !important;
+      
+      .tabbrowser-tab:not([pinned]){min-width: 140px !important;}
       
       /* pinned tabs */
       .tabbrowser-tab[pinned]{
@@ -437,6 +447,7 @@ Styles when Sidebery is not opened
         .tab-background {
           background-color: var(--tb-col) !important;
           border: var(--outline) !important;
+          outline: var(--shadow) !important;
         }
         &[selected] .tab-background {border: 1px solid var(--bt-col) !important;}
         
