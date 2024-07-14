@@ -441,19 +441,8 @@ Styles when Sidebery is not opened
       
       /* pinned tabs */
       .tabbrowser-tab[pinned]{
-        position: absolute !important;
-        top: 50px !important;
-        
-        .tab-background {
-          background-color: var(--tb-col) !important;
-          border: var(--outline) !important;
-          outline: var(--shadow) !important;
-        }
-        &[selected] .tab-background {border: 1px solid var(--bt-col) !important;}
-        
-        padding-left: calc(var(--tabsbar-wdt) - 30px) !important;
-        pointer-events: none !important;
-        & > *{pointer-events: initial !important;}
+        position: initial !important;
+        margin-inline: 0px !important;
       }
     }
   }
