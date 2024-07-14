@@ -437,7 +437,10 @@ Styles when Sidebery is not opened
       outline: var(--shadow) !important;
       transition: var(--transition) !important;
       
-      .tabbrowser-tab:not([pinned]){min-width: 140px !important;}
+      .tabbrowser-tab:not([pinned]){
+        min-width: 150px !important;
+        .tab-close-button{display: flex !important;}
+      }
       
       /* pinned tabs */
       .tabbrowser-tab[pinned]{
