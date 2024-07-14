@@ -73,6 +73,7 @@ Styles for sidebar
   width: var(--sdbr-wdt) !important;
 }
 
+/* add rounded corners to sidebar content */
 #sidebar {border-radius: var(--big-rounding) !important;}
 
 /* drag window by empty space in bookmarks toolbar */
@@ -269,6 +270,7 @@ Styles for sidebar
     background-color: var(--bg-col) !important;
   }
   
+  /* remove text from bookmarks toolbar elements placeholder */
   #bookmarks-toolbar-placeholder .toolbarbutton-text {display: none !important;}
 }
 
@@ -345,7 +347,7 @@ Styles when Sidebery is not opened
       height: 20px;
       position: absolute;
       
-      mask-image: url("chrome://global/skin/icons/info.svg");
+      mask-image: url("chrome://global/skin/icons/info-filled.svg");
       background-color: var(--shy-color);
       mask-repeat: no-repeat;
       
@@ -360,6 +362,77 @@ Styles when Sidebery is not opened
       font-size: 12px;
       
       padding-left: 22px;
+    }
+  }
+}
+
+/* assign the button to move the sidebar left and right to enable and disable native tabs for emergencies */
+
+/* if Sidebery is not opened but sidebar is */
+#main-window:has(
+  #sidebar-box:not([hidden]):not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) 
+) {
+  
+  
+  #sidebarMenu-popup #sidebar-reverse-position{
+    /* remove original text from this button */
+    .menu-text {display: none !important;}
+    
+    &::after{
+      content: "Enable native tabs for emergency" !important;
+      padding-inline: 5px;
+    }
+  }
+  
+  /* sidebar on left (native tabs disabled, default) */
+  &:has(#sidebar-box[style*="order: 2"]){
+    
+  }
+  
+  /* sidebar on right (native tabs enabled) */
+  &:has(#sidebar-box[style*="order: 4"]){
+    
+    /* add checkmark to button to indicate state */
+    #sidebarMenu-popup #sidebar-reverse-position {background-image: url("../icons/menu-check.svg") !important;}
+    
+    #tabbrowser-tabs{
+      --tabsbar-wdt: calc(
+        (
+          100vw
+          - var(--margin) * 2
+          - var(--left-margin)
+          - var(--right-margin)
+        ) / 1.5
+      );
+      
+      display: flex !important;
+      position: fixed !important;
+      
+      width: var(--tabsbar-wdt) !important;
+      
+      left: calc(var(--left-margin) + var(--margin)) !important;
+      top:  calc(var(--top-margin)  + var(--margin)) !important;
+      
+      background-color: var(--tb-col) !important;
+      border-radius: var(--big-rounding) !important;
+      border: var(--outline) !important;
+      transition: var(--transition) !important;
+      
+      /* pinned tabs */
+      .tabbrowser-tab[pinned]{
+        position: absolute !important;
+        top: 55px !important;
+        
+        .tab-background {
+          background-color: var(--tb-col) !important;
+          border: var(--outline) !important;
+        }
+        &[selected] .tab-background {border: 1px solid var(--bt-col) !important;}
+        
+        padding-left: calc(var(--tabsbar-wdt) - 30px) !important;
+        pointer-events: none !important;
+        & > *{pointer-events: initial !important;}
+      }
     }
   }
 }
