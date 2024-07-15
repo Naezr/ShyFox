@@ -131,6 +131,7 @@ Monochrome icons for some extensions
     .menu-iconic-icon {opacity: 0 !important;}
     background-image: url("../icons/bitwarden.svg") !important;
   }
+  #sidebar-switcher-target[style*="fde67d36-ff48-49e7-8ec4-3cf26deea141"] #sidebar-icon {list-style-image: url("../icons/bitwarden.svg") !important;}
 }
 
 /* 
@@ -453,11 +454,20 @@ Monochrome icons for some extensions
   
   /* sidebar header menu */
   #sidebarMenu-popup{
-    
+    #sidebar-switcher-bookmarks {background-image: url(chrome://browser/skin/bookmark.svg) !important;}
+    #sidebar-switcher-history {background-image: url(chrome://browser/skin/history.svg) !important;}
+    #sidebar-switcher-tabs {background-image: url(chrome://browser/skin/synced-tabs.svg) !important;}
   }
   
   /* bookmarks button menu */
+  #main-window:has(#PersonalToolbar[collapsed="true"]) #BMB_bookmarksPopup #BMB_viewBookmarksToolbar {background-image: url("../icons/eye-show.svg") !important;}
   #BMB_bookmarksPopup{
+    #BMB_viewBookmarksToolbar {background-image: url("../icons/eye-hide.svg") !important;}
+    #BMB_viewBookmarksSidebar {background-image: url("chrome://browser/skin/sidebars.svg") !important;}
+    #BMB_searchBookmarks {background-image: url(chrome://global/skin/icons/search-glass.svg) !important}
+    #BMB_mobileBookmarks {background-image: url(../icons/device-phone.svg) !important;}
     
+    #BMB_bookmarksShowAllTop {display: none !important;}
+    #BMB_bookmarksShowAll {background-image: url("chrome://browser/skin/bookmark-star-on-tray.svg") !important;}
   }
 }

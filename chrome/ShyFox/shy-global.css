@@ -200,7 +200,7 @@ Styles for dialogs e.g. "confirm deleting extension"
 
 #window-modal-dialog {margin-top: var(--margin) !important;} /* shift top-aligned dialogs little bit lower */
 .sizeDetermined #infoBody {min-height: 20px !important;} /* add minimal height to alert text */
-#searchbar-anon-search-settings {margin-inline-end: 4px !important;} /* margin for settings button in searcbar popup */
+#searchbar-anon-search-settings {margin-inline-end: 7px !important;} /* margin for settings button in searcbar popup */
 #PopupSearchAutoComplete {--panel-border-radius: var(--big-rounding) !important;} /* rounding for this popup */
 
 /* print dialog */

@@ -62,7 +62,7 @@ Navigation bar on top of the window
 }
 
 /* tab loading progress in urlbar background */
-#main-window:not([customizing]):not([titlepreface*="+"]):has(.tabbrowser-tab[selected][busy]) #urlbar-background{
+#main-window:not([customizing]):not([titlepreface*="+"]):has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) #urlbar-background{
   background: linear-gradient(
     to right,
     color-mix(in srgb, var(--shy-color) 10%, transparent) 0 var(--shy-tab-load-pcent),
