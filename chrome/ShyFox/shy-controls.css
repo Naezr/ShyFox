@@ -48,27 +48,27 @@ Styles for Min Max Close buttons
 
 /* remove window controls in f11 fullscreen or in clean mode */
 #main-window:is([sizemode="fullscreen"], [titlepreface*="?"]:not([customizing])) {
-  --window-control-wdt:   0px !important;
-  --buttonbox-left-hgt:   0px !important;
-  --buttonbox-right-hgt:  0px !important;
-  --nav-rgt-btnbx-margin: 0px !important;
-  --nav-rgt-btnbx-button: 0px !important;
-  --nav-lft-btnbx-margin: 0px !important;
-  --nav-lft-btnbx-button: 0px !important;
-  .titlebar-buttonbox-container {display: none}
+  --window-control-wdt:   0px !important;                          /* <                             */
+  --buttonbox-left-hgt:   0px !important;                          /* <         !DUPLICATE!         */
+  --buttonbox-right-hgt:  0px !important;                          /* <                             */
+  --nav-rgt-btnbx-margin: 0px !important;                          /* <   This code block must be   */
+  --nav-rgt-btnbx-button: 0px !important;                          /* <      identical to the       */
+  --nav-lft-btnbx-margin: 0px !important;                          /* <      code block below       */
+  --nav-lft-btnbx-button: 0px !important;                          /* <                             */
+  .titlebar-buttonbox-container {display: none !important;}        /* < vvvvvvvvvvvvvvvvvvvvvvvvvvv */
 }
 
 /* remove window controls by setting */
 @media (-moz-bool-pref: "shyfox.remove.window.controls") { 
   #main-window{
-    --window-control-wdt:   0px !important;
-    --buttonbox-left-hgt:   0px !important;
-    --buttonbox-right-hgt:  0px !important;
-    --nav-rgt-btnbx-margin: 0px !important;
-    --nav-rgt-btnbx-button: 0px !important;
-    --nav-lft-btnbx-margin: 0px !important;
-    --nav-lft-btnbx-button: 0px !important;
-    .titlebar-buttonbox-container {display: none !important;}
+    --window-control-wdt:   0px !important;                        /* < ^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+    --buttonbox-left-hgt:   0px !important;                        /* <                             */
+    --buttonbox-right-hgt:  0px !important;                        /* <         !DUPLICATE!         */
+    --nav-rgt-btnbx-margin: 0px !important;                        /* <                             */
+    --nav-rgt-btnbx-button: 0px !important;                        /* <   This code block must be   */
+    --nav-lft-btnbx-margin: 0px !important;                        /* <      identical to the       */
+    --nav-lft-btnbx-button: 0px !important;                        /* <      code block above       */
+    .titlebar-buttonbox-container {display: none !important;}      /* <                             */
   }
 }
 

@@ -91,19 +91,19 @@ Monochrome icons for some extensions
     /* ublock */
     menuitem[id*="ublock0_raymondhill_net-menuitem-_uBlock0-"]{
       .menu-iconic-icon {opacity: 0 !important;}
-      background-image: url("../icons/ublock.svg"); !important;
+      background-image: url("../icons/ublock.svg") !important;
     }
 
     /* simple translate */
     :is(menu, menuitem):not(menu *)[id*="simple-translate_sienori-menuitem-"] {
       .menu-iconic-icon {opacity: 0 !important;}
-      background-image: url("../icons/translate.svg"); !important;
+      background-image: url("../icons/translate.svg") !important;
     }
 
     /* bitwarden */
     #_446900e4-71c2-419f-a6a7-df9c091e268b_-menuitem-_root{
       .menu-iconic-icon {opacity: 0 !important;}
-      background-image: url("../icons/bitwarden.svg"); !important;
+      background-image: url("../icons/bitwarden.svg") !important;
       & > menupopup{
         & > *[id*="-menuitem-_autofill"] {background-image: url("chrome://browser/skin/login.svg")!important;}
         & > *[id*="-menuitem-_copy-username"] {background-image: url("../icons/edit-copy.svg") !important;}
@@ -122,9 +122,16 @@ Monochrome icons for some extensions
     /* clean url */
     #_74145f27-f039-47ce-a470-a662b129930a_-menuitem-_copy-link-to-clipboard{
       .menu-iconic-icon {opacity: 0 !important;}
-      background-image: url("../icons/eraser.svg"); !important;
+      background-image: url("../icons/eraser.svg") !important;
     }
   }
+  
+  /* sidebar switcher bitwarden icon */
+  #sidebarswitcher_menu__446900e4-71c2-419f-a6a7-df9c091e268b_-sidebar-action{
+    .menu-iconic-icon {opacity: 0 !important;}
+    background-image: url("../icons/bitwarden.svg") !important;
+  }
+  #sidebar-switcher-target[style*="fde67d36-ff48-49e7-8ec4-3cf26deea141"] #sidebar-icon {list-style-image: url("../icons/bitwarden.svg") !important;}
 }
 
 /* 
@@ -267,7 +274,9 @@ Monochrome icons for some extensions
   #contentAreaContextMenu,
   #unified-extensions-context-menu,
   #downloadsContextMenu,
-  #placesContext
+  #placesContext,
+  #sidebarMenu-popup,
+  #BMB_bookmarksPopup
 ) :is(menuitem, menu){
   
   /* icons color and position */
@@ -289,7 +298,7 @@ Monochrome icons for some extensions
   }
   
   .menu-iconic-text {margin-inline-start: -1px !important;}
-  &:not(menu) {padding-right: 0px !important;}
+  &:not(:is(menu, [acceltext])) {padding-right: 0px !important;}
 }
 
 @media (-moz-bool-pref: "shyfox.enable.context.menu.icons") {
@@ -306,7 +315,7 @@ Monochrome icons for some extensions
     #context-openlinkintab {background-image: url("../icons/new-tab.svg") !important;}
     context-openlinkincontainertab, #context-openlinkinusercontext-menu {background-image: url("../icons/container-openin-16.svg") !important;}
     #context-openlink {background-image: url("../icons/window.svg") !important;}
-    #context-openlinkprivate {background-image: url("chrome://browser/skin/privateBrowsing.svg"); !important;}
+    #context-openlinkprivate {background-image: url("chrome://browser/skin/privateBrowsing.svg") !important;}
     
     #spell-no-suggestions {background-image: url("../icons/text-proofing-tools.svg") !important;}
     #spell-add-to-dictionary, #spell-add-dictionaries, #spell-add-dictionaries-main {background-image: url("../icons/book-add.svg") !important;}
@@ -358,8 +367,8 @@ Monochrome icons for some extensions
 
     #context-take-screenshot {background-image: url("chrome://browser/skin/screenshot.svg") !important;}
 
-    #context-bookmarklink {background-image: url("chrome://browser/skin/bookmark.svg"); !important;}
-    #context-savelink {background-image: url("../icons/toolbarButton-download.svg"); !important;}
+    #context-bookmarklink {background-image: url("chrome://browser/skin/bookmark.svg") !important;}
+    #context-savelink {background-image: url("../icons/toolbarButton-download.svg") !important;}
     #context-savelinktopocket {background-image: url("../icons/pocket-outline.svg") !important;}
     #context-copyemail {background-image: url("../icons/mail.svg") !important;}
     #context-copyphone {background-image: url("../icons/device-phone.svg") !important;}
@@ -367,7 +376,7 @@ Monochrome icons for some extensions
     #context-stripOnShareLink {background-image: url("../icons/link-no-tracking.svg") !important;}
     #context-sendlinktodevice {background-image: url("../icons/send-to-device.svg") !important;}
 
-    #context-searchselect {background-image: url(chrome://global/skin/icons/search-glass.svg); !important;}
+    #context-searchselect {background-image: url(chrome://global/skin/icons/search-glass.svg) !important;}
     #context-searchselect-private {background-image: url("../icons/private-favicon.svg") !important;}
     #context-keywordfield {background-image: url("chrome://browser/skin/bookmark.svg") !important;}
     
@@ -441,5 +450,24 @@ Monochrome icons for some extensions
     .downloadRemoveFromHistoryMenuItem {background-image: url("../icons/eraser.svg") !important;}
     
     menuitem[command="downloadsCmd_clearList"],  menuitem[command="downloadsCmd_clearDownloads"] {background-image: url("../icons/broom.svg") !important;}
+  }
+  
+  /* sidebar header menu */
+  #sidebarMenu-popup{
+    #sidebar-switcher-bookmarks {background-image: url(chrome://browser/skin/bookmark.svg) !important;}
+    #sidebar-switcher-history {background-image: url(chrome://browser/skin/history.svg) !important;}
+    #sidebar-switcher-tabs {background-image: url(chrome://browser/skin/synced-tabs.svg) !important;}
+  }
+  
+  /* bookmarks button menu */
+  #main-window:has(#PersonalToolbar[collapsed="true"]) #BMB_bookmarksPopup #BMB_viewBookmarksToolbar {background-image: url("../icons/eye-show.svg") !important;}
+  #BMB_bookmarksPopup{
+    #BMB_viewBookmarksToolbar {background-image: url("../icons/eye-hide.svg") !important;}
+    #BMB_viewBookmarksSidebar {background-image: url("chrome://browser/skin/sidebars.svg") !important;}
+    #BMB_searchBookmarks {background-image: url(chrome://global/skin/icons/search-glass.svg) !important}
+    #BMB_mobileBookmarks {background-image: url(../icons/device-phone.svg) !important;}
+    
+    #BMB_bookmarksShowAllTop {display: none !important;}
+    #BMB_bookmarksShowAll {background-image: url("chrome://browser/skin/bookmark-star-on-tray.svg") !important;}
   }
 }

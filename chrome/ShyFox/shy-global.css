@@ -152,7 +152,24 @@ input:not([type="checkbox"]),
 richlistbox
 {border-radius: var(--big-rounding) !important;}
 
-/* dialog */
+/* disable pointer events in clean mode */ 
+#main-window[titlepreface*="?"]{
+  #nav-bar:not(:has(#urlbar[breakout-extend])),
+  #sidebar,
+  #TabsToolbar,
+  #PersonalToolbar
+  {pointer-events: none !important;}
+}
+
+/*
+
+--- DIALOG ------------------------------------------------------------------------------------------------------------------------------------------
+
+Styles for dialogs e.g. "confirm deleting extension"
+
+*/
+
+
 #commonDialogWindow, #commonDialogWindow .titleIcon{
   background-color: transparent !important;
   color: var(--bt-col) !important;
@@ -181,9 +198,10 @@ richlistbox
   }
 }
 
-#window-modal-dialog {margin-top: var(--margin) !important;}
-
-#searchbar-anon-search-settings {margin-inline-end: 4px !important;}
+#window-modal-dialog {margin-top: var(--margin) !important;} /* shift top-aligned dialogs little bit lower */
+.sizeDetermined #infoBody {min-height: 20px !important;} /* add minimal height to alert text */
+#searchbar-anon-search-settings {margin-inline-end: 7px !important;} /* margin for settings button in searcbar popup */
+#PopupSearchAutoComplete {--panel-border-radius: var(--big-rounding) !important;} /* rounding for this popup */
 
 /* print dialog */
 print-preview::before,
@@ -193,14 +211,7 @@ print-preview .previewStack::before,
 
 .printDialogBox::before {border-radius: var(--rounding) !important;}
 
-/* disable pointer events in clean mode */ 
-#main-window[titlepreface*="?"]{
-  #nav-bar:not(:has(#urlbar[breakout-extend])),
-  #sidebar,
-  #TabsToolbar,
-  #PersonalToolbar
-  {pointer-events: none !important;}
-}
+.printDialogBox {margin-top: var(--margin) !important;}
 
 /*
 
@@ -305,7 +316,8 @@ Apply theme colors to context menus and menubar
 #toolbar-context-menu, #toolbar-context-menu menupopup,
 #unified-extensions-context-menu, #unified-extensions-context-menu menupopup,
 #placesContext, #placesContext menupopup,
-#downloadsContextMenu, #downloadsContextMenu menupopup
+#downloadsContextMenu, #downloadsContextMenu menupopup,
+#sidebarMenu-popup, #PopupSearchAutoComplete
 {
   --panel-background: var(--tb-col)!important;  
   --panel-border-color: var(--bg-col) !important;
@@ -355,6 +367,34 @@ toolbarpaletteitem#wrapper-search-container[place="palette"] #searchbar {backgro
 
 :root[customizing] .customization-target:not(#widget-overflow-fixed-list) {min-width: 0px !important;}
 
+/* red sidebar icon styles */
+#main-window{
+  --shyfox-string-sidebar-button-tooltip: "This button is only shown when the sidebar is disabled and is colored red to attract attention";
+  &[lang="ru"]{--shyfox-string-sidebar-button-tooltip: "Эта кнопка отображается только тогда, когда боковая панель отключена, и окрашена в красный цвет, чтобы привлечь внимание";}
+}
+
+#wrapper-sidebar-button[place="palette"] .toolbarbutton-icon {
+  padding: 2px !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 6px !important;
+}
+
+#wrapper-sidebar-button[mousedown]{
+  &::after{
+    content: var(--shyfox-string-sidebar-button-tooltip) !important;
+    text-align: left !important;
+    position: absolute;
+    color: black !important;
+    background-color: white !important;
+    border-radius: var(--rounding);
+    padding: 5px;
+    width: 160px !important;
+    margin-left: 40px;
+    margin-top: 40px;
+  }
+}
+
 /*
 
 --- NOTIFICATION BAR --------------------------------------------------------------------------------------------------------------------------------
@@ -366,7 +406,7 @@ Sometimes Firefox shows notifications at the top of the window suggesting, for e
 #tab-notification-deck, .global-notificationbox{
   position: fixed !important;
   transition: var(--transition) !important;
-  z-index: 1 !important;
+  z-index: 0 !important;
   vbox {background-color: transparent !important;}
   background-color: transparent !important;
   width: auto;
@@ -478,7 +518,10 @@ File Edit View History Bookmarks Tools Help
 */
 
 /* fix some items dissapearing */
-#titlebar {opacity: 1 !important;}
+#titlebar {
+  opacity: 1 !important;
+  z-index: 1 !important;
+}
 
 :root[tabsintitlebar] #titlebar:-moz-window-inactive {
   opacity: 1 !important;

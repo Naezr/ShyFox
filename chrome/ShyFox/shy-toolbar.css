@@ -213,14 +213,10 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
   }
   
   /* make all panel content invisible (it will visible when hover) */
-  #TabsToolbar,
-  #PanelUI-menu-button,
-  #unified-extensions-button
-  {
-    & > *:not(.titlebar-buttonbox-container) {
-      transition: var(--transition) !important;
-      opacity: 0;
-    }
+  :is(#PanelUI-menu-button, #unified-extensions-button) > *,
+  #TabsToolbar-customization-target > *:not(#tabbrowser-tabs) {
+    transition: var(--transition) !important;
+    opacity: 0;
   }
   
   #TabsToolbar-customization-target{
@@ -240,7 +236,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     
     /* limit toolbar items width */
     & > toolbarbutton {margin-left: 1px !important;}
-    & > * {max-width: var(--toolbar-button-wdt) !important;}
+    & > *:not(#tabbrowser-tabs) {max-width: var(--toolbar-button-wdt) !important;}
   }
   
   /* styles for extensions button */
@@ -263,10 +259,10 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     {
       right: calc(var(--right-margin) + var(--margin));
       
-      & > *:not(.titlebar-buttonbox-container) {opacity: 1 !important;}
+      & > *:not(.titlebar-buttonbox-container), #TabsToolbar-customization-target > * {opacity: 1 !important;}
     }
     #TabsToolbar{
-      width: calc(var(--toolbar-button-wdt) + 4px) !important;;
+      width: calc(var(--toolbar-button-wdt) + 4px) !important;
       padding-right: 0px !important;
       
       background-color: var(--tb-col) !important;
