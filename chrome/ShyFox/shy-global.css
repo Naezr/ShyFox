@@ -367,14 +367,23 @@ toolbarpaletteitem#wrapper-search-container[place="palette"] #searchbar {backgro
 
 :root[customizing] .customization-target:not(#widget-overflow-fixed-list) {min-width: 0px !important;}
 
+/* red sidebar icon styles */
 #main-window{
   --shyfox-string-sidebar-button-tooltip: "This button is only shown when the sidebar is disabled and is colored red to attract attention";
   &[lang="ru"]{--shyfox-string-sidebar-button-tooltip: "Эта кнопка отображается только тогда, когда боковая панель отключена, и окрашена в красный цвет, чтобы привлечь внимание";}
 }
 
+#wrapper-sidebar-button[place="palette"] .toolbarbutton-icon {
+  padding: 2px !important;
+  width: 20px !important;
+  height: 20px !important;
+  border-radius: 6px !important;
+}
+
 #wrapper-sidebar-button[mousedown]{
   &::after{
-    content: var(--shyfox-string-sidebar-button-tooltip);
+    content: var(--shyfox-string-sidebar-button-tooltip) !important;
+    text-align: left !important;
     position: absolute;
     color: black !important;
     background-color: white !important;
