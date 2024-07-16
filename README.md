@@ -155,7 +155,7 @@
 </details>
 
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
-2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/)
+2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/firefox/addon/userchrome-toggle-extended/)
    
    <details><summary>Userchrome toggle settings</summary> 
    
@@ -284,7 +284,7 @@ The browser interface has been divided into three panels:
 
 ### Toggles
 
-The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized.                           
+The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized.                           
 
 | № | Name | Recommended shortcut |
 | --- | --- | --- |
