@@ -527,6 +527,11 @@ File Edit View History Bookmarks Tools Help
   opacity: 1 !important;
 }
 
+#navigator-toolbox:-moz-window-inactive {
+  background-color: initial !important;
+  color: initial !important;
+}
+
 /* remove annoying line at the top of the window */
 #navigator-toolbox {
   margin-top: -1px !important;
@@ -599,4 +604,16 @@ File Edit View History Bookmarks Tools Help
 #historySwipeAnimationPreviousArrow,#historySwipeAnimationNextArrow {
 	--swipe-nav-icon-primary-color: color-mix(in srgb, var(--shy-color) 80%, #FFFFFF50) !important;
 	--swipe-nav-icon-accent-color:  color-mix(in srgb, var(--shy-color) 20%, #00000050) !important;
+}
+
+/* inactive window */
+#main-window:-moz-window-inactive{
+  :is(
+    #nav-bar,
+    #sidebar-box,
+    #PersonalToolbar,
+    #toolbar-menubar,
+    #TabsToolbar,
+    findbar
+  ) > *{opacity: var(--inactive-opct) !important;}
 }
