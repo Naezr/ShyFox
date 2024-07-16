@@ -615,5 +615,7 @@ File Edit View History Bookmarks Tools Help
     #toolbar-menubar,
     #TabsToolbar,
     findbar
-  ) > *{opacity: var(--inactive-opct) !important;}
+  ) > *:not(
+    .titlebar-buttonbox-container
+  ) {opacity: var(--inactive-opct) !important;}
 }

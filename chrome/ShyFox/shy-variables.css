@@ -40,6 +40,7 @@ Values of these variables can be changed safely and most likely nothing will bre
   
   /* transparency of indicator bars showing the position of hidden panels */
   --hide-bar-opct: 0.2;
+  &:-moz-window-inactive{--hide-bar-opct: 0.1;}
   
   /* how much shorter these bars than panels */
   --hide-bar-wdt-pad: 10px;
