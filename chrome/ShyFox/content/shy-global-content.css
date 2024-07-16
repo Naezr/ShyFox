@@ -20,3 +20,33 @@ Styles for some other things stylable in userContent.css
     --in-content-focus-outline-color: var(--shy-color) !important;
   }
 }
+
+/* simple translate icon */
+@media (-moz-bool-pref: "shyfox.enable.ext.mono.context.icons") {
+  .simple-translate-button {
+    background-image: none !important;
+    &::before {
+      content: "";
+      position: absolute;
+      
+      background-color: var(--simple-translate-main-text);
+      mask-image: url("../../icons/translate.svg");
+      mask-repeat: no-repeat;
+      mask-position: center;
+      
+      width: inherit !important;
+      height: inherit !important;
+    }
+  }
+}
+
+/* simple translate */
+.simple-translate-panel{
+  border-radius: var(--big-rounding) !important;
+  border: 1px solid color-mix(in srgb, var(--simple-translate-main-bg) 90%, var(--simple-translate-main-text)) !important;
+}
+
+.simple-translate-button{
+  border-radius: 7px !important;
+  border: 1px solid color-mix(in srgb, var(--simple-translate-main-bg) 65%, var(--simple-translate-main-text)) !important;
+}
