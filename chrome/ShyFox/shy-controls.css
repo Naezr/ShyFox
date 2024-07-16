@@ -96,7 +96,7 @@ Styles for Min Max Close buttons
     .titlebar-buttonbox-container{
       height: var(--margin) !important;
       top: 0px;
-      opacity: calc(var(--hide-bar-opct) / 2 ) !important;
+      opacity: calc(var(--hide-bar-opct) / 2 );
       &:hover{opacity: 1}
     }
   }
@@ -170,7 +170,7 @@ Styles for Min Max Close buttons
     #main-window:is([titlepreface*="="][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
       .titlebar-buttonbox-container{
         top: 0px;
-        opacity: calc(var(--hide-bar-opct) / 2 ) !important;
+        opacity: calc(var(--hide-bar-opct) / 2 );
         &:hover{opacity: 1};
         height: var(--margin);
         right: 5px;
@@ -245,7 +245,7 @@ Styles when GTK window controls on left or system is MacOS
   #main-window:is([titlepreface*="-"][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
       .titlebar-buttonbox-container{
         top: 0px;
-        opacity: calc(var(--hide-bar-opct) / 2 ) !important;
+        opacity: calc(var(--hide-bar-opct) / 2 );
         &:hover{opacity: 1};
         height: var(--margin);
         left: 5px;
