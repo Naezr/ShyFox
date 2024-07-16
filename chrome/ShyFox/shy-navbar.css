@@ -51,6 +51,8 @@ Navigation bar on top of the window
   top: 0px;
   left: var(--left-margin) !important;
   right: auto !important;
+  
+  & > * {opacity: var(--dyn-opct);}
 }
 
 /* centered navbar text */

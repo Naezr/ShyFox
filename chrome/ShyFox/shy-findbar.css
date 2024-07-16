@@ -55,6 +55,7 @@ findbar{
   /* some design */
   background: var(--tb-col) !important;
   transition: var(--transition) !important;
+  & > * {opacity: var(--dyn-opct);}
   
   /* corners, shadow */
   border: var(--outline) !important;

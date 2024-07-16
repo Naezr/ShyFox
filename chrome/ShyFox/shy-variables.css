@@ -78,6 +78,10 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --tb-col: var(--toolbar-bgcolor, tomato);                           /* lighter background */       /* meaning something went wrong */
   --bt-col: var(--toolbarbutton-icon-fill);                           /* text or icons      */
   
+  /* dynamic opacity */
+  --dyn-opct: 1;
+  &:-moz-window-inactive{--dyn-opct: var(--inactive-opct);}
+  
   /* shared shortcuts for commonly used parameters */
   --outline: 1px solid var(--arrowpanel-background);      /* outline around almost anything              */
   --shadow: 2px solid var(--shadow-col);                  /* translucent outline that imitates a shadow  */

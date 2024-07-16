@@ -82,6 +82,8 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 #TabsToolbar-customization-target{
   position: absolute;
   
+  opacity: var(--dyn-opct);
+  
   right: 0;
   top: calc(var(--toolbar-item-hgt) * 2) !important;
   bottom: 0;
