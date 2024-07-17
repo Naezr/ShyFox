@@ -155,7 +155,7 @@
 </details>
 
 1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
-2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/)
+2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/firefox/addon/userchrome-toggle-extended/)
    
    <details><summary>Userchrome toggle settings</summary> 
    
@@ -176,12 +176,12 @@
    
    </details>    
    
-3. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery)
+3. Install [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery)
 
 > [!NOTE]                   
 > This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
  
-4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data).   
+4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data).   
 5. Launch Firefox and go to the customizing page ( <img src="https://github.com/Naezr/ShyFox/assets/95460152/49d963a3-ccb4-48f9-8892-f206894315d7"> > more tools > customize toolbar) and move buttons to something like that:
    
    <details><summary>Buttons layout</summary>
@@ -210,9 +210,9 @@
 If you don't like the way the standard dark and light themes look, you can colorize your ShyFox!
 
 There are three ways you can do it, choose one:
-- Install some theme from [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/themes/) (not all will be well compatible)
-- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/). Presets from screenshots: [pink](https://color.firefox.com/?theme=XQAAAAItAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPsqvXkIar4KdrumPOaRpoqhRtylP5n4Zfpe_3lMuBvgYbla0qT1QOs34oqRKJ__vCF6FKTI9i1CVNq28mKrlpbA8ZNH7GFcuP0Rpgycr-fRDXvVIf5Azp6HEjVD0AkSXEHSvbCGdTf5T_DiruA1oJu51K1Tq5463Tp_TUR3et-H8QZB3LVUmH47iHoiv0ArOfMUCQdp_ReUx15gcB_9_w9i), [turquoise](https://color.firefox.com/?theme=XQAAAAI0AQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPrv2Sw35312EPwz49WPR2-KqLVciULUNG8hT47EAt7OFG0PM9EP_FOrqm0ZcrcuiqO7AJ4ZtOtYZJYmJW2UQbLGqUwsxZZlqzQg5ljrBr22wQRHG74BnkZTZXKA9FV2uP7Z0yOf_y-Z0l7DPBlPoa21LYK1SjFsfIWVNevNDd3N3kGoYFj-vEdiReRjz_444_tbcATHH0jZbK4OH1YjmozJHzMhWWL9XTK5)
-- Install the [Adaptive Tab Bar Color](https://addons.mozilla.org/en-US/firefox/addon/adaptive-tab-bar-colour/) extension and then ShyFox will adapt to the colors of the currently open website.
+- Install some theme from [Firefox Add-ons](https://addons.mozilla.org/firefox/themes/) (not all will be well compatible)
+- Color your browser yourself with [Firefox Color](https://addons.mozilla.org/firefox/addon/firefox-color/). Presets from screenshots: [pink](https://color.firefox.com/?theme=XQAAAAItAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPsqvXkIar4KdrumPOaRpoqhRtylP5n4Zfpe_3lMuBvgYbla0qT1QOs34oqRKJ__vCF6FKTI9i1CVNq28mKrlpbA8ZNH7GFcuP0Rpgycr-fRDXvVIf5Azp6HEjVD0AkSXEHSvbCGdTf5T_DiruA1oJu51K1Tq5463Tp_TUR3et-H8QZB3LVUmH47iHoiv0ArOfMUCQdp_ReUx15gcB_9_w9i), [turquoise](https://color.firefox.com/?theme=XQAAAAI0AQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPrv2Sw35312EPwz49WPR2-KqLVciULUNG8hT47EAt7OFG0PM9EP_FOrqm0ZcrcuiqO7AJ4ZtOtYZJYmJW2UQbLGqUwsxZZlqzQg5ljrBr22wQRHG74BnkZTZXKA9FV2uP7Z0yOf_y-Z0l7DPBlPoa21LYK1SjFsfIWVNevNDd3N3kGoYFj-vEdiReRjz_444_tbcATHH0jZbK4OH1YjmozJHzMhWWL9XTK5)
+- Install the [Adaptive Tab Bar Color](https://addons.mozilla.org/firefox/addon/adaptive-tab-bar-colour/) extension and then ShyFox will adapt to the colors of the currently open website.
  
    <details><summary> Recommended Adaptive Tab Bar Color settings</summary>  
    
@@ -284,7 +284,7 @@ The browser interface has been divided into three panels:
 
 ### Toggles
 
-The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/ru/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized.                           
+The core of the theme is the [Userchrome toggle Extended](https://addons.mozilla.org/firefox/addon/userchrome-toggle-extended/) extension. With the help of toggles added by it the main feature of this theme is realized.                           
 
 | № | Name | Recommended shortcut |
 | --- | --- | --- |
