@@ -128,36 +128,15 @@
 
 ### Install
 
-<details><summary>Migrate from 2.0 </summary>
- 
-   <br/>
-   
-   If you migrating from 2.0 you need delete fx-autoconfig.                     
-   To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder.      
-   
-   If you new user, skip it.      
-   
-</details>
+#### Step 1 - Download files
 
-<details><summary>Migrate from 3.4 </summary>
- 
-   <br/>
-   
-   If you migrating from 3.4 you need delete Sidebery styles from its settings.                     
-   To do it go to the Sidebery settings > Styles editor 
-   <div align="center">
-    <a>Before | After</a><br/>
-    <img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/4a45a7db-ab88-4f24-a5a6-5fbbaf418224'><img width="50%" src='https://github.com/Naezr/ShyFox/assets/95460152/38aef588-15a6-44ad-8908-95d10ea055e3'>
-   </div>
-   
-   If you new user, skip it.      
-   
-</details>
+ - [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) and unzip theme files
 
-1. [Download](https://github.com/Naezr/ShyFox/archive/refs/heads/main.zip) theme files
-2. Install and configure [Userchrome toggle Extended](https://addons.mozilla.org/firefox/addon/userchrome-toggle-extended/)
+#### Step 2 - Configure extensions
+
+ - Install [Userchrome toggle Extended](https://addons.mozilla.org/firefox/addon/userchrome-toggle-extended/)
    
-   <details><summary>Userchrome toggle settings</summary> 
+   <details><summary>Configure Userchrome toggle Extended</summary> 
    
    <br/>
    
@@ -175,16 +154,62 @@
    <br/>
    
    </details>    
-   
-3. Install [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery)
 
-> [!NOTE]                   
-> This means a clean install. If you have used Sidebery before, reset the settings to default. If you want to get exactly the same experience as mine, [import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc) the Sidebery settings file that comes with the theme.
- 
-4. Close Firefox and then put `chrome` folder, and `user.js` into your [profile directory](https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data).   
-5. Launch Firefox and go to the customizing page ( <img src="https://github.com/Naezr/ShyFox/assets/95460152/49d963a3-ccb4-48f9-8892-f206894315d7"> > more tools > customize toolbar) and move buttons to something like that:
+
+ - Install [Sidebery](https://addons.mozilla.org/firefox/addon/sidebery)
+
+   <details><summary>Configure Sidebery</summary> 
    
-   <details><summary>Buttons layout</summary>
+   <br/>
+   
+   If you used Sidebery before, it would be better to reset its settings to default.
+   
+   Then import `sidebery-settings.json` from unzipped theme files
+
+   ![import](https://github.com/Naezr/ShyFox/assets/95460152/9961a813-d035-41cc-a6b4-146e20db45bc)
+
+   <br/>
+   
+   </details>    
+
+#### Step 3 - Moving files to a profile folder
+
+ - Find your [profile directory](https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data)
+ - Close Firefox
+ - Move `chrome` folder and `user.js` file from unzipped theme files into your [profile directory](https://support.mozilla.org/kb/profiles-where-firefox-stores-user-data)
+  
+   <details><summary>Profile folder structure</summary> 
+      
+      <br/>
+
+      ```js
+      {random characters}.default-release // Profile folder itself
+      |_ chrome // chrome folder you put in
+      |  |_ userChrome.css
+      |  |_ userContent.css
+      |  |_ ShyFox
+      |  |  |_ ... // css files
+      |  |_ icons
+      |  |  |_ ... // svg icons
+      |  |_ wallpaper.png
+      |  |_ wallpaper-light.png
+      |_ user.js // user.js file you put in
+      |_ ... // a lot of files that was there before
+      ```
+
+      <br/>
+      
+      </details>    
+
+ - Open Firefox
+
+#### Step 4 - Buttons layout
+
+ - Go to the customizing page. <img src="https://github.com/Naezr/ShyFox/assets/95460152/49d963a3-ccb4-48f9-8892-f206894315d7"> > More tools > Customize toolbar
+  
+ - Move buttons to something like that:
+   
+   <details><summary>Customizing menu</summary>
    
    <br/>
    
@@ -197,13 +222,27 @@
    
    </summary>
 
-> [!IMPORTANT]
-> Do not use `System theme - auto` in Firefox settings. It can cause problems
->              
-> ![System theme - auto](https://github.com/Naezr/ShyFox/assets/95460152/944e9200-ccc1-4cac-8d6e-d1c8f19db375)
+### Upgrading
 
-> [!NOTE]
-> Redo the steps 1 and 4 is enough for updating to new version
+ - Migrate from old version
+   <details><summary>Migrate from 2.0 </summary>
+   
+      <br/>
+      
+      If you migrating from 2.0 you need delete fx-autoconfig.                     
+      To do it, at first clean up `chrome` folder, at second delete `config.js` and `/defaults/prefs/config-prefs.js` from Firefox installation folder.           
+      
+   </details>
+
+   <details><summary>Migrate from 3.4 </summary>
+   
+      <br/>
+      
+      If you migrating from 3.4 you need to reset Sidebery settings to default and import new ones.
+         
+   </details>
+
+ - In other cases redo the installation steps 1 and 3 is enough for updating to new ShyFox version
 
 ### Customization
 
@@ -268,12 +307,7 @@ Settings that can be toggled in `about:config`
 
 ** - On macOS you need to disable native context menus to see icons. `widget.macos.native-context-menus` => `false`
 
-## Additional information     
-
- * The theme works and is only tested on the latest version of Firefox. Firefox-based browsers, ESR versions, or just older versions are not supported. It may work, but I am not responsible for it.
- * Support for macOS is limited. Theme works, but I personally can't test it there, because I don't have a mac. 
-
-## Features
+## Overview
 
 ### Panels
 
@@ -326,10 +360,10 @@ If sidebar is open but no Sidebery is there, the sidebar will take a slightly di
 | --- | --- | --- |
 | ![image](https://github.com/user-attachments/assets/0822da79-a2d3-4ab9-9a0b-971419d8666d) | ![image](https://github.com/user-attachments/assets/1ccc0d62-6850-44da-b98c-d4eea1e0a6dd) | ![image](https://github.com/user-attachments/assets/fa5b761b-a188-4f6b-982d-8d63b257bba6) |
 
-## To-Do
+## Additional information     
 
- * Add navbar on bottom support
- * Make it clearer when a window is in focus and when it is not
+ * The theme works and is only tested on the latest version of Firefox. Firefox-based browsers, ESR versions, or just older versions are not supported. It may work, but I am not responsible for it.
+ * Support for macOS is limited. Theme works, but I personally can't test it there, because I don't have a mac. 
 
 ## Thanks
 
