@@ -36,7 +36,7 @@ Values of these variables can be changed safely and most likely nothing will bre
   --blur-radius: 10px;
   
   /* brightness of inactive window elements */
-  --inactive-opct: 0.6;
+  --inactive-opct: 0.7;
   
   /* transparency of indicator bars showing the position of hidden panels */
   --hide-bar-opct: 0.2;
