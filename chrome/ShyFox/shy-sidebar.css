@@ -333,7 +333,7 @@ Styles when Sidebery is not opened
 }
 
 /* styles when Sidebery is not opened but sidebar is */
-#main-window:has(
+#main-window[chromehidden=""]:has(
   #sidebar-box:not([hidden]):not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) 
 ) {
   
