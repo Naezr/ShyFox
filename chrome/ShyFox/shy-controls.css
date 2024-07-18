@@ -265,17 +265,28 @@ Styles when GTK window controls on left or system is MacOS
   
   /* style when not enough space - merged into window border */
   #main-window:is([titlepreface*="-"][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
+    .titlebar-buttonbox-container{
+      opacity: calc(var(--hide-bar-opct) / 2 );
+      &:hover{opacity: 1};
+      left: 5px;
+    }
+
+    .titlebar-button {margin: 0px !important;}
+
+    @media not (-moz-bool-pref: "shyfox.force.native.controls"){
       .titlebar-buttonbox-container{
         top: 0px;
-        opacity: calc(var(--hide-bar-opct) / 2 );
-        &:hover{opacity: 1};
         height: var(--margin);
-        left: 5px;
-        
-        .titlebar-button{
-          margin: 0px !important;
-          .toolbarbutton-icon {border-radius: 0 !important;}
-        }
       }
+
+      .titlebar-button .toolbarbutton-icon {border-radius: 0 !important;}
+    }
+
+    @media (-moz-bool-pref: "shyfox.force.native.controls"){
+      .titlebar-buttonbox-container{
+        top: -5px;
+        height: calc(var(--margin) + 5px);
+      }
+    }
   }
 }
