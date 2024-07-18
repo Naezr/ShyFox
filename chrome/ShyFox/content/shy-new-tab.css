@@ -131,6 +131,10 @@ Styles for new tab
     background-color: var(--tr-col);
     border-radius: var(--giant-rounding);
   }
+
+  .only-search .search-wrapper {
+    padding-top: 34px !important;
+  }
   
   /* settings */
   .icon-settings:hover {background-color: var(--tr-hov-col) !important;}
