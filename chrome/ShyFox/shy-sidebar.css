@@ -52,7 +52,10 @@ Styles for sidebar
   
   padding-top: 0 !important;
   
-  & > * {transition: var(--transition) !important;}
+  & > * {
+    opacity: var(--dyn-opct);
+    transition: var(--transition) !important;
+  }
 }
 
 /* styles for sidebar */
@@ -147,7 +150,7 @@ Styles for sidebar
     }
     
     /* make all panel content invisible (it will visible when hover) */
-    & * {
+    & > * {
       transition: var(--transition) !important;
       opacity: 0;
     }
@@ -248,7 +251,7 @@ Styles for sidebar
             
       &::after{opacity: 0}
       
-      & * {opacity: 1}
+      & > * {opacity: var(--dyn-opct);}
     }
   }
 }
@@ -330,7 +333,7 @@ Styles when Sidebery is not opened
 }
 
 /* styles when Sidebery is not opened but sidebar is */
-#main-window:has(
+#main-window[chromehidden=""]:has(
   #sidebar-box:not([hidden]):not([sidebarcommand*="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]) 
 ) {
   

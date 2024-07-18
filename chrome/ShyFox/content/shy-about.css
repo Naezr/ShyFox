@@ -52,6 +52,7 @@ Styles for settings, Firefox View, etc.
   .sidebar-footer-link,          menupopup,
   .info-box-container,           section,
   .sidebar-item--tall,           details,
+  .info-box-content,
   .qr-code-box,                  select,
   .action-box,                   table,
   .dialogBox,                    tree,
@@ -81,12 +82,15 @@ Styles for settings, Firefox View, etc.
   input:not([type="checkbox"]),
   
   .search-container,
+  .study-icon,
+  
   search-textbox,
   menulist,
   span,
   a, 
   
   .tooltip-container .tooltip-panel,
+  
   #activeLanguages
   
   {border-radius: var(--rounding) !important;}

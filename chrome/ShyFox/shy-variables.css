@@ -35,8 +35,12 @@ Values of these variables can be changed safely and most likely nothing will bre
   /* intensity of blur (new tab) */
   --blur-radius: 10px;
   
+  /* brightness of inactive window elements */
+  --inactive-opct: 0.7;
+  
   /* transparency of indicator bars showing the position of hidden panels */
   --hide-bar-opct: 0.2;
+  &:-moz-window-inactive{--hide-bar-opct: 0.1;}
   
   /* how much shorter these bars than panels */
   --hide-bar-wdt-pad: 10px;
@@ -67,10 +71,16 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
 
 :root{
   
-  /* pick browser colors */                     /* used for:          */ 
-  --bg-col: var(--lwt-accent-color, tomato);    /* darker background  */       /* tomato is the fallback color */
-  --tb-col: var(--toolbar-bgcolor, tomato);     /* lighter background */       /* meaning something went wrong */
-  --bt-col: var(--toolbarbutton-icon-fill);     /* text or icons      */
+  --ActiveCaption: ActiveCaption;
+  
+  /* pick browser colors */                                           /* used for:          */ 
+  --bg-col: var(--lwt-accent-color, var(--ActiveCaption, tomato));    /* darker background  */       /* tomato is the fallback color */
+  --tb-col: var(--toolbar-bgcolor, tomato);                           /* lighter background */       /* meaning something went wrong */
+  --bt-col: var(--toolbarbutton-icon-fill);                           /* text or icons      */
+  
+  /* dynamic opacity */
+  --dyn-opct: 1;
+  &:-moz-window-inactive{--dyn-opct: var(--inactive-opct);}
   
   /* shared shortcuts for commonly used parameters */
   --outline: 1px solid var(--arrowpanel-background);      /* outline around almost anything              */

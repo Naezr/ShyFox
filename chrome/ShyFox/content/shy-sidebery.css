@@ -24,7 +24,7 @@ Styles for Sidebery extension
     --audio-btn-round-margin: calc(var(--big-rounding) / 2) !important;
 
     --tabs-audio-btn-width: 22px !important;
-    --tabs-margin: calc(var(--margin) / 2) !important;
+    --tabs-margin: 6px !important;
     --tabs-height: var(--button-size) !important;
     --tabs-inner-gap: calc(var(--margin) / 2) !important;
     --tabs-border-radius: var(--big-rounding) !important;

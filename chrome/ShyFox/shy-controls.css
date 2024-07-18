@@ -96,7 +96,7 @@ Styles for Min Max Close buttons
     .titlebar-buttonbox-container{
       height: var(--margin) !important;
       top: 0px;
-      opacity: 0.3;
+      opacity: calc(var(--hide-bar-opct) / 2 );
       &:hover{opacity: 1}
     }
   }

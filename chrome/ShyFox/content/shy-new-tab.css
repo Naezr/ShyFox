@@ -100,6 +100,7 @@ Styles for new tab
   /* light background */
   :root:not([lwt-newtab-brighttext]) .search-handoff-button {background-color: var(--tr-light-col) !important;}
   
+  /* height overflow */
   @media (height > 700px) {
     body:not(.inline-onboarding) .fixed-search .search-wrapper {
       background-color: var(--tr-col) !important;
@@ -109,6 +110,9 @@ Styles for new tab
       display: flex !important;
     }
   }
+  
+  /* margin to logo when only search is enabled */
+  .only-search .logo-and-wordmark {margin-top: 20px !important;}
   
   /* wallpaper */
   body{

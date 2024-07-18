@@ -317,7 +317,8 @@ Apply theme colors to context menus and menubar
 #unified-extensions-context-menu, #unified-extensions-context-menu menupopup,
 #placesContext, #placesContext menupopup,
 #downloadsContextMenu, #downloadsContextMenu menupopup,
-#sidebarMenu-popup, #PopupSearchAutoComplete
+#sidebarMenu-popup, #PopupSearchAutoComplete,
+:is(#back-button, #forward-button) menupopup
 {
   --panel-background: var(--tb-col)!important;  
   --panel-border-color: var(--bg-col) !important;
@@ -473,6 +474,7 @@ File Edit View History Bookmarks Tools Help
     
     border-radius: var(--rounding);
     background-color: var(--tb-col) !important;
+    & > * {opacity: var(--dyn-opct);}
     
     /* outline only when visible */
     &:not([inactive="true"]) {
@@ -525,6 +527,11 @@ File Edit View History Bookmarks Tools Help
 
 :root[tabsintitlebar] #titlebar:-moz-window-inactive {
   opacity: 1 !important;
+}
+
+#navigator-toolbox:-moz-window-inactive {
+  background-color: initial !important;
+  color: initial !important;
 }
 
 /* remove annoying line at the top of the window */
