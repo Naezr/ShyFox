@@ -1,4 +1,4 @@
-# ShyFox 3.7
+# ShyFox 3.7.1
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -14,6 +14,12 @@
 <details><summary>🚩 Release notes</summary>
 
 <br/>
+
+3.7.1:
+- Window brightness now reduces when window is inactive
+- Sidebery tab dragging has been fixed
+- Istall guide rework
+- Another small fixes
 
 3.7:
 - The theme now responds adequately to the missing Sidebery
@@ -222,6 +228,13 @@
    
    </summary>
 
+> [!NOTE]
+> `System theme - auto` can cause problems in some cases
+> 
+> ![image](https://github.com/user-attachments/assets/5da52c2e-6b04-414a-b492-478a87b55f9a)
+
+
+
 ### Upgrading
 
  - Migrate from old version
@@ -266,13 +279,16 @@ There are three ways you can do it, choose one:
    
    </details>
 
+> [!NOTE]
+> Use only one thing. Adaptive Tab bar Color and Firefox Color are not compatible 
+
 You can change new tab wallpaper to your own. There is two wallpaper files in `chrome` folder:
  - `wallpaper.png` - for dark theme                   
  - `wallpaper-light.png` - for light theme             
   
 To use one image for all themes just delete `wallpaper-light.png`.
 
-You can change browser accent color. To do it change value of `--shy-color` variable in `ShyFox/shy-variables.css`.
+You can change theme accent color. To do it change value of `--shy-color` variable in `chrome/ShyFox/shy-variables.css`.
 
 ### Options
 
