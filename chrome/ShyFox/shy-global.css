@@ -317,7 +317,8 @@ Apply theme colors to context menus and menubar
 #unified-extensions-context-menu, #unified-extensions-context-menu menupopup,
 #placesContext, #placesContext menupopup,
 #downloadsContextMenu, #downloadsContextMenu menupopup,
-#sidebarMenu-popup, #PopupSearchAutoComplete
+#sidebarMenu-popup, #PopupSearchAutoComplete,
+:is(#back-button, #forward-button) menupopup
 {
   --panel-background: var(--tb-col)!important;  
   --panel-border-color: var(--bg-col) !important;
