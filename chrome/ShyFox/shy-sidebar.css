@@ -136,7 +136,7 @@ Styles for sidebar
       - var(--sdbr-wdt)
     ) !important;
     
-    transition: all var(--trans-dur) var(--trans-del);
+    transition: var(--delayed-transition);
 
     border-radius: var(--big-rounding) !important;
     
@@ -155,7 +155,7 @@ Styles for sidebar
     
     /* make all panel content invisible (it will visible when hover) */
     & > * {
-      transition: all var(--trans-dur) var(--trans-del) !important;
+      transition: var(--delayed-transition) !important;
       opacity: 0;
     }
   }
@@ -181,7 +181,7 @@ Styles for sidebar
     &::after{
       content: "";
       position: absolute;
-      transition: all var(--trans-dur) var(--trans-del) !important;
+      transition: var(--delayed-transition) !important;
       
       left: calc(
         100% 

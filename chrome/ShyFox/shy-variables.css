@@ -26,7 +26,7 @@ Values of these variables can be changed safely and most likely nothing will bre
   --trans-dur: 0.25s;
   
   /* animation delay */
-  --trans-del: 0.5s;
+  --trans-del: 0.35s;
   
   /* width of some elements. 1vw is one hundredth of the screen width */
   --sdbr-wdt: 300px;
@@ -86,9 +86,10 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   &:-moz-window-inactive{--dyn-opct: var(--inactive-opct);}
   
   /* shared shortcuts for commonly used parameters */
-  --outline: 1px solid var(--arrowpanel-background);      /* outline around almost anything              */
-  --shadow: 2px solid var(--shadow-col);                  /* translucent outline that imitates a shadow  */
-  --transition: all var(--trans-dur) ease-out;            /* animation for smooth transitions            */
+  --outline: 1px solid var(--arrowpanel-background);                    /* outline around almost anything              */
+  --shadow: 2px solid var(--shadow-col);                                /* translucent outline that imitates a shadow  */
+  --transition: all var(--trans-dur) ease-out;                          /* animation for smooth transitions            */
+  --delayed-transition: all var(--trans-dur) var(--trans-del) ease-out; /* transition with delay                       */
   
   /* constant variables */
   --toolbar-item-hgt: 40px;       /* height of all panels elements: buttons, urlbar, etc.                                   */
