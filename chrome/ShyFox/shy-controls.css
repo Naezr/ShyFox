@@ -198,8 +198,8 @@ Styles for Min Max Close buttons
       
       @media (-moz-bool-pref: "shyfox.force.native.controls"){
         .titlebar-buttonbox-container{
-          top: -5px;
-          height: calc(var(--margin) + 5px);
+          top: -6px;
+          height: calc(var(--margin) + 6px);
         }
       }
     }
@@ -284,8 +284,8 @@ Styles when GTK window controls on left or system is MacOS
 
     @media (-moz-bool-pref: "shyfox.force.native.controls"){
       .titlebar-buttonbox-container{
-        top: -5px;
-        height: calc(var(--margin) + 5px);
+        top: -6px;
+        height: calc(var(--margin) + 6px);
       }
     }
   }
