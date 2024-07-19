@@ -25,6 +25,9 @@ Values of these variables can be changed safely and most likely nothing will bre
   /* animations time */
   --trans-dur: 0.25s;
   
+  /* animation delay */
+  --trans-del: 1s;
+  
   /* width of some elements. 1vw is one hundredth of the screen width */
   --sdbr-wdt: 300px;
   

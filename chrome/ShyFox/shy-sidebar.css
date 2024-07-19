@@ -133,6 +133,8 @@ Styles for sidebar
       + var(--panel-hide-ldg) 
       - var(--sdbr-wdt)
     ) !important;
+    
+    transition: all var(--trans-dur) var(--trans-del) !important;
 
     border-radius: var(--big-rounding) !important;
     
@@ -151,7 +153,7 @@ Styles for sidebar
     
     /* make all panel content invisible (it will visible when hover) */
     & > * {
-      transition: var(--transition) !important;
+      transition: all var(--trans-dur) var(--trans-del) !important;
       opacity: 0;
     }
   }
@@ -177,7 +179,7 @@ Styles for sidebar
     &::after{
       content: "";
       position: absolute;
-      transition: var(--transition);
+      transition: all var(--trans-dur) var(--trans-del);
       
       left: calc(
         100% 
@@ -246,12 +248,20 @@ Styles for sidebar
       
       background-color: var(--bg-col) !important;
       
+      transition: var(--transition) !important;
+      
       border: var(--outline) !important;
       outline: var(--shadow) !important;
             
-      &::after{opacity: 0}
+      &::after{
+        transition: var(--transition) !important;
+        opacity: 0;
+      }
       
-      & > * {opacity: var(--dyn-opct);}
+      & > * {
+        transition: var(--transition) !important;
+        opacity: var(--dyn-opct);
+      }
     }
   }
 }
