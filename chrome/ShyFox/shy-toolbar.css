@@ -92,6 +92,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
   flex-direction: column !important;
   justify-content: center !important;
   align-content: center !important;
+  width: var(--toolbar-button-wdt) !important;
   
   & > * {padding: 3px !important;}
   
