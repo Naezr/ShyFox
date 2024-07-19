@@ -46,9 +46,11 @@ Styles for sidebar
   max-width: 100vw !important;
   
   left: 0px;
-
-  transition: var(--transition) !important;
+  
   background-color: transparent !important;
+  
+  transition: var(--transition);
+  border: 0px solid transparent !important; /* empty border for transition */
   
   padding-top: 0 !important;
   
@@ -134,7 +136,7 @@ Styles for sidebar
       - var(--sdbr-wdt)
     ) !important;
     
-    transition: all var(--trans-dur) var(--trans-del) !important;
+    transition: all var(--trans-dur) var(--trans-del);
 
     border-radius: var(--big-rounding) !important;
     
@@ -179,7 +181,7 @@ Styles for sidebar
     &::after{
       content: "";
       position: absolute;
-      transition: all var(--trans-dur) var(--trans-del);
+      transition: all var(--trans-dur) var(--trans-del) !important;
       
       left: calc(
         100% 
