@@ -26,7 +26,7 @@ Values of these variables can be changed safely and most likely nothing will bre
   --trans-dur: 0.25s;
   
   /* animation delay */
-  --trans-del: 0.35s;
+  --trans-del: 0s;
   
   /* width of some elements. 1vw is one hundredth of the screen width */
   --sdbr-wdt: 300px;
@@ -62,6 +62,10 @@ Values of these variables can be changed safely and most likely nothing will bre
   --private-col: #6e00bc80;    /* private mode outline color                                  */
   --debug-col: transparent;    /* rgba(0, 0, 255, 0.2); color of hidden panels hover hitboxes */
   --debug-col-2: transparent;  /* rgba(0, 255, 0, 0.2); color of window dragging hitboxes     */
+}
+
+@media (-moz-bool-pref: "shyfox.fill.accent.with.icons.fill.color"){
+  :root{--shy-color: var(--toolbarbutton-icon-fill, tomato) !important;}
 }
 
 /* 
