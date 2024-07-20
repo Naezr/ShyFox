@@ -291,7 +291,7 @@ To use one image for all themes just delete `wallpaper-light.png`.
 You can change theme accent color. To do it change value of `--shy-color` variable in `chrome/ShyFox/shy-variables.css`.
 
 > NOTE                        
-> If you are using [pywalfox](https://github.com/Frewacom/pywalfox), change the value to `var(--toolbarbutton-icon-fill)` in order to use pywalfox's accent color.
+> If you want ShyFox's accent color to be the one used by icons, for example when using a theme with icons that aren't white or black, change the value to `var(--toolbarbutton-icon-fill)`.
 
 ### Options
 
