@@ -542,6 +542,13 @@ File Edit View History Bookmarks Tools Help
   z-index: 3;
 }
 
+/* weird margin fix */
+#tabbrowser-tabpanels {
+  & browser[type="content"] {
+    margin: 0 !important;
+  }
+}
+
 
 /*
 
