@@ -20,7 +20,6 @@ menupopup > :is(menuitem, menu){
   max-width: 300px !important;
   border-radius: var(--rounding) !important;
   margin: 0 !important;
-  margin-block: 1px !important;
   
   padding-block: 0px !important;
   padding-inline-start: 5px !important;
@@ -76,7 +75,10 @@ menupopup > :is(menuitem, menu){
       padding-top: 5px !important;
       padding-bottom: 5px !important;
     }
-
+    
+    .unified-extensions-item[attention] > .unified-extensions-item-action-button.subviewbutton {
+      background-position: left calc(var(--uei-dot-horizontal-position-in-panel) - 4px) bottom var(--uei-dot-vertical-position-in-panel) !important;
+    }
     .unified-extensions-item-action-button {padding-right: 3px !important;}
   }
 }
