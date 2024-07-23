@@ -46,11 +46,9 @@ Styles for sidebar
   max-width: 100vw !important;
   
   left: 0px;
-  
+
+  transition: var(--transition) !important;
   background-color: transparent !important;
-  
-  transition: var(--transition);
-  border: 0px solid transparent !important; /* empty border for transition */
   
   padding-top: 0 !important;
   
@@ -135,8 +133,6 @@ Styles for sidebar
       + var(--panel-hide-ldg) 
       - var(--sdbr-wdt)
     ) !important;
-    
-    transition: var(--delayed-transition);
 
     border-radius: var(--big-rounding) !important;
     
@@ -155,7 +151,7 @@ Styles for sidebar
     
     /* make all panel content invisible (it will visible when hover) */
     & > * {
-      transition: var(--delayed-transition) !important;
+      transition: var(--transition) !important;
       opacity: 0;
     }
   }
@@ -181,7 +177,7 @@ Styles for sidebar
     &::after{
       content: "";
       position: absolute;
-      transition: var(--delayed-transition) !important;
+      transition: var(--transition);
       
       left: calc(
         100% 
@@ -250,20 +246,12 @@ Styles for sidebar
       
       background-color: var(--bg-col) !important;
       
-      transition: var(--transition) !important;
-      
       border: var(--outline) !important;
       outline: var(--shadow) !important;
             
-      &::after{
-        transition: var(--transition) !important;
-        opacity: 0;
-      }
+      &::after{opacity: 0}
       
-      & > * {
-        transition: var(--transition) !important;
-        opacity: var(--dyn-opct);
-      }
+      & > * {opacity: var(--dyn-opct);}
     }
   }
 }
