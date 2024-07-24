@@ -65,7 +65,7 @@ Styles for new tab
   }
     
   .title {
-    background-color: var(--newtab-background-color-secondary);
+    background-color: color-mix(in srgb, var(--tr-col) 90%, var(--newtab-text-primary-color));
     & > span {
       padding-left: 8px;
       padding-right: 8px;
