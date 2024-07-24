@@ -306,7 +306,7 @@ Apply theme colors to context menus and menubar
   --panel-color: var(--bt-col) !important;  
   
   menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
-    background-color: var(--tb-col) !important;
+    background-color: var(--panel-item-hover-bgcolor) !important;
     color: var(--bt-col) !important;
   }
 }
@@ -318,16 +318,17 @@ Apply theme colors to context menus and menubar
 #placesContext, #placesContext menupopup,
 #downloadsContextMenu, #downloadsContextMenu menupopup,
 #sidebarMenu-popup, #PopupSearchAutoComplete,
-:is(#back-button, #forward-button) menupopup
+:is(#back-button, #forward-button) menupopup,
+#permission-popup-menulist menupopup
 {
-  --panel-background: var(--tb-col)!important;  
-  --panel-border-color: var(--bg-col) !important;
+  --panel-background: var(--pp-col)!important;  
+  --panel-border-color: var(--tb-col) !important;
   
   --toolbar-field-focus-background-color: var(--bt-col) !important;
   --panel-color: var(--bt-col) !important;  
   
   menu:where([_moz-menuactive="true"]:not([disabled="true"])), menuitem:where([_moz-menuactive="true"]:not([disabled="true"])) {
-    background-color: var(--bg-col) !important;
+    background-color: var(--panel-item-hover-bgcolor) !important;
     color: var(--bt-col) !important;
   }
 }
@@ -541,6 +542,13 @@ File Edit View History Bookmarks Tools Help
   z-index: 3;
 }
 
+/* weird margin fix */
+#tabbrowser-tabpanels {
+  & browser[type="content"] {
+    margin: 0 !important;
+  }
+}
+
 
 /*
 
@@ -589,6 +597,7 @@ File Edit View History Bookmarks Tools Help
   --toolbarbutton-icon-fill-attention:           var(--shy-color) !important;
   --fxview-primary-action-background:            var(--shy-color) !important;
   --toolbar-field-focus-border-color:            var(--shy-color) !important;
+  --uei-button-attention-dot-color:              var(--shy-color) !important;
   --button-primary-active-bgcolor:               var(--shy-color) !important;
   --button-primary-hover-bgcolor:                var(--shy-color) !important;
   --uc-checkbox-checked-bgcolor:                 var(--shy-color) !important;

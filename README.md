@@ -1,4 +1,4 @@
-# ShyFox 3.7.1
+# ShyFox 3.7.2
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -14,6 +14,12 @@
 <details><summary>🚩 Release notes</summary>
 
 <br/>
+
+3.7.2:
+- Native themed window control buttons can now be enabled for Linux
+- Accent color can be equated to fill color of toolbar buttons
+- Changed colors of some context menus
+- Maybe fixed some bugs
 
 3.7.1:
 - Window brightness now reduces when window is inactive
@@ -288,7 +294,7 @@ You can change new tab wallpaper to your own. There is two wallpaper files in `c
   
 To use one image for all themes just delete `wallpaper-light.png`.
 
-You can change theme accent color. To do it change value of `--shy-color` variable in `chrome/ShyFox/shy-variables.css`.
+You can change theme accent color. To do it change value of `--shy-accent-color` variable in `chrome/ShyFox/shy-variables.css`. You can also equate it to the fill color of the buttons. See options below
 
 ### Options
 
@@ -302,6 +308,8 @@ Settings that can be toggled in `about:config`
 | `shyfox.enable.ext.mono.toolbar.icons` | Supported* extensions get monochrome icons as toolbar buttons | Standard icons used |
 | `shyfox.enable.ext.mono.context.icons` | Supported* extensions get monochrome icons as context menu items** | Standard icons used |
 | `shyfox.enable.context.menu.icons` | Many context menu items get icons** | No icons in context menus |
+| `shyfox.fill.accent.with.icons.fill.color` | Accent color equates to fill color of toolbar buttons | Using hardcoded accent |
+| `shyfox.force.native.controls` (Linux only) | Attempts to use system theme for `min` `max` `close` buttons  | Adwaita icons used |
 
 <details><summary>* - Supported extensions</summary>
    

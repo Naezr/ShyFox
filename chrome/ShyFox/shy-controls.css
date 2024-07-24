@@ -138,27 +138,38 @@ Styles for Min Max Close buttons
     .toolbarbutton-icon {
       background-image: none !important;
       stroke: none !important;
-      appearance: none !important;
-      border-radius: 100%;
-      padding: 4px;
       -moz-context-properties: fill, fill-opacity !important;
-      background-color: color-mix(in srgb, var(--bt-col) 5%, transparent);
     }
     
     &:hover .toolbarbutton-icon {background-color: color-mix(in srgb, var(--bt-col) 15%, transparent) !important;}
 
-    margin: 0 4px !important;
+    margin-inline: 8px !important;
+    padding: 0 !important;
     fill: var(--bt-col) !important;
     color: var(--bt-col) !important;
   }
 
+  @media not (-moz-bool-pref: "shyfox.force.native.controls"){
+    .titlebar-close   {list-style-image: url("../icons/gtk-window-close-symbolic.svg")    !important;}
+    .titlebar-min     {list-style-image: url("../icons/gtk-window-minimize-symbolic.svg") !important;}
+    .titlebar-max     {list-style-image: url("../icons/gtk-window-maximize-symbolic.svg") !important;}
+    .titlebar-restore {list-style-image: url("../icons/gtk-window-restore-symbolic.svg")  !important;}
+    
+    .titlebar-button .toolbarbutton-icon{
+      background-color: color-mix(in srgb, var(--bt-col) 5%, transparent);
+      appearance: none !important;
+      border-radius: 100%;
+      padding: 4px !important;
+    }
+  }
   
-  .titlebar-close   {list-style-image: url("../icons/gtk-window-close-symbolic.svg")    !important;}
-  .titlebar-min     {list-style-image: url("../icons/gtk-window-minimize-symbolic.svg") !important;}
-  .titlebar-max     {list-style-image: url("../icons/gtk-window-maximize-symbolic.svg") !important;}
-  .titlebar-restore {list-style-image: url("../icons/gtk-window-restore-symbolic.svg")  !important;}
+  @media (-moz-bool-pref: "shyfox.force.native.controls"){
+    .titlebar-close   {appearance: -moz-window-button-close    !important;}
+    .titlebar-min     {appearance: -moz-window-button-minimize !important;}
+    .titlebar-max     {appearance: -moz-window-button-maximize !important;}
+    .titlebar-restore {appearance: -moz-window-button-restore  !important;}
+  }
 }
-
 
 /* if GTK buttons position is right */
 @media (-moz-gtk-csd-available){
@@ -169,15 +180,26 @@ Styles for Min Max Close buttons
     /* style when not enough space - merged into window border */
     #main-window:is([titlepreface*="="][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
       .titlebar-buttonbox-container{
-        top: 0px;
         opacity: calc(var(--hide-bar-opct) / 2 );
         &:hover{opacity: 1};
-        height: var(--margin);
         right: 5px;
+      }
+      
+      .titlebar-button {margin: 0px !important;}
+      
+      @media not (-moz-bool-pref: "shyfox.force.native.controls"){
+        .titlebar-buttonbox-container{
+          top: 0px;
+          height: var(--margin);
+        }
         
-        .titlebar-button{
-          margin: 0px !important;
-          .toolbarbutton-icon {border-radius: 0 !important;}
+        .titlebar-button .toolbarbutton-icon {border-radius: 0 !important;}
+      }
+      
+      @media (-moz-bool-pref: "shyfox.force.native.controls"){
+        .titlebar-buttonbox-container{
+          top: -6px;
+          height: calc(var(--margin) + 6px);
         }
       }
     }
@@ -243,17 +265,28 @@ Styles when GTK window controls on left or system is MacOS
   
   /* style when not enough space - merged into window border */
   #main-window:is([titlepreface*="-"][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
+    .titlebar-buttonbox-container{
+      opacity: calc(var(--hide-bar-opct) / 2 );
+      &:hover{opacity: 1};
+      left: 5px;
+    }
+
+    .titlebar-button {margin: 0px !important;}
+
+    @media not (-moz-bool-pref: "shyfox.force.native.controls"){
       .titlebar-buttonbox-container{
         top: 0px;
-        opacity: calc(var(--hide-bar-opct) / 2 );
-        &:hover{opacity: 1};
         height: var(--margin);
-        left: 5px;
-        
-        .titlebar-button{
-          margin: 0px !important;
-          .toolbarbutton-icon {border-radius: 0 !important;}
-        }
       }
+
+      .titlebar-button .toolbarbutton-icon {border-radius: 0 !important;}
+    }
+
+    @media (-moz-bool-pref: "shyfox.force.native.controls"){
+      .titlebar-buttonbox-container{
+        top: -6px;
+        height: calc(var(--margin) + 6px);
+      }
+    }
   }
 }

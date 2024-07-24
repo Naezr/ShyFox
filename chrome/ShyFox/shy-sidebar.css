@@ -307,7 +307,7 @@ Styles when Sidebery is not opened
 }
 
 /* notification when sidebar is not opened */
-#main-window:has( 
+#main-window[chromehidden=""]:has( 
   #sidebar-box[hidden="true"]
 ) {
   --shyfox-string-open-sidebar: "Open sidebar!";

@@ -11,7 +11,7 @@ Values of these variables can be changed safely and most likely nothing will bre
 
 :root, #screenshots-component *{
   /* accent color */
-  --shy-color: #3584E4;
+  --shy-accent-color: #3584E4;
   
   /* window border thickness and size of many margins */
   --margin: 0.8rem;
@@ -61,6 +61,14 @@ Values of these variables can be changed safely and most likely nothing will bre
   --debug-col-2: transparent;  /* rgba(0, 255, 0, 0.2); color of window dragging hitboxes     */
 }
 
+
+/* accent color toggle */
+:root{--shy-color: var(--shy-accent-color)}
+
+@media (-moz-bool-pref: "shyfox.fill.accent.with.icons.fill.color"){
+  :root{--shy-color: var(--toolbarbutton-icon-fill, var(--shy-accent-color)) !important;}
+}
+
 /* 
 
 --- VARIABLES ----------------------------------------------------------------------------------------------------------------------------------
@@ -77,6 +85,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --bg-col: var(--lwt-accent-color, var(--ActiveCaption, tomato));    /* darker background  */       /* tomato is the fallback color */
   --tb-col: var(--toolbar-bgcolor, tomato);                           /* lighter background */       /* meaning something went wrong */
   --bt-col: var(--toolbarbutton-icon-fill);                           /* text or icons      */
+  --pp-col: var(--arrowpanel-background);                             /* popup color        */
   
   /* dynamic opacity */
   --dyn-opct: 1;
@@ -91,7 +100,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --toolbar-item-hgt: 40px;       /* height of all panels elements: buttons, urlbar, etc.                                   */
   --toolbar-button-wdt: 45px;     /* width of all panels buttons                                                            */
   --hide-bar-padding: 3px;        /* how much indicator bars showing the position of hidden panels is thinner than --margin */
-  --screenshot-tool-hgt: 145px;   
+  --screenshot-tool-hgt: 145px;   /* height of `ctrl + shift + s` tool buttons  */
   
   /* hiding the window border in fullscreen mode and assigning --margin to it in windowed mode */
   --left-margin:   0px;
