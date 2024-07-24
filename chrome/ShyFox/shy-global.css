@@ -322,7 +322,7 @@ Apply theme colors to context menus and menubar
 #permission-popup-menulist menupopup
 {
   --panel-background: var(--pp-col)!important;  
-  --panel-border-color: var(--bg-col) !important;
+  --panel-border-color: var(--tb-col) !important;
   
   --toolbar-field-focus-background-color: var(--bt-col) !important;
   --panel-color: var(--bt-col) !important;  
