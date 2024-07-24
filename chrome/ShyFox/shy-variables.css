@@ -11,7 +11,7 @@ Values of these variables can be changed safely and most likely nothing will bre
 
 :root, #screenshots-component *{
   /* accent color */
-  --shy-color: #3584E4;
+  --shy-accent-color: #3584E4;
   
   /* window border thickness and size of many margins */
   --margin: 0.8rem;
@@ -61,8 +61,12 @@ Values of these variables can be changed safely and most likely nothing will bre
   --debug-col-2: transparent;  /* rgba(0, 255, 0, 0.2); color of window dragging hitboxes     */
 }
 
+
+/* accent color toggle */
+:root{--shy-color: var(--shy-accent-color)}
+
 @media (-moz-bool-pref: "shyfox.fill.accent.with.icons.fill.color"){
-  :root{--shy-color: var(--toolbarbutton-icon-fill, tomato) !important;}
+  :root{--shy-color: var(--toolbarbutton-icon-fill, var(--shy-accent-color)) !important;}
 }
 
 /* 
