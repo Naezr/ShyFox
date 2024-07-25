@@ -15,8 +15,12 @@ Shrink some things so they take up less space
 #context-navigation > .menuitem-iconic[disabled="true"] {background-color: transparent !important;}
 
 menupopup > :is(menuitem, menu){
-  max-height: 20px !important;
-  min-height: 20px !important;
+  height: fit-content !important;
+  & > * {
+    padding: 0px !important;
+    margin: 1px !important;
+  }
+  
   max-width: 300px !important;
   border-radius: var(--rounding) !important;
   margin: 0 !important;

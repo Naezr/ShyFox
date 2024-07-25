@@ -333,6 +333,10 @@ Apply theme colors to context menus and menubar
   }
 }
 
+/* dropdown selectors */
+menupopup {--content-select-background-image: none !important;}
+#ContentSelectDropdown .ContentSelectDropdown-item-0:not([_moz-menuactive="true"]) {background-color: transparent !important;;}
+
 /*
 
 --- CUSTOMIZING PAGE --------------------------------------------------------------------------------------------------------------------------------
