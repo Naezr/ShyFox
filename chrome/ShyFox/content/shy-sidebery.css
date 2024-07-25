@@ -29,7 +29,8 @@ Styles for Sidebery extension
     --tabs-height: var(--button-size) !important;
     --tabs-inner-gap: calc(var(--margin) / 2) !important;
     --tabs-border-radius: var(--big-rounding) !important;
-
+    
+    @media (-moz-bool-pref: "shyfox.fill.accent.with.icons.fill.color") {--shy-color: var(--s-toolbar-fg, var(--shy-accent-color)) !important;}
     --accent: var(--shy-color) !important;
     --frame-el-overlay-selected-border: var(--accent) !important;
     --toolbar-el-overlay-selected-border: var(--accent) !important;
