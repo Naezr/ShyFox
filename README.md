@@ -1,4 +1,4 @@
-# ShyFox 3.7.2
+# ShyFox 3.7.3
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -14,6 +14,10 @@
 <details><summary>🚩 Release notes</summary>
 
 <br/>
+
+3.7.3
+- New tab colors rework
+- Added Privacy Badger svg icon
 
 3.7.2:
 - Native themed window control buttons can now be enabled for Linux
