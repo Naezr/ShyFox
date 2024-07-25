@@ -320,7 +320,7 @@ Settings that can be toggled in `about:config`
    - uBlock Origin - both toolbar and context menu
    - Simple Translate - only context menu item
    - Dark Reader - toolbar button (moon icon)
-   - Privacy Badger - toolbar button (ugly extension's own icon, looking for fancy svg)
+   - Privacy Badger - toolbar button
    - Clear URLs - only context menu item (eraser icon)
    
    Feel free to suggest icons for other extensions
