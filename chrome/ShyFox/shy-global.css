@@ -561,19 +561,15 @@ File Edit View History Bookmarks Tools Help
 .footer-button {
   &:not([disabled]) {
     &[default], &.primary {
-      background-color: var(--shy-color) !important;;
+      background-color: var(--shy-accent-color) !important;;
       &:hover {
-        background-color: color-mix(in srgb, black 10%,var(--shy-color)) !important;
+        background-color: color-mix(in srgb, var(--bt-col, black) 10%,var(--shy-accent-color)) !important;
       }
     }
   }
 }
 
-::selection {
-  color: white !important;
-  mix-blend-mode: difference !important;
-  background: var(--shy-accent-color) !important;
-}
+::selection {background: var(--shy-accent-color) !important;}
 
 #tracking-protection-icon-box[active]{
   fill: var(--shy-color) !important;

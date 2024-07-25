@@ -111,12 +111,6 @@ Styles for Sidebery extension
     height: var(--pin-favicon-size) !important;
   }
 
-  /* match badge to bigger icon */
-  .Tab[data-pin="true"] > .body > .fav > .badge{
-    right: -8.5px !important;
-    bottom: -7px !important;
-  }
-
   /* shadow, outline and background */
   .Tab[data-pin="true"] .body {
     border: 1px solid var(--s-frame-bg) !important;

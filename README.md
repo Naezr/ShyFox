@@ -308,7 +308,7 @@ Settings that can be toggled in `about:config`
 | `shyfox.enable.ext.mono.toolbar.icons` | Supported* extensions get monochrome icons as toolbar buttons | Standard icons used |
 | `shyfox.enable.ext.mono.context.icons` | Supported* extensions get monochrome icons as context menu items** | Standard icons used |
 | `shyfox.enable.context.menu.icons` | Many context menu items get icons** | No icons in context menus |
-| `shyfox.fill.accent.with.icons.fill.color` | Accent color equates to fill color of toolbar buttons | Using hardcoded accent |
+| `shyfox.fill.accent.with.icons.fill.color` | Attempts to use icon fill color as accent | Using hardcoded accent |
 | `shyfox.force.native.controls` (Linux only) | Attempts to use system theme for `min` `max` `close` buttons  | Adwaita icons used |
 
 <details><summary>* - Supported extensions</summary>
