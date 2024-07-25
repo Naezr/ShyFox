@@ -81,6 +81,7 @@ Monochrome icons for some extensions
   /* gray background for all badges */
   .toolbarbutton-badge {
     background-color: rgba(102, 102, 102, 1) !important;
+    color: white !important;
   }
 }
 

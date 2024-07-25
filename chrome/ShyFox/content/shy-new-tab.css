@@ -96,9 +96,12 @@ Styles for new tab
       background-color: var(--tr-col) !important;
       backdrop-filter: blur(var(--blur-radius));
     }
-    .logo-and-wordmark {
-      display: flex !important;
-    }
+    .logo-and-wordmark {display: flex !important;}
+  }
+  
+  @media (height <= 700px) {
+    .search-wrapper {padding: 20px 0 30px !important;}
+    .outer-wrapper > main {margin-top: 0px !important;}
   }
   
   /* margin to logo when only search is enabled */
