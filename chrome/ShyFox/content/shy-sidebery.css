@@ -103,11 +103,7 @@ Styles for Sidebery extension
   }
 
   /* bigger favicon */
-  .Tab[data-pin="true"] > .body > .fav{
-    width: var(--pin-favicon-size) !important;
-    height: var(--pin-favicon-size) !important;
-  }
-  .Tab[data-pin="true"] > .body > .fav > .fav-icon { 
+  .Tab[data-pin="true"] :is(.fav, .fav-icon){ 
     width: var(--pin-favicon-size) !important;
     height: var(--pin-favicon-size) !important;
   }
@@ -154,10 +150,7 @@ Styles for Sidebery extension
   .NavigationBar{box-shadow: none !important}
   
   /* accent colored selection */
-  ::selection {
-    color: White !important;
-    background: var(--accent) !important;
-  }
+  ::selection {background: var(--shy-accent-color) !important;}
   
   /* notification */
   .notification{
