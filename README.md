@@ -18,6 +18,7 @@
 3.7.3
 - New tab colors rework
 - Added Privacy Badger svg icon
+- Redesigned logic of pinned tabs
 
 3.7.2:
 - Native themed window control buttons can now be enabled for Linux
