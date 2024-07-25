@@ -14,14 +14,9 @@ Styles for new tab
     --tr-dark-col:  rgba(36, 35, 47, 0.4);
     --tr-light-col: rgba(250, 250, 250, 0.6);
     
-    &[lwt-newtab-brighttext]{
-      --tr-col: var(--tr-dark-col);
-      --tr-hov-col: color-mix(in srgb, var(--tr-dark-col) 80%, #ffffff60);
-    }
-    &:not([lwt-newtab-brighttext]){
-      --tr-col: var(--tr-light-col);
-      --tr-hov-col: color-mix(in srgb, var(--tr-light-col) 80%, #00000040);
-    }
+    --tr-col: color-mix(in srgb, var(--newtab-background-color) 40%, transparent);
+    --tr-hov-col: color-mix(in srgb, var(--tr-col) 80%, var(--newtab-text-primary-color));
+    --newtab-background-color-secondary: color-mix(in srgb, var(--newtab-background-color) 90%, var(--newtab-text-primary-color)) !important;
   }
   
   .toggle-button[aria-pressed="true"] {
@@ -65,7 +60,7 @@ Styles for new tab
   }
     
   .title {
-    background-color: var(--newtab-background-color-secondary);
+    background-color: color-mix(in srgb, var(--tr-col) 90%, var(--newtab-text-primary-color));
     & > span {
       padding-left: 8px;
       padding-right: 8px;
@@ -73,7 +68,7 @@ Styles for new tab
   }
   
   .top-site-outer:is(.active, :focus, :hover){
-    background: var(--tr-col) !important;
+    background: var(--tr-hov-col) !important;
   }
   
   .top-site-outer, .top-site-inner {
@@ -92,23 +87,21 @@ Styles for new tab
   .search-handoff-button {
     border-radius: 100px !important;
     backdrop-filter: blur(var(--blur-radius));
+    background-color: var(--tr-col) !important;
   }
-  
-  /* dark background */
-  :root[lwt-newtab-brighttext] .search-handoff-button {background-color: var(--tr-dark-col) !important;}
-  
-  /* light background */
-  :root:not([lwt-newtab-brighttext]) .search-handoff-button {background-color: var(--tr-light-col) !important;}
-  
+
   /* height overflow */
   @media (height > 700px) {
     body:not(.inline-onboarding) .fixed-search .search-wrapper {
       background-color: var(--tr-col) !important;
       backdrop-filter: blur(var(--blur-radius));
     }
-    .logo-and-wordmark {
-      display: flex !important;
-    }
+    .logo-and-wordmark {display: flex !important;}
+  }
+  
+  @media (height <= 700px) {
+    .search-wrapper {padding: 20px 0 30px !important;}
+    .outer-wrapper > main {margin-top: 0px !important;}
   }
   
   /* margin to logo when only search is enabled */

@@ -15,6 +15,7 @@ Styles for Sidebery extension
     --general-margin: 4px !important;
     
     --button-size: 35px;
+    --pin-favicon-size: 30px;
 
     --nav-btn-margin: calc(var(--margin) / 2) !important;
     --nav-btn-width: var(--button-size) !important;
@@ -28,7 +29,8 @@ Styles for Sidebery extension
     --tabs-height: var(--button-size) !important;
     --tabs-inner-gap: calc(var(--margin) / 2) !important;
     --tabs-border-radius: var(--big-rounding) !important;
-
+    
+    @media (-moz-bool-pref: "shyfox.fill.accent.with.icons.fill.color") {--shy-color: var(--s-toolbar-fg, var(--shy-accent-color)) !important;}
     --accent: var(--shy-color) !important;
     --frame-el-overlay-selected-border: var(--accent) !important;
     --toolbar-el-overlay-selected-border: var(--accent) !important;
@@ -40,57 +42,35 @@ Styles for Sidebery extension
 --- PINNED TABS -------------------------------------------------------------------------------------------------------------------------------------
 
 */
-
-  /* height calculation */
-  #root.root {
-    --tabs-pinned-height: calc(
-      ( 100vw - var(--tabs-margin) ) / 3.6 
-    ) !important;
-  }
-
-  /* 1 pinned tab */
-
-  .PinnedTabsBar .tab-wrapper:nth-child(1):last-child{
+  
+  /* size calculation */
+  .PinnedTabsBar .tab-wrapper .Tab {
+    --n: 3; --m: 1;
     
-    .Tab{
-      width: calc(100vw - var(--tabs-margin) * 2) !important;
-      height: calc(var(--tabs-pinned-height) / 1.4) !important;}
+    width: calc(
+      100vw / var(--n) 
+      - var(--tabs-margin) * (1/var(--n) + 1)
+    ) !important;
+    
+    height: calc( (
+      (100vw - var(--tabs-margin)) / 3.6
+    ) / var(--m) ) !important;
   }
+  
+  /* 1 pinned tab */
+  .PinnedTabsBar 
+    .tab-wrapper:nth-child(1):last-child .Tab
+      {--n: 1; --m: 1.4;}
   
   /* 2 tabs in bottom row */
-
-  .PinnedTabsBar:has(.tab-wrapper:is(
-    :nth-child(2), :nth-child(5), :nth-child(8), :nth-child(11),
-    :nth-child(14), :nth-child(17), :nth-child(20), :nth-child(23),
-    :nth-child(26), :nth-child(29), :nth-child(32), :nth-child(35),
-    :nth-child(38), :nth-child(41), :nth-child(44), :nth-child(47)
-  ):last-child){
-    .tab-wrapper:nth-last-child(-n + 2){
-      .Tab {
-        width: calc(100vw / 2 - var(--tabs-margin) * 1.5) !important;
-        height: calc(var(--tabs-pinned-height) / 1.2) !important;
-      }
-    }
-  }
-  
-  /* 3 tabs in any row */
-  .PinnedTabsBar .tab-wrapper .Tab {width: calc(100vw / 3 - var(--tabs-margin) * 1.4) !important}
+  .PinnedTabsBar:has(.tab-wrapper:nth-child(3n + 2):last-child)
+    .tab-wrapper:nth-last-child(-n + 2) .Tab
+      {--n: 2; --m: 1.2;}
 
   /* 4 tabs in bottom row */
-
-  .PinnedTabsBar:has(.tab-wrapper:is(
-    :nth-child(4), :nth-child(7), :nth-child(10),
-    :nth-child(13), :nth-child(16), :nth-child(19), :nth-child(22),
-    :nth-child(25), :nth-child(28), :nth-child(31), :nth-child(34),
-    :nth-child(37), :nth-child(40), :nth-child(43), :nth-child(46)
-  ):last-child){
-    .tab-wrapper:nth-last-child(-n + 4){
-      .Tab {
-        width: calc(100vw / 4 - var(--tabs-margin) * 1.3) !important;
-        height: calc(var(--tabs-pinned-height) / 1.3) !important;
-      }
-    }
-  }
+  .PinnedTabsBar:has(.tab-wrapper:nth-child(3n + 4):last-child) 
+    .tab-wrapper:nth-last-child(-n + 4) .Tab
+      {--n: 4; --m: 1.3;}
   
   /* audio icon */
   .Tab[data-pin="true"] > .body > .audio { 
@@ -101,17 +81,9 @@ Styles for Sidebery extension
   }
 
   /* bigger favicon */
-  .Tab[data-pin="true"] > .body > .fav > .fav-icon { 
-    width: 30px !important;
-    height: 30px !important;
-    top: -7.5px !important;
-    left: -6.5px !important; 
-  }
-
-  /* match badge to bigger icon */
-  .Tab[data-pin="true"] > .body > .fav > .badge{
-    right: -8.5px !important;
-    bottom: -7px !important;
+  .Tab[data-pin="true"] :is(.fav, .fav-icon){ 
+    width: var(--pin-favicon-size) !important;
+    height: var(--pin-favicon-size) !important;
   }
 
   /* shadow, outline and background */
@@ -156,10 +128,7 @@ Styles for Sidebery extension
   .NavigationBar{box-shadow: none !important}
   
   /* accent colored selection */
-  ::selection {
-    color: White !important;
-    background: var(--accent) !important;
-  }
+  ::selection {background: var(--shy-accent-color) !important;}
   
   /* notification */
   .notification{

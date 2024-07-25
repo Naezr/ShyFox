@@ -50,3 +50,13 @@ Styles for some other things stylable in userContent.css
   border-radius: 7px !important;
   border: 1px solid color-mix(in srgb, var(--simple-translate-main-bg) 65%, var(--simple-translate-main-text)) !important;
 }
+
+/* Adaptive Tab Bar Color settings accent */
+@-moz-document url("moz-extension://d6e33c37-61b0-488f-9899-bf896d64db63/options.html"){
+  * {
+    --color-link: var(--shy-color) !important;
+    --color-accent: var(--shy-color) !important;
+    --color-link-hover: color-mix(in srgb, var(--shy-color) 60%, var(--color)) !important;
+    --color-link-active: color-mix(in srgb, var(--shy-color) 30%, var(--color)) !important;
+  }
+}
