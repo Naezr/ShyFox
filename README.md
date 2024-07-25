@@ -230,7 +230,7 @@
    
    <br/>
    
-   ![layout](https://github.com/user-attachments/assets/80a90889-074f-45f2-afc6-f6408ba26251)
+   ![layout](https://github.com/user-attachments/assets/a0524f8b-a16d-4753-bbbe-8aeccae25b2b)
    
    > NOTE                                 
    > If you don't add `Flexible Space` to the right toolbar, all buttons except `Menu` and `Extensions` will be centered on the panel
