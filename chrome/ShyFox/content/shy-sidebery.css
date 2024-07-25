@@ -15,6 +15,7 @@ Styles for Sidebery extension
     --general-margin: 4px !important;
     
     --button-size: 35px;
+    --pin-favicon-size: 30px;
 
     --nav-btn-margin: calc(var(--margin) / 2) !important;
     --nav-btn-width: var(--button-size) !important;
@@ -101,11 +102,13 @@ Styles for Sidebery extension
   }
 
   /* bigger favicon */
+  .Tab[data-pin="true"] > .body > .fav{
+    width: var(--pin-favicon-size) !important;
+    height: var(--pin-favicon-size) !important;
+  }
   .Tab[data-pin="true"] > .body > .fav > .fav-icon { 
-    width: 30px !important;
-    height: 30px !important;
-    top: -7.5px !important;
-    left: -6.5px !important; 
+    width: var(--pin-favicon-size) !important;
+    height: var(--pin-favicon-size) !important;
   }
 
   /* match badge to bigger icon */
