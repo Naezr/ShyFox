@@ -34,6 +34,7 @@ menupopup > :is(menuitem, menu){
   menupopup > :is(menuitem, menu) > * {padding: 5px 0px !important;}
 }
 
+/* margin for some menus */
 :is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button, #sidebarMenu-popup) :is(menuitem, menu) {margin-inline: 5px !important;}
 
 /* remove some items from sidebar header menu */

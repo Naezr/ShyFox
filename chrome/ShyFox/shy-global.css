@@ -488,7 +488,7 @@ File Edit View History Bookmarks Tools Help
     }
   }
 
-  #main-menubar * {padding-top: 0px !important;}
+  #main-menubar > * {padding-top: 0px !important;}
 }
 
 /*

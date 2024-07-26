@@ -304,10 +304,11 @@ You can change theme accent color. To do it change value of `--shy-accent-color`
 
 ### Options
 
-Settings that can be toggled in `about:config`
+Settings that can be toggled via [about:config](https://support.mozilla.org/kb/about-config-editor-firefox)
 
 | Setting | true | false / not exist (default) |
 | :--- | :--- | :--- |
+| `shyfox.larger.context.menu` | Using large context menu | Using compact context menu |
 | `shyfox.disable.floating.search` | Floating search disabled | Floating search enabled |
 | `shyfox.disable.compact.unified.extensions` | Using default extensions menu | Using compact extensions menu |
 | `shyfox.remove.window.controls` | `min` `max` `close` buttons removed at all | These buttons removed only in fullscreen |
