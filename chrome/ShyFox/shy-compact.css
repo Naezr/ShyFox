@@ -29,6 +29,11 @@ menupopup > :is(menuitem, menu){
   padding-inline-start: 5px !important;
 }
 
+/* large context menu */
+@media (-moz-bool-pref: "shyfox.larger.context.menu"){
+  menupopup > :is(menuitem, menu) > * {padding: 5px 0px !important;}
+}
+
 :is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button, #sidebarMenu-popup) :is(menuitem, menu) {margin-inline: 5px !important;}
 
 /* remove some items from sidebar header menu */
