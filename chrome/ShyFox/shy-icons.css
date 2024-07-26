@@ -280,7 +280,8 @@ Monochrome icons for some extensions
   #downloadsContextMenu,
   #placesContext,
   #sidebarMenu-popup,
-  #BMB_bookmarksPopup
+  #BMB_bookmarksPopup,
+  #toolbar-menubar menupopup
 ) :is(menuitem, menu){
   
   /* icons color and position */
