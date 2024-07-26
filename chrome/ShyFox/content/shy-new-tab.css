@@ -51,6 +51,7 @@ Styles for new tab
   .tile, .top-site-icon{
     background-color: transparent !important;
     box-shadow: none !important;
+    border: none !important;
   }
   
   .top-site-button, .customize-menu{
