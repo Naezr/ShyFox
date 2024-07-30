@@ -265,7 +265,7 @@ Navigation bar on top of the window
   
   /* hide all  */
   &[titlepreface*="?"]{
-    #nav-bar-customization-target > *:not(#urlbar-container) {display: none !important;}
+    #nav-bar-customization-target > *:not(#urlbar-container, #unified-extensions-button) {display: none !important;}
   }
   
   /* adaptive navbar width */
