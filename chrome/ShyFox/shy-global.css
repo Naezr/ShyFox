@@ -594,6 +594,14 @@ File Edit View History Bookmarks Tools Help
   }
 }
 
+.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner {
+  &:not([selected]) > .urlbarView-no-wrap {
+    & > .urlbarView-favicon {
+      color: var(--shy-color) !important;
+    }
+  }
+}
+
 .ctrlTab-preview:focus > .ctrlTab-preview-inner, #ctrlTab-showAll:focus {border-color: var(--shy-color) !important;}
 
 :root, panel, dialog, window{
