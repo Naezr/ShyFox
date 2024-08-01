@@ -108,7 +108,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --top-margin:    0px;
   --bottom-margin: 0px; 
   
-  &:not(:is([inFullscreen="true"], [inDOMFullscreen="true"], [titlepreface*="?"][sizemode="maximized"])){
+  &:not(:is([inFullscreen="true"], [inDOMFullscreen="true"], [titlepreface*="?"]:is([sizemode="maximized"], [gtktiledwindow="true"]))){
     --left-margin:   var(--margin);
     --right-margin:  var(--margin);
     --top-margin:    var(--margin);
