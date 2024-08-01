@@ -117,3 +117,24 @@ Styles for settings, Firefox View, etc.
   panel-list[role="menu"] panel-item {margin-inline: 5px}
   
 }
+
+/* about:debugging thin mode */
+@-moz-document url-prefix("about:debugging") {
+  @media (max-width: 700px) {
+    .sidebar{
+      width: 45px !important;
+      img{margin: none !important;}
+      
+      .sidebar-item:has(.qa-sidebar-no-devices),
+      .sidebar__adb-status,
+      .sidebar__refresh-usb,
+      .sidebar__footer__support-help span,
+      .ellipsis-text {display: none}
+    }
+    
+    sidebar__footer__support-help, .sidebar-item__link{width: 23px !important;}
+    .sidebar-item:has(.sidebar__footer__support-help) {width: 14px !important;}
+    .sidebar-fixed-item__icon{margin-right: 0px !important;}
+    .app{display: flex !important;}
+  }
+}
