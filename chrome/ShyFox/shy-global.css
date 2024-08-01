@@ -36,7 +36,7 @@ Area where website is displayed
   &:not(
     :is(
       :is([titlepreface*="+"], [titlepreface*="-"][titlepreface*="="])[inFullscreen="true"]),
-      [titlepreface*="?"]:is([sizemode="maximized"], [inFullscreen="true"])
+      [titlepreface*="?"]:is([sizemode="maximized"], [inFullscreen="true"], [gtktiledwindow="true"])
   ){
     
     /* add rounded corners and outline to browser content */
