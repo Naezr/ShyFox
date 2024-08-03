@@ -29,6 +29,12 @@ Styles for settings, Firefox View, etc.
     --input-border-color:                          var(--shy-color) !important;
   }
   
+  .primary-button{
+     --primary-button-background-color: var(--shy-color) !important;
+     --primary-button-hover-background-color: color-mix(in srgb, white 10%, var(--shy-color)) !important;
+     --primary-button-active-background-color: color-mix(in srgb, white 20%, var(--shy-color)) !important;
+  }
+  
   :is(.icon, img)[src="chrome://global/skin/icons/info-filled.svg"] {fill: var(--shy-color) !important;}
   moz-message-bar {background-color: var(--in-content-button-background) !important;}
   
