@@ -1,4 +1,4 @@
-# ShyFox 3.7.3
+# ShyFox 3.8
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -14,6 +14,12 @@
 <details><summary>🚩 Release notes</summary>
 
 <br/>
+
+3.8
+- Migrating to invisible titleprefixes & new Userchrome Toggle
+- `about:debugging` page now shrinks at small window width
+- Added `about:config` option to make context menus larger
+- Some bugfixes
 
 3.7.3
 - New tab colors rework
