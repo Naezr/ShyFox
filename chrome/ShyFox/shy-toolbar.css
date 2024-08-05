@@ -8,7 +8,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 */
 
 /* if toolbar is not hidden, this window is not floating popup and not in fullscreen video */
-#main-window:not(:is([titlepreface*="="], [titlepreface*="?"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
+#main-window:not(:is([titlepreface*="​"], [titlepreface*="‍"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
   /* set right margin to toolbar width */
   --right-margin: var(--toolbar-button-wdt);
 }
@@ -132,7 +132,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 }
 
 /* space for window controls */
-#main-window:not([titlepreface*="="]){
+#main-window:not([titlepreface*="‌"]){
   #TabsToolbar,
   #PanelUI-menu-button,
   #unified-extensions-button
@@ -148,7 +148,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 */
 
 /* activate style when toolbar hidden or clean mode enabled (and not in customizing page) */
-#main-window:is([titlepreface*="="], [titlepreface*="?"]):not([customizing]){
+#main-window:is([titlepreface*="​"], [titlepreface*="‍"]):not([customizing]){
   
   /* styles for tabs toolbar and buttons */
   #TabsToolbar,
@@ -246,7 +246,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
   #unified-extensions-button {margin-top: var(--toolbar-item-hgt) !important;}
 
   /* show toolbar on hover or focus (if not in clean mode) */
-  &:not([titlepreface*="?"]):has(
+  &:not([titlepreface*="‍"]):has(
     #TabsToolbar:hover
     .titlebar-buttonbox-container:not(:hover),
     #TabsToolbar-customization-target *:not(#firefox-view-button)[open],

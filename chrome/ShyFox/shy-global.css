@@ -35,8 +35,8 @@ Area where website is displayed
   /* if navbar is not hidden in f11 fullscreen or not only navbar is visible in f11 or window is not maximized in clean mode */
   &:not(
     :is(
-      :is([titlepreface*="+"], [titlepreface*="-"][titlepreface*="="])[inFullscreen="true"]),
-      [titlepreface*="?"]:is([sizemode="maximized"], [inFullscreen="true"])
+      :is([titlepreface*="‌"], [titlepreface*="؜"][titlepreface*="​"])[inFullscreen="true"]),
+      [titlepreface*="‍"]:is([sizemode="maximized"], [inFullscreen="true"], [gtktiledwindow="true"])
   ){
     
     /* add rounded corners and outline to browser content */
@@ -58,17 +58,17 @@ Area where website is displayed
   }
   
   /* if in f11 fullscreen sidebar active but navbar not */
-  &:not([titlepreface*="?"]):not([titlepreface*="-"])[titlepreface*="+"][inFullscreen="true"]{
+  &:not([titlepreface*="‍"]):not([titlepreface*="؜"])[titlepreface*="‌"][inFullscreen="true"]{
     #appcontent browser {border-left: var(--outline);}
   }
   
   /* if in f11 fullscreen toolbar active but navbar not */
-  &:not([titlepreface*="?"]):not([titlepreface*="="])[titlepreface*="+"][inFullscreen="true"]{
+  &:not([titlepreface*="‍"]):not([titlepreface*="​"])[titlepreface*="‌"][inFullscreen="true"]{
     #appcontent browser {border-right: var(--outline);}
   }
   
   /* if in f11 fullscreen nor toolbar or sidebar active but navbar is */
-  &:not([titlepreface*="?"])[titlepreface*="-"][titlepreface*="="]:not([titlepreface*="+"])[inFullscreen="true"]{
+  &:not([titlepreface*="‍"])[titlepreface*="؜"][titlepreface*="​"]:not([titlepreface*="‌"])[inFullscreen="true"]{
     #appcontent browser {border-top: var(--outline);}
   }
 }
@@ -153,7 +153,7 @@ richlistbox
 {border-radius: var(--big-rounding) !important;}
 
 /* disable pointer events in clean mode */ 
-#main-window[titlepreface*="?"]{
+#main-window[titlepreface*="‍"]{
   #nav-bar:not(:has(#urlbar[breakout-extend])),
   #sidebar,
   #TabsToolbar,
@@ -269,7 +269,7 @@ screenshots-buttons{
 }
 
 /* when sidebar hidden */
-#main-window:is([titlepreface*="-"], [titlepreface*="?"]){
+#main-window:is([titlepreface*="؜"], [titlepreface*="‍"]){
   #screenshotsPagePanel{
     bottom: calc(
       var(--bottom-margin)
@@ -332,6 +332,10 @@ Apply theme colors to context menus and menubar
     color: var(--bt-col) !important;
   }
 }
+
+/* dropdown selectors */
+menupopup {--content-select-background-image: none !important;}
+#ContentSelectDropdown .ContentSelectDropdown-item-0:not([_moz-menuactive="true"]) {background-color: transparent !important;;}
 
 /*
 
@@ -484,7 +488,7 @@ File Edit View History Bookmarks Tools Help
     }
   }
 
-  #main-menubar * {padding-top: 0px !important;}
+  #main-menubar > * {padding-top: 0px !important;}
 }
 
 /*
@@ -587,6 +591,14 @@ File Edit View History Bookmarks Tools Help
 .urlbarView-favicon {
   .urlbarView-row[type="tabtosearch"]:not([selected]) > .urlbarView-row-inner > .urlbarView-no-wrap > & {
     color: var(--shy-color) !important;
+  }
+}
+
+.urlbarView-row[dynamicType="onboardTabToSearch"] > .urlbarView-row-inner {
+  &:not([selected]) > .urlbarView-no-wrap {
+    & > .urlbarView-favicon {
+      color: var(--shy-color) !important;
+    }
   }
 }
 

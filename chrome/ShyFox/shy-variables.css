@@ -49,7 +49,7 @@ Values of these variables can be changed safely and most likely nothing will bre
   --panel-hide-ldg: 1px;            /* f11 fullscreen   */
   &:not([inFullscreen="true"]){
     --panel-hide-ldg: 0px;          /* maximized window */ 
-    &[sizemode="normal"]:not([titlepreface*="?"]){
+    &[sizemode="normal"]:not([titlepreface*="‍"]){
       --panel-hide-ldg: 9px;        /* floating window  */
     }
   }
@@ -108,7 +108,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   --top-margin:    0px;
   --bottom-margin: 0px; 
   
-  &:not(:is([inFullscreen="true"], [inDOMFullscreen="true"], [titlepreface*="?"][sizemode="maximized"])){
+  &:not(:is([inFullscreen="true"], [inDOMFullscreen="true"], [titlepreface*="‍"]:is([sizemode="maximized"], [gtktiledwindow="true"]))){
     --left-margin:   var(--margin);
     --right-margin:  var(--margin);
     --top-margin:    var(--margin);
@@ -116,7 +116,7 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   }
   
   /* hide indication bars in fullscreen or clean mode */
-  &:is([inFullscreen="true"], [inDOMFullscreen="true"], [titlepreface*="?"]){
+  &:is([inFullscreen="true"], [inDOMFullscreen="true"], [titlepreface*="‍"]){
     --hide-bar-opct: 0 !important;
   }
   

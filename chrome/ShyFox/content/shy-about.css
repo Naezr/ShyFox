@@ -29,6 +29,12 @@ Styles for settings, Firefox View, etc.
     --input-border-color:                          var(--shy-color) !important;
   }
   
+  .primary-button{
+     --primary-button-background-color: var(--shy-color) !important;
+     --primary-button-hover-background-color: color-mix(in srgb, white 10%, var(--shy-color)) !important;
+     --primary-button-active-background-color: color-mix(in srgb, white 20%, var(--shy-color)) !important;
+  }
+  
   :is(.icon, img)[src="chrome://global/skin/icons/info-filled.svg"] {fill: var(--shy-color) !important;}
   moz-message-bar {background-color: var(--in-content-button-background) !important;}
   
@@ -53,6 +59,7 @@ Styles for settings, Firefox View, etc.
   .info-box-container,           section,
   .sidebar-item--tall,           details,
   .info-box-content,
+  .sidebar-item,
   .qr-code-box,                  select,
   .action-box,                   table,
   .dialogBox,                    tree,
@@ -115,4 +122,25 @@ Styles for settings, Firefox View, etc.
   .tooltip-container .tooltip-panel .menuitem,
   panel-list[role="menu"] panel-item {margin-inline: 5px}
   
+}
+
+/* about:debugging thin mode */
+@-moz-document url-prefix("about:debugging") {
+  @media (max-width: 700px) {
+    .sidebar{
+      width: 45px !important;
+      img{margin: none !important;}
+      
+      .sidebar-item:has(.qa-sidebar-no-devices),
+      .sidebar__adb-status,
+      .sidebar__refresh-usb,
+      .sidebar__footer__support-help span,
+      .ellipsis-text {display: none}
+    }
+    
+    sidebar__footer__support-help, .sidebar-item__link{width: 23px !important;}
+    .sidebar-item:has(.sidebar__footer__support-help) {width: 14px !important;}
+    .sidebar-fixed-item__icon{margin-right: 0px !important;}
+    .app{display: flex !important;}
+  }
 }

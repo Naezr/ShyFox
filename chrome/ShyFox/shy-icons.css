@@ -24,14 +24,6 @@ Adding icons to all sorts of places
   background-image: url("../icons/book.svg") !important;
 }
 
-.openintabs-menuitem{
-  .menu-text{
-    padding-inline-start: 25px !important;
-    background-image: url("../icons/bookmark-multiple.svg") !important;
-    background-repeat: no-repeat;
-  }
-}
-
 /* 
 
 --- MONOCHROME EXTENSIONS ---------------------------------------------------------------------------------------------------------------------------
@@ -280,7 +272,9 @@ Monochrome icons for some extensions
   #downloadsContextMenu,
   #placesContext,
   #sidebarMenu-popup,
-  #BMB_bookmarksPopup
+  #BMB_bookmarksPopup,
+  #toolbar-menubar menupopup,
+  #PlacesToolbar menupopup
 ) :is(menuitem, menu){
   
   /* icons color and position */
@@ -289,7 +283,7 @@ Monochrome icons for some extensions
   -moz-context-properties: fill, fill-opacity, stroke !important;
   background-repeat: no-repeat !important;
   background-position-x: 5px !important;
-  background-position-y: 2px !important;
+  background-position-y: center !important;
   background-size: 16px !important;
   
   /* various paddings/margins tweaks */
@@ -474,4 +468,7 @@ Monochrome icons for some extensions
     #BMB_bookmarksShowAllTop {display: none !important;}
     #BMB_bookmarksShowAll {background-image: url("chrome://browser/skin/bookmark-star-on-tray.svg") !important;}
   }
+  
+  /* bookmarks bar folder menu */
+  #PlacesToolbar .openintabs-menuitem {background-image: url("../icons/bookmark-multiple.svg") !important;}
 }

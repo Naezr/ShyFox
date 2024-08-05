@@ -47,7 +47,7 @@ Styles for Min Max Close buttons
 }
 
 /* remove window controls in f11 fullscreen or in clean mode */
-#main-window:is([sizemode="fullscreen"], [titlepreface*="?"]:not([customizing])) {
+#main-window:is([sizemode="fullscreen"], [titlepreface*="‍"]:not([customizing])) {
   --window-control-wdt:   0px !important;                          /* <                             */
   --buttonbox-left-hgt:   0px !important;                          /* <         !DUPLICATE!         */
   --buttonbox-right-hgt:  0px !important;                          /* <                             */
@@ -91,7 +91,7 @@ Styles for Min Max Close buttons
   }
   
   /* style when not enough space - merged into window border */
-  #main-window[titlepreface*="="][titlepreface*="+"] {
+  #main-window[titlepreface*="​"][titlepreface*="‌"] {
     .titlebar-button {padding: calc(var(--margin) / 2) 15px !important;}
     .titlebar-buttonbox-container{
       height: var(--margin) !important;
@@ -102,7 +102,7 @@ Styles for Min Max Close buttons
   }
   
   /* style when right toolbar is visible but navbar hidden - vertical orientation */
-  #main-window:not([titlepreface*="="])[titlepreface*="+"]:not([customizing]){
+  #main-window:not([titlepreface*="​"])[titlepreface*="‌"]:not([customizing]){
     .titlebar-buttonbox-container{height: 85px}
     .titlebar-buttonbox{
       display: flex;
@@ -178,7 +178,7 @@ Styles for Min Max Close buttons
     .titlebar-buttonbox-container{padding-right: 4px}
     
     /* style when not enough space - merged into window border */
-    #main-window:is([titlepreface*="="][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
+    #main-window:is([titlepreface*="​"][titlepreface*="‌"], [titlepreface*="‍"]):not([customizing]){
       .titlebar-buttonbox-container{
         opacity: calc(var(--hide-bar-opct) / 2 );
         &:hover{opacity: 1};
@@ -205,7 +205,7 @@ Styles for Min Max Close buttons
     }
 
     /* style when right toolbar is visible but navbar hidden - vertical orientation */
-    #main-window:not([titlepreface*="="])[titlepreface*="+"]:not([customizing]){
+    #main-window:not([titlepreface*="​"])[titlepreface*="‌"]:not([customizing]){
       
       .titlebar-buttonbox{
         display: flex;
@@ -264,7 +264,7 @@ Styles when GTK window controls on left or system is MacOS
   }
   
   /* style when not enough space - merged into window border */
-  #main-window:is([titlepreface*="-"][titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
+  #main-window:is([titlepreface*="؜"][titlepreface*="‌"], [titlepreface*="‍"]):not([customizing]){
     .titlebar-buttonbox-container{
       opacity: calc(var(--hide-bar-opct) / 2 );
       &:hover{opacity: 1};

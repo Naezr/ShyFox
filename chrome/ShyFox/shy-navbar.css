@@ -13,7 +13,7 @@ Navigation bar on top of the window
 }
 
 /* if navbar is not hidden, this window is not floating popup and not in fullscreen video */
-#main-window:not(:is([titlepreface*="+"], [titlepreface*="?"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
+#main-window:not(:is([titlepreface*="‌"], [titlepreface*="‍"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
   /* set top margin to navbar height */
   --top-margin: calc(var(--toolbar-item-hgt)) !important;
 }
@@ -64,7 +64,7 @@ Navigation bar on top of the window
 }
 
 /* tab loading progress in urlbar background */
-#main-window:not([customizing]):not([titlepreface*="+"]):has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) #urlbar-background{
+#main-window:not([customizing]):not([titlepreface*="‌"]):has(.tabbrowser-tab[selected][busy]) #urlbar:not([breakout-extend]) #urlbar-background{
   background: linear-gradient(
     to right,
     color-mix(in srgb, var(--shy-color) 10%, transparent) 0 var(--shy-tab-load-pcent),
@@ -73,7 +73,7 @@ Navigation bar on top of the window
 }
 
 /* space for window controls and magic width calculations (это пиздец) */
-#main-window:not([customizing])[titlepreface*="="]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing])[titlepreface*="​"]:not(:is([titlepreface*="‌"], [titlepreface*="‍"])){
   #nav-bar{
     margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));
     width: calc(
@@ -86,7 +86,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window:not([customizing]):not([titlepreface*="="]):not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing]):not([titlepreface*="​"]):not(:is([titlepreface*="‌"], [titlepreface*="‍"])){
   #nav-bar{
     margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button));
     width: calc(
@@ -99,7 +99,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window:not([customizing])[titlepreface*="-"]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing])[titlepreface*="؜"]:not(:is([titlepreface*="‌"], [titlepreface*="‍"])){
   #nav-bar{
     margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));
     width: calc(
@@ -114,7 +114,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window:not([customizing])[titlepreface*="-"][titlepreface*="="]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing])[titlepreface*="؜"][titlepreface*="​"]:not(:is([titlepreface*="‌"], [titlepreface*="‍"])){
   #nav-bar{
     width: calc(
       100vw
@@ -136,7 +136,7 @@ Navigation bar on top of the window
 
 
 /* activate style when navbar hidden or clean mode enabled (and not in customizing page) */
-#main-window:is([titlepreface*="+"], [titlepreface*="?"]):not([customizing]){
+#main-window:is([titlepreface*="‌"], [titlepreface*="‍"]):not([customizing]){
   
   #nav-bar{
     overflow: visible !important;
@@ -264,8 +264,8 @@ Navigation bar on top of the window
   }
   
   /* hide all  */
-  &[titlepreface*="?"]{
-    #nav-bar-customization-target > *:not(#urlbar-container) {display: none !important;}
+  &[titlepreface*="‍"]{
+    #nav-bar-customization-target > *:not(#urlbar-container, #unified-extensions-button) {display: none !important;}
   }
   
   /* adaptive navbar width */

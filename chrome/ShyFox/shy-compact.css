@@ -15,8 +15,12 @@ Shrink some things so they take up less space
 #context-navigation > .menuitem-iconic[disabled="true"] {background-color: transparent !important;}
 
 menupopup > :is(menuitem, menu){
-  max-height: 20px !important;
-  min-height: 20px !important;
+  height: fit-content !important;
+  & > * {
+    padding: 0px !important;
+    margin: 1px !important;
+  }
+  
   max-width: 300px !important;
   border-radius: var(--rounding) !important;
   margin: 0 !important;
@@ -25,6 +29,12 @@ menupopup > :is(menuitem, menu){
   padding-inline-start: 5px !important;
 }
 
+/* large context menu */
+@media (-moz-bool-pref: "shyfox.larger.context.menu"){
+  menupopup > :is(menuitem, menu) > * {padding: 5px 0px !important;}
+}
+
+/* margin for some menus */
 :is(.bookmark-item, #PlacesChevron, #bookmarks-menu-button, #sidebarMenu-popup) :is(menuitem, menu) {margin-inline: 5px !important;}
 
 /* remove some items from sidebar header menu */

@@ -20,7 +20,7 @@ Styles for sidebar
 }
 
 /* if sidebar is not hidden or clean mode not enabled, this window is not floating popup and not in fullscreen video */
-#main-window:not(:is([titlepreface*="-"], [titlepreface*="?"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
+#main-window:not(:is([titlepreface*="؜"], [titlepreface*="‍"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
   /* set left margin to sidebar width */
   --left-margin: var(--sdbr-wdt) !important;
 }
@@ -102,7 +102,7 @@ Styles for sidebar
 }
 
 /* padding for screenshot control buttons */
-#main-window:not([titlepreface*="-"]):has(#screenshotsPagePanel:not([hidden])){
+#main-window:not([titlepreface*="؜"]):has(#screenshotsPagePanel:not([hidden])){
   #sidebar-box{
     padding-bottom: calc(
       var(--screenshot-tool-hgt)
@@ -119,7 +119,7 @@ Styles for sidebar
 */
 
 /* activate style when sidebar hidden or clean mode enabled (and not in customizing page) */
-#main-window:is([titlepreface*="-"], [titlepreface*="?"]):not([customizing]){
+#main-window:is([titlepreface*="؜"], [titlepreface*="‍"]):not([customizing]){
   
   /* styles for both sidebar and bookmaarks toolbar */
   #sidebar-box,
@@ -231,7 +231,7 @@ Styles for sidebar
   }
 
   /* show sidebar on hover or focus (if not in clean mode) */
-  &:not([titlepreface*="?"]):has(
+  &:not([titlepreface*="‍"]):has(
     #sidebar-box:hover,
     #sidebar-box:focus-within,
     #PersonalToolbar:hover,
@@ -345,7 +345,7 @@ Styles when Sidebery is not opened
     margin: 0 calc(var(--margin) / 1.5) !important;
   }
   
-  &[titlepreface*="-"] {#sidebar {margin-bottom: calc(var(--margin) / 1.5) !important;}}
+  &[titlepreface*="؜"] {#sidebar {margin-bottom: calc(var(--margin) / 1.5) !important;}}
   
   #sidebar-header{
     #sidebar-close {display: none}

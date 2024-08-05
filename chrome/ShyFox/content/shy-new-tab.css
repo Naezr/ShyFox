@@ -11,12 +11,10 @@ Styles for new tab
     --newtab-primary-action-background: var(--shy-color) !important;
     --newtab-primary-action-background-pocket: var(--shy-color) !important;
     
-    --tr-dark-col:  rgba(36, 35, 47, 0.4);
-    --tr-light-col: rgba(250, 250, 250, 0.6);
-    
     --tr-col: color-mix(in srgb, var(--newtab-background-color) 40%, transparent);
     --tr-hov-col: color-mix(in srgb, var(--tr-col) 80%, var(--newtab-text-primary-color));
     --newtab-background-color-secondary: color-mix(in srgb, var(--newtab-background-color) 90%, var(--newtab-text-primary-color)) !important;
+    --background-color-box: var(--tr-col) !important;
   }
   
   .toggle-button[aria-pressed="true"] {
@@ -43,7 +41,8 @@ Styles for new tab
   .top-site-outer, 
   .top-site-inner,
   .context-menu,
-  .icon-settings
+  .icon-settings,
+  .weatherCard
   {border-radius: var(--big-rounding) !important;}
   
   /* pinned links */
@@ -52,6 +51,7 @@ Styles for new tab
   .tile, .top-site-icon{
     background-color: transparent !important;
     box-shadow: none !important;
+    border: none !important;
   }
   
   .top-site-button, .customize-menu{
@@ -137,6 +137,15 @@ Styles for new tab
     background-color: var(--tr-col) !important;
     &:hover{background-color: var(--tr-hov-col) !important;}
   }
+  
+  /* weather */
+  .weatherInfoLink:hover, .weatherButtonContextMenuWrapper:hover {
+    background-color: var(--tr-hov-col) !important;
+  }
+  
+  .weatherCard:not(:hover) .weatherButtonContextMenuWrapper{opacity: 0}
+  .weatherInfoLink {border-radius: 0px !important;}
+  .weatherButtonContextMenuWrapper::after{display: none !important;}
   
   /* autograph */
   .activity-stream::before,
