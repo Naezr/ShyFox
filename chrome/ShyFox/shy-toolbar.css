@@ -132,7 +132,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 }
 
 /* space for window controls */
-#main-window:not([titlepreface*="‌"]){
+#main-window:not([titlepreface*="​"]){
   #TabsToolbar,
   #PanelUI-menu-button,
   #unified-extensions-button
