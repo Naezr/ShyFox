@@ -36,7 +36,7 @@ Area where website is displayed
   &:not(
     :is(
       :is([titlepreface*="‌"], [titlepreface*="؜"][titlepreface*="​"])[inFullscreen="true"]),
-      [titlepreface*="?"]:is([sizemode="maximized"], [inFullscreen="true"], [gtktiledwindow="true"])
+      [titlepreface*="‍"]:is([sizemode="maximized"], [inFullscreen="true"], [gtktiledwindow="true"])
   ){
     
     /* add rounded corners and outline to browser content */
@@ -58,17 +58,17 @@ Area where website is displayed
   }
   
   /* if in f11 fullscreen sidebar active but navbar not */
-  &:not([titlepreface*="?"]):not([titlepreface*="؜"])[titlepreface*="‌"][inFullscreen="true"]{
+  &:not([titlepreface*="‍"]):not([titlepreface*="؜"])[titlepreface*="‌"][inFullscreen="true"]{
     #appcontent browser {border-left: var(--outline);}
   }
   
   /* if in f11 fullscreen toolbar active but navbar not */
-  &:not([titlepreface*="?"]):not([titlepreface*="​"])[titlepreface*="‌"][inFullscreen="true"]{
+  &:not([titlepreface*="‍"]):not([titlepreface*="​"])[titlepreface*="‌"][inFullscreen="true"]{
     #appcontent browser {border-right: var(--outline);}
   }
   
   /* if in f11 fullscreen nor toolbar or sidebar active but navbar is */
-  &:not([titlepreface*="?"])[titlepreface*="؜"][titlepreface*="​"]:not([titlepreface*="‌"])[inFullscreen="true"]{
+  &:not([titlepreface*="‍"])[titlepreface*="؜"][titlepreface*="​"]:not([titlepreface*="‌"])[inFullscreen="true"]{
     #appcontent browser {border-top: var(--outline);}
   }
 }
@@ -153,7 +153,7 @@ richlistbox
 {border-radius: var(--big-rounding) !important;}
 
 /* disable pointer events in clean mode */ 
-#main-window[titlepreface*="?"]{
+#main-window[titlepreface*="‍"]{
   #nav-bar:not(:has(#urlbar[breakout-extend])),
   #sidebar,
   #TabsToolbar,
@@ -269,7 +269,7 @@ screenshots-buttons{
 }
 
 /* when sidebar hidden */
-#main-window:is([titlepreface*="؜"], [titlepreface*="?"]){
+#main-window:is([titlepreface*="؜"], [titlepreface*="‍"]){
   #screenshotsPagePanel{
     bottom: calc(
       var(--bottom-margin)
