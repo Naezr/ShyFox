@@ -132,7 +132,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 }
 
 /* space for window controls */
-#main-window:not([titlepreface*="="]){
+#main-window:not([titlepreface*="‌"]){
   #TabsToolbar,
   #PanelUI-menu-button,
   #unified-extensions-button
@@ -148,7 +148,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 */
 
 /* activate style when toolbar hidden or clean mode enabled (and not in customizing page) */
-#main-window:is([titlepreface*="="], [titlepreface*="‍"]):not([customizing]){
+#main-window:is([titlepreface*="‌"], [titlepreface*="‍"]):not([customizing]){
   
   /* styles for tabs toolbar and buttons */
   #TabsToolbar,
