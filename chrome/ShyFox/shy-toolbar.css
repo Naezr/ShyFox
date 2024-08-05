@@ -148,7 +148,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 */
 
 /* activate style when toolbar hidden or clean mode enabled (and not in customizing page) */
-#main-window:is([titlepreface*="‌"], [titlepreface*="‍"]):not([customizing]){
+#main-window:is([titlepreface*="​"], [titlepreface*="‍"]):not([customizing]){
   
   /* styles for tabs toolbar and buttons */
   #TabsToolbar,
