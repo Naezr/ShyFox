@@ -73,7 +73,7 @@ Navigation bar on top of the window
 }
 
 /* space for window controls and magic width calculations (это пиздец) */
-#main-window:not([customizing])[titlepreface*="="]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing])[titlepreface*="​"]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
   #nav-bar{
     margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-margin));
     width: calc(
@@ -86,7 +86,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window:not([customizing]):not([titlepreface*="="]):not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing]):not([titlepreface*="​"]):not(:is([titlepreface*="+"], [titlepreface*="?"])){
   #nav-bar{
     margin-right: calc(var(--buttonbox-right-wdt) - var(--nav-rgt-btnbx-button));
     width: calc(
@@ -114,7 +114,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window:not([customizing])[titlepreface*="؜"][titlepreface*="="]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
+#main-window:not([customizing])[titlepreface*="؜"][titlepreface*="​"]:not(:is([titlepreface*="+"], [titlepreface*="?"])){
   #nav-bar{
     width: calc(
       100vw

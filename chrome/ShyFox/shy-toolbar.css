@@ -8,7 +8,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 */
 
 /* if toolbar is not hidden, this window is not floating popup and not in fullscreen video */
-#main-window:not(:is([titlepreface*="="], [titlepreface*="?"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
+#main-window:not(:is([titlepreface*="​"], [titlepreface*="?"]))[chromehidden=""]:not([inDOMFullscreen="true"]){
   /* set right margin to toolbar width */
   --right-margin: var(--toolbar-button-wdt);
 }
