@@ -163,17 +163,15 @@
    <details><summary>Configure Userchrome toggle Extended</summary> 
    
    <br/>
+
+   You need to turn on "Allow multiple styles to be active together" and turn on the first four toggles. If you will be using a popup, enable "Close popup after clicking toggle" and rename the toggles for convenience. Play with the rest of the settings as you wish. Make sure you click "Apply changes" button after all
    
-   Make sure you click each "Apply changes" button, preferably several times
-   
-   ![settings1](https://github.com/Naezr/ShyFox/assets/95460152/ddc7fbcb-ee97-43be-b2c9-81ff2f948ef4)
-   ![settings2](https://github.com/Naezr/ShyFox/assets/95460152/87f4f31f-183a-4643-8dc5-9c56ca8b3ba7)
-   ![settings4](https://github.com/Naezr/ShyFox/assets/95460152/e0b823db-f235-4e37-9de1-c6a7d30def2a)
+   ![settings](https://github.com/user-attachments/assets/44b8702d-3a92-458d-8a2e-23b8e9e5703d)
 
    It would also be nice to customize the shortcuts for toggles. I recommend these:
    
-   ![how to](https://github.com/Naezr/ShyFox/assets/95460152/a945e58b-0eb5-40d3-8d2a-20cc103543ea)
-   ![shortcuts](https://github.com/Naezr/ShyFox/assets/95460152/44878112-8503-45a7-9fc1-a753033160d5)
+   ![how-to](https://github.com/user-attachments/assets/d49948f5-4544-4070-a691-dc090f37b2d3)
+   ![shortcuts](https://github.com/user-attachments/assets/bef9f1be-878e-4103-b1a9-0d171e9850bd)
    
    <br/>
    
