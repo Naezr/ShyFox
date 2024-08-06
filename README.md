@@ -146,7 +146,7 @@
 
 </div>
 
-🎦 [Video showcase](showcase.md)
+🎦 [Video showcase](showcase.md) ; 💲 [Support project!](https://boosty.to/n2ezr) ; 🔊 [Telegram community](https://t.me/shyfoxchat)
 
 ## Usage
 
