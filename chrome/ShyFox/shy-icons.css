@@ -70,6 +70,28 @@ Monochrome icons for some extensions
   .toolbarbutton-icon {
     list-style-image: url("../icons/moon.svg");
   }
+  
+  /* Video Download Helper => custom svg icon */
+  :is(.webextension-browser-action,
+  .eom-addon-button)[data-extensionid="{b9db16a4-6edc-47ec-a1f4-b86292ed211d}"] 
+  .toolbarbutton-icon {
+    list-style-image: url("../icons/video-download-helper.svg");
+  }
+  
+  /* Auto Tab Discard => power icon */
+  :is(.webextension-browser-action,
+  .eom-addon-button)[data-extensionid="{c2c003ee-bd69-42a2-b0e9-6f34222cb046}"] 
+  .toolbarbutton-icon {
+    list-style-image: url("../icons/quit.svg");
+  }
+  
+  /* Midnight Lizard => custom svg icon */
+  :is(.webextension-browser-action,
+  .eom-addon-button)[data-extensionid="{8fbc7259-8015-4172-9af1-20e1edfbbd3a}"] 
+  .toolbarbutton-icon {
+    list-style-image: url("../icons/midnight-lizard.svg");
+    scale: 1.3;
+  }
 
   /* gray background for all badges */
   .toolbarbutton-badge {
