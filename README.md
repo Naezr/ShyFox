@@ -333,6 +333,9 @@ Settings that can be toggled via [about:config](https://support.mozilla.org/kb/a
    - Dark Reader - toolbar button (moon icon)
    - Privacy Badger - toolbar button
    - Clear URLs - only context menu item (eraser icon)
+   - Midnight Lizard - toolbar button
+   - Auto Tab Discard - toolbar button
+   - Video Download Helper - toolbar button and context menu item
    
    Feel free to suggest icons for other extensions
    
