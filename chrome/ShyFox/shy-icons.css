@@ -150,12 +150,21 @@ Monochrome icons for some extensions
     }
   }
   
-  /* sidebar switcher bitwarden icon */
+  /* sidebar switcher */
+  
+  /* Bitwarden */
   #sidebarswitcher_menu__446900e4-71c2-419f-a6a7-df9c091e268b_-sidebar-action{
     .menu-iconic-icon {opacity: 0 !important;}
     background-image: url("../icons/bitwarden.svg") !important;
   }
   #sidebar-switcher-target[style*="fde67d36-ff48-49e7-8ec4-3cf26deea141"] #sidebar-icon {list-style-image: url("../icons/bitwarden.svg") !important;}
+
+  /* Video Download Helper */
+  #sidebarswitcher_menu__b9db16a4-6edc-47ec-a1f4-b86292ed211d_-sidebar-action{
+    .menu-iconic-icon {opacity: 0 !important;}
+    background-image: url("../icons/video-download-helper.svg") !important;
+  }
+  #sidebar-switcher-target[style*="89b69b2a-5ae9-4b43-addc-4bf789f8448f"] #sidebar-icon {list-style-image: url("../icons/video-download-helper.svg") !important;}
 }
 
 /* 
