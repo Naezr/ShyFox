@@ -66,36 +66,40 @@ Styles when Sidebery is not opened
     margin: 0 calc(var(--margin) / 1.5) !important;
   }
   
-  &[titlepreface*="؜"] {#sidebar {margin-bottom: calc(var(--margin) / 1.5) !important;}}
-  
   #sidebar-header{
-    #sidebar-close {display: none}
-    
     padding-bottom: 30px !important;
     border: none !important;
-    
-    /* info text */
-    &::before{
-      content: "";
-      width: 20px;
-      height: 20px;
-      position: absolute;
-      
-      mask-image: url("chrome://global/skin/icons/info-filled.svg");
-      background-color: var(--shy-color);
-      mask-repeat: no-repeat;
-      
-      top: 44px;
-      left: 10px;
-    }
-    
-    &::after{
-      content: var(--shyfox-string-to-manage-tabs-open-sidebery);
-      position: absolute;
-      top: 45px;
-      font-size: 11.8px;
-      
-      padding-left: 22px;
+  }
+  
+  #sidebar-close {display: none}
+  
+  &[titlepreface*="؜"] {#sidebar {margin-bottom: calc(var(--margin) / 1.5) !important;}}
+  
+  &:has(#sidebar-box[style*="order: 2"]){
+    #sidebar-header{
+      /* info text */
+      &::before{
+        content: "";
+        width: 20px;
+        height: 20px;
+        position: absolute;
+
+        mask-image: url("chrome://global/skin/icons/info-filled.svg");
+        background-color: var(--shy-color);
+        mask-repeat: no-repeat;
+
+        top: 44px;
+        left: 10px;
+      }
+
+      &::after{
+        content: var(--shyfox-string-to-manage-tabs-open-sidebery);
+        position: absolute;
+        top: 45px;
+        font-size: 11.8px;
+
+        padding-left: 22px;
+      }
     }
   }
 }
@@ -134,61 +138,46 @@ Styles when Sidebery is not opened
     /* add checkmark to button to indicate state */
     #sidebarMenu-popup #sidebar-reverse-position {background-image: url("../icons/menu-check.svg") !important;}
     
-    /* native tabs styling */
+    /* display native tabs */
     #tabbrowser-tabs{
-      --tabsbar-wdt: calc(
-        (
-          100vw
-          - var(--margin) * 2
-          - var(--left-margin)
-          - var(--right-margin)
-        ) / 1.5
-      );
-      
       display: flex !important;
       position: fixed !important;
-      
-      width: var(--tabsbar-wdt) !important;
-      height: 445px !important;
-      padding: 0 !important;
-      
-      left: calc(var(--left-margin) + var(--margin)) !important;
-      top:  calc(var(--top-margin)  + var(--margin)) !important;
-      
-      background-color: var(--tb-col) !important;
-      border-radius: var(--big-rounding) !important;
-      border: var(--outline) !important;
-      outline: var(--shadow) !important;
-      transition: var(--transition) !important;
     }
     
-    
+    #sidebar{display: none !important;}
   }
 }
 
-.tabbrowser-tab[pinned]{
+#tabbrowser-tabs{
+  --clip-top: 40px;
+  padding-top: var(--clip-top) !important;
+  clip-path: polygon(0 var(--clip-top), 100% var(--clip-top), 100% 100%, 0% 100%);
+}
+
+.tabbrowser-tab[pinned],
+.tabbrowser-tab{
   position: initial !important;
-  margin-inline: 0px !important;
+  margin-left: 5px !important;
+  width: calc(var(--sdbr-wdt) - 10px) !important;
+  min-width: calc(var(--sdbr-wdt) - 10px) !important;
+  max-width: calc(var(--sdbr-wdt) - 10px) !important;
+}
+
+.tabbrowser-tab[pinned] .tab-label-container{
+  margin-left: 5.5px !important;
 }
 
 :root:not([customizing]) #tabbrowser-tabs {
   position: relative !important;
-  height: 300px !important;
-  width: var(--uc-vertical-tabs-width);
   contain: size !important;
   overflow: hidden !important;
-  order: 0;
-  border-radius: var(--uc-all-border-radius);
-  border-inline-start: 0 !important;
-  margin: 0 !important;
-  padding-inline: 0 !important;
-  margin-left: 2px !important;
 }
 
 :root:not([customizing]) #tabbrowser-arrowscrollbox {
   --var-box-model: -webkit-box;
   --var-scrollbox-overflow: auto;
 }
+
 #tabbrowser-tabs:is(haspinnedtabs="") scrollbox[orient="horizontal"],
 #tabbrowser-tabs[positionpinnedtabs] scrollbox[orient="horizontal"],
 scrollbox[orient="horizontal"] {

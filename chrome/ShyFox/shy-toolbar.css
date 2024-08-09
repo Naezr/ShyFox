@@ -94,7 +94,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
   align-content: center !important;
   width: var(--toolbar-button-wdt) !important;
   
-  & > * {padding: 3px !important;}
+  & > *:not(#tabbrowser-tabs) {padding: 3px !important;}
   
   /* bookmarks inside toolbar */
   #PlacesToolbar {width: 40px !important;}
@@ -181,16 +181,16 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
     border-radius: var(--big-rounding);
     
     /* hover target (invisible box between window edge and panel) */
-    &::before{
+    #TabsToolbar-customization-target::before{
       content: "";
       position: absolute;
       z-index: -999;
       background-color: var(--debug-col);
       
       width: 500%;
-      height: 100%;
+      height: calc(100% + var(--toolbar-item-hgt) * 2 + 3px);
       left: 0px;
-      top: 0px;
+      bottom: 0px;
     }
     
     /* indication bar (line on window edge) */
@@ -247,8 +247,7 @@ Tab bar has been transformed into vertical toolbar on the right side of the wind
 
   /* show toolbar on hover or focus (if not in clean mode) */
   &:not([titlepreface*="‍"]):has(
-    #TabsToolbar:hover
-    .titlebar-buttonbox-container:not(:hover),
+    #TabsToolbar-customization-target:hover #tabbrowser-tabs:not(:hover),
     #TabsToolbar-customization-target *:not(#firefox-view-button)[open],
     #TabsToolbar-customization-target #searchbar:focus-within,
     #PanelUI-menu-button[open],
