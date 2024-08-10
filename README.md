@@ -2,7 +2,7 @@
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
- <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-128-orange?logo=firefox"></a>
+ <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-129-orange?logo=firefox"></a>
  <a href='https://github.com/Naezr/ShyFox/commits'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/main">
 </a>
  <a href='https://github.com/Naezr/ShyFox/commits/nightly'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/nightly?label=last%20nightly%20commit&color=purple"></a>
