@@ -1,0 +1,168 @@
+/* 
+
+##############################################################################################################################
+
+ M A I N
+
+*/
+
+
+#appcontent{
+  margin: var(--browser-margin) !important;
+  
+  transition: var(--content-transition) !important;
+}
+
+#browser{
+  background: var(--bg-col) !important;
+  color: var(--bg-txt) !important;
+}
+
+.browserStack::after {
+  box-shadow: 0 0 0 var(--big-rounding) var(--bg-col) !important;
+  border-radius: var(--big-rounding);
+  border: var(--border);
+  
+  position: absolute;
+  pointer-events: none;
+  clip-path: inset(-1px);
+  content: "";
+  inset: 1px;
+}
+
+.browserStack{ padding: 1px !important; }
+
+#navigator-toolbox{
+  position: relative !important;
+  margin-top: -1px !important;
+  z-index: 2;
+}
+
+#private-browsing-indicator-with-label,
+#tabbrowser-tabs,
+.titlebar-spacer
+{ display: none !important; }
+
+#titlebar {
+  :root[tabsintitlebar] & {
+    &:-moz-window-inactive {
+      opacity: var(--inactive-titlebar-opacity);
+      opacity: 1 !important;
+    }
+  }
+}
+
+/* 
+
+##############################################################################################################################
+
+ S I D E B A R
+
+*/
+
+#sidebar-box{ z-index: 1 !important; }
+
+#sidebar-splitter{
+  display: none !important;
+}
+
+#sidebar-header{
+  display: grid !important;
+  padding: 0 !important;
+  border: none !important;
+}
+
+#sidebar-switcher-target{
+  margin: 0 !important;
+  padding: 0 5px !important;
+  border-radius: 0 !important;
+}
+
+#identity-icon-box{
+  padding-inline: 6px !important;
+}
+
+#sidebar-close{
+  display: none !important;
+}
+
+/* 
+
+##############################################################################################################################
+
+ N A V B A R
+
+*/
+
+#nav-bar{
+  background: transparent !important;
+  color: var(--bg-txt) !important;
+  --toolbarbutton-icon-fill: var(--bg-txt) !important;
+  border: 0px solid transparent !important;
+  
+  z-index: 2;
+  position: fixed !important;
+}
+
+#urlbar:focus-within{
+  #identity-box,
+  #page-action-buttons,
+  #tracking-protection-icon-container
+  { display: none !important; }
+
+  padding-inline: 5px !important;
+}
+
+#PanelUI-menu-button{ padding-inline: 0 !important; }
+#PanelUI-button{ padding-inline-end: var(--toolbar-start-end-padding); }
+#ion-button{ display: none !important; }
+
+#pageActionSeparator, #pageActionButton[multiple-children] ~ .urlbar-page-action {
+  display: flex !important;
+}
+
+#identity-icon-box { max-width: calc(30px + 13em) !important; }
+
+/* 
+
+##############################################################################################################################
+
+ B O O K M A R K S   B A R
+
+*/
+
+:root:has(#PersonalToolbar[collapsed="true"]){
+  --bmbr-hgt: 0px;
+}
+
+#PersonalToolbar{
+  background: transparent !important;
+  color: var(--bg-txt) !important;  
+  border: 0px solid transparent !important;
+  
+  position: fixed;
+  height: var(--bmbr-hgt) !important;
+  padding: 4px var(--toolbar-start-end-padding) !important;
+}
+
+#PersonalToolbar > toolbarbutton,
+#PlacesChevron{
+  width: 32px !important;
+  margin: 0 2px !important;
+    
+  & > .toolbarbutton-icon{
+    width: 32px !important;
+    padding: 0 8px !important;
+  }
+}
+
+#OtherBookmarks{ 
+  .toolbarbutton-text{ display: none !important; }
+  .toolbarbutton-icon{ margin: 0 !important; }
+}
+
+#import-button, .bookmark-item{
+  margin: 0 2px !important;
+  padding: 0 8px !important;
+}
+

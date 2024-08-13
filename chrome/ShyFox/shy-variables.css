@@ -1,0 +1,168 @@
+/* 
+
+##############################################################################################################################
+
+ S E T T I N G S
+
+*/
+
+:root{
+  --margin:       10px;
+  --rounding:     11px;
+  --big-rounding: 15px;
+}
+
+:root{
+  --nvbr-hgt: 40px;
+  --tbbr-wdt: 40px;
+  --sdbr-wdt: 300px;
+  --top-hide-margin-inline: 100px;
+  --panel-hidden-hitbox: 8px;
+}
+
+:root{
+  --trans-dur: 0.25s;
+  --long-trans-dur: 0.5s;
+}
+
+:root{
+  --hvbr-pd-inline: 10px;
+  --hvbr-pd-block: 2px;
+  --hvbr-brd-rad: 5px;
+  --hvbr-opct: 0.3;
+  --hvbr-color: var(--bg-txt);
+}
+
+/* 
+
+##############################################################################################################################
+
+ C O L O R S
+
+*/
+
+/* active colors */
+:root{
+  --caption: ActiveCaption;
+  --caption-text: CaptionText;
+  --tb-caption: -moz-dialog;
+  --tb-caption-text: -moz-dialogtext;
+  
+  --lwt-bg: var(--lwt-accent-color);
+  --lwt-txt: var(--lwt-text-color);
+  --lwt-tb-bg: var(--toolbar-bgcolor);
+  --lwt-tb-txt: var(--toolbar-color);
+}
+
+/* inactive colors */
+:root:-moz-window-inactive{
+  --inactive-transparency: 30%;
+  
+  /*--caption: InactiveCaption;*/
+  --caption-text: InactiveCaptionText;
+  --tb-caption-text: color-mix( in srgb, -moz-dialogtext, transparent var(--inactive-transparency) );
+  
+  
+  /*--lwt-bg: var(--lwt-accent-color-inactive, var(--lwt-accent-color));*/
+  --lwt-txt: color-mix( in srgb, var(--lwt-text-color), transparent var(--inactive-transparency) );
+  --lwt-tb-txt: color-mix( in srgb, var(--toolbar-color), transparent var(--inactive-transparency) );
+}
+
+/* colors */
+:root{
+  --bg-col: var(--lwt-bg,  var(--caption));            /* background color */
+  --bg-txt: var(--lwt-txt, var(--caption-text));       /* bg text color    */
+  --tb-col: var(--lwt-tb-bg, var(--tb-caption));       /* toolbar bg color */
+  --tb-txt: var(--lwt-tb-txt, var(--tb-caption-text)); /* tb text color    */
+  
+  --br-col: var(--arrowpanel-border-color);            /* border color     */
+  
+  --debug-col: rgba(255, 0, 0, 0.0);
+}
+
+/* 
+
+##############################################################################################################################
+
+ G L O B A L
+
+*/
+
+:root{
+  --border: 1px solid var(--br-col); /* border */
+  
+  --enabled-opct: 1;
+  --disabled-opct: 0.5;
+  
+  --content-transition:  
+    margin-top var(--trans-dur) ease-out,
+    margin-bottom var(--trans-dur) ease-out,
+    margin-left var(--long-trans-dur) ease,
+    margin-right var(--long-trans-dur) ease
+  ;
+  
+  --bar-transition:
+    margin var(--long-trans-dur) ease,
+    top var(--trans-dur) ease-out,
+    background var(--trans-dur) ease-out,
+    color var(--trans-dur) ease-in,
+    border var(--trans-dur) ease,
+    border-radius var(--long-trans-dur) ease,
+    left var(--long-trans-dur) ease,
+    right var(--long-trans-dur) ease
+  ;
+  
+  --opacity-transition: 
+    opacity var(--trans-dur) ease-in,
+    fill var(--trans-dur) ease-in  
+  ;
+  
+  --hoverbar-transition: opacity var(--trans-dur) ease-out;
+}
+
+/* margin */
+:root{
+  --margin-on-top:    var(--margin);
+  --margin-on-right:  var(--margin);
+  --margin-on-bottom: var(--margin);
+  --margin-on-left:   var(--margin);
+}
+
+:root[titlepreface*="‍"]{
+  --margin-on-top:    0px;
+  --margin-on-right:  0px;
+  --margin-on-bottom: 0px;
+  --margin-on-left:   0px;
+}
+
+:root{
+  --top-margin:    var(--margin-on-top);
+  --right-margin:  var(--margin-on-right);
+  --bottom-margin: var(--margin-on-bottom);
+  --left-margin:   var(--margin-on-left);
+}
+
+:root{
+  --browser-margin: var(--top-margin) var(--right-margin) var(--bottom-margin) var(--left-margin);
+}
+
+/* 
+
+##############################################################################################################################
+
+ O V E R R I D E S
+
+*/
+
+* {
+  --tab-border-radius:                 var(--rounding) !important; /* tabs toolbar      */
+  --toolbarbutton-border-radius:       var(--rounding) !important; /* navbar & bookmark */
+  --arrowpanel-menuitem-border-radius: var(--rounding) !important; /* popup button      */
+  
+  --arrowpanel-border-radius:          var(--big-rounding) !important; /* popup itself  */
+  --panel-border-radius:               var(--big-rounding) !important; /* context menu  */
+  
+  --toolbar-start-end-padding: 3px !important;
+  --bookmarks-toolbar-overlapping-browser-height: 0px !important;
+}
+

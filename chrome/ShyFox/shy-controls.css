@@ -1,0 +1,8 @@
+#toolbar-menubar .titlebar-buttonbox-container{
+  position: fixed;
+  display: none; /* */
+}
+
+#TabsToolbar .titlebar-buttonbox-container{
+  display: none !important;
+}

@@ -1,0 +1,77 @@
+:root{
+  --left-nvbr-hgt: 0px;
+  --left-bmbr-hgt: 0px;
+}
+
+:root:not([titlepreface*="؜"]){
+  --left-margin: var(--sdbr-wdt);
+}
+
+/* sidebar */
+#sidebar-box{
+  --sidebar-background-color: var(--bg-col) !important;
+  --sidebar-text-color: var(--bg-txt) !important;
+  
+  position: fixed;
+  top: calc(var(--left-nvbr-hgt) + var(--left-bmbr-hgt));
+  bottom: 0;
+  left: 0;
+  
+  width: var(--sdbr-wdt) !important;
+}
+
+/* navbar */
+@media (-moz-bool-pref: "shyfox.position.navbar") {
+  :root{
+    --left-nvbr-hgt: calc(var(--nvbr-hgt) * 2);
+  }
+  
+  #nav-bar{
+    left: 0;
+    top: 0;
+    width: var(--sdbr-wdt) !important;
+    
+    padding-bottom: var(--nvbr-hgt) !important;
+    height: calc(var(--nvbr-hgt) * 2) !important;
+  }
+  
+  #urlbar-container{
+    width: calc(var(--sdbr-wdt) - var(--toolbar-start-end-padding) * 2) !important;
+    height: var(--nvbr-hgt) !important;
+    
+    margin: 0 !important;
+    margin-left: var(--toolbar-start-end-padding) !important;
+    
+    position: absolute !important;
+    bottom: 0;
+  }
+    
+  #urlbar[breakout-extend]{
+    #urlbar-background{
+      border-radius: 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+    }
+    
+    width: var(--sdbr-wdt) !important;
+    left: calc( 0px - var(--toolbar-start-end-padding)) !important;
+    right: 0 !important;
+  }
+  
+}
+
+/* bookmarks toolbar */
+@media (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+  :root{
+    --bmbr-hgt: 40px;
+    --left-bmbr-hgt: var(--bmbr-hgt);
+  }
+  
+  #PersonalToolbar{
+    left: 0;
+    top: var(--left-nvbr-hgt);
+
+    width: var(--sdbr-wdt) !important;
+  }
+}
+
