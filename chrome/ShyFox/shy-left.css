@@ -94,7 +94,7 @@
   --sidebar-text-color: var(--bg-txt) !important;
   
   position: fixed;
-  top: calc(var(--left-nvbr-hgt) + var(--left-bmbr-hgt));
+  top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) + var(--margin) );
   bottom: var(--margin);  
 }
 
@@ -106,7 +106,7 @@
 
 #sidebar{
   border-radius: var(--big-rounding) !important;
-  margin-right: 3px;
+  margin-right: calc( var(--margin) / 2 );
 }
 
 #sidebar-main{ z-index: 2 !important; }

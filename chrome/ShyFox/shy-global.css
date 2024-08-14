@@ -35,7 +35,7 @@
 #navigator-toolbox{
   position: relative !important;
   margin-top: -1px !important;
-  z-index: 2;
+  z-index: 5;
 }
 
 #private-browsing-indicator-with-label,
