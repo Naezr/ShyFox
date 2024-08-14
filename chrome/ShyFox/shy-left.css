@@ -53,6 +53,8 @@
     }
   }
   
+  .tabbrowser-tab:not([pinned], [fadein]) { visibility: collapse !important; }
+  
   & * { scrollbar-width: none !important; }
   
   #tabs-newtab-button {
@@ -62,7 +64,7 @@
     border-radius: var(--button-border-radius) !important;
     &:hover { background: var(--button-background-color) !important; }
     
-    height: 45px !important;
+    height: 40px !important;
     width: 100% !important;
     
     .toolbarbutton-icon {
