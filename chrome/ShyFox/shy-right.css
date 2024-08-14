@@ -1,8 +1,8 @@
-@media (-moz-bool-pref: "shyfox.remove.toolbar") {
+@media not (-moz-bool-pref: "shyfox.position.tabbar") {
   #TabsToolbar{ display: none !important; }
 }
 
-@media not (-moz-bool-pref: "shyfox.remove.toolbar") { /* start of wrapper */
+@media (-moz-bool-pref: "shyfox.position.tabbar") { /* start of wrapper */
 
 /* 
 
@@ -74,12 +74,6 @@
 */
 
 #TabsToolbar{
-  transition: var(--bar-transition) !important;
-  border: 0px solid transparent !important;
-  background: transparent !important;
-  color: var(--tbbr-col) !important;
-
-  position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
@@ -87,7 +81,7 @@
   padding-top: calc(var(--tbbr-menubutton-hgt) + var(--tbbr-extbutton-hgt)) !important;
   width: var(--tbbr-wdt) !important;
 
-  toolbarbutton{ height: var(--nvbr-hgt) !important; }
+  toolbarbutton{ height: var(--tbbr-wdt) !important; }
 
   toolbarbutton > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack){
     width: 32px !important;

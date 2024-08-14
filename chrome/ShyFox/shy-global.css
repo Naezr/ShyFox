@@ -39,7 +39,6 @@
 }
 
 #private-browsing-indicator-with-label,
-#tabbrowser-tabs,
 .titlebar-spacer
 { display: none !important; }
 
@@ -60,7 +59,15 @@
 
 */
 
-#sidebar-box{ z-index: 1 !important; }
+#sidebar-main{
+  position: fixed;
+  z-index: 5;
+}
+
+#sidebar-box{
+  position: fixed;
+  z-index: 1 !important;
+}
 
 #sidebar-splitter{
   display: none !important;
@@ -102,6 +109,7 @@
   
   z-index: 2;
   position: fixed !important;
+  transition: var(--bar-transition) !important;
 }
 
 #urlbar:focus-within{
@@ -143,6 +151,8 @@
   position: fixed;
   height: var(--bmbr-hgt) !important;
   padding: 4px var(--toolbar-start-end-padding) !important;
+  
+  transition: var(--bar-transition) !important;
 }
 
 #PersonalToolbar > toolbarbutton,
@@ -166,3 +176,18 @@
   padding: 0 8px !important;
 }
 
+/* 
+
+##############################################################################################################################
+
+ T A B S   T O O L B A R
+
+*/
+
+#TabsToolbar{
+  background: transparent !important;
+  color: var(--tbbr-col) !important;
+  border: 0px solid transparent !important;
+  transition: var(--bar-transition) !important;
+  position: fixed;
+}

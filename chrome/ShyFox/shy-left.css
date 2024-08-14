@@ -8,11 +8,14 @@
 }
 
 /* sidebar */
+#sidebar-main > * {
+
+}
+
 #sidebar-box{
   --sidebar-background-color: var(--bg-col) !important;
   --sidebar-text-color: var(--bg-txt) !important;
   
-  position: fixed;
   top: calc(var(--left-nvbr-hgt) + var(--left-bmbr-hgt));
   bottom: 0;
   left: 0;
@@ -74,4 +77,3 @@
     width: var(--sdbr-wdt) !important;
   }
 }
-
