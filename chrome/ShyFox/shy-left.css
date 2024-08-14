@@ -3,24 +3,35 @@
   --left-bmbr-hgt: 0px;
 }
 
-:root:not([titlepreface*="؜"]){
-  --left-margin: var(--sdbr-wdt);
+:root:not([titlepreface*="؜"]):not(:has(#sidebar-main[hidden])){
+  --left-margin: var(--sdbr-tb-wdt);
+  &:has(
+    #sidebar-box:not([hidden]),
+    #sidebar-main > *[expanded]
+  ) { --left-margin: var(--sdbr-wdt); }
 }
 
 /* sidebar */
-#sidebar-main > * {
-
-}
-
-#sidebar-box{
+#sidebar-box, #sidebar-main{
   --sidebar-background-color: var(--bg-col) !important;
   --sidebar-text-color: var(--bg-txt) !important;
   
   top: calc(var(--left-nvbr-hgt) + var(--left-bmbr-hgt));
-  bottom: 0;
-  left: 0;
-  
+  bottom: var(--margin);  
+}
+
+:root:not( :has(#sidebar-box[hidden]) )
+#sidebar-main > *:not([expanded]){
+  width: var(--sdbr-tb-wdt) !important;
+}
+
+#sidebar-main > *[expanded]{
   width: var(--sdbr-wdt) !important;
+}
+
+#sidebar-box{
+  width: calc( var(--sdbr-wdt) - var(--sdbr-tb-wdt) ) !important;
+  left: var(--sdbr-tb-wdt);
 }
 
 /* navbar */

@@ -61,8 +61,39 @@
 
 #sidebar-main{
   position: fixed;
-  z-index: 5;
+  z-index: 2;
 }
+
+.wrapper:has(.tools-and-extensions) {
+  background: color-mix(in srgb, var(--bg-col), transparent 25%) !important;
+  color: var(--bg-txt) !important;
+  border: 0px solid transparent !important;
+  
+  padding-inline: 2px !important;
+  &:has(.expanded-button[label]) { padding-inline: var(--toolbar-start-end-padding) !important; }
+  
+  min-width: 0px !important;
+  
+  .expanded-button { --button-padding: 2px 5px !important; }
+}
+
+:root:has(#sidebar-main > *[expanded]) #sidebar-box {
+  filter: blur(5px) !important;
+}
+
+#vertical-tabs .tabbrowser-tab{
+  max-width: none !important;
+  margin-inline: 0px !important;
+  
+  .tab-icon-image{ margin-inline: 0px !important; }
+  .tab-label-container{ margin-inline-start: 6px !important; }
+  
+  &:nth-last-child(1 of [pinned]) {
+    border-bottom: 1px solid CurrentColor !important;
+  }
+}
+
+#vertical-tabs #tabbrowser-arrowscrollbox-periphery #tabs-newtab-button {display: flex !important;}
 
 #sidebar-box{
   position: fixed;
@@ -74,7 +105,6 @@
 }
 
 #sidebar-header{
-  display: grid !important;
   padding: 0 !important;
   border: none !important;
 }
@@ -87,10 +117,6 @@
 
 #identity-icon-box{
   padding-inline: 6px !important;
-}
-
-#sidebar-close{
-  display: none !important;
 }
 
 /* 

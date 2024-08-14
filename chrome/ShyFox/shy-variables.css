@@ -16,6 +16,7 @@
   --nvbr-hgt: 40px;
   --tbbr-wdt: 40px;
   --sdbr-wdt: 300px;
+  --sdbr-tb-wdt: 40px;
   --top-hide-margin-inline: 100px;
   --panel-hidden-hitbox: 8px;
 }
@@ -158,11 +159,12 @@
   --tab-border-radius:                 var(--rounding) !important; /* tabs toolbar      */
   --toolbarbutton-border-radius:       var(--rounding) !important; /* navbar & bookmark */
   --arrowpanel-menuitem-border-radius: var(--rounding) !important; /* popup button      */
+  --button-border-radius:              var(--rounding) !important; /* button            */
   
   --arrowpanel-border-radius:          var(--big-rounding) !important; /* popup itself  */
   --panel-border-radius:               var(--big-rounding) !important; /* context menu  */
   
-  --toolbar-start-end-padding: 3px !important;
+  --toolbar-start-end-padding: 5px !important;
   --bookmarks-toolbar-overlapping-browser-height: 0px !important;
 }
 
