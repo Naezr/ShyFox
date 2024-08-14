@@ -29,7 +29,8 @@
   
   min-width: 0px !important;
   
-  .expanded-button { --button-padding: 2px 5px !important; }
+  .expanded-button { --button-padding: 0 9px !important; }
+  moz-button:not(.expanded-button) { margin-left: 2px }
 }
 
 #sidebar-main > *[expanded]{
@@ -47,6 +48,7 @@
 
     .tab-icon-image{ margin-inline: 0px !important; }
     .tab-label-container{ margin-inline-start: 6px !important; }
+    .tab-content { padding: 0 var(--inline-tab-padding) !important; }
 
     &:nth-last-child(1 of [pinned]) {
       border-bottom: 1px solid CurrentColor !important;
@@ -87,9 +89,6 @@
   border-radius: 0 !important;
 }
 
-#sidebar-box{ z-index: 1 !important; }
-#sidebar-main{ z-index: 2 !important; }
-
 #sidebar-box, #sidebar-main{
   --sidebar-background-color: var(--bg-col) !important;
   --sidebar-text-color: var(--bg-txt) !important;
@@ -100,9 +99,17 @@
 }
 
 #sidebar-box{
+  z-index: 1 !important;
   width: calc( var(--sdbr-wdt) - var(--sdbr-tb-wdt) ) !important;
   left: var(--sdbr-tb-wdt);
 }
+
+#sidebar{
+  border-radius: var(--big-rounding) !important;
+  margin-right: 3px;
+}
+
+#sidebar-main{ z-index: 2 !important; }
 
 :root:not( :has(#sidebar-box[hidden]) )
 #sidebar-main > *:not([expanded]){
