@@ -88,7 +88,10 @@
   display: flex !important;
 }
 
-#identity-icon-box { max-width: calc(30px + 13em) !important; }
+#identity-icon-box {
+  padding-inline: 6px !important;
+  max-width: calc(30px + 13em) !important;
+}
 
 /* 
 

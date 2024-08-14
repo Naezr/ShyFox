@@ -75,9 +75,6 @@
   border-radius: 0 !important;
 }
 
-#identity-icon-box{
-  padding-inline: 6px !important;
-}
 
 #sidebar-box, #sidebar-main{
   --sidebar-background-color: var(--bg-col) !important;
