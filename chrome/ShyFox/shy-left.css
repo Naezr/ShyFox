@@ -70,8 +70,9 @@
     width: 100% !important;
     
     .toolbarbutton-icon {
-      width: 20px !important;
-      margin-left: calc( 50% - 20px ) !important;
+      width: 100% !important;
+      height: 16px !important;
+      padding: 0 calc( 50% - 8px );
     }
   }
 }
