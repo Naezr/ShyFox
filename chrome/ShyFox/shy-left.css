@@ -55,7 +55,21 @@
   
   & * { scrollbar-width: none !important; }
   
-  #tabs-newtab-button { display: flex !important; }
+  #tabs-newtab-button {
+    display: flex !important;
+    appearance: none !important;
+    
+    border-radius: var(--button-border-radius) !important;
+    &:hover { background: var(--button-background-color) !important; }
+    
+    height: 45px !important;
+    width: 100% !important;
+    
+    .toolbarbutton-icon {
+      width: 20px !important;
+      margin-left: calc( 50% - 20px ) !important;
+    }
+  }
 }
 
 #sidebar-splitter{ display: none !important; }
