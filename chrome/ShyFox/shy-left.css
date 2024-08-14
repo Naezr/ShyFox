@@ -40,19 +40,23 @@
   filter: blur(5px) !important;
 }
 
-#vertical-tabs .tabbrowser-tab{
-  max-width: none !important;
-  margin-inline: 0px !important;
-  
-  .tab-icon-image{ margin-inline: 0px !important; }
-  .tab-label-container{ margin-inline-start: 6px !important; }
-  
-  &:nth-last-child(1 of [pinned]) {
-    border-bottom: 1px solid CurrentColor !important;
-  }
-}
+#vertical-tabs {
+  .tabbrowser-tab{
+    max-width: none !important;
+    margin-inline: 0px !important;
 
-#vertical-tabs #tabbrowser-arrowscrollbox-periphery #tabs-newtab-button {display: flex !important;}
+    .tab-icon-image{ margin-inline: 0px !important; }
+    .tab-label-container{ margin-inline-start: 6px !important; }
+
+    &:nth-last-child(1 of [pinned]) {
+      border-bottom: 1px solid CurrentColor !important;
+    }
+  }
+  
+  & * { scrollbar-width: none !important; }
+  
+  #tabs-newtab-button { display: flex !important; }
+}
 
 #sidebar-splitter{ display: none !important; }
 
