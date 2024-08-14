@@ -19,13 +19,8 @@
 
 */
 
-#sidebar-main{
-  position: fixed;
-  z-index: 2;
-}
-
 .wrapper:has(.tools-and-extensions) {
-  background: color-mix(in srgb, var(--bg-col), transparent 25%) !important;
+  background: color-mix(in srgb, var(--bg-col), transparent 50%) !important;
   color: var(--bg-txt) !important;
   border: 0px solid transparent !important;
   
@@ -35,6 +30,10 @@
   min-width: 0px !important;
   
   .expanded-button { --button-padding: 2px 5px !important; }
+}
+
+#sidebar-main > *[expanded]{
+  width: var(--sdbr-wdt) !important;
 }
 
 :root:has(#sidebar-main > *[expanded]) #sidebar-box {
@@ -55,14 +54,7 @@
 
 #vertical-tabs #tabbrowser-arrowscrollbox-periphery #tabs-newtab-button {display: flex !important;}
 
-#sidebar-box{
-  position: fixed;
-  z-index: 1 !important;
-}
-
-#sidebar-splitter{
-  display: none !important;
-}
+#sidebar-splitter{ display: none !important; }
 
 #sidebar-header{
   padding: 0 !important;
@@ -75,13 +67,21 @@
   border-radius: 0 !important;
 }
 
+#sidebar-box{ z-index: 1 !important; }
+#sidebar-main{ z-index: 2 !important; }
 
 #sidebar-box, #sidebar-main{
   --sidebar-background-color: var(--bg-col) !important;
   --sidebar-text-color: var(--bg-txt) !important;
   
+  position: fixed;
   top: calc(var(--left-nvbr-hgt) + var(--left-bmbr-hgt));
   bottom: var(--margin);  
+}
+
+#sidebar-box{
+  width: calc( var(--sdbr-wdt) - var(--sdbr-tb-wdt) ) !important;
+  left: var(--sdbr-tb-wdt);
 }
 
 :root:not( :has(#sidebar-box[hidden]) )
@@ -89,14 +89,7 @@
   width: var(--sdbr-tb-wdt) !important;
 }
 
-#sidebar-main > *[expanded]{
-  width: var(--sdbr-wdt) !important;
-}
 
-#sidebar-box{
-  width: calc( var(--sdbr-wdt) - var(--sdbr-tb-wdt) ) !important;
-  left: var(--sdbr-tb-wdt);
-}
 
 /* 
 
