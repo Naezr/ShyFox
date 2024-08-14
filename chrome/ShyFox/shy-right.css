@@ -38,7 +38,7 @@
   
   #PanelUI-menu-button{
     fill: var(--tbbr-col) !important;
-    transition: var(--bar-transition), var(--opacity-transition), margin none !important;
+    transition: var(--bar-transition), var(--opacity-transition), margin 0s !important;
 
     position: fixed !important;
     z-index: -999 !important;
@@ -55,7 +55,7 @@
   
   #unified-extensions-button{
     fill: var(--tbbr-col) !important;
-    transition: var(--bar-transition), var(--opacity-transition), margin none !important;
+    transition: var(--bar-transition), var(--opacity-transition), margin 0s !important;
 
     position: fixed !important;
     z-index: -999 !important;
