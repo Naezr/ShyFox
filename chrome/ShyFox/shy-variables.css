@@ -22,6 +22,10 @@
 }
 
 :root{
+  --pinned-tab-icon-size: 25px;
+}
+
+:root{
   --trans-dur: 0.25s;
   --long-trans-dur: 0.5s;
 }
