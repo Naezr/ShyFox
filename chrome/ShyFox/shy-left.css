@@ -30,6 +30,8 @@
   
   min-width: 0px !important;
   .tools-and-extensions, .bottom-actions { padding-inline: 0px !important }
+  
+  :is(.tools-and-extensions, .bottom-actions) moz-button { margin-block-start: 4px !important; }
 }
 
 
