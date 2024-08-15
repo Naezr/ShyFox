@@ -173,7 +173,7 @@
   top: var(--hvbr-pd-inline);
   height: calc( 100% - var(--hvbr-pd-inline) * 2 );
   width: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
-} }
+}
 
 /* 
 

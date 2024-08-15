@@ -148,7 +148,7 @@
 
 #TabsToolbar{
   background: transparent !important;
-  color: var(--tbbr-col) !important;
+  color: var(--bg-txt) !important;
   border: 0px solid transparent !important;
   transition: var(--bar-transition) !important;
   position: fixed;
