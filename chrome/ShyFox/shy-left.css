@@ -25,41 +25,23 @@
   border: 0px solid transparent !important;
   
   padding-inline: 2px !important;
-  &:has(.expanded-button[label]) { padding-inline: var(--toolbar-start-end-padding) !important; }
+  padding-block: 0px !important;
+  &:has(.expanded-button) { padding-inline: var(--toolbar-start-end-padding) !important; }
   
   min-width: 0px !important;
-  
-  .expanded-button { --button-padding: 0 9px !important; }
-  moz-button:not(.expanded-button) { margin-left: 2px }
+  .tools-and-extensions, .bottom-actions { padding-inline: 0px !important }
 }
 
-#sidebar-main > *[expanded]{
-  width: var(--sdbr-wdt) !important;
-}
 
-:root:has(#sidebar-main > *[expanded]) #sidebar-box {
-  filter: blur(5px) !important;
-}
 
 #vertical-tabs {
-  .tabbrowser-tab{
-    max-width: none !important;
-    margin-inline: 0px !important;
-
-    .tab-icon-image{ margin-inline: 0px !important; }
-    .tab-label-container{ margin-inline-start: 6px !important; }
-    .tab-content { padding: 0 var(--inline-tab-padding) !important; }
-
-    &:nth-last-child(1 of [pinned]) {
-      border-bottom: 1px solid CurrentColor !important;
-    }
-  }
+  .tabbrowser-tab{ max-width: none !important; }
   
   .tabbrowser-tab:not([pinned], [fadein]) { visibility: collapse !important; }
   
-  & * { scrollbar-width: none !important; }
+  #vertical-pinned-tabs-container { padding-inline: 0px !important; }
   
-  #tabs-newtab-button {
+  #tabs-newtab-button{
     display: flex !important;
     appearance: none !important;
     
@@ -75,7 +57,15 @@
       padding: 0 calc( 50% - 8px );
     }
   }
+  
+  #vertical-tabs-newtab-button{ appearance: none !important; }
+  #newtab-button-container{
+    margin-inline-end: 0px !important;
+    padding-top: 0px !important;
+  }
 }
+
+
 
 #sidebar-splitter{ display: none !important; }
 
@@ -89,6 +79,8 @@
   padding: 0 5px !important;
   border-radius: 0 !important;
 }
+
+
 
 #sidebar-box, #sidebar-main{
   --sidebar-background-color: var(--bg-col) !important;
@@ -112,12 +104,20 @@
 
 #sidebar-main{ z-index: 2 !important; }
 
+
+
 :root:not( :has(#sidebar-box[hidden]) )
 #sidebar-main > *:not([expanded]){
   width: var(--sdbr-tb-wdt) !important;
 }
 
+#sidebar-main > *[expanded]{
+  width: var(--sdbr-wdt) !important;
+}
 
+:root:has(#sidebar-main > *[expanded]) #sidebar-box {
+  filter: blur(5px) !important;
+}
 
 /* 
 
