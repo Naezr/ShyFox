@@ -1,5 +1,4 @@
 @media not (-moz-bool-pref: "shyfox.position.tabbar") {
-  #TabsToolbar{ display: none !important; }
   @media (-moz-bool-pref: "shyfox.position.menubutton") {#PanelUI-menu-button { display: none !important; }}
   @media (-moz-bool-pref: "shyfox.position.extbutton") {#unified-extensions-button{ display: none !important; }}
 }

@@ -52,8 +52,11 @@
     &:not([pinned], [fadein]) { visibility: collapse !important; }
   }
   
-  .tab-background:is([selected], [multiselected]) 
-  { background-color: color-mix(in srgb, var(--tab-selected-bgcolor), transparent 50%) !important; }
+  .tab-background:is([selected], [multiselected])
+  { background-color: color-mix(in srgb, currentColor 15%, transparent) !important; !important; }
+  
+  .tabbrowser-tab[pinned] .tab-background:not( :is([selected], [multiselected]) )
+  { background-color: color-mix(in srgb, currentColor 5%, transparent) !important; }
   
   #tabbrowser-tabs:not([expanded]){
     #newtab-button-container, #tabs-newtab-button, .tabbrowser-tab
@@ -157,6 +160,8 @@
   bottom: 0px;
   
   z-index: 2 !important;
+  
+  
 }
 
 #sidebar-box{
@@ -168,24 +173,19 @@
   left: var(--sdbr-tb-wdt);
   
   border-radius: var(--big-rounding) !important;
+  transition: var(--bar-transition), var(--opacity-transition) !important;
 }
-
-#sidebar{
-  border: var(--border) !important;
-  border-radius: var(--big-rounding) !important;
-}
-
-
 
 #sidebar-box[hidden]{
   display: flex !important;
   opacity: 0 !important;
   pointer-events: none !important;
-  left: calc(0px - var(--sdbr-wdt)) !important;
+  left: calc( 0px - var(--sdbr-wdt) + var(--sdbr-tb-wdt) ) !important;
 }
 
-#sidebar-box{
-  transition: var(--bar-transition), var(--opacity-transition) !important;
+#sidebar{
+  border: var(--border) !important;
+  border-radius: var(--big-rounding) !important;
 }
 
 
