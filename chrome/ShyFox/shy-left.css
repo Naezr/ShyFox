@@ -25,7 +25,7 @@
   border: 0px solid transparent !important;
   
   padding-inline: 2px !important;
-  padding-block: 0px !important;
+  padding-block: var(--margin) !important;
   &:has(.expanded-button) { padding-inline: var(--toolbar-start-end-padding) !important; }
   
   min-width: 0px !important;
@@ -89,11 +89,20 @@
   --sidebar-text-color: var(--bg-txt) !important;
   
   position: fixed;
-  top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) + var(--margin) );
-  bottom: var(--margin);  
+  
+}
+
+#sidebar-main{
+  top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) );
+  bottom: 0px;
+  
+  z-index: 2 !important;
 }
 
 #sidebar-box{
+  top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) + var(--margin) );
+  bottom: var(--margin);
+  
   z-index: 1 !important;
   width: calc( var(--sdbr-wdt) - var(--sdbr-tb-wdt) ) !important;
   left: var(--sdbr-tb-wdt);
@@ -104,7 +113,7 @@
   margin-right: calc( var(--margin) / 2 );
 }
 
-#sidebar-main{ z-index: 2 !important; }
+
 
 
 
