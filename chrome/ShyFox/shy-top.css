@@ -311,7 +311,7 @@
     border-radius: var(--nvbr-hover-brs) !important; border: var(--nvbr-hover-brd) !important;
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); }
     @media not (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{ opacity: var(--enabled-opct); } }
-    @media not (-moz-bool-pref: "shyfox.position.menubutton") ) { #PanelUI-menu-button{ opacity: var(--enabled-opct); } }
+    @media not (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{ opacity: var(--enabled-opct); } }
     #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
   }
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{

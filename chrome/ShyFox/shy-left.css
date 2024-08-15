@@ -24,7 +24,7 @@
   color: var(--bg-txt) !important;
   border: 0px solid transparent !important;
   
-  padding-inline: 2px !important;
+  padding-inline: 0px !important;
   padding-block: var(--margin) !important;
   &:has(.expanded-button) { padding-inline: var(--toolbar-start-end-padding) !important; }
   
@@ -37,33 +37,55 @@
 
 
 #vertical-tabs {
-  .tabbrowser-tab{ max-width: none !important; }
+  width: 100% !important;
   
-  .tabbrowser-tab:not([pinned], [fadein]) { visibility: collapse !important; }
+  .tabbrowser-tab{
+    max-width: none !important;
+    padding: 0 !important;
+    
+    .tab-background{ border-radius: var(--tab-border-radius) !important; }
+    
+    &:not([pinned], [fadein]) { visibility: collapse !important; }
+  }
   
   #vertical-pinned-tabs-container { padding-inline: 0px !important; }
   
+  #tabbrowser-tabs:not([expanded]){
+    #newtab-button-container, #tabs-newtab-button, .tabbrowser-tab
+    { width: calc( var(--sdbr-tb-wdt) - 8px ) !important; }
+    
+    #newtab-button-container{ padding-inline: 4px !important; }
+    #tabs-newtab-button, .tabbrowser-tab{ margin-inline: 4px !important; }
+  }
+  
+}
+
+
+
+#vertical-tabs{
   #tabs-newtab-button{
     display: flex !important;
     appearance: none !important;
-    
+
     border-radius: var(--button-border-radius) !important;
-    &:hover { background: var(--button-background-color) !important; }
-    
-    height: 40px !important;
+    &:hover { background: var(--tab-hover-background-color) !important; }
+
+    height: 36px !important;
     width: 100% !important;
-    
+
     .toolbarbutton-icon {
       width: 100% !important;
       height: 16px !important;
       padding: 0 calc( 50% - 8px );
     }
   }
-  
-  #vertical-tabs-newtab-button{ appearance: none !important; }
+
+  #vertical-tabs-newtab-button{
+    appearance: none !important;
+    border-radius: var(--rounding) !important;
+  }
   #newtab-button-container{
     margin-inline-end: 0px !important;
-    padding-top: 0px !important;
   }
 }
 
@@ -100,7 +122,7 @@
 }
 
 #sidebar-box{
-  top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) + var(--margin) );
+  top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) );
   bottom: var(--margin);
   
   z-index: 1 !important;
@@ -109,6 +131,7 @@
 }
 
 #sidebar{
+  border: var(--border) !important;
   border-radius: var(--big-rounding) !important;
   margin-right: calc( var(--margin) / 2 );
 }
@@ -116,8 +139,6 @@
 
 
 
-
-:root:not( :has(#sidebar-box[hidden]) )
 #sidebar-main > *:not([expanded]){
   width: var(--sdbr-tb-wdt) !important;
 }
