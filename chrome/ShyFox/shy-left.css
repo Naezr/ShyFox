@@ -52,6 +52,9 @@
     &:not([pinned], [fadein]) { visibility: collapse !important; }
   }
   
+  .tab-background:is([selected], [multiselected]) 
+  { background-color: color-mix(in srgb, var(--tab-selected-bgcolor), transparent 50%) !important; }
+  
   #tabbrowser-tabs:not([expanded]){
     #newtab-button-container, #tabs-newtab-button, .tabbrowser-tab
     { width: calc( var(--sdbr-tb-wdt) - 8px ) !important; }
@@ -130,6 +133,7 @@
     appearance: none !important;
     border-radius: var(--rounding) !important;
   }
+  
   #newtab-button-container{
     display: none !important; /* */
     margin-inline-end: 0px !important;
