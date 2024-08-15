@@ -63,6 +63,11 @@
 
 
 #vertical-tabs{
+  #tabbrowser-arrowscrollbox[overflowing="true"] {
+    border-top: 1px solid color-mix(in srgb, currentColor 25%, transparent);
+    padding-block: 5px !important;
+  }
+  
   #tabs-newtab-button{
     display: flex !important;
     appearance: none !important;
@@ -86,6 +91,7 @@
   }
   #newtab-button-container{
     margin-inline-end: 0px !important;
+    padding: 0px !important;
   }
 }
 
