@@ -28,8 +28,12 @@
   color: var(--bg-txt) !important;
   border: 0px solid transparent !important;
   
-  padding-inline: 0px !important;
-  padding-block: var(--margin) !important;
+  padding: 0px !important;
+  padding-bottom: var(--margin) !important;
+  
+  @media ( not (-moz-bool-pref: "shyfox.position.navbar")) and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) 
+  { padding-top: var(--margin) !important; }
+  
   &:has(.expanded-button) { padding-inline: var(--toolbar-start-end-padding) !important; }
   
   min-width: 0px !important;
@@ -160,12 +164,16 @@
   bottom: 0px;
   
   z-index: 2 !important;
-  
+
   
 }
 
 #sidebar-box{
-  top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) );
+  top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) + var(--margin) );
+  
+  @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") 
+  { top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) ); }
+  
   bottom: var(--margin);
   
   z-index: 1 !important;
@@ -189,6 +197,10 @@
 }
 
 
+
+#sidebar-main > *{
+  transition: width 3s ease !important;
+}
 
 #sidebar-main > *:not([expanded]){
   width: var(--sdbr-tb-wdt) !important;
