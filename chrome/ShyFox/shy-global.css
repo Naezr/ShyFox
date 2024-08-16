@@ -51,6 +51,36 @@
   }
 }
 
+/* 
+
+##############################################################################################################################
+
+ D E V T O O L S
+
+*/
+
+.browserSidebarContainer, .responsive-mode { background-color: var(--bg-col) !important; }
+
+browser[class*="devtools-toolbox"]{
+  border-radius: var(--big-rounding) !important;
+  border: var(--border) !important;
+}
+
+.devtools-side-splitter, .devtools-horizontal-splitter{
+  background-color: transparent !important;
+  margin-inline: 0px !important;
+  margin: 0px !important;
+}
+
+.devtools-side-splitter      { min-width:  calc( var(--margin) / 2 ) !important; }
+.devtools-horizontal-splitter{ min-height: calc( var(--margin) / 2 ) !important; }
+
+.rdm-toolbar {
+  margin: 2px !important;
+  width: calc( 100% - 4px ) !important;
+  border-top-left-radius: var(--big-rounding) !important;
+  border-top-right-radius: var(--big-rounding) !important;
+}
 
 /* 
 
