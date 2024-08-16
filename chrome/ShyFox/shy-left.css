@@ -238,6 +238,11 @@
     
     position: absolute !important;
     bottom: 0;
+    
+    .urlbar-page-action{ visibility: collapse !important; }
+    #pageActionButton[multiple-children]{ visibility: visible !important; }
+    
+    #identity-icon-box #identity-icon-label { display: none !important; }
   }
     
   #urlbar[breakout-extend]{

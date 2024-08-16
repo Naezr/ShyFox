@@ -212,7 +212,7 @@ browser[class*="devtools-toolbox"]{
   notification-message{
     border-radius: var(--big-rounding) !important;
     background-color: var(--tb-col) !important;
-    color: var(--bt-col) !important;
+    color: var(--tb-txt) !important;
     
     &::before{ display: none !important; }
   }
