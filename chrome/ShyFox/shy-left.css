@@ -159,7 +159,6 @@
   bottom: 0px;
   
   z-index: 2 !important;
-  width: var(--sdbr-wdt) !important;
 }
 
 #sidebar-box{
@@ -204,6 +203,8 @@
   #sidebar-box{ filter: blur(5px) grayscale(80%) !important; }
   #sidebar { border: 0px solid transparent !important; }
 }
+
+:root:has(#sidebar-box[hidden]) #sidebar-main:not([hidden]){ width: var(--sdbr-wdt) !important; }
 
 /* 
 
