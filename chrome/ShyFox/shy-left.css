@@ -192,10 +192,6 @@
 
 
 
-#sidebar-main > *{
-  transition: width 3s ease !important;
-}
-
 #sidebar-main > *:not([expanded]){
   width: var(--sdbr-tb-wdt) !important;
 }
@@ -205,7 +201,7 @@
 }
 
 :root:has(#sidebar-main > *[expanded]){
-  #sidebar-box{ filter: blur(5px) grayscale(65%)  brightness(60%) !important; }
+  #sidebar-box{ filter: blur(5px) grayscale(80%) !important; }
   #sidebar { border: 0px solid transparent !important; }
 }
 
