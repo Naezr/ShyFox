@@ -53,10 +53,10 @@
   }
   
   .tab-background:is([selected], [multiselected])
-  { background-color: color-mix(in srgb, currentColor 15%, transparent) !important; !important; }
+  { background-color: color-mix(in srgb, currentColor 20%, transparent) !important; !important; }
   
   .tabbrowser-tab[pinned] .tab-background:not( :is([selected], [multiselected]) )
-  { background-color: color-mix(in srgb, currentColor 5%, transparent) !important; }
+  { background-color: color-mix(in srgb, currentColor 15%, transparent) !important; }
   
   #tabbrowser-tabs:not([expanded]){
     #newtab-button-container, #tabs-newtab-button, .tabbrowser-tab
