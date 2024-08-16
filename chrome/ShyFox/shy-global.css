@@ -183,3 +183,40 @@ browser[class*="devtools-toolbox"]{
   transition: var(--bar-transition) !important;
   position: fixed;
 }
+
+/* 
+
+##############################################################################################################################
+
+ N O T I F I C A T I O N
+
+*/
+
+#tab-notification-deck, .global-notificationbox{
+  position: fixed !important;
+  transition: var(--transition) !important;
+  z-index: 0 !important;
+  vbox{ background-color: transparent !important; }
+  background-color: transparent !important;
+  width: auto;
+  
+  max-width: calc(
+    100vw 
+    - var(--margin)
+    - var(--right-margin)
+    - var(--left-margin)
+  );
+  
+  top:  calc( var(--top-margin)  + var(--margin) / 2 );
+  left: calc( var(--left-margin) + var(--margin) / 2 );
+  
+  notification-message{
+    border-radius: var(--big-rounding) !important;
+    background-color: var(--tb-col) !important;
+    color: var(--bt-col) !important;
+    
+    &::before{ display: none !important; }
+  }
+  
+  .footer-button{ margin: 4px !important; }
+}
