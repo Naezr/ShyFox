@@ -19,6 +19,7 @@
 
 */
 
+/* new sidebar panel */
 .wrapper:has(.tools-and-extensions) {
   background: transparent !important;
   color: var(--bg-txt) !important;
@@ -39,7 +40,7 @@
 }
 
 
-
+/* tabs */
 #vertical-tabs {
   width: 100% !important;
   
@@ -68,7 +69,7 @@
 }
 
 
-  
+/* pinned tabs */
 #tabbrowser-tabs[expanded] #vertical-pinned-tabs-container{
   padding-inline: 0px !important;
   display: flex !important;
@@ -108,7 +109,7 @@
 }
 
 
-
+/* new tab buttons */
 #vertical-tabs{
   #tabbrowser-arrowscrollbox[overflowing="true"] {
     border-top: 1px solid color-mix(in srgb, currentColor 25%, transparent);
@@ -144,7 +145,7 @@
 }
 
 
-
+/* sidebar */
 #sidebar-splitter{ display: none !important; }
 
 #sidebar-box, #sidebar-main{
@@ -191,6 +192,7 @@
 }
 
 
+/* old sidebar */
 :root:has(#sidebar-main > *[hidden]) #sidebar-box:not([hidden]) {
   width: calc( var(--sdbr-wdt) - var(--margin) ) !important;
   margin-left: calc( var(--margin) / 2 ) !important;
@@ -209,6 +211,8 @@
   }
 }
 
+
+/* width */
 #sidebar-main > *:not([expanded]){
   width: var(--sdbr-tb-wdt) !important;
 }
@@ -217,7 +221,7 @@
   width: var(--sdbr-wdt) !important;
 }
 
-:root:has(#sidebar-main > *[expanded]){
+:root:has( #sidebar-main > *[expanded]:not([hidden]) ){
   #sidebar-box{ filter: blur(5px) grayscale(80%) !important; }
   #sidebar { border: 0px solid transparent !important; }
 }
