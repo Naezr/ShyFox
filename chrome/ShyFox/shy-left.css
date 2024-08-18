@@ -3,8 +3,11 @@
   --left-bmbr-hgt: 0px;
 }
 
-:root:not([titlepreface*="؜"]):not(:has(#sidebar-main[hidden])){
-  --left-margin: var(--sdbr-tb-wdt);
+:root:not([titlepreface*="؜"]){
+  &:not(
+    :has( #sidebar-main > *[hidden] )
+  ) { --left-margin: var(--sdbr-tb-wdt); }
+  
   &:has(
     #sidebar-box:not([hidden]),
     #sidebar-main > *[expanded]
@@ -183,7 +186,7 @@
   display: flex !important;
   opacity: 0 !important;
   pointer-events: none !important;
-  left: calc( 0px - var(--sdbr-wdt) + var(--sdbr-tb-wdt) ) !important;
+  left: calc( 0px - var(--sdbr-wdt) ) !important;
 }
 
 #sidebar{
