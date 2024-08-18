@@ -70,7 +70,7 @@
 
 
 /* pinned tabs */
-#tabbrowser-tabs[expanded] #vertical-pinned-tabs-container{
+#vertical-tabs #tabbrowser-tabs[expanded] #vertical-pinned-tabs-container{
   padding-inline: 0px !important;
   display: flex !important;
   flex-wrap: wrap;
