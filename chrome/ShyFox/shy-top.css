@@ -61,11 +61,36 @@
     toolbarspring { max-width: none !important; }
     padding-inline: var(--toolbar-start-end-padding) !important;
     
+    & :is( #edit-controls, #zoom-controls ) > *,
+    & > * { transition: var(--opacity-transition) !important; }
+    
     &:not( :has(#tabbrowser-tabs) ) #alltabs-button{ display: none !important; }
+    #tabbrowser-tabs{ padding-bottom: 0px !important; }
   }
   
   :root[titlepreface*="​"]{
+    #TabsToolbar{
+      --tbbr-hover-col: var(--tb-col);
+      --tbbr-hover-txt: var(--tb-txt);
+      --tbbr-hover-brs: var(--big-rounding);
+      --tbbr-hover-brd: var(--border);
+      
+      top: calc( var(--margin-on-top) - var(--tbbr-size) );
+      margin-inline: var(--top-hide-margin-inline) !important;
+      overflow: visible !important;
+    }
     
+    #TabsToolbar::before{
+      content: ""; position: absolute;
+      -moz-window-dragging: drag;
+      z-index: -999;
+      bottom: calc( 0px - var(--panel-hidden-hitbox) );
+      left: 0px;
+      width: 100%; height: 500%;
+      background: var(--debug-col);
+    }
+    
+    #TabsToolbar-customization-target > *{ opacity: 0; }
   }
   
 }

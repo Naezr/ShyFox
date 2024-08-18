@@ -205,16 +205,15 @@ browser[class*="devtools-toolbox"]{
     }
 
     .tabbrowser-tab[pinned]{
-      width: 36px !important;
+      &, .tab-stack{ width: 36px !important; }
 
       .tab-background{
         width: 32px !important;
         min-width: 32px !important;
-        margin: 4px !important;
+        margin: 4px 2px !important;
       }
 
       .tab-label-container{ display: none !important; }
-      .tab-content{ padding: 0 12px !important; }
     }
   }
 }
