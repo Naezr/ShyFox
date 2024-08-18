@@ -25,6 +25,9 @@
   --topbar-zindex: 5;
   
   --hover-top: calc( var(--margin) + var(--margin-on-top) );
+  
+  --nvbr-top-gap: 0px;
+  --bmbr-top-gap: 0px;
   --top-gap: calc( var(--margin) / 2 )
 }
 
@@ -136,8 +139,7 @@
   
   :root[titlepreface*="​"]{
     
-    --nvbr-gap: 0px;
-    @media not (-moz-bool-pref: "shyfox.position.tabbar") { --nvbr-gap: var(--top-gap); }
+    @media not (-moz-bool-pref: "shyfox.position.tabbar") { --nvbr-top-gap: var(--top-gap); }
     
     #nav-bar{
       --nvbr-hover-col: var(--tb-col);
@@ -147,7 +149,7 @@
       
       --toolbarbutton-icon-fill: var(--tb-txt) !important;
       
-      --nvbr-hover-top: calc( var(--hover-top) + var(--top-tbbr-hgt) + var(--nvbr-gap) );
+      --nvbr-hover-top: calc( var(--hover-top) + var(--top-tbbr-hgt) + var(--nvbr-top-gap) );
       
       top: calc( var(--margin-on-top) - var(--nvbr-hgt) );
       margin-inline: var(--top-hide-margin-inline) !important;
@@ -197,8 +199,7 @@
   
   :root[titlepreface*="​"]{
     
-    --bmbr-gap: 0px;
-    @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.tabbar") { --bmbr-gap: var(--top-gap); }  
+    @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.tabbar") { --bmbr-top-gap: var(--top-gap); }  
     
     #PersonalToolbar{
       --bmbr-hover-col: var(--tb-col);
@@ -206,7 +207,7 @@
       --bmbr-hover-brs: var(--big-rounding);
       --bmbr-hover-brd: var(--border);
       
-      --bmbr-hover-top: calc(var(--hover-top) + var(--top-tbbr-hgt) + var(--top-nvbr-hgt) + var(--bmbr-gap) + var(--nvbr-gap) );
+      --bmbr-hover-top: calc(var(--hover-top) + var(--top-tbbr-hgt) + var(--top-nvbr-hgt) + var(--bmbr-top-gap) + var(--nvbr-top-gap) );
       
       top: calc( var(--margin-on-top) - var(--bmbr-hgt) );
       margin-inline: var(--top-hide-margin-inline) !important;
