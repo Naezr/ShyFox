@@ -3,7 +3,11 @@
   @media (-moz-bool-pref: "shyfox.position.extbutton") {#unified-extensions-button{ display: none !important; }}
 }
 
-@media (-moz-bool-pref: "shyfox.position.tabbar") { /* start of wrapper */
+@media (-moz-bool-pref: "shyfox.remove.tabbar") and (-moz-bool-pref: "shyfox.position.tabbar") {
+  #TabsToolbar{ display: none !important; }
+}
+
+@media ( not (-moz-bool-pref: "shyfox.remove.tabbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") { /* start of wrapper */
 
 /* 
 

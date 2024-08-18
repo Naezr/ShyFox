@@ -64,6 +64,10 @@
     &:not( :has(#tabbrowser-tabs) ) #alltabs-button{ display: none !important; }
   }
   
+  :root[titlepreface*="​"]{
+    
+  }
+  
 }
 
 /* 
