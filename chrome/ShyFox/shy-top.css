@@ -60,6 +60,8 @@
   #TabsToolbar-customization-target{
     toolbarspring { max-width: none !important; }
     padding-inline: var(--toolbar-start-end-padding) !important;
+    
+    &:not( :has(#tabbrowser-tabs) ) #alltabs-button{ display: none !important; }
   }
   
 }
