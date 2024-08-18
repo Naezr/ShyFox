@@ -37,6 +37,7 @@
   
   #PanelUI-menu-button{
     fill: var(--tbbr-col) !important;
+    color: var(--tbbr-col) !important;
     transition: var(--bar-transition), var(--opacity-transition), margin 0s !important;
 
     position: fixed !important;
@@ -54,6 +55,7 @@
   
   #unified-extensions-button{
     fill: var(--tbbr-col) !important;
+    color: var(--tbbr-col) !important;
     transition: var(--bar-transition), var(--opacity-transition), margin 0s !important;
 
     position: fixed !important;
@@ -202,11 +204,13 @@
     } #TabsToolbar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; }
     @media (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{
       fill: var(--tbbr-hover-txt) !important;
+      color: var(--tbbr-hover-txt) !important;
       right: var(--tbbr-hover-right);
       opacity: var(--enabled-opct);
     } }
     @media (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{
-      fill: var(--tbbr-hover-txt) !important;  
+      fill: var(--tbbr-hover-txt) !important;
+      color: var(--tbbr-hover-txt) !important;
       right: var(--tbbr-hover-right);
       opacity: var(--enabled-opct);
     } }
@@ -230,11 +234,13 @@
     } #TabsToolbar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; }
     #unified-extensions-button{
       fill: var(--tbbr-hover-txt) !important;
+      color: var(--tbbr-hover-txt) !important;
       right: var(--tbbr-hover-right);
       opacity: var(--enabled-opct);
     }
     @media (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{
-      fill: var(--tbbr-hover-txt) !important;  
+      fill: var(--tbbr-hover-txt) !important;
+      color: var(--tbbr-hover-txt) !important;
       right: var(--tbbr-hover-right);
       opacity: var(--enabled-opct);
     } }
@@ -258,11 +264,13 @@
     } #TabsToolbar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; }
     @media (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{
       fill: var(--tbbr-hover-txt) !important;
+      color: var(--tbbr-hover-txt) !important;
       right: var(--tbbr-hover-right);
       opacity: var(--enabled-opct);
     } }
     #PanelUI-menu-button{
-      fill: var(--tbbr-hover-txt) !important;  
+      fill: var(--tbbr-hover-txt) !important;
+      color: var(--tbbr-hover-txt) !important;
       right: var(--tbbr-hover-right);
       opacity: var(--enabled-opct);
     }  
