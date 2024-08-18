@@ -192,6 +192,31 @@ browser[class*="devtools-toolbox"]{
     padding: 8px !important;
     margin: 0px !important;
   }
+  
+  #tabbrowser-tabs{
+    height: var(--tbbr-size) !important;
+
+    .tabbrowser-tab{
+      .tab-background{
+        margin: 4px 0px !important;
+        height: 32px !important;
+        min-height: 32px !important;
+      }
+    }
+
+    .tabbrowser-tab[pinned]{
+      width: 36px !important;
+
+      .tab-background{
+        width: 32px !important;
+        min-width: 32px !important;
+        margin: 4px !important;
+      }
+
+      .tab-label-container{ display: none !important; }
+      .tab-content{ padding: 0 12px !important; }
+    }
+  }
 }
 
 /* 

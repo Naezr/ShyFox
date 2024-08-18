@@ -49,18 +49,19 @@
 @media not (-moz-bool-pref: "shyfox.position.tabbar") {
   :root{ --top-tbbr-hgt: var(--tbbr-size); }
   
+  #titlebar{ z-index: calc( var(--topbar-zindex) + 1 ) !important; }
+  
   #TabsToolbar{
-    z-index: calc( var(--topbar-zindex) + 1 ) !important;
-    
     right: var(--topbar-right);
     left: var(--topbar-left);
     top: 0px;
   }
   
   #TabsToolbar-customization-target{
-    width: 100% !important;
     toolbarspring { max-width: none !important; }
+    padding-inline: var(--toolbar-start-end-padding) !important;
   }
+  
 }
 
 /* 
