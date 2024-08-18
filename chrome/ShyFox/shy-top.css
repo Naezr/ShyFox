@@ -7,14 +7,15 @@
 */
 
 :root{
+  --top-tbbr-hgt: 0px;
   --top-nvbr-hgt: 0px;
   --top-bmbr-hgt: 0px;
 }
 
-@media not ((-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.bookmarkbar")) {
+@media not ( (-moz-bool-pref: "shyfox.position.tabbar") and (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
   
   :root:not([titlepreface*="​"]){
-    --top-margin: calc(var(--top-nvbr-hgt) + var(--top-bmbr-hgt));
+    --top-margin: calc( var(--top-tbbr-hgt) + var(--top-nvbr-hgt) + var(--top-bmbr-hgt) );
   }
 }
 
@@ -36,6 +37,32 @@
   } }
 }
 
+
+/* 
+
+##############################################################################################################################
+
+ T A B B A R
+
+*/
+
+@media not (-moz-bool-pref: "shyfox.position.tabbar") {
+  :root{ --top-tbbr-hgt: var(--tbbr-size); }
+  
+  #TabsToolbar{
+    z-index: calc( var(--topbar-zindex) + 1 ) !important;
+    
+    right: var(--topbar-right);
+    left: var(--topbar-left);
+    top: 0px;
+  }
+  
+  #TabsToolbar-customization-target{
+    width: 100% !important;
+    toolbarspring { max-width: none !important; }
+  }
+}
+
 /* 
 
 ##############################################################################################################################
@@ -52,7 +79,7 @@
     
     right: var(--topbar-right);
     left: var(--topbar-left);
-    top: 0;
+    top: var(--top-tbbr-hgt);
 
     height: var(--nvbr-hgt) !important;
   }
@@ -113,7 +140,7 @@
   
   #PersonalToolbar{
     z-index: calc( var(--topbar-zindex) - 1 ) !important;
-    top: var(--top-nvbr-hgt);
+    top: calc( var(--top-tbbr-hgt) + var(--top-nvbr-hgt) );
     right: var(--topbar-right);
     left: var(--topbar-left);
   }

@@ -182,6 +182,16 @@ browser[class*="devtools-toolbox"]{
   border: 0px solid transparent !important;
   transition: var(--bar-transition) !important;
   position: fixed;
+  
+  
+  toolbarbutton{ height: var(--tbbr-size) !important; }
+
+  toolbarbutton > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack){
+    width: 32px !important;
+    height: 32px !important;
+    padding: 8px !important;
+    margin: 0px !important;
+  }
 }
 
 /* 

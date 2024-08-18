@@ -14,7 +14,7 @@
 */
 
 :root:not([titlepreface*="‌"]){
-  --right-margin: var(--tbbr-wdt);
+  --right-margin: var(--tbbr-size);
 }
 
 :root{
@@ -84,16 +84,7 @@
   bottom: 0;
 
   padding-top: calc(var(--tbbr-menubutton-hgt) + var(--tbbr-extbutton-hgt)) !important;
-  width: var(--tbbr-wdt) !important;
-
-  toolbarbutton{ height: var(--tbbr-wdt) !important; }
-
-  toolbarbutton > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack){
-    width: 32px !important;
-    height: 32px !important;
-    padding: 8px !important;
-    margin: 0px !important;
-  }
+  width: var(--tbbr-size) !important;
 }
 
 #TabsToolbar-customization-target{
@@ -110,7 +101,7 @@
 }
 
 :root[titlepreface*="‌"]{
-  --tbbr-right: calc( var(--margin-on-right) - var(--tbbr-wdt) );
+  --tbbr-right: calc( var(--margin-on-right) - var(--tbbr-size) );
   --tbbr-hover-right: calc( var(--margin) + var(--margin-on-right) );  
   --tbbr-hover-txt: var(--tb-txt);
 
