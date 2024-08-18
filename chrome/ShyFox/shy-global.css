@@ -244,6 +244,7 @@ browser[class*="devtools-toolbox"]{
 
 #tab-notification-deck, .global-notificationbox{
   position: fixed !important;
+  transition: var(--bar-transition) !important;
   z-index: 0 !important;
   vbox{ background-color: transparent !important; }
   background-color: transparent !important;
