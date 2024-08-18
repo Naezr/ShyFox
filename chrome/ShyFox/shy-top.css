@@ -133,6 +133,8 @@
       --nvbr-hover-brd: var(--border);
       
       --toolbarbutton-icon-fill: var(--tb-txt) !important;
+      --nvbr-hover-top: calc( var(--hover-top) + var(--top-tbbr-hgt) );
+      
       top: calc( var(--margin-on-top) - var(--nvbr-hgt) );
       margin-inline: var(--top-hide-margin-inline) !important;
       overflow: visible !important;
@@ -189,7 +191,7 @@
       --bmbr-gap: calc(var(--margin) / 2);
       @media (-moz-bool-pref: "shyfox.position.navbar") { --bmbr-gap: 0px; }
       
-      --bmbr-hover-top: calc(var(--hover-top) + var(--top-nvbr-hgt) + var(--bmbr-gap));
+      --bmbr-hover-top: calc(var(--hover-top) + var(--top-tbbr-hgt) + var(--top-nvbr-hgt) + var(--bmbr-gap));
       
       top: calc( var(--margin-on-top) - var(--bmbr-hgt) );
       margin-inline: var(--top-hide-margin-inline) !important;
@@ -265,7 +267,7 @@
     #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
-    top: var(--hover-top);
+    top: var(--nvbr-hover-top);
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border: var(--nvbr-hover-brd) !important;
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); } #PanelUI-menu-button{ opacity: var(--enabled-opct); }
@@ -305,7 +307,7 @@
     #nav-bar-customization-target *:not(#unified-extensions-button)[open]
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
-    top: var(--hover-top);
+    top: var(--nvbr-hover-top);
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border: var(--nvbr-hover-brd) !important;
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); }
@@ -325,7 +327,7 @@
     #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
-    top: var(--hover-top);
+    top: var(--nvbr-hover-top);
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border: var(--nvbr-hover-brd) !important;
     #nav-bar-customization-target > * { opacity: var(--enabled-opct); } #PanelUI-menu-button{ opacity: var(--enabled-opct); }
@@ -345,7 +347,7 @@
     #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
-    top: var(--hover-top);
+    top: var(--nvbr-hover-top);
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border: var(--nvbr-hover-brd) !important;
     #nav-bar-customization-target > * { opacity: var(--enabled-opct); } #PanelUI-menu-button{ opacity: var(--enabled-opct); }
@@ -365,7 +367,7 @@
     #urlbar:focus-within
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
-    top: var(--hover-top);
+    top: var(--nvbr-hover-top);
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border: var(--nvbr-hover-brd) !important;
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); }
@@ -387,7 +389,7 @@
     #PersonalToolbar #PlacesToolbarDropIndicator:not([collapsed])
   ) { --top-hvbr-opct: 0;
   @media not (-moz-bool-pref: "shyfox.position.navbar") { #nav-bar{ 
-    top: var(--hover-top);
+    top: var(--nvbr-hover-top);
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border: var(--nvbr-hover-brd) !important;
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); }
