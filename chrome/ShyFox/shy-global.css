@@ -168,6 +168,22 @@ browser[class*="devtools-toolbox"]{
   padding: 0 8px !important;
 }
 
+#PersonalToolbar{
+  & > *:nth-child(1 of toolbarbutton) {
+    margin-left: 0px !important;
+    padding-left: 0px !important;
+  }
+  
+  & > *:nth-last-child(1 of toolbarbutton) {
+    margin-right: 0px !important;
+    padding-right: 0px !important;
+  }
+  
+  #PlacesToolbarItems > *:nth-child(1) {
+    margin-left: 0px !important;
+  }
+}
+
 /* 
 
 ##############################################################################################################################
