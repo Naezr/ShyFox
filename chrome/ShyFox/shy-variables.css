@@ -94,7 +94,9 @@
 */
 
 :root{
-  --border: 1px solid var(--br-col); /* border */
+  --br-wdt: 1px;
+  --br-style: solid;
+  --border: var(--br-wdt) var(--br-style) var(--br-col); /* border */
   
   --enabled-opct: 1;
   --disabled-opct: 0.5;

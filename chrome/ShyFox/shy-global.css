@@ -25,12 +25,12 @@
   
   position: absolute;
   pointer-events: none;
-  clip-path: inset(-1px);
+  clip-path: inset(calc( 0px - var(--br-wdt) ));
   content: "";
-  inset: 1px;
+  inset: var(--br-wdt);
 }
 
-.browserStack{ padding: 1px !important; }
+.browserStack{ padding: var(--br-wdt) !important; }
 
 #navigator-toolbox{
   position: relative !important;
