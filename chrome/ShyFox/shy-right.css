@@ -183,7 +183,7 @@
 :root[titlepreface*="‌"]{
   &:has(
     #TabsToolbar:hover,
-    #TabsToolbar *[open]
+    #TabsToolbar *:not(.tabbrowser-tab)[open]
   ) { --right-hvbr-opct: 0;
     #TabsToolbar{
       background: var(--tbbr-hover-col) !important;
