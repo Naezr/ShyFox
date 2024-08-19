@@ -166,9 +166,11 @@
       overflow: visible !important;
     }
     
-    #nav-bar-customization-target, #PanelUI-button{
-      height: var(--nvbr-hgt) !important;
-      margin-top: calc(0px - var(--br-wdt)) !important;
+    @media not (-moz-bool-pref: "shyfox.appearance.topbar.gapless") {
+      #nav-bar-customization-target, #PanelUI-button{
+        height: var(--nvbr-hgt) !important;
+        margin-top: calc(0px - var(--br-wdt)) !important;
+      }
     }
     
     #nav-bar-customization-target::before{
