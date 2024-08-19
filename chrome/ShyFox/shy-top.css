@@ -275,6 +275,19 @@
   height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
 } }
 
+@media ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") and (-moz-bool-pref: "shyfox.position.navbar") { #TabsToolbar::after{
+  content: ""; position: absolute;
+  pointer-events: none;
+  transition: var(--hoverbar-transition) !important;
+  border-radius: var(--hvbr-brd-rad);
+  background: var(--hvbr-color);
+  opacity: var(--top-hvbr-opct);
+  bottom: var(--hvbr-pd-block);
+  left: var(--hvbr-pd-inline);
+  width: calc( 100% - var(--hvbr-pd-inline) * 2 );
+  height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+} }
+
 /* 
 
 ##############################################################################################################################
