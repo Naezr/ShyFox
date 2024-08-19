@@ -127,11 +127,6 @@
     height: var(--nvbr-hgt) !important;
   }
   
-  #nav-bar-customization-target, #PanelUI-button{
-    height: var(--nvbr-hgt) !important;
-    margin-top: calc(0px - var(--br-wdt)) !important;
-  }
-  
   #nav-bar-customization-target :is( #stop-reload-button, #edit-controls, #zoom-controls ) > *,
   #nav-bar-customization-target > *:not(#unified-extensions-button),
   #nav-bar-customization-target > *[disabled],
@@ -160,6 +155,11 @@
       top: calc( var(--margin-on-top) - var(--nvbr-hgt) );
       margin-inline: var(--top-hide-margin-inline) !important;
       overflow: visible !important;
+    }
+    
+    #nav-bar-customization-target, #PanelUI-button{
+      height: var(--nvbr-hgt) !important;
+      margin-top: calc(0px - var(--br-wdt)) !important;
     }
     
     #nav-bar-customization-target::before{
