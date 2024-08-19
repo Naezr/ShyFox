@@ -136,6 +136,8 @@ browser[class*="devtools-toolbox"]{
 }
 
 #PersonalToolbar{
+  &:not([collapsed="true"]){ visibility: visible !important; }
+  
   background: transparent !important;
   color: var(--bg-txt) !important;  
   border: 0px solid transparent !important;
