@@ -72,6 +72,15 @@
     
     &:not( :has(#tabbrowser-tabs) ) #alltabs-button{ display: none !important; }
     #tabbrowser-tabs{ padding-bottom: 0px !important; }
+    
+    & > *:nth-child(1 of toolbarbutton) {
+      margin-left: 0px !important;
+      padding-left: 0px !important;
+    }
+    & > *:nth-last-child(1 of toolbarbutton) {
+      margin-right: 0px !important;
+      padding-right: 0px !important;
+    }
   }
   
   :root[titlepreface*="​"]{
@@ -296,8 +305,7 @@
 
 */
 
-:root[titlepreface*="​"]{
-  @media (-moz-bool-pref: "shyfox.appearance.topbar.gapless") {
+:root[titlepreface*="​"]{ @media (-moz-bool-pref: "shyfox.appearance.topbar.gapless") {
   & { --top-gap: 0px; }
   
   /* tabbar bottom */
@@ -310,39 +318,40 @@
   } }
   
   /* navbar top */
-  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) {
     #navigator-toolbox #nav-bar{
       --nvbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
       --nvbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
     }
   }
   
-  /* navbar top & bottom */
-  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
-    #navigator-toolbox #nav-bar{
-      --nvbr-hover-brs: 0px;
-      --nvbr-hover-brw: 0px var(--br-wdt) 0px var(--br-wdt);
+  :root:has(#PersonalToolbar:not([collapsed="true"])){
+    /* navbar top & bottom */
+    @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
+      #navigator-toolbox #nav-bar{
+        --nvbr-hover-brs: 0px;
+        --nvbr-hover-brw: 0px var(--br-wdt) 0px var(--br-wdt);
+      }
     }
-  }
   
-  /* navbar bottom */
-  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
-    #navigator-toolbox #nav-bar{
-      --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
-      --nvbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
+    /* navbar bottom */
+    @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
+      #navigator-toolbox #nav-bar{
+        --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
+        --nvbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
+      }
     }
-  }
   
-  /* bookmark bar top */
-  @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") {
-  @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.tabbar") {
-    #navigator-toolbox #PersonalToolbar{
-      --bmbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
-      --bmbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
-    }
-  } }
- }
-}
+    /* bookmark bar top */
+    @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+    @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.tabbar") {
+      #navigator-toolbox #PersonalToolbar{
+        --bmbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+        --bmbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
+      }
+    } }
+  }
+} }
 
 /* 
 
