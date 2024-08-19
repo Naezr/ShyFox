@@ -4,13 +4,12 @@
 }
 
 :root:not([titlepreface*="؜"]){
-  &:not(
-    :has( #sidebar-main > *[hidden] )
+  &:not( :has( #sidebar-main[hidden] )
   ) { --left-margin: var(--sdbr-tb-wdt); }
   
   &:has(
     #sidebar-box:not([hidden]),
-    #sidebar-main > *[expanded]
+    #sidebar-main:not([hidden]) > *[expanded]
   ) { --left-margin: var(--sdbr-wdt); }
 }
 
