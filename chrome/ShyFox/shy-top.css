@@ -31,43 +31,6 @@
   --top-gap: calc( var(--margin) / 2 );
 }
 
-:root[titlepreface*="​"]{ @media (-moz-bool-pref: "shyfox.appearance.topbar.gapless") {
-  & { --top-gap: 0px; }
-  
-  @media not (-moz-bool-pref: "shyfox.position.tabbar") {
-  @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.bookmarkbar")  {
-    #navigator-toolbox #titlebar #TabsToolbar{
-      --tbbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
-    } 
-  } }
-
-  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") {
-    #navigator-toolbox #nav-bar{
-      --nvbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
-    }
-  }
-  
-  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
-    #navigator-toolbox #nav-bar{
-      --nvbr-hover-brs: 0px;
-    }
-  }
-  
-  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
-    #navigator-toolbox #nav-bar{
-      --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
-    }
-  }
-  
-  @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") {
-  @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.tabbar") {
-    #navigator-toolbox #PersonalToolbar{
-      --bmbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
-    }
-  } }
-  
-} }
-
 :root[titlepreface*="​"]{
   @media (max-width: 1100px) { & {
     --topbar-right: var(--margin);
@@ -397,8 +360,7 @@
   
   @media not (-moz-bool-pref: "shyfox.position.tabbar") { &:has(
     #TabsToolbar:hover, #TabsToolbar *:not(.tabbrowser-tab)[open],
-    #nav-bar-customization-target:hover, #nav-bar-customization-target *[open],
-    #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
+    #nav-bar-customization-target:hover, #nav-bar-customization-target *[open]
   ) { --top-hvbr-opct: 0;
   @media not (-moz-bool-pref: "shyfox.position.navbar") { #nav-bar{
     top: var(--nvbr-hover-top);
@@ -421,6 +383,29 @@
   }
   } }
   
+  @media ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.position.navbar") ) { &:has(
+    #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
+  ) { --top-hvbr-opct: 0;
+  @media not (-moz-bool-pref: "shyfox.position.navbar") { #nav-bar{
+    top: var(--nvbr-hover-top);
+    background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
+    border-radius: var(--nvbr-hover-brs) !important; border: var(--nvbr-hover-brd) !important;
+    #nav-bar-customization-target > * { opacity: var(--enabled-opct); } #PanelUI-menu-button{ opacity: var(--enabled-opct); }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+  } }
+  @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
+    top: var(--bmbr-hover-top);
+    background: var(--bmbr-hover-col) !important; color: var(--bmbr-hover-txt) !important;
+    border-radius: var(--bmbr-hover-brs) !important; border: var(--bmbr-hover-brd) !important;
+    & > * { opacity: var(--enabled-opct) !important; } & > *[disabled] { opacity: var(--disabled-opct) !important; }
+  } }
+  #TabsToolbar{
+    top: var(--tbbr-hover-top);
+    background: var(--tbbr-hover-col) !important; color: var(--tbbr-hover-txt) !important;
+    border-radius: var(--tbbr-hover-brs) !important; border: var(--tbbr-hover-brd) !important;
+    #TabsToolbar-customization-target > * { opacity: var(--enabled-opct) !important; } #TabsToolbar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; }
+  }
+  } }
   
   @media not (-moz-bool-pref: "shyfox.position.navbar") { &:has(
     #nav-bar-overflow-button:hover, #nav-bar-overflow-button[open],
@@ -477,4 +462,41 @@
   } }
   } }
   
+  
+  @media (-moz-bool-pref: "shyfox.appearance.topbar.gapless") {
+  & { --top-gap: -1px; }
+  
+  @media not (-moz-bool-pref: "shyfox.position.tabbar") {
+  @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.bookmarkbar")  {
+    #navigator-toolbox #titlebar #TabsToolbar{
+      --tbbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
+    }
+  } }
+
+  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+    #navigator-toolbox #nav-bar{
+      --nvbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+    }
+  }
+  
+  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
+    #navigator-toolbox #nav-bar{
+      --nvbr-hover-brs: 0px;
+    }
+  }
+  
+  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
+    #navigator-toolbox #nav-bar{
+      --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
+    }
+  }
+  
+  @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+  @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.tabbar") {
+    #navigator-toolbox #PersonalToolbar{
+      --bmbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+    }
+  } }
+  
+ }
 }
