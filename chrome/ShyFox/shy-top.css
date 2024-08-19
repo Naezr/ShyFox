@@ -325,7 +325,7 @@
     }
   }
   
-  :root:has(#PersonalToolbar:not([collapsed="true"])){
+  &:has(#PersonalToolbar:not([collapsed="true"])){
     /* navbar top & bottom */
     @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
       #navigator-toolbox #nav-bar{
