@@ -398,7 +398,7 @@
   
   @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) and (-moz-bool-pref: "shyfox.position.extbutton") { &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
-    #nav-bar-customization-target *:not(#unified-extensions-button)[open],
+    #nav-bar-customization-target *:not(#unified-extensions-button, #firefox-view-button)[open],
     #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
@@ -419,7 +419,7 @@
   
   @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") and (-moz-bool-pref: "shyfox.position.menubutton") and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) { &:has(
     #nav-bar-customization-target:hover, #nav-bar-customization-target:-moz-drag-over,
-    #nav-bar-customization-target *[open]
+    #nav-bar-customization-target *:not(#firefox-view-button)[open]
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
     top: var(--hover-top);
@@ -439,7 +439,7 @@
   
   @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") and (-moz-bool-pref: "shyfox.position.menubutton") and (-moz-bool-pref: "shyfox.position.extbutton") { &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
-    #nav-bar-customization-target *:not(#unified-extensions-button)[open]
+    #nav-bar-customization-target *:not(#unified-extensions-button, #firefox-view-button)[open]
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
     top: var(--nvbr-hover-top);
@@ -458,7 +458,7 @@
   
   
   @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.tabbar") and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) { &:has(
-    #nav-bar-customization-target:hover, #nav-bar-customization-target *[open],
+    #nav-bar-customization-target:hover, #nav-bar-customization-target *:not(#firefox-view-button)[open],
     #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
@@ -478,8 +478,8 @@
   
   
   @media not (-moz-bool-pref: "shyfox.position.tabbar") { &:has(
-    #TabsToolbar:hover, #TabsToolbar *:not(.tabbrowser-tab)[open],
-    #nav-bar-customization-target:hover, #nav-bar-customization-target *[open]
+    #TabsToolbar:hover, #TabsToolbar *:not(.tabbrowser-tab, #firefox-view-button)[open],
+    #nav-bar-customization-target:hover, #nav-bar-customization-target *:not(#firefox-view-button)[open]
   ) { --top-hvbr-opct: 0;
   @media not (-moz-bool-pref: "shyfox.position.navbar") { #nav-bar{
     top: var(--nvbr-hover-top);
@@ -555,7 +555,7 @@
   
   
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { &:has(
-    #PersonalToolbar:hover, #PersonalToolbar *[open],
+    #PersonalToolbar:hover, #PersonalToolbar *:not(#firefox-view-button)[open],
     #PersonalToolbar #PlacesToolbarDropIndicator:not([collapsed])
   ) { --top-hvbr-opct: 0;
   @media not (-moz-bool-pref: "shyfox.position.navbar") { #nav-bar{ 
