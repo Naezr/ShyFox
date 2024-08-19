@@ -28,7 +28,7 @@
   
   --nvbr-top-gap: 0px;
   --bmbr-top-gap: 0px;
-  --top-gap: calc( var(--margin) / 2 )
+  --top-gap: calc( var(--margin) / 2 );
 }
 
 :root[titlepreface*="​"]{
