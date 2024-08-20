@@ -68,6 +68,29 @@
     #newtab-button-container{ padding-inline: 4px !important; }
     #tabs-newtab-button, .tabbrowser-tab{ margin-inline: 4px !important; }
   }
+  
+    #tabbrowser-tabs{
+
+    .tabbrowser-tab{
+      .tab-background{
+        margin: 4px 0px !important;
+        height: 32px !important;
+        min-height: 32px !important;
+      }
+    }
+
+    .tabbrowser-tab[pinned]{
+      &, .tab-stack{ width: 36px !important; }
+
+      .tab-background{
+        width: 32px !important;
+        min-width: 32px !important;
+        margin: 4px 2px !important;
+      }
+
+      .tab-label-container{ display: none !important; }
+    }
+  }
 }
 
 
