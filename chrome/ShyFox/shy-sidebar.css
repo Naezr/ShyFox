@@ -135,6 +135,26 @@ Styles for sidebar
     ) !important;
 
     border-radius: var(--big-rounding) !important;
+    border: var(--outline) !important;
+    outline: var(--shadow) !important;
+    background-color: var(--bg-col) !important;
+
+    /* dont delay sidebar movement and transform on toggle */
+    /* delay sidebar, border and indication bar disappearance */
+    &:not(:hover) {
+      transition:
+          var(--transition) var(--trans-delay),
+            top var(--trans-dur) ease-out 0s,
+            height var(--trans-dur) ease-out 0s,
+            background-color 0s ease-out 0s,
+            border-radius var(--trans-dur) ease-out 0s !important;
+      border-color: transparent !important;
+      outline-color: transparent !important;
+      
+      &::after {
+        transition-delay: var(--trans-delay);
+      }
+    }
     
     /* hover target (invisible box between window edge and panel) */
     &::before{
@@ -153,6 +173,12 @@ Styles for sidebar
     & > * {
       transition: var(--transition) !important;
       opacity: 0;
+      /* delay panel content disappearance */
+      &:not(:hover) {
+        transition:
+          var(--transition) var(--trans-delay), border-radius var(--trans-dur) ease-out 0s !important;
+        border-radius: var(--big-rounding) !important;
+      }
     }
   }
   
@@ -202,7 +228,10 @@ Styles for sidebar
   }
   
   /* add rounded corners to sidebar content */
-  #sidebar {border-radius: var(--big-rounding) !important;}
+  #sidebar {
+    border-radius: var(--big-rounding) !important;
+    transition-delay: 0s !important;
+  }
   
   /* styles for bookmarks */
   #PersonalToolbar{
@@ -251,7 +280,10 @@ Styles for sidebar
             
       &::after{opacity: 0}
       
-      & > * {opacity: var(--dyn-opct);}
+      & > * {
+        opacity: var(--dyn-opct);
+        transition-delay: 0s !important; /* prevent opacity delay on sidebar contents */
+      }
     }
   }
 }
