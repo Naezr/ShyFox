@@ -3,6 +3,16 @@
 > [!WARNING]
 >This is an alpha. Firefox Nightly 131 or newer is required. Go to the Discussions tab for information. The rest of the README is from 3.0 and has not been edited
 
+| setting | |
+| --- | --- |
+| `shyfox.position.bookmarkbar` |
+| `shyfox.position.navbar` |
+| `shyfox.position.tabbar` |
+| `shyfox.remove.tabbar` |
+| `shyfox.position.extbutton` |
+| `shyfox.position.menubutton` |
+| `shyfox.appearance.topbar.gapless` | 
+
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
  <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-128-orange?logo=firefox"></a>
