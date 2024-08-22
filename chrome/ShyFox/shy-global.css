@@ -35,7 +35,7 @@ Area where website is displayed
   /* if navbar is not hidden in f11 fullscreen or not only navbar is visible in f11 or window is not maximized in clean mode */
   &:not(
     :is(
-      :is([titlepreface*="‌"], [titlepreface*="؜"][titlepreface*="​"])[inFullscreen="true"]),
+      :is([titlepreface*="‌"], [titlepreface*="᠎"][titlepreface*="​"])[inFullscreen="true"]),
       [titlepreface*="‍"]:is([sizemode="maximized"], [inFullscreen="true"], [gtktiledwindow="true"])
   ){
     
@@ -58,7 +58,7 @@ Area where website is displayed
   }
   
   /* if in f11 fullscreen sidebar active but navbar not */
-  &:not([titlepreface*="‍"]):not([titlepreface*="؜"])[titlepreface*="‌"][inFullscreen="true"]{
+  &:not([titlepreface*="‍"]):not([titlepreface*="᠎"])[titlepreface*="‌"][inFullscreen="true"]{
     #appcontent browser {border-left: var(--outline);}
   }
   
@@ -68,7 +68,7 @@ Area where website is displayed
   }
   
   /* if in f11 fullscreen nor toolbar or sidebar active but navbar is */
-  &:not([titlepreface*="‍"])[titlepreface*="؜"][titlepreface*="​"]:not([titlepreface*="‌"])[inFullscreen="true"]{
+  &:not([titlepreface*="‍"])[titlepreface*="᠎"][titlepreface*="​"]:not([titlepreface*="‌"])[inFullscreen="true"]{
     #appcontent browser {border-top: var(--outline);}
   }
 }
@@ -269,7 +269,7 @@ screenshots-buttons{
 }
 
 /* when sidebar hidden */
-#main-window:is([titlepreface*="؜"], [titlepreface*="‍"]){
+#main-window:is([titlepreface*="᠎"], [titlepreface*="‍"]){
   #screenshotsPagePanel{
     bottom: calc(
       var(--bottom-margin)

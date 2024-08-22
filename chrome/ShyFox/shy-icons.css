@@ -70,6 +70,28 @@ Monochrome icons for some extensions
   .toolbarbutton-icon {
     list-style-image: url("../icons/moon.svg");
   }
+  
+  /* Video Download Helper => custom svg icon */
+  :is(.webextension-browser-action,
+  .eom-addon-button)[data-extensionid="{b9db16a4-6edc-47ec-a1f4-b86292ed211d}"] 
+  .toolbarbutton-icon {
+    list-style-image: url("../icons/video-download-helper.svg");
+  }
+  
+  /* Auto Tab Discard => power icon */
+  :is(.webextension-browser-action,
+  .eom-addon-button)[data-extensionid="{c2c003ee-bd69-42a2-b0e9-6f34222cb046}"] 
+  .toolbarbutton-icon {
+    list-style-image: url("../icons/quit.svg");
+  }
+  
+  /* Midnight Lizard => custom svg icon */
+  :is(.webextension-browser-action,
+  .eom-addon-button)[data-extensionid="{8fbc7259-8015-4172-9af1-20e1edfbbd3a}"] 
+  .toolbarbutton-icon {
+    list-style-image: url("../icons/midnight-lizard.svg");
+    scale: 1.3;
+  }
 
   /* gray background for all badges */
   .toolbarbutton-badge {
@@ -120,14 +142,29 @@ Monochrome icons for some extensions
       .menu-iconic-icon {opacity: 0 !important;}
       background-image: url("../icons/eraser.svg") !important;
     }
+    
+    /* video download helper */
+    #_b9db16a4-6edc-47ec-a1f4-b86292ed211d_-menuitem-_vdh-top{
+      .menu-iconic-icon {opacity: 0 !important;}
+      background-image: url("../icons/video-download-helper.svg") !important;
+    }
   }
   
-  /* sidebar switcher bitwarden icon */
+  /* sidebar switcher */
+  
+  /* Bitwarden */
   #sidebarswitcher_menu__446900e4-71c2-419f-a6a7-df9c091e268b_-sidebar-action{
     .menu-iconic-icon {opacity: 0 !important;}
     background-image: url("../icons/bitwarden.svg") !important;
   }
   #sidebar-switcher-target[style*="fde67d36-ff48-49e7-8ec4-3cf26deea141"] #sidebar-icon {list-style-image: url("../icons/bitwarden.svg") !important;}
+
+  /* Video Download Helper */
+  #sidebarswitcher_menu__b9db16a4-6edc-47ec-a1f4-b86292ed211d_-sidebar-action{
+    .menu-iconic-icon {opacity: 0 !important;}
+    background-image: url("../icons/video-download-helper.svg") !important;
+  }
+  #sidebar-switcher-target[style*="89b69b2a-5ae9-4b43-addc-4bf789f8448f"] #sidebar-icon {list-style-image: url("../icons/video-download-helper.svg") !important;}
 }
 
 /* 

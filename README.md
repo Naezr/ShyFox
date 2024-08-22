@@ -1,8 +1,8 @@
-# ShyFox 3.8
+# ShyFox 3.8.1
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
- <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-128-orange?logo=firefox"></a>
+ <a href='https://www.mozilla.org'><img src="https://img.shields.io/badge/Firefox-129-orange?logo=firefox"></a>
  <a href='https://github.com/Naezr/ShyFox/commits'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/main">
 </a>
  <a href='https://github.com/Naezr/ShyFox/commits/nightly'><img src="https://img.shields.io/github/last-commit/Naezr/ShyFox/nightly?label=last%20nightly%20commit&color=purple"></a>
@@ -15,13 +15,17 @@
 
 <br/>
 
-3.8
+3.8.1:
+- Added mono icons for Auto Tab Discard, Midnight Lizard and Video Download Helper
+- Changed sidebar invisible symbol
+
+3.8:
 - Migrating to invisible titleprefixes & new Userchrome Toggle
 - `about:debugging` page now shrinks at small window width
 - Added `about:config` option to make context menus larger
 - Some bugfixes
 
-3.7.3
+3.7.3:
 - New tab colors rework
 - Added Privacy Badger svg icon
 - Redesigned logic of pinned tabs
@@ -333,6 +337,9 @@ Settings that can be toggled via [about:config](https://support.mozilla.org/kb/a
    - Dark Reader - toolbar button (moon icon)
    - Privacy Badger - toolbar button
    - Clear URLs - only context menu item (eraser icon)
+   - Midnight Lizard - toolbar button
+   - Auto Tab Discard - toolbar button
+   - Video Download Helper - toolbar button and context menu item
    
    Feel free to suggest icons for other extensions
    
