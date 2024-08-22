@@ -55,6 +55,55 @@
 
 ##############################################################################################################################
 
+ D R A G G I N G   B O R D E R
+
+*/
+
+/* shared */
+#browser::before,
+#browser::after,
+#navigator-toolbox::before,
+#navigator-toolbox::after
+{
+  position: fixed;
+  pointer-events: none;
+  -moz-window-dragging: drag;
+  content: "";
+  background-color: var(--debug-col);
+}
+
+/* top */
+#browser::after {
+  height: calc(var(--margin) + 2px);
+  top: -1px;
+  width: 100vw;
+}
+
+/* bottom */
+#browser::before {
+  height: calc(var(--margin) + 2px);
+  bottom: -1px;
+  width: 100vw;
+}
+
+/* left */
+#navigator-toolbox::before{
+  width: calc(var(--margin) + 2px);
+  left: -1px;
+  height: 100vw;
+}
+
+/* right */
+#navigator-toolbox::after{
+  width: calc(var(--margin) + 2px);
+  right: -1px;
+  height: 100vw;
+}
+
+/* 
+
+##############################################################################################################################
+
  D E V T O O L S
 
 */
