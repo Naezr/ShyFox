@@ -99,7 +99,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window:not([customizing])[titlepreface*="؜"]:not(:is([titlepreface*="‌"], [titlepreface*="‍"])){
+#main-window:not([customizing])[titlepreface*="᠎"]:not(:is([titlepreface*="‌"], [titlepreface*="‍"])){
   #nav-bar{
     margin-left: calc(var(--buttonbox-left-wdt) - var(--nav-lft-btnbx-margin));
     width: calc(
@@ -114,7 +114,7 @@ Navigation bar on top of the window
   }
 }
 
-#main-window:not([customizing])[titlepreface*="؜"][titlepreface*="​"]:not(:is([titlepreface*="‌"], [titlepreface*="‍"])){
+#main-window:not([customizing])[titlepreface*="᠎"][titlepreface*="​"]:not(:is([titlepreface*="‌"], [titlepreface*="‍"])){
   #nav-bar{
     width: calc(
       100vw

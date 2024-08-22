@@ -264,7 +264,7 @@ Styles when GTK window controls on left or system is MacOS
   }
   
   /* style when not enough space - merged into window border */
-  #main-window:is([titlepreface*="؜"][titlepreface*="‌"], [titlepreface*="‍"]):not([customizing]){
+  #main-window:is([titlepreface*="᠎"][titlepreface*="‌"], [titlepreface*="‍"]):not([customizing]){
     .titlebar-buttonbox-container{
       opacity: calc(var(--hide-bar-opct) / 2 );
       &:hover{opacity: 1};
