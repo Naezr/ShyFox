@@ -35,8 +35,7 @@ Styles for sidebar
 */
 
 /* styles for both sidebar and bookmarks toolbar */
-#sidebar-box, 
-#tabbrowser-tabs,
+#sidebar-box,
 #PersonalToolbar
 {
   position: fixed;
@@ -60,9 +59,7 @@ Styles for sidebar
 }
 
 /* styles for sidebar */
-#sidebar-box,
-#tabbrowser-tabs
-{
+#sidebar-box{
   
   top: calc(
     var(--margin) / 2 
@@ -106,8 +103,7 @@ Styles for sidebar
 
 /* padding for screenshot control buttons */
 #main-window:not([titlepreface*="؜"]):has(#screenshotsPagePanel:not([hidden])){
-  #sidebar-box,
-  #tabbrowser-tabs {
+  #sidebar-box{
     padding-bottom: calc(
       var(--screenshot-tool-hgt)
       - var(--margin)
@@ -127,7 +123,6 @@ Styles for sidebar
   
   /* styles for both sidebar and bookmaarks toolbar */
   #sidebar-box,
-  #tabbrowser-tabs,
   #PersonalToolbar
   {
     z-index: 2 !important;
@@ -162,8 +157,7 @@ Styles for sidebar
   }
   
   /* styles for sidebar */
-  #sidebar-box,
-  #tabbrowser-tabs{    
+  #sidebar-box{    
     height: calc(
       100vh
       - var(--bookmarks-hgt)
@@ -240,14 +234,11 @@ Styles for sidebar
   &:not([titlepreface*="‍"]):has(
     #sidebar-box:hover,
     #sidebar-box:focus-within,
-    #tabbrowser-tabs:hover,
-    #tabbrowser-tabs:focus-within,
     #PersonalToolbar:hover,
     #PersonalToolbar *:not(#firefox-view-button)[open],
     #sidebar-switcher-target[aria-expanded="true"]
   ) {
     #sidebar-box,
-    #tabbrowser-tabs,
     #PersonalToolbar
     {
       opacity: 1 !important;
