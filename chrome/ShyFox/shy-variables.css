@@ -82,7 +82,7 @@
   
   --br-col: var(--arrowpanel-border-color);            /* border color     */
   
-  --debug-col: rgba(255, 0, 0, 0.0);
+  --debug-col: rgba(100, 100, 200, 0.0);
 }
 
 /* 

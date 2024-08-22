@@ -85,6 +85,8 @@
   
   :root[titlepreface*="​"]{
     #TabsToolbar{
+      --tbbr-hidden-hitbox: 0px;
+      
       --tbbr-hover-col: var(--tb-col);
       --tbbr-hover-txt: var(--tb-txt);
       
@@ -104,7 +106,7 @@
       content: ""; position: absolute;
       -moz-window-dragging: drag;
       z-index: -999;
-      bottom: calc( 0px - var(--panel-hidden-hitbox) );
+      bottom: calc( 0px - var(--tbbr-hidden-hitbox) );
       left: 0px;
       width: 100%; height: 500%;
       background: var(--debug-col);
@@ -149,6 +151,8 @@
     @media not (-moz-bool-pref: "shyfox.position.tabbar") { --nvbr-top-gap: var(--top-gap); }
     
     #nav-bar{
+      --nvbr-hidden-hitbox: 0px;
+      
       --nvbr-hover-col: var(--tb-col);
       --nvbr-hover-txt: var(--tb-txt);
       
@@ -177,7 +181,7 @@
       content: ""; position: absolute;
       -moz-window-dragging: drag;
       z-index: -999;
-      bottom: calc( 0px - var(--panel-hidden-hitbox) );
+      bottom: calc( 0px - var(--nvbr-hidden-hitbox) );
       left: 0px;
       width: 100%; height: 500%;
       background: var(--debug-col);
@@ -219,6 +223,8 @@
     @media not (-moz-bool-pref: "shyfox.position.navbar"), not (-moz-bool-pref: "shyfox.position.tabbar") { --bmbr-top-gap: var(--top-gap); }  
     
     #PersonalToolbar{
+      --bmbr-hidden-hitbox: 0px;
+      
       --bmbr-hover-col: var(--tb-col);
       --bmbr-hover-txt: var(--tb-txt);
       
@@ -238,7 +244,7 @@
       content: ""; position: absolute;
       -moz-window-dragging: drag;
       z-index: -999;
-      bottom: calc( 0px - var(--panel-hidden-hitbox) );
+      bottom: calc( 0px - var(--bmbr-hidden-hitbox) );
       left: 0px;
       width: 100%; height: 500%;
       background: var(--debug-col);
@@ -263,71 +269,81 @@
 
 
 :root:has(#PersonalToolbar:not([collapsed="true"])){ 
-  @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar::after{
-    content: ""; position: absolute;
-    pointer-events: none;
-    transition: var(--hoverbar-transition) !important;
-    border-radius: var(--hvbr-brd-rad);
-    background: var(--hvbr-color);
-    opacity: var(--top-hvbr-opct);
-    bottom: var(--hvbr-pd-block);
-    left: var(--hvbr-pd-inline);
-    width: calc( 100% - var(--hvbr-pd-inline) * 2 );
-    height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
-  } } 
-
-  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") { #nav-bar::after{
-    content: ""; position: absolute;
-    pointer-events: none;
-    transition: var(--hoverbar-transition) !important;
-    border-radius: var(--hvbr-brd-rad);
-    background: var(--hvbr-color);
-    opacity: var(--top-hvbr-opct);
-    bottom: var(--hvbr-pd-block);
-    left: var(--hvbr-pd-inline);
-    width: calc( 100% - var(--hvbr-pd-inline) * 2 );
-    height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+  @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
+    &::after{
+      content: ""; position: absolute;
+      pointer-events: none;
+      transition: var(--hoverbar-transition) !important;
+      border-radius: var(--hvbr-brd-rad);
+      background: var(--hvbr-color);
+      opacity: var(--top-hvbr-opct);
+      bottom: var(--hvbr-pd-block);
+      left: var(--hvbr-pd-inline);
+      width: calc( 100% - var(--hvbr-pd-inline) * 2 );
+      height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+    } --bmbr-hidden-hitbox: var(--panel-hidden-hitbox);
   } }
 
-  @media ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") and (-moz-bool-pref: "shyfox.position.navbar") { #TabsToolbar::after{
-    content: ""; position: absolute;
-    pointer-events: none;
-    transition: var(--hoverbar-transition) !important;
-    border-radius: var(--hvbr-brd-rad);
-    background: var(--hvbr-color);
-    opacity: var(--top-hvbr-opct);
-    bottom: var(--hvbr-pd-block);
-    left: var(--hvbr-pd-inline);
-    width: calc( 100% - var(--hvbr-pd-inline) * 2 );
-    height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+  @media ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") { #nav-bar{
+    &::after{
+      content: ""; position: absolute;
+      pointer-events: none;
+      transition: var(--hoverbar-transition) !important;
+      border-radius: var(--hvbr-brd-rad);
+      background: var(--hvbr-color);
+      opacity: var(--top-hvbr-opct);
+      bottom: var(--hvbr-pd-block);
+      left: var(--hvbr-pd-inline);
+      width: calc( 100% - var(--hvbr-pd-inline) * 2 );
+      height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+    } --nvbr-hidden-hitbox: var(--panel-hidden-hitbox);
+  } }
+
+  @media ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") and (-moz-bool-pref: "shyfox.position.navbar") { #TabsToolbar{
+    &::after{
+      content: ""; position: absolute;
+      pointer-events: none;
+      transition: var(--hoverbar-transition) !important;
+      border-radius: var(--hvbr-brd-rad);
+      background: var(--hvbr-color);
+      opacity: var(--top-hvbr-opct);
+      bottom: var(--hvbr-pd-block);
+      left: var(--hvbr-pd-inline);
+      width: calc( 100% - var(--hvbr-pd-inline) * 2 );
+      height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+    } --tbbr-hidden-hitbox: var(--panel-hidden-hitbox);
   } }
 }
 
 :root:has(#PersonalToolbar[collapsed="true"]){ 
-  @media not (-moz-bool-pref: "shyfox.position.navbar") { #nav-bar::after{
-    content: ""; position: absolute;
-    pointer-events: none;
-    transition: var(--hoverbar-transition) !important;
-    border-radius: var(--hvbr-brd-rad);
-    background: var(--hvbr-color);
-    opacity: var(--top-hvbr-opct);
-    bottom: var(--hvbr-pd-block);
-    left: var(--hvbr-pd-inline);
-    width: calc( 100% - var(--hvbr-pd-inline) * 2 );
-    height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+  @media not (-moz-bool-pref: "shyfox.position.navbar") { #nav-bar{
+    &::after{
+      content: ""; position: absolute;
+      pointer-events: none;
+      transition: var(--hoverbar-transition) !important;
+      border-radius: var(--hvbr-brd-rad);
+      background: var(--hvbr-color);
+      opacity: var(--top-hvbr-opct);
+      bottom: var(--hvbr-pd-block);
+      left: var(--hvbr-pd-inline);
+      width: calc( 100% - var(--hvbr-pd-inline) * 2 );
+      height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+    } --nvbr-hidden-hitbox: var(--panel-hidden-hitbox);
   } }
 
-  @media ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.position.navbar") { #TabsToolbar::after{
-    content: ""; position: absolute;
-    pointer-events: none;
-    transition: var(--hoverbar-transition) !important;
-    border-radius: var(--hvbr-brd-rad);
-    background: var(--hvbr-color);
-    opacity: var(--top-hvbr-opct);
-    bottom: var(--hvbr-pd-block);
-    left: var(--hvbr-pd-inline);
-    width: calc( 100% - var(--hvbr-pd-inline) * 2 );
-    height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+  @media ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.position.navbar") { #TabsToolbar{
+    &::after{
+      content: ""; position: absolute;
+      pointer-events: none;
+      transition: var(--hoverbar-transition) !important;
+      border-radius: var(--hvbr-brd-rad);
+      background: var(--hvbr-color);
+      opacity: var(--top-hvbr-opct);
+      bottom: var(--hvbr-pd-block);
+      left: var(--hvbr-pd-inline);
+      width: calc( 100% - var(--hvbr-pd-inline) * 2 );
+      height: calc( var(--margin) - var(--hvbr-pd-block) * 2 );
+    } --tbbr-hidden-hitbox: var(--panel-hidden-hitbox);
   } }
 }
 
