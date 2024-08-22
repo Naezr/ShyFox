@@ -1,4 +1,4 @@
-# ShyFox 3.8
+# ShyFox 3.8.1
 
 <div>
  <a href='https://github.com/Naezr/ShyFox/stargazers'><img src='https://img.shields.io/github/stars/Naezr/ShyFox?style=social'></a>
@@ -15,13 +15,17 @@
 
 <br/>
 
-3.8
+3.8.1:
+- Added mono icons for Auto Tab Discard, Midnight Lizard and Video Download Helper
+- Changed sidebar invisible symbol
+
+3.8:
 - Migrating to invisible titleprefixes & new Userchrome Toggle
 - `about:debugging` page now shrinks at small window width
 - Added `about:config` option to make context menus larger
 - Some bugfixes
 
-3.7.3
+3.7.3:
 - New tab colors rework
 - Added Privacy Badger svg icon
 - Redesigned logic of pinned tabs
