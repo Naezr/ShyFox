@@ -69,7 +69,7 @@
     #tabs-newtab-button, .tabbrowser-tab{ margin-inline: 4px !important; }
   }
   
-    #tabbrowser-tabs{
+  #tabbrowser-tabs #tabbrowser-arrowscrollbox{
 
     .tabbrowser-tab{
       .tab-background{
