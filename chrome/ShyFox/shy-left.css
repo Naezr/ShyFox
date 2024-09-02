@@ -3,6 +3,10 @@
   --left-bmbr-hgt: 0px;
 }
 
+:root[titlepreface*="᠎"]{
+  --hidden-left: calc( 0px - var(--sdbr-wdt) + var(--margin-on-left) );
+}
+
 :root:not([titlepreface*="᠎"]){
   &:not( :has( #sidebar-main[hidden] )
   ) { --left-margin: var(--sdbr-tb-wdt); }
@@ -45,7 +49,7 @@
   
   .tabbrowser-tab{
     max-width: none !important;
-    padding: 0 !important;
+    padding: 0px !important;
     
     .tab-background{ border-radius: var(--tab-border-radius) !important; }
     
@@ -166,7 +170,9 @@
   
   top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) );
   bottom: 0px;
+  left: 0px;
   
+  transition: var(--bar-transition) !important;
   z-index: 2 !important;
 }
 
@@ -236,6 +242,13 @@
 
 :root:has(#sidebar-box[hidden]) #sidebar-main:not([hidden]){ width: var(--sdbr-wdt) !important; }
 
+
+:root[titlepreface*="᠎"]{
+  #sidebar-box, #sidebar-main{
+    left: var(--hidden-left) !important;
+  }
+}
+
 /* 
 
 ##############################################################################################################################
@@ -287,6 +300,12 @@
     right: 0 !important;
   }
   
+  :root[titlepreface*="᠎"]{
+    #nav-bar{
+      left: var(--hidden-left) !important;
+    }
+  }
+  
 }
 
 /* 
@@ -308,5 +327,11 @@
     top: var(--left-nvbr-hgt);
 
     width: var(--sdbr-wdt) !important;
+  }
+  
+  :root[titlepreface*="᠎"]{
+    #PersonalToolbar{
+      left: var(--hidden-left) !important;
+    }
   }
 }
