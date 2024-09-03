@@ -27,10 +27,10 @@
   pointer-events: none;
   clip-path: inset(calc( 0px - var(--br-wdt) ));
   content: "";
-  inset: var(--br-wdt);
+  inset: calc( 0px - var(--br-wdt) );
 }
 
-.browserStack{ padding: var(--br-wdt) !important; }
+.browserStack{ margin: var(--br-wdt) !important; }
 
 #navigator-toolbox{
   position: relative !important;
