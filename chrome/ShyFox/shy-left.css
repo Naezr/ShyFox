@@ -3,8 +3,9 @@
   --left-bmbr-hgt: 0px;
 }
 
-:root[titlepreface*="᠎"]{
+:root{
   --hidden-left: calc( 0px - var(--sdbr-wdt) + var(--margin-on-left) );
+  --semi-hidden-left: calc( 0px - var(--sdbr-wdt) + var(--sdbr-tb-wdt) );
 }
 
 :root:not([titlepreface*="᠎"]){
@@ -240,12 +241,13 @@
   #sidebar { border: 0px solid transparent !important; }
 }
 
-:root:has(#sidebar-box[hidden]) #sidebar-main:not([hidden]){ width: var(--sdbr-wdt) !important; }
-
-
 :root[titlepreface*="᠎"]{
   #sidebar-box, #sidebar-main{
     left: var(--hidden-left) !important;
+  }
+  
+  &:has(#sidebar-box[hidden]) #sidebar-main:not([hidden]){
+    left: calc( 0px - var(--sdbr-tb-wdt) + var(--margin-on-left) ) !important;
   }
 }
 
@@ -306,6 +308,12 @@
     }
   }
   
+  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]) ):has( #sidebar-box[hidden] ) {
+    #nav-bar{
+      left: var(--semi-hidden-left) !important;
+    }
+  }
+  
 }
 
 /* 
@@ -332,6 +340,12 @@
   :root[titlepreface*="᠎"]{
     #PersonalToolbar{
       left: var(--hidden-left) !important;
+    }
+  }
+  
+  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]) ):has( #sidebar-box[hidden] ) {
+    #PersonalToolbar{
+      left: var(--semi-hidden-left) !important;
     }
   }
 }
