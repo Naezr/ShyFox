@@ -63,6 +63,11 @@
     top: 0px;
   }
   
+  #TabsToolbar .toolbar-items{
+    height: var(--tbbr-size) !important;
+    margin-top: calc( 0px - var(--br-wdt) ) !important;
+  }
+  
   #TabsToolbar-customization-target{
     toolbarspring { max-width: none !important; }
     padding-inline: var(--toolbar-start-end-padding) !important;
