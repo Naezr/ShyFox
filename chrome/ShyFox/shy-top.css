@@ -63,11 +63,6 @@
     top: 0px;
   }
   
-  #TabsToolbar .toolbar-items{
-    height: var(--tbbr-size) !important;
-    margin-top: calc( 0px - var(--br-wdt) ) !important;
-  }
-  
   #TabsToolbar-customization-target{
     toolbarspring { max-width: none !important; }
     padding-inline: var(--toolbar-start-end-padding) !important;
@@ -105,6 +100,11 @@
       top: calc( var(--margin-on-top) - var(--tbbr-size) );
       margin-inline: var(--top-hide-margin-inline) !important;
       overflow: visible !important;
+    }
+    
+    #TabsToolbar .toolbar-items{
+      height: var(--tbbr-size) !important;
+      margin-top: calc( 0px - var(--br-wdt) ) !important;
     }
     
     #TabsToolbar::before{
