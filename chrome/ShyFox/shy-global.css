@@ -7,10 +7,14 @@
 */
 
 
-#appcontent{
+#tabbrowser-tabbox{
   margin: var(--browser-margin) !important;
   
   transition: var(--content-transition) !important;
+  box-shadow: none !important;
+  
+  position: fixed !important;
+  top: 0px; bottom: 0px; left: 0px; right: 0px;
 }
 
 #browser{

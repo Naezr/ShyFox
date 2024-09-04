@@ -26,6 +26,9 @@
 
 */
 
+/* hide ugly animation */
+.sidebar-animation-screenshot {visibility: collapse !important;}
+
 /* new sidebar panel */
 .wrapper:has(.tools-and-extensions) {
   background: transparent !important;
@@ -164,6 +167,7 @@
 #sidebar-box, #sidebar-main{
   position: fixed;
   min-width: 0px !important;
+  padding: 0px !important;
 }
 
 #sidebar-main{
