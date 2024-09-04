@@ -67,7 +67,8 @@
   { background-color: color-mix(in srgb, currentColor 10%, transparent) !important; }
   
   #tabbrowser-tabs:not([expanded]){
-    #newtab-button-container, #tabs-newtab-button, .tabbrowser-tab
+    #newtab-button-container, #tabs-newtab-button, .tabbrowser-tab, 
+    .tabbrowser-tab[pinned] :is(.tab-background, .tab-content)
     { width: calc( var(--sdbr-tb-wdt) - 8px ) !important; }
     
     #newtab-button-container{ padding-inline: 4px !important; }
