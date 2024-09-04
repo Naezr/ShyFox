@@ -294,6 +294,11 @@
     #pageActionButton[multiple-children]{ visibility: visible !important; }
     
     #identity-icon-box #identity-icon-label { display: none !important; }
+    
+    #identity-box[pageproxystate="invalid"]{
+      #identity-icon-box { padding: 0.5px !important; }
+      #identity-icon { display: none !important; }
+    }
   }
     
   #urlbar[breakout-extend]{
