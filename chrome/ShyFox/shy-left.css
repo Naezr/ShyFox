@@ -165,7 +165,7 @@
 #sidebar-splitter{ display: none !important; }
 
 #sidebar-box, #sidebar-main{
-  position: fixed;
+  position: fixed !important;
   min-width: 0px !important;
   padding: 0px !important;
 }
@@ -208,6 +208,7 @@
 #sidebar{
   border: var(--border) !important;
   border-radius: var(--big-rounding) !important;
+  box-shadow: none !important;
 }
 
 
