@@ -205,7 +205,8 @@ browser[class*="devtools-toolbox"]{
 #PersonalToolbar > toolbarbutton,
 #PlacesChevron{
   width: 32px !important;
-  margin: 0 2px !important;
+  margin: 0 4px !important;
+  padding-inline: 0px !important;
     
   & > .toolbarbutton-icon{
     width: 32px !important;
