@@ -6,6 +6,12 @@
 :root{
   --hidden-left: calc( 0px - var(--sdbr-wdt) + var(--margin-on-left) );
   --semi-hidden-left: calc( 0px - var(--sdbr-wdt) + var(--sdbr-tb-wdt) );
+  
+  --hover-left: calc( var(--left-margin) + var(--margin) );
+  
+  --left-bmbr-gap: 0px;
+  --left-sdbr-gap: 0px;
+  --left-gap: calc( var(--margin) / 2 );
 }
 
 :root:not([titlepreface*="᠎"]){
@@ -252,7 +258,7 @@
     left: var(--hidden-left) !important;
   }
   
-  &:has(#sidebar-box[hidden]) #sidebar-main:not([hidden]){
+  &:has(#sidebar-box[hidden]) #sidebar-main > *:not([hidden]):not([expanded]){
     left: calc( 0px - var(--sdbr-tb-wdt) + var(--margin-on-left) ) !important;
   }
 }
@@ -271,6 +277,7 @@
   }
   
   #nav-bar{
+    overflow: visible !important;
 
     left: 0;
     top: 0;
@@ -313,13 +320,46 @@
     right: 0 !important;
   }
   
+  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ) {
+    #nav-bar{
+      --nvbr-hover-top: calc( var(--margin-on-top) + var(--margin) );
+      
+      --nvbr-hover-col: var(--tb-col);
+      --nvbr-hover-txt: var(--tb-txt);
+      
+      --nvbr-hover-brs: var(--big-rounding);
+      --nvbr-hover-brw: var(--br-wdt);
+      --nvbr-hover-brt: var(--br-style);
+      --nvbr-hover-brc: var(--br-col);
+      
+      --toolbarbutton-icon-fill: var(--tb-txt) !important;
+    }
+    
+    #nav-bar-customization-target::before{
+      content: ""; position: absolute;
+      -moz-window-dragging: drag;
+      z-index: -999;
+      right: calc( 0px - var(--panel-hidden-hitbox) );
+      bottom: 0px;
+      width: 500%; height: 500%;
+      background: var(--debug-col);
+    }
+    
+    #urlbar[breakout-extend]{
+      #urlbar-background{
+        border-radius: var(--big-rounding) !important;
+        border: var(--border) !important;
+      }
+    }
+  }
+  
   :root[titlepreface*="᠎"]{
     #nav-bar{
       left: var(--hidden-left) !important;
     }
   }
   
-  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]) ):has( #sidebar-box[hidden] ) {
+  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
     #nav-bar{
       left: var(--semi-hidden-left) !important;
     }
@@ -346,6 +386,34 @@
     top: var(--left-nvbr-hgt);
 
     width: var(--sdbr-wdt) !important;
+    overflow: visible !important;
+  }
+  
+  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){
+    
+    @media (-moz-bool-pref: "shyfox.position.navbar") { --bmbr-left-gap: var(--left-gap); }
+    
+    #PersonalToolbar{
+      --bmbr-hover-top: calc( var(--margin-on-top) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) );
+      
+      --bmbr-hover-col: var(--tb-col);
+      --bmbr-hover-txt: var(--tb-txt);
+      
+      --bmbr-hover-brs: var(--big-rounding);
+      --bmbr-hover-brw: var(--br-wdt);
+      --bmbr-hover-brt: var(--br-style);
+      --bmbr-hover-brc: var(--br-col);
+    }
+    
+    #PersonalToolbar::before{
+      content: ""; position: absolute;
+      -moz-window-dragging: drag;
+      z-index: -999;
+      right: calc( 0px - var(--panel-hidden-hitbox) );
+      bottom: 0px;
+      width: 500%; height: 500%;
+      background: var(--debug-col);
+    }
   }
   
   :root[titlepreface*="᠎"]{
@@ -354,9 +422,52 @@
     }
   }
   
-  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]) ):has( #sidebar-box[hidden] ) {
+  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
     #PersonalToolbar{
       left: var(--semi-hidden-left) !important;
     }
   }
+}
+
+/* 
+
+##############################################################################################################################
+
+ S E M I   H I D D E N   M A G I C   Z O N E
+
+*/
+
+:root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
+  
+  &:has(
+    #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
+    #nav-bar-customization-target *:not(#unified-extensions-button, #firefox-view-button)[open]
+  ) {
+    #nav-bar{
+      left: var(--hover-left) !important;
+      top: var(--nvbr-hover-top) !important;
+      
+      background: var(--nvbr-hover-col) !important;
+      color: var(--nvbr-hover-txt) !important;
+      
+      border-radius: var(--nvbr-hover-brs) !important;
+      border-width: var(--nvbr-hover-brw) !important;
+      border-style: var(--nvbr-hover-brt) !important;
+      border-color: var(--nvbr-hover-brc) !important;
+    }
+    
+    #PersonalToolbar{
+      left: var(--hover-left) !important;
+      top: var(--bmbr-hover-top) !important;
+      
+      background: var(--bmbr-hover-col) !important;
+      color: var(--bmbr-hover-txt) !important;
+      
+      border-radius: var(--bmbr-hover-brs) !important;
+      border-width: var(--bmbr-hover-brw) !important;
+      border-style: var(--bmbr-hover-brt) !important;
+      border-color: var(--bmbr-hover-brc) !important;
+    }
+  }
+  
 }
