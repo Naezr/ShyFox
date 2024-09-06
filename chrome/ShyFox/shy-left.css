@@ -286,6 +286,8 @@
     height: calc(var(--nvbr-hgt) * 2) !important;
   }
   
+  #nav-bar toolbarspring{ max-width: unset !important; }
+  
   #nav-bar-customization-target{ margin-left: calc( 0px - var(--br-wdt) ) }
   
   #urlbar-container{
