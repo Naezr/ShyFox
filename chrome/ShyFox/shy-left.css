@@ -434,41 +434,111 @@
 
 ##############################################################################################################################
 
+ A P P E A R A N C E : G A P L E S S
+
+*/
+
+@media (-moz-bool-pref: "shyfox.appearance.leftbar.gapless") {
+  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){
+    & { --left-gap: 0px }
+  }
+  
+  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
+  @media (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+    #nav-bar{
+      --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
+      --nvbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
+    }
+    #PersonalToolbar{
+      --bmbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+      --bmbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
+    }
+  } }
+}
+
+
+/* 
+
+##############################################################################################################################
+
  S E M I   H I D D E N   M A G I C   Z O N E
 
 */
 
 :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
   
-  &:has(
+  
+  @media (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.extbutton") and (-moz-bool-pref: "shyfox.position.menubutton") {&:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
     #nav-bar-customization-target *:not(#unified-extensions-button, #firefox-view-button)[open]
   ) {
     #nav-bar{
-      left: var(--hover-left) !important;
-      top: var(--nvbr-hover-top) !important;
-      
-      background: var(--nvbr-hover-col) !important;
-      color: var(--nvbr-hover-txt) !important;
-      
-      border-radius: var(--nvbr-hover-brs) !important;
-      border-width: var(--nvbr-hover-brw) !important;
-      border-style: var(--nvbr-hover-brt) !important;
-      border-color: var(--nvbr-hover-brc) !important;
+      left: var(--hover-left) !important; top: var(--nvbr-hover-top) !important;
+      background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
+      border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important;
+      border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
     }
-    
     #PersonalToolbar{
-      left: var(--hover-left) !important;
-      top: var(--bmbr-hover-top) !important;
-      
-      background: var(--bmbr-hover-col) !important;
-      color: var(--bmbr-hover-txt) !important;
-      
-      border-radius: var(--bmbr-hover-brs) !important;
-      border-width: var(--bmbr-hover-brw) !important;
-      border-style: var(--bmbr-hover-brt) !important;
-      border-color: var(--bmbr-hover-brc) !important;
+      left: var(--hover-left) !important; top: var(--bmbr-hover-top) !important;
+      background: var(--bmbr-hover-col) !important; color: var(--bmbr-hover-txt) !important;
+      border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
+      border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     }
-  }
+  } }
   
+  @media (-moz-bool-pref: "shyfox.position.navbar") and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) and (-moz-bool-pref: "shyfox.position.menubutton") {&:has(
+    #nav-bar-customization-target:hover,
+    #nav-bar-customization-target *:not(#firefox-view-button)[open]
+  ) {
+    #nav-bar{
+      left: var(--hover-left) !important; top: var(--nvbr-hover-top) !important;
+      background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
+      border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important;
+      border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
+    }
+    #PersonalToolbar{
+      left: var(--hover-left) !important; top: var(--bmbr-hover-top) !important;
+      background: var(--bmbr-hover-col) !important; color: var(--bmbr-hover-txt) !important;
+      border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
+      border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
+    }
+  } }
+  
+  @media (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.extbutton") and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) {&:has(
+    #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
+    #nav-bar-customization-target *:not(#unified-extensions-button, #firefox-view-button)[open],
+    #PanelUI-button:hover, #PanelUI-menu-button[open]
+  ) {
+    #nav-bar{
+      left: var(--hover-left) !important; top: var(--nvbr-hover-top) !important;
+      background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
+      border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important;
+      border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
+    }
+    #PersonalToolbar{
+      left: var(--hover-left) !important; top: var(--bmbr-hover-top) !important;
+      background: var(--bmbr-hover-col) !important; color: var(--bmbr-hover-txt) !important;
+      border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
+      border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
+    }
+  } }
+  
+  @media (-moz-bool-pref: "shyfox.position.navbar") and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) {&:has(
+    #nav-bar-customization-target:hover,
+    #nav-bar-customization-target *:not(#firefox-view-button)[open],
+    #PanelUI-button:hover, #PanelUI-menu-button[open]
+  ) {
+    #nav-bar{
+      left: var(--hover-left) !important; top: var(--nvbr-hover-top) !important;
+      background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
+      border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important;
+      border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
+    }
+    #PersonalToolbar{
+      left: var(--hover-left) !important; top: var(--bmbr-hover-top) !important;
+      background: var(--bmbr-hover-col) !important; color: var(--bmbr-hover-txt) !important;
+      border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
+      border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
+    }
+  } }
 }
