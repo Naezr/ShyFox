@@ -339,7 +339,7 @@
       -moz-window-dragging: drag;
       z-index: -999;
       right: calc( 0px - var(--panel-hidden-hitbox) );
-      bottom: 0px;
+      bottom: calc( 0px - var(--br-wdt) );
       width: 500%; height: 500%;
       background: var(--debug-col);
     }
@@ -409,7 +409,7 @@
       -moz-window-dragging: drag;
       z-index: -999;
       right: calc( 0px - var(--panel-hidden-hitbox) );
-      bottom: 0px;
+      bottom: calc( 0px - var(--br-wdt) );
       width: 500%; height: 500%;
       background: var(--debug-col);
     }
