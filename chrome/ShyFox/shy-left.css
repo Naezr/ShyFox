@@ -9,8 +9,8 @@
   
   --hover-left: calc( var(--left-margin) + var(--margin) );
   
-  --left-bmbr-gap: 0px;
-  --left-sdbr-gap: 0px;
+  --bmbr-left-gap: 0px;
+  --sdbr-left-gap: 0px;
   --left-gap: calc( var(--margin) / 2 );
 }
 
