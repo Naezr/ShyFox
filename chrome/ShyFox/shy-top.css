@@ -141,15 +141,7 @@
     top: var(--top-tbbr-hgt);
 
     height: var(--nvbr-hgt) !important;
-  }
-  
-  #nav-bar-customization-target :is( #stop-reload-button, #edit-controls, #zoom-controls ) > *,
-  #nav-bar-customization-target > *:not(#unified-extensions-button),
-  #nav-bar-customization-target > *[disabled],
-  #nav-bar-overflow-button
-  { transition: var(--opacity-transition) !important; }
-  @media not (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{ transition: var(--opacity-transition) !important; } }
-  @media not (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{ transition: var(--opacity-transition) !important; } }    
+  }  
   
   :root[titlepreface*="​"]{
     
@@ -220,8 +212,6 @@
     right: var(--topbar-right);
     left: var(--topbar-left);
   }
-  
-  #PersonalToolbar > * { transition: var(--opacity-transition) !important; }
   
   :root[titlepreface*="​"]{
     
