@@ -539,9 +539,7 @@
   } }
   
   @media not (-moz-bool-pref: "shyfox.position.navbar") { &:has(
-    #nav-bar-customization-target:hover, #nav-bar-customization-target *:not(#firefox-view-button)[open],
-    #nav-bar-overflow-button:hover, #nav-bar-overflow-button[open],
-    #urlbar:focus-within
+    #nav-bar-overflow-button:hover, #nav-bar-overflow-button[open], #urlbar:focus-within
   ) { --top-hvbr-opct: 0;
   #nav-bar{ 
     top: var(--nvbr-hover-top);
