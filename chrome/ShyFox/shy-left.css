@@ -21,7 +21,8 @@
   &:has(
     #sidebar-box:not([hidden]),
     #sidebar-main > *[expanded]:not([hidden])
-  ) { --left-margin: var(--sdbr-wdt); }
+  ), &:has(#sidebar-box[hidden]):has(#sidebar-main > *[hidden]) 
+  { --left-margin: var(--sdbr-wdt); }
 }
 
 /* 
