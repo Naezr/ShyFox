@@ -15,12 +15,12 @@
 }
 
 :root:not([titlepreface*="᠎"]){
-  &:not( :has( #sidebar-main[hidden] )
+  &:not( :has( #sidebar-main > *[hidden] )
   ) { --left-margin: var(--sdbr-tb-wdt); }
   
   &:has(
     #sidebar-box:not([hidden]),
-    #sidebar-main:not([hidden]) > *[expanded]
+    #sidebar-main > *[expanded]:not([hidden])
   ) { --left-margin: var(--sdbr-wdt); }
 }
 
@@ -188,11 +188,18 @@
   z-index: 2 !important;
 }
 
+:root:has( #PersonalToolbar:not([collapsed="true"]) ) {
+@media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+  #sidebar-box { top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) ); }
+} }
+
+:root:has( #PersonalToolbar[collapsed="true"] ) {
+@media (-moz-bool-pref: "shyfox.position.navbar") {
+  #sidebar-box { top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) ); }
+} }
+
 #sidebar-box{
   top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) + var(--margin) );
-  
-  @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") 
-  { top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) ); }
   
   bottom: var(--margin);
   
