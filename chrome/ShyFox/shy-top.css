@@ -429,7 +429,7 @@
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important; border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); } #PanelUI-menu-button{ opacity: var(--enabled-opct); }
-    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); }
   } 
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
     top: var(--bmbr-hover-top);
@@ -449,7 +449,7 @@
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important; border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
     #nav-bar-customization-target > * { opacity: var(--enabled-opct); }
-    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); }
   }
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
     top: var(--bmbr-hover-top);
@@ -469,7 +469,7 @@
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important; border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); }
-    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); }
   }
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
     top: var(--bmbr-hover-top);
@@ -489,7 +489,7 @@
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important; border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
     #nav-bar-customization-target > * { opacity: var(--enabled-opct); } #PanelUI-menu-button{ opacity: var(--enabled-opct); }
-    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); }
   }
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
     top: var(--bmbr-hover-top);
@@ -508,7 +508,7 @@
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important; border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
     #nav-bar-customization-target > * { opacity: var(--enabled-opct); } #PanelUI-menu-button{ opacity: var(--enabled-opct); }
-    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); }
   } }
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
     top: var(--bmbr-hover-top);
@@ -532,7 +532,7 @@
     background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
     border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important; border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
     #nav-bar-customization-target > * { opacity: var(--enabled-opct); } #PanelUI-menu-button{ opacity: var(--enabled-opct); }
-    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); }
   } }
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
     top: var(--bmbr-hover-top);
@@ -560,7 +560,7 @@
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); }
     @media not (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{ opacity: var(--enabled-opct); } }
     @media not (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{ opacity: var(--enabled-opct); } }
-    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); }
   }
   @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
     top: var(--bmbr-hover-top);
@@ -588,7 +588,7 @@
     #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); }
     @media not (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{ opacity: var(--enabled-opct); } }
     @media not (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{ opacity: var(--enabled-opct); } }
-    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: 1; }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); }
   } }
   #PersonalToolbar{
     top: var(--bmbr-hover-top);

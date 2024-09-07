@@ -201,6 +201,7 @@
   margin-left: var(--sdbr-tb-wdt);
   left: 0px;
   
+  background: var(--sidebar-background-color) !important;
   border-radius: var(--big-rounding) !important;
   transition: var(--bar-transition), var(--opacity-transition), width var(--long-trans-dur) ease !important;
 }
