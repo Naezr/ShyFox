@@ -271,7 +271,12 @@
 }
 
 :root[titlepreface*="᠎"]{
+  @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") { --sdbr-left-gap: var(--left-gap); }
+  
   #sidebar-box, #sidebar-main{
+    --sdbr-hover-top: calc( var(--top-margin) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) + var(--left-bmbr-hgt) + var(--sdbr-left-gap) );
+    --sdbr-hover-bottom: calc( var(--margin-on-bottom) + var(--margin) );
+    
     left: var(--hidden-left) !important;
   }
   
@@ -418,7 +423,7 @@
     @media (-moz-bool-pref: "shyfox.position.navbar") { --bmbr-left-gap: var(--left-gap); }
     
     #PersonalToolbar{
-      --bmbr-hover-top: calc( var(--margin-on-top) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) );
+      --bmbr-hover-top: calc( var(--top-margin) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) );
       
       --bmbr-hover-col: var(--tb-col);
       --bmbr-hover-txt: var(--tb-txt);
@@ -491,8 +496,7 @@
 
 */
 
-:root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
-  
+:is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){  
   
   @media (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.extbutton") and (-moz-bool-pref: "shyfox.position.menubutton") {&:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
@@ -511,6 +515,13 @@
       border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; } }
+    &[titlepreface*="᠎"]{
+      #sidebar-box, #sidebar-main {
+        top: var(--sdbr-hover-top) !important;
+        bottom: var(--sdbr-hover-bottom) !important;
+        left: var(--hover-left) !important;
+      }
+    }
   } }
   
   @media (-moz-bool-pref: "shyfox.position.navbar") and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) and (-moz-bool-pref: "shyfox.position.menubutton") {&:has(
@@ -611,6 +622,5 @@
       border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; }
-  } }
-  
+  } }  
 }

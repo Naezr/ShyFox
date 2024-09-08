@@ -118,6 +118,7 @@
   --bar-transition:
     margin var(--long-trans-dur) ease,
     top var(--trans-dur) ease-out,
+    bottom var(--trans-dur) ease-out,
     background var(--trans-dur) ease-out,
     color var(--trans-dur) ease-in,
     border var(--trans-dur) ease,
