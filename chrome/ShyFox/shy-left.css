@@ -21,8 +21,16 @@
   &:has(
     #sidebar-box:not([hidden]),
     #sidebar-main > *[expanded]:not([hidden])
-  ), &:has(#sidebar-box[hidden]):has(#sidebar-main > *[hidden]) 
-  { --left-margin: var(--sdbr-wdt); }
+  ) { --left-margin: var(--sdbr-wdt); }
+  
+  &:has(#sidebar-box[hidden]):has(#sidebar-main > *[hidden]){
+    &:has( #PersonalToolbar[collapsed="true"] ) { @media (-moz-bool-pref: "shyfox.position.navbar") {
+      --left-margin: var(--sdbr-wdt);
+    } }
+    &:has( #PersonalToolbar:not([collapsed="true"]) ) { @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+      --left-margin: var(--sdbr-wdt);
+    } }
+  }
 }
 
 /* 
