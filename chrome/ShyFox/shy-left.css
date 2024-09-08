@@ -207,6 +207,10 @@
   #sidebar-box { top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) ); }
 } }
 
+:root[titlepreface*="᠎"] #sidebar-box{
+  margin-left: calc( var(--sdbr-tb-wdt) + var(--margin) / 2 );
+}
+
 #sidebar-box{
   top: calc( var(--left-nvbr-hgt) + var(--left-bmbr-hgt) + var(--margin) );
   
@@ -276,6 +280,14 @@
   #sidebar-box, #sidebar-main{
     --sdbr-hover-top: calc( var(--top-margin) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) + var(--left-bmbr-hgt) + var(--sdbr-left-gap) );
     --sdbr-hover-bottom: calc( var(--margin-on-bottom) + var(--margin) );
+    
+    --sdbr-hover-col: var(--tb-col);
+    --sdbr-hover-txt: var(--tb-txt);
+
+    --sdbr-hover-brs: var(--big-rounding);
+    --sdbr-hover-brw: var(--br-wdt);
+    --sdbr-hover-brt: var(--br-style);
+    --sdbr-hover-brc: var(--br-col);
     
     left: var(--hidden-left) !important;
   }
@@ -520,6 +532,12 @@
         top: var(--sdbr-hover-top) !important;
         bottom: var(--sdbr-hover-bottom) !important;
         left: var(--hover-left) !important;
+      }
+      
+      #sidebar-main{
+        background: var(--sdbr-hover-col) !important; color: var(--sdbr-hover-txt) !important;
+        border-radius: var(--sdbr-hover-brs) !important; border-width: var(--sdbr-hover-brw) !important;
+        border-style: var(--sdbr-hover-brt) !important; border-color: var(--sdbr-hover-brc) !important;
       }
     }
   } }
