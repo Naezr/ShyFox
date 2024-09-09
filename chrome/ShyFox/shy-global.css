@@ -360,6 +360,6 @@ browser[class*="devtools-toolbox"]{
   }
 }
 
-panel[type="arrow"][animate][animate="open"] {
-  animation: shy-jello-animation 0.2s ease-in-out;
-}
+panel[type="arrow"][animate][animate="open"],
+:is(toolbarbutton, menu)[open] > menupopup
+{ animation: shy-jello-animation 0.2s ease-in-out; }

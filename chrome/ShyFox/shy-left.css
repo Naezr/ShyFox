@@ -277,7 +277,7 @@
 :root[titlepreface*="᠎"]{
   @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") { --sdbr-left-gap: var(--left-gap); }
   
-  #sidebar-box, #sidebar-main:not( :has(*[hidden]) ){
+  #sidebar-box, #sidebar-main:not( :has( > *[hidden]) ){
     --sdbr-hover-top: calc( var(--top-margin) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) + var(--left-bmbr-hgt) + var(--sdbr-left-gap) );
     --sdbr-hover-bottom: calc( var(--margin-on-bottom) + var(--margin) );
     
