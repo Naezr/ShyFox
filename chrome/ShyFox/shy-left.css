@@ -277,7 +277,7 @@
 :root[titlepreface*="᠎"]{
   @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") { --sdbr-left-gap: var(--left-gap); }
   
-  #sidebar-box, #sidebar-main{
+  #sidebar-box, #sidebar-main:not( :has(*[hidden]) ){
     --sdbr-hover-top: calc( var(--top-margin) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) + var(--left-bmbr-hgt) + var(--sdbr-left-gap) );
     --sdbr-hover-bottom: calc( var(--margin-on-bottom) + var(--margin) );
     
@@ -491,7 +491,7 @@
     & { --left-gap: 0px }
   }
   
-  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
+  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ):has(#PersonalToolbar:not([collapsed="true"])) {
   @media (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.bookmarkbar") {
     #nav-bar{
       --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
@@ -501,6 +501,12 @@
       --bmbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
       --bmbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
     }
+    
+    &:has( #sidebar-main > *[hidden] ):has( #sidebar-box:not([hidden]) ){
+      
+    }
+    
+    
   } }
 }
 
@@ -537,7 +543,7 @@
       #sidebar{ border-width: var(--sdbr-main-hover-brw) !important; border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important; }
       #sidebar-box, #sidebar { border-radius: var(--sdbr-main-hover-brs) !important; }
       #sidebar-main{
-        background: var(--sdbr-hover-col) !important; color: var(--sdbr-hover-txt) !important;
+        background: var(--sdbr-hover-col) !important;
         border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
         border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
       }
