@@ -336,3 +336,30 @@ browser[class*="devtools-toolbox"]{
   
   .footer-button{ margin: 4px !important; }
 }
+
+/* 
+
+##############################################################################################################################
+
+ A N I M A T I O N
+
+*/
+
+@keyframes shy-jello-animation {
+  0% {
+    transform: scale3d(0.8, 0.8, 0.8);
+  }
+
+  60% {
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+panel[type="arrow"][animate][animate="open"] {
+  animation: shy-jello-animation 0.2s ease-in-out;
+}
