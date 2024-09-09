@@ -284,10 +284,15 @@
     --sdbr-hover-col: var(--tb-col);
     --sdbr-hover-txt: var(--tb-txt);
 
-    --sdbr-hover-brs: var(--big-rounding);
-    --sdbr-hover-brw: var(--br-wdt);
-    --sdbr-hover-brt: var(--br-style);
-    --sdbr-hover-brc: var(--br-col);
+    --sdbr-main-hover-brs: var(--big-rounding);
+    --sdbr-main-hover-brw: var(--br-wdt);
+    --sdbr-main-hover-brt: var(--br-style);
+    --sdbr-main-hover-brc: var(--br-col);
+    
+    --sdbr-box-hover-brs: var(--big-rounding);
+    --sdbr-box-hover-brw: var(--br-wdt);
+    --sdbr-box-hover-brt: var(--br-style);
+    --sdbr-box-hover-brc: var(--br-col);
     
     left: var(--hidden-left) !important;
   }
@@ -504,7 +509,7 @@
 
 ##############################################################################################################################
 
- S E M I   H I D D E N   M A G I C   Z O N E
+ M A G I C   Z O N E
 
 */
 
@@ -528,16 +533,13 @@
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; } }
     &[titlepreface*="᠎"]{
-      #sidebar-box, #sidebar-main {
-        top: var(--sdbr-hover-top) !important;
-        bottom: var(--sdbr-hover-bottom) !important;
-        left: var(--hover-left) !important;
-      }
-      
+      #sidebar-box, #sidebar-main { top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important; left: var(--hover-left) !important; }
+      #sidebar{ border-width: var(--sdbr-main-hover-brw) !important; border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important; }
+      #sidebar-box, #sidebar { border-radius: var(--sdbr-main-hover-brs) !important; }
       #sidebar-main{
         background: var(--sdbr-hover-col) !important; color: var(--sdbr-hover-txt) !important;
-        border-radius: var(--sdbr-hover-brs) !important; border-width: var(--sdbr-hover-brw) !important;
-        border-style: var(--sdbr-hover-brt) !important; border-color: var(--sdbr-hover-brc) !important;
+        border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
+        border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
       }
     }
   } }
