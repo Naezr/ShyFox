@@ -44,10 +44,14 @@
 /* hide ugly animation */
 .sidebar-animation-screenshot {visibility: collapse !important;}
 
+#sidebar-main{
+  --txt-color: var(--bg-txt);
+}
+
 /* new sidebar panel */
 .wrapper:has(.tools-and-extensions) {
   background: transparent !important;
-  color: var(--bg-txt) !important;
+  color: var(--txt-color) !important;
   border: 0px solid transparent !important;
   
   padding: 0px !important;
@@ -100,6 +104,14 @@
   }
 }
 
+/* rm scrollbars */
+#tabbrowser-arrowscrollbox, #vertical-pinned-tabs-container{
+  --vertical-tabs-scrollbox-width: none;
+}
+
+scrollbox, #vertical-pinned-tabs-container{
+  scrollbar-width: var(--vertical-tabs-scrollbox-width) !important;
+}
 
 /* pinned tabs */
 #vertical-tabs #tabbrowser-tabs[expanded] #vertical-pinned-tabs-container{
@@ -543,7 +555,7 @@
       #sidebar{ border-width: var(--sdbr-main-hover-brw) !important; border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important; }
       #sidebar-box, #sidebar { border-radius: var(--sdbr-main-hover-brs) !important; }
       #sidebar-main{
-        background: var(--sdbr-hover-col) !important;
+        background: var(--sdbr-hover-col) !important; --txt-color: var(--sdbr-hover-txt) !important;
         border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
         border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
       }
