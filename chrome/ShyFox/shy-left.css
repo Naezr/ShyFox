@@ -205,7 +205,7 @@ scrollbox, #vertical-pinned-tabs-container{
   bottom: 0px;
   left: 0px;
   
-  transition: var(--bar-transition) !important;
+  transition: var(--bar-transition), var(--opacity-transition) !important;
   z-index: 2 !important;
 }
 
@@ -300,6 +300,8 @@ scrollbox, #vertical-pinned-tabs-container{
   @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") { --sdbr-left-gap: var(--left-gap); }
   
   #sidebar-box, #sidebar-main:not( :has( > *[hidden]) ){
+    opacity: 0;
+    
     --sdbr-hover-top: calc( var(--top-margin) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) + var(--left-bmbr-hgt) + var(--sdbr-left-gap) );
     --sdbr-hover-bottom: calc( var(--margin-on-bottom) + var(--margin) );
     
@@ -640,9 +642,11 @@ scrollbox, #vertical-pinned-tabs-container{
       border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; } }
-    
     &[titlepreface*="᠎"]{
-      #sidebar-box, #sidebar-main { top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important; left: var(--hover-left) !important; }
+      #sidebar-box, #sidebar-main {
+        top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important;
+        left: var(--hover-left) !important; opacity: 1;
+      }
       #sidebar-box{
         border-width: var(--sdbr-box-hover-brw)!important; border-style: var(--sdbr-box-hover-brt) !important;
         border-color: var(--sdbr-box-hover-brc) !important; border-radius: var(--sdbr-box-hover-brs) !important;
@@ -672,6 +676,21 @@ scrollbox, #vertical-pinned-tabs-container{
       border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; } }
+    &[titlepreface*="᠎"]{
+      #sidebar-box, #sidebar-main {
+        top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important;
+        left: var(--hover-left) !important; opacity: 1;
+      }
+      #sidebar-box{
+        border-width: var(--sdbr-box-hover-brw)!important; border-style: var(--sdbr-box-hover-brt) !important;
+        border-color: var(--sdbr-box-hover-brc) !important; border-radius: var(--sdbr-box-hover-brs) !important;
+      } #sidebar { border: none !important; border-radius: var(--sdbr-box-hover-brs) !important; }
+      #sidebar-main{
+        background: var(--sdbr-hover-col) !important; --txt-color: var(--sdbr-hover-txt) !important;
+        border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
+        border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
+      }
+    }
   } }
   
   @media (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.extbutton") and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) {&:has(
@@ -692,6 +711,21 @@ scrollbox, #vertical-pinned-tabs-container{
       border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; } }
+    &[titlepreface*="᠎"]{
+      #sidebar-box, #sidebar-main {
+        top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important;
+        left: var(--hover-left) !important; opacity: 1;
+      }
+      #sidebar-box{
+        border-width: var(--sdbr-box-hover-brw)!important; border-style: var(--sdbr-box-hover-brt) !important;
+        border-color: var(--sdbr-box-hover-brc) !important; border-radius: var(--sdbr-box-hover-brs) !important;
+      } #sidebar { border: none !important; border-radius: var(--sdbr-box-hover-brs) !important; }
+      #sidebar-main{
+        background: var(--sdbr-hover-col) !important; --txt-color: var(--sdbr-hover-txt) !important;
+        border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
+        border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
+      }
+    }
   } }
   
   @media (-moz-bool-pref: "shyfox.position.navbar") and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) {&:has(
@@ -712,6 +746,21 @@ scrollbox, #vertical-pinned-tabs-container{
       border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; } }
+    &[titlepreface*="᠎"]{
+      #sidebar-box, #sidebar-main {
+        top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important;
+        left: var(--hover-left) !important; opacity: 1;
+      }
+      #sidebar-box{
+        border-width: var(--sdbr-box-hover-brw)!important; border-style: var(--sdbr-box-hover-brt) !important;
+        border-color: var(--sdbr-box-hover-brc) !important; border-radius: var(--sdbr-box-hover-brs) !important;
+      } #sidebar { border: none !important; border-radius: var(--sdbr-box-hover-brs) !important; }
+      #sidebar-main{
+        background: var(--sdbr-hover-col) !important; --txt-color: var(--sdbr-hover-txt) !important;
+        border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
+        border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
+      }
+    }
   } }
   
   @media (-moz-bool-pref: "shyfox.position.navbar") { &:has(
@@ -732,6 +781,21 @@ scrollbox, #vertical-pinned-tabs-container{
       border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; } }
+    &[titlepreface*="᠎"]{
+      #sidebar-box, #sidebar-main {
+        top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important;
+        left: var(--hover-left) !important; opacity: 1;
+      }
+      #sidebar-box{
+        border-width: var(--sdbr-box-hover-brw)!important; border-style: var(--sdbr-box-hover-brt) !important;
+        border-color: var(--sdbr-box-hover-brc) !important; border-radius: var(--sdbr-box-hover-brs) !important;
+      } #sidebar { border: none !important; border-radius: var(--sdbr-box-hover-brs) !important; }
+      #sidebar-main{
+        background: var(--sdbr-hover-col) !important; --txt-color: var(--sdbr-hover-txt) !important;
+        border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
+        border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
+      }
+    }
   } }
   
   @media (-moz-bool-pref: "shyfox.position.bookmarkbar") {&:has(
@@ -753,5 +817,20 @@ scrollbox, #vertical-pinned-tabs-container{
       border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
       border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
     } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; }
+    &[titlepreface*="᠎"]{
+      #sidebar-box, #sidebar-main {
+        top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important;
+        left: var(--hover-left) !important; opacity: 1;
+      }
+      #sidebar-box{
+        border-width: var(--sdbr-box-hover-brw)!important; border-style: var(--sdbr-box-hover-brt) !important;
+        border-color: var(--sdbr-box-hover-brc) !important; border-radius: var(--sdbr-box-hover-brs) !important;
+      } #sidebar { border: none !important; border-radius: var(--sdbr-box-hover-brs) !important; }
+      #sidebar-main{
+        background: var(--sdbr-hover-col) !important; --txt-color: var(--sdbr-hover-txt) !important;
+        border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
+        border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
+      }
+    }
   } }  
 }
