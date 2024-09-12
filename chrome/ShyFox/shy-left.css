@@ -833,4 +833,40 @@ scrollbox, #vertical-pinned-tabs-container{
       }
     }
   } }  
+  
+  &:has(
+    #sidebar-box:hover, #sidebar-box *[open], #sidebar-main:hover
+  ) {
+    @media (-moz-bool-pref: "shyfox.position.navbar") { #nav-bar{ 
+      --toolbarbutton-icon-fill: var(--nvbr-hover-txt) !important;
+      left: var(--hover-left) !important; top: var(--nvbr-hover-top) !important;
+      background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
+      border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important;
+      border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
+    } #nav-bar-customization-target > *:not(#unified-extensions-button) { opacity: var(--enabled-opct); }
+    #nav-bar-customization-target > *[disabled] { opacity: var(--disabled-opct) !important; } #nav-bar-overflow-button { opacity: var(--enabled-opct); } }
+    @media not (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{ opacity: var(--enabled-opct); } }
+    @media not (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{ opacity: var(--enabled-opct); } }
+    @media (-moz-bool-pref: "shyfox.position.bookmarkbar") { #PersonalToolbar{
+      left: var(--hover-left) !important; top: var(--bmbr-hover-top) !important;
+      background: var(--bmbr-hover-col) !important; color: var(--bmbr-hover-txt) !important;
+      border-radius: var(--bmbr-hover-brs) !important; border-width: var(--bmbr-hover-brw) !important;
+      border-style: var(--bmbr-hover-brt) !important; border-color: var(--bmbr-hover-brc) !important;
+    } #PersonalToolbar > * { opacity: var(--enabled-opct); } #PersonalToolbar > *[disabled] { opacity: var(--disabled-opct) !important; } }
+    &[titlepreface*="᠎"]{
+      #sidebar-box, #sidebar-main {
+        top: var(--sdbr-hover-top) !important; bottom: var(--sdbr-hover-bottom) !important;
+        left: var(--hover-left) !important; opacity: 1;
+      }
+      #sidebar-box{
+        border-width: var(--sdbr-box-hover-brw)!important; border-style: var(--sdbr-box-hover-brt) !important;
+        border-color: var(--sdbr-box-hover-brc) !important; border-radius: var(--sdbr-box-hover-brs) !important;
+      } #sidebar { border: none !important; border-radius: var(--sdbr-box-hover-brs) !important; }
+      #sidebar-main{
+        background: var(--sdbr-hover-col) !important; --txt-color: var(--sdbr-hover-txt) !important;
+        border-radius: var(--sdbr-main-hover-brs) !important; border-width: var(--sdbr-main-hover-brw) !important;
+        border-style: var(--sdbr-main-hover-brt) !important; border-color: var(--sdbr-main-hover-brc) !important;
+      }
+    }
+  }
 }
