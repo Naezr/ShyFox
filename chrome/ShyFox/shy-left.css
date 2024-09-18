@@ -291,7 +291,7 @@ scrollbox, #vertical-pinned-tabs-container{
   width: calc( var(--sdbr-wdt) - var(--br-wdt) * 2 ) !important;
 }
 
-:root:has( #sidebar-main > *[expanded]:not([hidden]) ){
+:root:not([titlepreface*="᠎"]):has( #sidebar-main > *[expanded]:not([hidden]) ){
   #sidebar-box{ filter: blur(5px) grayscale(80%) !important; }
   #sidebar { border: 0px solid transparent !important; }
 }
