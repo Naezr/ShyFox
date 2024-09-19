@@ -1,7 +1,7 @@
 @-moz-document url("about:config"){:root:has(
   
 /*                           vvvv <<<< Number of all shyfox parameters + 1 */  
-  #prefs .deleted:nth-child(  10  of :not(.hidden) )
+  #prefs .add:nth-child(  10  of :not(.hidden) )
   
 ):has( label #about-config-show-only-modified:checked ) {
   
@@ -16,11 +16,13 @@
       .cell-value    { width: calc(50vw - 10px - 40px - 40px ) !important; }
     }
     
+    --max: 99999;
     
+    .add{ order: var(--max) !important; }
     
     & > *:nth-child( 1 of :not(.hidden) ){
       color: red !important;
-      order: 99999999 !important;
+      order: calc( var(--max) - 1 ) !important;
     }
     
     & > *:nth-child( 3 of :not(.hidden) ){
