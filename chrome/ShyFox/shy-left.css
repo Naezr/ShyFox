@@ -15,7 +15,7 @@
 }
 
 :root:not([titlepreface*="᠎"]){
-  &:not( :has( :is( #sidebar-main > *[hidden], #sidebar-main[hidden] ) )
+  &:not( :has( #sidebar-main > *[hidden], #sidebar-main[hidden] )
   ) { --left-margin: var(--sdbr-tb-wdt); }
   
   &:has(
@@ -23,7 +23,7 @@
     #sidebar-main > *[expanded]:not([hidden])
   ) { --left-margin: var(--sdbr-wdt); }
   
-  &:has(#sidebar-box[hidden]):has( :is( #sidebar-main > *[hidden], #sidebar-main[hidden] ) ){
+  &:has(#sidebar-box[hidden]):has( #sidebar-main > *[hidden], #sidebar-main[hidden] ){
     &:has( #PersonalToolbar[collapsed="true"] ) { @media (-moz-bool-pref: "shyfox.position.navbar") {
       --left-margin: var(--sdbr-wdt);
     } }
@@ -253,7 +253,7 @@ scrollbox, #vertical-pinned-tabs-container{
 
 
 /* old sidebar */
-:root:has( :is( #sidebar-main > *[hidden], #sidebar-main[hidden] ) ) {
+:root:has( #sidebar-main > *[hidden], #sidebar-main[hidden] ) {
   #sidebar-box:not([hidden]) {
     width: calc( var(--sdbr-wdt) - var(--margin) ) !important;
     margin-left: calc( var(--margin) / 2 ) !important;
