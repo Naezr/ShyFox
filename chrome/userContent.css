@@ -1,1 +1,3 @@
-div{opacity: 1}
+@import url("ShyFox/shy-variables.css");
+
+@import url("ShyFox/content/shy-config.css");

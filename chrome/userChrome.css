@@ -1,6 +1,7 @@
 @import url("ShyFox/shy-variables.css");
-@import url("ShyFox/shy-global.css");
-@import url("ShyFox/shy-left.css");
-@import url("ShyFox/shy-top.css");
-@import url("ShyFox/shy-right.css");
-@import url("ShyFox/shy-controls.css");
+
+@import url("ShyFox/chrome/shy-global.css");
+@import url("ShyFox/chrome/shy-left.css");
+@import url("ShyFox/chrome/shy-top.css");
+@import url("ShyFox/chrome/shy-right.css");
+@import url("ShyFox/chrome/shy-controls.css");
