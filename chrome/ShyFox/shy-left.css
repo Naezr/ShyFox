@@ -321,7 +321,7 @@ scrollbox, #vertical-pinned-tabs-container{
     left: var(--hidden-left) !important;
   }
   
-  :is( #sidebar-box, #sidebar-main:not( :is( :has( > *[hidden]), [hidden] ) )::before{
+  :is( #sidebar-box, #sidebar-main:not( :is( :has( > *[hidden]), [hidden] ) ) )::before{
     content: ""; position: absolute;
     -moz-window-dragging: drag;
     z-index: -999;
