@@ -15,7 +15,7 @@
 }
 
 :root:not([titlepreface*="᠎"]){
-  &:not( :has( #sidebar-main > *[hidden] )
+  &:not( :has( :is( #sidebar-main > *[hidden], #sidebar-main[hidden] ) )
   ) { --left-margin: var(--sdbr-tb-wdt); }
   
   &:has(
@@ -23,7 +23,7 @@
     #sidebar-main > *[expanded]:not([hidden])
   ) { --left-margin: var(--sdbr-wdt); }
   
-  &:has(#sidebar-box[hidden]):has(#sidebar-main > *[hidden]){
+  &:has(#sidebar-box[hidden]):has( :is( #sidebar-main > *[hidden], #sidebar-main[hidden] ) ){
     &:has( #PersonalToolbar[collapsed="true"] ) { @media (-moz-bool-pref: "shyfox.position.navbar") {
       --left-margin: var(--sdbr-wdt);
     } }
@@ -253,7 +253,7 @@ scrollbox, #vertical-pinned-tabs-container{
 
 
 /* old sidebar */
-:root:has(#sidebar-main > *[hidden]) {
+:root:has( :is( #sidebar-main > *[hidden], #sidebar-main[hidden] ) ) {
   #sidebar-box:not([hidden]) {
     width: calc( var(--sdbr-wdt) - var(--margin) ) !important;
     margin-left: calc( var(--margin) / 2 ) !important;
@@ -299,7 +299,7 @@ scrollbox, #vertical-pinned-tabs-container{
 :root[titlepreface*="᠎"]{
   @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") { --sdbr-left-gap: var(--left-gap); }
   
-  #sidebar-box, #sidebar-main:not( :has( > *[hidden]) ){
+  #sidebar-box, #sidebar-main:not( :is( :has( > *[hidden]), [hidden] ) ){
     opacity: 0;
     
     top: calc( var(--top-margin) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) + var(--left-bmbr-hgt) + var(--sdbr-left-gap) ) !important;
@@ -321,7 +321,7 @@ scrollbox, #vertical-pinned-tabs-container{
     left: var(--hidden-left) !important;
   }
   
-  :is( #sidebar-box, #sidebar-main:not( :has( > *[hidden]) ) )::before{
+  :is( #sidebar-box, #sidebar-main:not( :is( :has( > *[hidden]), [hidden] ) )::before{
     content: ""; position: absolute;
     -moz-window-dragging: drag;
     z-index: -999;
@@ -539,7 +539,7 @@ scrollbox, #vertical-pinned-tabs-container{
       }
       
       /* classic sidebar box top */
-      &:has( #sidebar-main > *[hidden] ):has( #sidebar-box:not([hidden]) ){
+      &:has( #sidebar-main > *[hidden], #sidebar-main[hidden] ):has( #sidebar-box:not([hidden]) ){
         @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar"){ #sidebar-box{
           --sdbr-box-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
           --sdbr-box-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
@@ -569,7 +569,7 @@ scrollbox, #vertical-pinned-tabs-container{
       &:is( 
         :has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box:not([hidden]) ),
         :has( #sidebar-main > *:not([hidden])[expanded] ),
-        :has( #sidebar-main > *[hidden] ):has( #sidebar-box:not([hidden]) )
+        :has( #sidebar-main > *[hidden], #sidebar-main[hidden] ):has( #sidebar-box:not([hidden]) )
       ) {
         @media (-moz-bool-pref: "shyfox.position.navbar") and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
           #nav-bar{
@@ -605,7 +605,7 @@ scrollbox, #vertical-pinned-tabs-container{
     }
     
     &:has(#PersonalToolbar[collapsed="true"]) {
-      &:has( #sidebar-main > *[hidden] ):has( #sidebar-box:not([hidden]) ){
+      &:has( #sidebar-main > *[hidden], #sidebar-main[hidden] ):has( #sidebar-box:not([hidden]) ){
         @media (-moz-bool-pref: "shyfox.position.navbar") {
           #nav-bar{
             --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
