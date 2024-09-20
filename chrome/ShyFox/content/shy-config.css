@@ -1,5 +1,9 @@
 @-moz-document url("about:config"){
 
+:root{
+  --sm-tr-txt: color-mix( in srgb, var(--in-content-page-color), transparent 50% );
+}
+  
 /* Make it possible to change the order of elements */
 #prefs{
   display: grid !important;
@@ -32,6 +36,23 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
   color: transparent;
 }
 
+:root:has( #about-config-show-only-modified:checked ):not(:has( #prefs[has-visible-prefs], #about-config-search:focus  )){
+  #toolbar::before{
+    content: "shyfox.";
+    
+    position: absolute;
+    pointer-events: none;
+    
+    left: 42px;
+    top: 20px;
+    width: 450px;
+    
+    color: var(--sm-tr-txt);
+    background: var(--in-content-box-background);
+    
+  }
+}
+  
 /* actual prefs customizing */
 :root:has(
   /* The condition is rather fuzzy and checks the number of items shown on the screen. There is no way to know for sure that these styles apply to the right parameters */
@@ -43,53 +64,87 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
   
   #prefs{
     
-    --max: 99999;
+    --max:  99999;
+    --min: -99999;
     
     .add{ order: calc( var(--max) + 1 ) !important; }
     
+    .has-user-value{ 
+      order: var(--order) !important;
+      --in-content-box-background-odd: transparent !important;
+    }
+    
+    .has-user-value th[scope="row"]{ color: var(--color) !important; }
+    
+    .has-user-value th[scope="row"]::after{
+      content: var(--description);
+      
+      position: absolute;
+      left: 50px;
+      margin-top: 30px;
+      width: 450px !important;
+      font-style: italic !important;
+
+      color: var(--sm-tr-txt);
+    }
+    
     /* 1 - shyfox.appearance.leftbar.gapless */
     & > .has-user-value:nth-child( 1 of :not(.hidden) ){
-      color: lightblue !important;
+      --color: lightblue;
     }
     
     /* 2 - shyfox.appearance.topbar.gapless */
     & > .has-user-value:nth-child( 2 of :not(.hidden) ){
-      color: lightblue !important;
+      --color: lightblue;
     }
     
     /* 3 - shyfox.debug.color */
     & > .has-user-value:nth-child( 3 of :not(.hidden) ){
-      color: tomato !important;
+      --color: tomato;
     }
     
     /* 4 - shyfox.position.bookmarkbar */
     & > .has-user-value:nth-child( 4 of :not(.hidden) ){
-      color: pink !important;
+      --color: pink;
+      --order: calc( var(--min) + 3 );
+        
+      padding-bottom: 25px;
+      --description: "sample text"
     }
     
     /* 5 - shyfox.position.extbutton */
     & > .has-user-value:nth-child( 5 of :not(.hidden) ){
-      color: bisque !important;
+      --color: bisque;
+      --order: calc( var(--min) + 5 )
     }
     
     /* 6 - shyfox.position.menubutton */
     & > .has-user-value:nth-child( 6 of :not(.hidden) ){
-      color: bisque !important;
+      --color: bisque;
+      --order: calc( var(--min) + 4 )
     }
     
     /* 7 - shyfox.position.navbar */
     & > .has-user-value:nth-child( 7 of :not(.hidden) ){
-      color: pink !important;
+      --color: pink;
+      --order: calc( var(--min) + 1 );
+      
+      padding-bottom: 45px !important;
+      --description: "Defines the position of the navigation bar. False = top, True = left (above sidebar)";
     }
     
     /* 8 - shyfox.position.tabbar */
     & > .has-user-value:nth-child( 8 of :not(.hidden) ){
-      color: pink !important;
+      --color: pink;
+      --order: calc( var(--min) + 2 );
+      
+      padding-bottom: 45px;
+      --description: "Defines the position of the tab bar. False = top (horizontal tabs can be used), True = right (as a toolbar without tabs).";
     }
     
     /* 9 - shyfox.remove.tabbar */
     & > .has-user-value:nth-child( 9 of :not(.hidden) ){
-      color: turquoise !important;
+      --color: turquoise;
       @media not (-moz-bool-pref: "shyfox.position.tabbar") { opacity: 0.5 !important;  }
     }
   }
