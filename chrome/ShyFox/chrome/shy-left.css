@@ -671,7 +671,7 @@ scrollbox, #vertical-pinned-tabs-container{
     #nav-bar-customization-target *:not(#firefox-view-button)[open]
   ) {
     #nav-bar{ --toolbarbutton-icon-fill: var(--nvbr-hover-txt) !important;
-      left: var(--hover-left) !important;
+      left: var(--hover-left) !important; top: var(--nvbr-hover-top) !important;
       background: var(--nvbr-hover-col) !important; color: var(--nvbr-hover-txt) !important;
       border-radius: var(--nvbr-hover-brs) !important; border-width: var(--nvbr-hover-brw) !important;
       border-style: var(--nvbr-hover-brt) !important; border-color: var(--nvbr-hover-brc) !important;
