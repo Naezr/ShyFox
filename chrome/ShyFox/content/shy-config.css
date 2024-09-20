@@ -1,35 +1,72 @@
-@-moz-document url("about:config"){:root:has(
+@-moz-document url("about:config"){
+
+/* Make it possible to change the order of elements */
+#prefs{
+  display: grid !important;
   
-/*                           vvvv <<<< Number of all shyfox parameters + 1 */  
+  & > * {
+    width: 100% !important;
+    th[scope="row"]{ width: calc( 50vw - 68px ) !important; }
+    .cell-value    { width: calc( 50vw - 40px ) !important; }
+  }
+}
+  
+:root:has(
+  
+  /*                     vvvv <<<< Number of all shyfox parameters + 1 */  
   #prefs .add:nth-child(  10  of :not(.hidden) )
   
 ):has( label #about-config-show-only-modified:checked ) {
   
   #prefs{
     
-    /* Make it possible to change the order of elements */
-    display: grid !important;
-    
-    & > * {
-      width: 100% !important;
-      th[scope="row"]{ width: calc( 50vw - 10px ) !important; }
-      .cell-value    { width: calc(50vw - 10px - 40px - 40px ) !important; }
-    }
-    
     --max: 99999;
     
-    .add{ order: var(--max) !important; }
+    .add{ order: calc( var(--max) + 1 ) !important; }
     
-    & > *:nth-child( 1 of :not(.hidden) ){
-      color: red !important;
-      order: calc( var(--max) - 1 ) !important;
+    /* 1 - shyfox.appearance.leftbar.gapless */
+    & > .has-user-value:nth-child( 1 of :not(.hidden) ){
+      color: lightblue !important;
     }
     
-    & > *:nth-child( 3 of :not(.hidden) ){
-      color: green !important;
-      order: -1 !important;
+    /* 2 - shyfox.appearance.topbar.gapless */
+    & > .has-user-value:nth-child( 2 of :not(.hidden) ){
+      color: lightblue !important;
     }
     
+    /* 3 - shyfox.debug.color */
+    & > .has-user-value:nth-child( 3 of :not(.hidden) ){
+      color: tomato !important;
+    }
     
+    /* 4 - shyfox.position.bookmarkbar */
+    & > .has-user-value:nth-child( 4 of :not(.hidden) ){
+      color: pink !important;
+    }
+    
+    /* 5 - shyfox.position.extbutton */
+    & > .has-user-value:nth-child( 5 of :not(.hidden) ){
+      color: bisque !important;
+    }
+    
+    /* 6 - shyfox.position.menubutton */
+    & > .has-user-value:nth-child( 6 of :not(.hidden) ){
+      color: bisque !important;
+    }
+    
+    /* 7 - shyfox.position.navbar */
+    & > .has-user-value:nth-child( 7 of :not(.hidden) ){
+      color: pink !important;
+    }
+    
+    /* 8 - shyfox.position.tabbar */
+    & > .has-user-value:nth-child( 8 of :not(.hidden) ){
+      color: pink !important;
+    }
+    
+    /* 9 - shyfox.remove.tabbar */
+    & > .has-user-value:nth-child( 9 of :not(.hidden) ){
+      color: turquoise !important;
+    }
   }
 } }
