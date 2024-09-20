@@ -10,13 +10,36 @@
     .cell-value    { width: calc( 50vw - 40px ) !important; }
   }
 }
+
+/* searchbox with */
+#about-config-search{
+  max-width: 500px !important;
+}
+
+/* shiny text for checkbox */
+@keyframes rainbow {
+  0%   {background-position: 0% 50%;}
+  100% {background-position: 500% 50%;}
+}
+
+span[data-l10n-id="about-config-show-only-modified"]::after{
+  content: " and enable ShyFox values descriptions";
   
+  background: linear-gradient(to right, #3572EF, #3ABEF9, #A7E6FF, #3572EF);
+  background-size: 500% 100%;
+  animation: rainbow 13s linear infinite;
+  background-clip: text;
+  color: transparent;
+}
+
+/* actual prefs customizing */
 :root:has(
+  /* The condition is rather fuzzy and checks the number of items shown on the screen. There is no way to know for sure that these styles apply to the right parameters */
   
   /*                     vvvv <<<< Number of all shyfox parameters + 1 */  
   #prefs .add:nth-child(  10  of :not(.hidden) )
   
-):has( label #about-config-show-only-modified:checked ) {
+):has( #about-config-show-only-modified:checked ) {
   
   #prefs{
     
@@ -67,6 +90,7 @@
     /* 9 - shyfox.remove.tabbar */
     & > .has-user-value:nth-child( 9 of :not(.hidden) ){
       color: turquoise !important;
+      @media not (-moz-bool-pref: "shyfox.position.tabbar") { opacity: 0.5 !important;  }
     }
   }
 } }
