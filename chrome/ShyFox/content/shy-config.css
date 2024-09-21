@@ -67,11 +67,17 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
     --max:  99999;
     --min: -99999;
     
+    --odd-bg: var(--in-content-box-background-odd);
+    
     .add{ order: calc( var(--max) + 1 ) !important; }
     
-    .has-user-value{ 
+    .has-user-value{
       order: var(--order) !important;
-      --in-content-box-background-odd: transparent !important;
+      
+      padding-bottom: var(--text-hgt) !important;
+      
+      --bg: transparent;
+      &:not(:hover){ background: var(--bg) !important; }
     }
     
     .has-user-value th[scope="row"]{ color: var(--color) !important; }
@@ -91,16 +97,21 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
     /* 1 - shyfox.appearance.leftbar.gapless */
     & > .has-user-value:nth-child( 1 of :not(.hidden) ){
       --color: lightblue;
+      --bg: var(--odd-bg);
+      --order: calc( var(--min) + 6 );
     }
     
     /* 2 - shyfox.appearance.topbar.gapless */
     & > .has-user-value:nth-child( 2 of :not(.hidden) ){
       --color: lightblue;
+      --order: calc( var(--min) + 7 );
     }
     
     /* 3 - shyfox.debug.color */
     & > .has-user-value:nth-child( 3 of :not(.hidden) ){
       --color: tomato;
+      --bg: var(--odd-bg);
+      --order: calc( var(--min) + 8 );
     }
     
     /* 4 - shyfox.position.bookmarkbar */
@@ -108,20 +119,21 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
       --color: pink;
       --order: calc( var(--min) + 3 );
         
-      padding-bottom: 25px;
+      --text-hgt: 25px;
       --description: "sample text"
     }
     
     /* 5 - shyfox.position.extbutton */
     & > .has-user-value:nth-child( 5 of :not(.hidden) ){
       --color: bisque;
-      --order: calc( var(--min) + 5 )
+      --order: calc( var(--min) + 5 );
     }
     
     /* 6 - shyfox.position.menubutton */
     & > .has-user-value:nth-child( 6 of :not(.hidden) ){
       --color: bisque;
-      --order: calc( var(--min) + 4 )
+      --bg: var(--odd-bg);
+      --order: calc( var(--min) + 4 );
     }
     
     /* 7 - shyfox.position.navbar */
@@ -129,22 +141,25 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
       --color: pink;
       --order: calc( var(--min) + 1 );
       
-      padding-bottom: 45px !important;
+      --text-hgt: 45px;
       --description: "Defines the position of the navigation bar. False = top, True = left (above sidebar)";
     }
     
     /* 8 - shyfox.position.tabbar */
     & > .has-user-value:nth-child( 8 of :not(.hidden) ){
       --color: pink;
+      --bg: var(--odd-bg);
       --order: calc( var(--min) + 2 );
       
-      padding-bottom: 45px;
+      --text-hgt: 45px;
       --description: "Defines the position of the tab bar. False = top (horizontal tabs can be used), True = right (as a toolbar without tabs).";
     }
     
     /* 9 - shyfox.remove.tabbar */
     & > .has-user-value:nth-child( 9 of :not(.hidden) ){
       --color: turquoise;
+      --order: calc( var(--min) + 9 );
+      
       @media not (-moz-bool-pref: "shyfox.position.tabbar") { opacity: 0.5 !important;  }
     }
   }
