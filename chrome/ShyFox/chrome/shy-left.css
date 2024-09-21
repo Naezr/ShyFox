@@ -95,7 +95,7 @@
   }
   
   #tabbrowser-tabs{ grid-gap: 0px !important; }
-  #vertical-pinned-tabs-container:has(tab){ margin-block: var(--space-small) !important; }
+  #vertical-pinned-tabs-container:has(tab){ margin: var(--space-small) 0px !important; }
   
   .tabbrowser-tab:not([pinned]) .tab-background{
     margin: 4px 0px !important;
