@@ -37,6 +37,7 @@
 */
 
 :root:not(:has( .table-shown )){
+  /* search box */
   #toolbar{
     .checkbox-container{ display: none !important; }
     
@@ -59,14 +60,16 @@
   
   #prefs{ visibility: collapse !important; }
   
-  #show-all:not(:hover){ opacity: 0.1 !important; }
-  
+  /* custom text */
   .config-help-text{ font-size: 0px !important; }
   
   .config-help-text::after{
     content: "Type in “shyfox” to open the ShyFox configuration page";
     font-size: 15px !important;
   }
+  
+  /* hide show all button */
+  #show-all:not(:hover){ opacity: 0.1 !important; }
 }
 
 /* 
@@ -113,8 +116,10 @@
     
     --odd-bg: var(--in-content-box-background-odd);
     
+    /* bottom item order */
     .add{ order: calc( var(--max) + 1 ) !important; }
     
+    /* pref container shared */
     .has-user-value{
       order: var(--order) !important;
       
@@ -127,8 +132,10 @@
       &:not(:hover){ background: var(--bg) !important; }
     }
     
+    /* pref color accent */
     .has-user-value th[scope="row"]{ color: var(--color) !important; }
     
+    /* description shared */
     .has-user-value th[scope="row"]::after{
       content: var(--description);
       
