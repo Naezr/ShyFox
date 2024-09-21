@@ -1,5 +1,13 @@
 @-moz-document url("about:config"){
 
+/* 
+
+##############################################################################################################################
+
+ B A S E
+
+*/
+
 :root{
   --sm-tr-txt: color-mix( in srgb, var(--in-content-page-color), transparent 50% );
 }
@@ -20,7 +28,55 @@
   max-width: 500px !important;
 }
 
-/* actual prefs customizing */
+/* 
+
+##############################################################################################################################
+
+ S T A R T   P A G E
+
+*/
+
+:root:not(:has( .table-shown )){
+  #toolbar{
+    .checkbox-container{ display: none !important; }
+    
+    position: fixed !important;
+    
+    padding: 0px !important;
+    
+    --width: 400px;
+    --height: 50px;
+    top: 350px !important;
+    left: calc( 50vw - var(--width) / 2 ) !important;
+    
+    height: var(--height) !important;
+    max-width: var(--width) !important;
+    min-width: var(--width) !important;
+    width:     var(--width) !important;
+  }
+  
+  #about-config-search{ border-radius: 999px !important; }
+  
+  #prefs{ visibility: collapse !important; }
+  
+  #show-all:not(:hover){ opacity: 0.1 !important; }
+  
+  .config-help-text{ font-size: 0px !important; }
+  
+  .config-help-text::after{
+    content: "Type in “shyfox” to open the ShyFox configuration page";
+    font-size: 15px !important;
+  }
+}
+
+/* 
+
+##############################################################################################################################
+
+ M A I N   C O N F I G   U I
+
+*/
+
 :root:has(
   /* The condition is rather fuzzy and checks the number of items shown on the screen. There is no way to know for sure that these styles apply to the right parameters */
   
