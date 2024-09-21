@@ -152,6 +152,11 @@ browser[class*="devtools-toolbox"]{
   z-index: 2;
   position: fixed !important;
   transition: var(--bar-transition) !important;
+  
+  & * {
+    --urlbar-container-height: var(--nvbr-hgt) !important;
+    --urlbar-height: 32px !important;
+  }
 }
 
 #nav-bar-customization-target :is( #stop-reload-button, #edit-controls, #zoom-controls ) > *,
@@ -167,8 +172,8 @@ browser[class*="devtools-toolbox"]{
   #page-action-buttons,
   #tracking-protection-icon-container
   { display: none !important; }
-
-  padding-inline: 5px !important;
+  
+  #urlbar-input { padding-inline-start: 5px !important; }
 }
 
 #PanelUI-menu-button{ padding-inline: 0 !important; }
