@@ -74,6 +74,9 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
     .has-user-value{
       order: var(--order) !important;
       
+      --text-wdt: 300px;
+      
+      --text-hgt: calc( 20px * var(--text-lines) + 5px );
       padding-bottom: var(--text-hgt) !important;
       
       --bg: transparent;
@@ -87,10 +90,12 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
       
       position: absolute;
       left: 50px;
-      margin-top: 30px;
-      width: 450px !important;
+      margin-top: 28px;
       font-style: italic !important;
-
+      white-space: pre-wrap !important;
+      
+      width: var(--text-wdt) !important;
+      
       color: var(--sm-tr-txt);
     }
     
@@ -119,8 +124,9 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
       --color: pink;
       --order: calc( var(--min) + 3 );
         
-      --text-hgt: 25px;
-      --description: "sample text"
+      --text-lines: 2;
+      --text-wdt: 400px;
+      --description: "Defines position of the bookmarks bar (if it enabled).    False = top, True = left (above sidebar)"
     }
     
     /* 5 - shyfox.position.extbutton */
@@ -141,8 +147,8 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
       --color: pink;
       --order: calc( var(--min) + 1 );
       
-      --text-hgt: 45px;
-      --description: "Defines the position of the navigation bar. False = top, True = left (above sidebar)";
+      --text-lines: 2;
+      --description: "Defines position of the navigation bar.    False = top, True = left (above sidebar)";
     }
     
     /* 8 - shyfox.position.tabbar */
@@ -151,8 +157,8 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
       --bg: var(--odd-bg);
       --order: calc( var(--min) + 2 );
       
-      --text-hgt: 45px;
-      --description: "Defines the position of the tab bar. False = top (horizontal tabs can be used), True = right (as a toolbar without tabs).";
+      --text-lines: 3;
+      --description: "Defines position of the tab bar.                   False = top (horizontal tabs can be used), True = right (as a toolbar without tabs).";
     }
     
     /* 9 - shyfox.remove.tabbar */
