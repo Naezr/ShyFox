@@ -7,11 +7,13 @@
 */
 
 
+/* main content position */
 #tabbrowser-tabbox{
   margin: var(--browser-margin) !important;
   
   transition: var(--content-transition) !important;
   box-shadow: none !important;
+  outline: none !important;
   
   position: fixed !important;
   top: 0px; bottom: 0px; left: 0px; right: 0px;
@@ -22,6 +24,7 @@
   color: var(--bg-txt) !important;
 }
 
+/* fake border radius & border around main content */
 .browserStack::after {
   box-shadow: 0 0 0 var(--big-rounding) var(--bg-col) !important;
   border-radius: var(--big-rounding);
@@ -36,16 +39,19 @@
 
 .browserStack{ margin: var(--br-wdt) !important; }
 
+/* weird line on top fix */
 #navigator-toolbox{
   position: relative !important;
   margin-top: -1px !important;
   z-index: 5;
 }
 
+/* remove useless items */
 #private-browsing-indicator-with-label,
 .titlebar-spacer
 { display: none !important; }
 
+/* opacity fix */
 #titlebar {
   :root[tabsintitlebar] & {
     &:-moz-window-inactive {
@@ -112,13 +118,16 @@
 
 */
 
+/* consistent bg */
 .browserSidebarContainer, .responsive-mode { background-color: var(--bg-col) !important; }
 
+/* border & corners */
 browser[class*="devtools-toolbox"]{
   border-radius: var(--big-rounding) !important;
   border: var(--border) !important;
 }
 
+/* splitter */
 .devtools-side-splitter, .devtools-horizontal-splitter{
   background-color: transparent !important;
   margin-inline: 0px !important;
@@ -128,11 +137,26 @@ browser[class*="devtools-toolbox"]{
 .devtools-side-splitter      { min-width:  calc( var(--margin) / 2 ) !important; }
 .devtools-horizontal-splitter{ min-height: calc( var(--margin) / 2 ) !important; }
 
+/* dynamic mode toolbar */
 .rdm-toolbar {
-  margin: 2px !important;
-  width: calc( 100% - 4px ) !important;
-  border-top-left-radius: var(--big-rounding) !important;
-  border-top-right-radius: var(--big-rounding) !important;
+  margin: var(--br-wdt) !important;
+  width: calc( 100% - var(--br-wdt) * 2 ) !important;
+  border-top-left-radius: calc( var(--big-rounding) - var(--br-wdt) ) !important;
+  border-top-right-radius: calc( var(--big-rounding) - var(--br-wdt) ) !important;
+}
+
+/* dynamic mode borders */
+.responsive-mode {
+  browser{
+    border-radius: var(--rounding) !important;
+    border: var(--border) !important;
+  }
+  
+  .browserStack{
+    border-radius: var(--big-rounding) !important;
+    border: var(--border) !important;
+    margin: 0px !important;
+  }
 }
 
 /* 
@@ -143,6 +167,7 @@ browser[class*="devtools-toolbox"]{
 
 */
 
+/* navbar shared styles */
 #nav-bar{
   background: transparent !important;
   color: var(--bg-txt) !important;
@@ -159,6 +184,7 @@ browser[class*="devtools-toolbox"]{
   }
 }
 
+/* opacity transition */
 #nav-bar-customization-target :is( #stop-reload-button, #edit-controls, #zoom-controls ) > *,
 #nav-bar-customization-target > *:not(#unified-extensions-button),
 #nav-bar-customization-target > *[disabled],
@@ -167,6 +193,7 @@ browser[class*="devtools-toolbox"]{
 @media not (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{ transition: var(--opacity-transition) !important; } }
 @media not (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{ transition: var(--opacity-transition) !important; } }  
 
+/* urlbar shared styles */
 #urlbar:focus-within{
   #identity-box,
   #page-action-buttons,
@@ -176,14 +203,17 @@ browser[class*="devtools-toolbox"]{
   #urlbar-input { padding-inline-start: 5px !important; }
 }
 
+/* menu button container padding tweak */
 #PanelUI-menu-button{ padding-inline: 0 !important; }
 #PanelUI-button{ padding-inline-end: var(--toolbar-start-end-padding); }
 #ion-button{ display: none !important; }
 
+/* idk what is it */
 #pageActionSeparator, #pageActionButton[multiple-children] ~ .urlbar-page-action {
   display: flex !important;
 }
 
+/* identity box tweak */
 #identity-icon-box {
   padding-inline: 6px !important;
   max-width: calc(30px + 13em) !important;
