@@ -20,39 +20,6 @@
   max-width: 500px !important;
 }
 
-/* shiny text for checkbox */
-@keyframes rainbow {
-  0%   {background-position: 0% 50%;}
-  100% {background-position: 500% 50%;}
-}
-
-span[data-l10n-id="about-config-show-only-modified"]::after{
-  content: " and enable ShyFox values descriptions";
-  
-  background: linear-gradient(to right, #3572EF, #3ABEF9, #A7E6FF, #3572EF);
-  background-size: 500% 100%;
-  animation: rainbow 13s linear infinite;
-  background-clip: text;
-  color: transparent;
-}
-
-:root:has( #about-config-show-only-modified:checked ):not(:has( #prefs[has-visible-prefs], #about-config-search:focus  )){
-  #toolbar::before{
-    content: "shyfox.";
-    
-    position: absolute;
-    pointer-events: none;
-    
-    left: 42px;
-    top: 20px;
-    width: 450px;
-    
-    color: var(--sm-tr-txt);
-    background: var(--in-content-box-background);
-    
-  }
-}
-  
 /* actual prefs customizing */
 :root:has(
   /* The condition is rather fuzzy and checks the number of items shown on the screen. There is no way to know for sure that these styles apply to the right parameters */
@@ -60,7 +27,28 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
   /*                     vvvv <<<< Number of all shyfox parameters + 1 */  
   #prefs .add:nth-child(  10  of :not(.hidden) )
   
-):has( #about-config-show-only-modified:checked ) {
+) {
+
+  /* shiny text for checkbox */
+  @keyframes rainbow {
+    0%   {background-position: 0% 50%;}
+    100% {background-position: 500% 50%;}
+  }
+
+  span[data-l10n-id="about-config-show-only-modified"]{ font-size: 0px !important; }
+
+  span[data-l10n-id="about-config-show-only-modified"]::after{
+    content: "Enable ShyFox values descriptions";
+    font-size: 15px !important;
+
+    background: linear-gradient(to right, #3572EF, #3ABEF9, #A7E6FF, #3572EF);
+    background-size: 500% 100%;
+    animation: rainbow 13s linear infinite;
+    background-clip: text;
+    color: transparent;
+  }
+    
+&:has( #about-config-show-only-modified:checked ) {
   
   #prefs{
     
@@ -169,4 +157,6 @@ span[data-l10n-id="about-config-show-only-modified"]::after{
       @media not (-moz-bool-pref: "shyfox.position.tabbar") { opacity: 0.5 !important;  }
     }
   }
-} }
+
+} } 
+}
