@@ -37,6 +37,10 @@
 */
 
 :root:not(:has( .table-shown )){
+  --page-top-margin: calc( 50vh - 300px );
+  
+  body{ margin-top: var(--page-top-margin) !important; }
+  
   /* search box */
   #toolbar{
     .checkbox-container{ display: none !important; }
@@ -47,7 +51,7 @@
     
     --width: 400px;
     --height: 50px;
-    top: 350px !important;
+    top: calc( 350px + var(--page-top-margin) ) !important;
     left: calc( 50vw - var(--width) / 2 ) !important;
     
     height: var(--height) !important;
@@ -60,12 +64,47 @@
   
   #prefs{ visibility: collapse !important; }
   
+  /* cool background bubbles */
+  #toolbar::before{
+    --radius: 300px;
+        
+    background: aqua;
+    filter: blur(100px);
+    
+    margin-top: -100px;
+    margin-left: -200px;
+  }
+  
+  #toolbar::after{
+    --radius: 400px;
+    
+    background: turquoise;
+    filter: blur(100px);
+    
+    margin-top: -330px;
+    margin-left: 280px;
+  }
+  
+  #toolbar::before, #toolbar::after{
+    content: "";
+    position: absolute !important;
+    z-index: -999;
+    
+    width: var(--radius);
+    height: var(--radius);
+    border-radius: var(--radius);
+  }
+  
+  #toolbar{ z-index: -1 !important; background: transparent !important; }
+  .config-background-wrapper{ z-index: 1 !important; }
+  
   /* custom text */
   .config-help-text{ font-size: 0px !important; }
   
   .config-help-text::after{
     content: "Type in “shyfox” to open the ShyFox configuration page";
     font-size: 15px !important;
+    text-shadow: 2px 2px 4px color-mix(in srgb, var(--in-content-page-background), transparent 50%);
   }
   
   /* hide show all button */

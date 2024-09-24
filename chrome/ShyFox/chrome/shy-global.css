@@ -157,6 +157,8 @@ browser[class*="devtools-toolbox"]{
     border: var(--border) !important;
     margin: 0px !important;
   }
+  
+  .browserStack::after{ display: none; }
 }
 
 /* 
