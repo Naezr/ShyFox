@@ -69,6 +69,7 @@
     --radius: 300px;
         
     background: aqua;
+    opacity: 0.3;
     filter: blur(100px);
     
     margin-top: -100px;
@@ -79,6 +80,7 @@
     --radius: 400px;
     
     background: turquoise;
+    opacity: 0.2;
     filter: blur(100px);
     
     margin-top: -330px;
@@ -205,8 +207,7 @@
     /* 3 - shyfox.debug.color */
     & > .has-user-value:nth-child( 3 of :not(.hidden) ){
       --color: tomato;
-      --bg: var(--odd-bg);
-      --order: calc( var(--min) + 8 );
+      --order: calc( var(--min) + 9 );
     }
     
     /* 4 - shyfox.position.bookmarkbar */
@@ -254,7 +255,8 @@
     /* 9 - shyfox.remove.tabbar */
     & > .has-user-value:nth-child( 9 of :not(.hidden) ){
       --color: turquoise;
-      --order: calc( var(--min) + 9 );
+      --bg: var(--odd-bg);
+      --order: calc( var(--min) + 8 );
       
       @media not (-moz-bool-pref: "shyfox.position.tabbar") { opacity: 0.5 !important;  }
     }
