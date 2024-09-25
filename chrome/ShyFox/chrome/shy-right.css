@@ -89,9 +89,6 @@
 
   padding-top: calc( var(--tbbr-menubutton-hgt) + var(--tbbr-extbutton-hgt) ) !important;
   width: var(--tbbr-size) !important;
-  
-  transition: var(--bar-transition), height 0.6s ease !important;
-  height: 100vh !important;
 }
 
 #TabsToolbar-customization-target{
@@ -118,7 +115,7 @@
     --tbbr-hover-brd: var(--border);
     
     top: calc( var(--top-margin) + var(--margin) );
-    bottom: auto;
+    bottom: var(--tbbr-bottom);
     right: var(--tbbr-right);
   }
   
@@ -184,13 +181,12 @@
 */
   
 :root{
-  --tbbr-hgt: calc( var(--tbbr-menubutton-hgt) + var(--tbbr-extbutton-hgt) + var(--tbbr-elements-hgt) + var(--br-wdt) * 2 );
   --tbbr-elements-hgt: 40px * var(--tbbr-elements-number);
+  --tbbr-hgt: calc( var(--tbbr-menubutton-hgt) + var(--tbbr-extbutton-hgt) + var(--tbbr-elements-hgt) + var(--br-wdt) * 2 );
+  --tbbr-bottom: calc( 100% - var(--top-margin) - var(--margin) - var(--tbbr-hgt) )
 }
   
 :root[titlepreface*="‌"]{
-  #TabsToolbar{ height: var(--tbbr-hgt) !important; }
-  
   &:has(
     #TabsToolbar:hover,
     #TabsToolbar *:not(.tabbrowser-tab)[open]
