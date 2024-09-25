@@ -8,9 +8,10 @@
 
 
 /* main content position */
+:root:not([inDOMFullscreen]) #tabbrowser-tabbox
+{ margin: var(--browser-margin) !important; }
+
 #tabbrowser-tabbox{
-  margin: var(--browser-margin) !important;
-  
   transition: var(--content-transition) !important;
   box-shadow: none !important;
   outline: none !important;
@@ -25,19 +26,21 @@
 }
 
 /* fake border radius & border around main content */
-.browserStack::after {
-  box-shadow: 0 0 0 var(--big-rounding) var(--bg-col) !important;
-  border-radius: var(--big-rounding);
-  border: var(--border);
-  
-  position: absolute;
-  pointer-events: none;
-  clip-path: inset(calc( 0px - var(--br-wdt) ));
-  content: "";
-  inset: calc( 0px - var(--br-wdt) );
-}
+:root:not([inDOMFullscreen]){
+  .browserStack::after {
+    box-shadow: 0 0 0 var(--big-rounding) var(--bg-col) !important;
+    border-radius: var(--big-rounding);
+    border: var(--border);
 
-.browserStack{ margin: var(--br-wdt) !important; }
+    position: absolute;
+    pointer-events: none;
+    clip-path: inset(calc( 0px - var(--br-wdt) ));
+    content: "";
+    inset: calc( 0px - var(--br-wdt) );
+  }
+
+  .browserStack{ margin: var(--br-wdt) !important; }
+}
 
 /* weird line on top fix */
 #navigator-toolbox{
@@ -50,6 +53,8 @@
 #private-browsing-indicator-with-label,
 .titlebar-spacer
 { display: none !important; }
+
+:root[inDOMFullscreen] #navigator-toolbox{ display: none !important; }
 
 /* opacity fix */
 #titlebar {
