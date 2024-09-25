@@ -87,8 +87,11 @@
   top: 0;
   bottom: 0;
 
-  padding-top: calc(var(--tbbr-menubutton-hgt) + var(--tbbr-extbutton-hgt)) !important;
+  padding-top: calc( var(--tbbr-menubutton-hgt) + var(--tbbr-extbutton-hgt) ) !important;
   width: var(--tbbr-size) !important;
+  
+  transition: var(--bar-transition), height 0.6s ease !important;
+  height: 100vh !important;
 }
 
 #TabsToolbar-customization-target{
@@ -120,14 +123,14 @@
   }
   
   #TabsToolbar::before{
-      content: ""; position: absolute;
-      -moz-window-dragging: drag;
-      z-index: -999;
-      left: calc( 0px - var(--panel-hidden-hitbox) );
-      top: 0px;
-      height: 100%; width: 500%;
-      background: var(--debug-col);
-    }
+    content: ""; position: absolute;
+    -moz-window-dragging: drag;
+    z-index: -999;
+    left: calc( 0px - var(--panel-hidden-hitbox) );
+    top: 0px;
+    height: 100%; width: 500%;
+    background: var(--debug-col);
+  }
   
   #TabsToolbar-customization-target > * { opacity: 0; }
   #TabsToolbar-customization-target > *[disabled] { opacity: 0 !important; }
@@ -180,7 +183,14 @@
 
 */
   
+:root{
+  --tbbr-hgt: calc( var(--tbbr-menubutton-hgt) + var(--tbbr-extbutton-hgt) + var(--tbbr-elements-hgt) + var(--br-wdt) * 2 );
+  --tbbr-elements-hgt: 40px * var(--tbbr-elements-number);
+}
+  
 :root[titlepreface*="‌"]{
+  #TabsToolbar{ height: var(--tbbr-hgt) !important; }
+  
   &:has(
     #TabsToolbar:hover,
     #TabsToolbar *:not(.tabbrowser-tab)[open]
@@ -271,6 +281,111 @@
     }  
   } }
   
+}
+
+:root{
+  --tbbr-elements-number: calc( var(--tbbr-elements-counter) - 1 ); /* -1 because hidden alltabs button */
+  
+  &:has( #TabsToolbar-customization-target > *:nth-child( 0 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 0} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 1 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 1} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 2 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 2} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 3 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 3} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 4 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 4} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 5 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 5} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 6 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 6} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 7 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 7} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 8 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 8} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 9 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 9} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 10 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 10} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 11 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 11} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 12 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 12} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 13 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 13} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 14 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 14} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 15 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 15} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 16 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 16} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 17 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 17} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 18 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 18} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 19 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 19} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 20 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 20} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 21 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 21} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 22 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 22} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 23 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 23} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 24 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 24} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 25 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 25} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 26 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 26} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 27 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 27} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 28 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 28} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 29 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 29} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 30 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 30} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 31 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 31} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 32 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 32} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 33 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 33} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 34 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 34} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 35 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 35} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 36 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 36} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 37 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 37} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 38 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 38} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 39 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 39} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 40 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 40} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 41 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 41} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 42 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 42} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 43 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 43} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 44 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 44} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 45 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 45} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 46 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 46} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 47 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 47} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 48 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 48} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 49 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 49} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 50 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 50} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 51 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 51} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 52 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 52} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 53 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 53} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 54 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 54} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 55 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 55} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 56 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 56} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 57 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 57} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 58 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 58} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 59 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 59} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 60 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 60} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 61 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 61} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 62 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 62} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 63 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 63} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 64 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 64} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 65 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 65} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 66 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 66} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 67 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 67} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 68 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 68} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 69 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 69} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 70 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 70} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 71 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 71} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 72 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 72} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 73 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 73} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 74 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 74} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 75 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 75} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 76 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 76} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 77 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 77} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 78 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 78} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 79 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 79} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 80 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 80} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 81 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 81} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 82 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 82} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 83 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 83} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 84 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 84} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 85 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 85} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 86 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 86} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 87 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 87} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 88 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 88} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 89 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 89} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 90 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 90} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 91 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 91} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 92 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 92} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 93 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 93} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 94 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 94} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 95 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 95} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 96 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 96} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 97 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 97} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 98 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 98} 
+  &:has( #TabsToolbar-customization-target > *:nth-child( 99 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 99}   
 }
 
 } /* end of wrapper */
