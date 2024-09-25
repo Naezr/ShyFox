@@ -178,9 +178,7 @@ scrollbox, #vertical-pinned-tabs-container{
   }
 
   #vertical-tabs-newtab-button{
-    appearance: none !important;
     border-radius: var(--rounding) !important;
-    display: none !important; /* */
     margin-inline: 3px !important;
   }
 }
