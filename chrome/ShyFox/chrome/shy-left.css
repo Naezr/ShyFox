@@ -373,6 +373,17 @@ scrollbox, #vertical-pinned-tabs-container{
     .urlbar-page-action{ visibility: collapse !important; }
     #pageActionButton[multiple-children]{ visibility: visible !important; }
     
+    #urlbar:not(:hover) > .urlbar-input-container:not(:hover) > *:not(.urlbar-searchmode-and-input-box-container){
+      visibility: collapse !important;
+    }
+    
+    .urlbar-searchmode-and-input-box-container{
+      order: -1 !important;
+      padding-left: 5px !important;
+    }
+    
+    #identity-box{ margin-right: 0px !important; }
+    
     #identity-icon-box #identity-icon-label { display: none !important; }
     
     #identity-box[pageproxystate="invalid"]{
