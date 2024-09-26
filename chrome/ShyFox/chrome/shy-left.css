@@ -377,11 +377,11 @@ scrollbox, #vertical-pinned-tabs-container{
       max-width: var(--sdbr-wdt) !important;
     }
     
-    #urlbar:hover > :is(.urlbar-input-container, #urlbar-input-container) > *:not(.urlbar-searchmode-and-input-box-container){
-      transition-delay: 0s !important;  
+    #urlbar:hover > :is(.urlbar-input-container, #urlbar-input-container) > *:not(.urlbar-searchmode-and-input-box-container):not(.urlbar-input-box){
+      transition-delay: 0s !important;
     }
     
-    #urlbar:not(:hover) > :is(.urlbar-input-container, #urlbar-input-container) > *:not(.urlbar-searchmode-and-input-box-container){
+    #urlbar:not(:hover) > :is(.urlbar-input-container, #urlbar-input-container) > *:not(.urlbar-searchmode-and-input-box-container):not(.urlbar-input-box){
       opacity: 0 !important;
       max-width: 0px !important;
     }
