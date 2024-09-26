@@ -371,17 +371,17 @@ scrollbox, #vertical-pinned-tabs-container{
     .urlbar-page-action{ visibility: collapse !important; }
     #pageActionButton[multiple-children]{ visibility: visible !important; }
     
-    .urlbar-input-container > *{
+    :is(.urlbar-input-container, #urlbar-input-container) > *{
       transition: max-width 0.2s  linear, opacity 0.1s linear;
       transition-delay: 0.7s !important;
       max-width: var(--sdbr-wdt) !important;
     }
     
-    #urlbar:hover > .urlbar-input-container > *:not(.urlbar-searchmode-and-input-box-container){
+    #urlbar:hover > :is(.urlbar-input-container, #urlbar-input-container) > *:not(.urlbar-searchmode-and-input-box-container){
       transition-delay: 0s !important;  
     }
     
-    #urlbar:not(:hover) > .urlbar-input-container > *:not(.urlbar-searchmode-and-input-box-container){
+    #urlbar:not(:hover) > :is(.urlbar-input-container, #urlbar-input-container) > *:not(.urlbar-searchmode-and-input-box-container){
       opacity: 0 !important;
       max-width: 0px !important;
     }
@@ -390,6 +390,8 @@ scrollbox, #vertical-pinned-tabs-container{
       order: -1 !important;
       padding-left: 5px !important;
     }
+    
+    #urlbar-input.urlbar-input{ padding: 0px !important; }
     
     #identity-box{ margin-right: 0px !important; }
     
