@@ -368,7 +368,7 @@ scrollbox, #vertical-pinned-tabs-container{
     position: absolute !important;
     bottom: 0;
     
-    #urlbar[textoverflow]:not(:hover) > :is(.urlbar-input-container, #urlbar-input-container){
+    #urlbar:not(:hover):not([focused]) > :is(.urlbar-input-container, #urlbar-input-container){
     & > *:not(.urlbar-searchmode-and-input-box-container, .urlbar-input-box, #page-action-buttons),
     #page-action-buttons > *:not(#urlbar-zoom-button){
       visibility: collapse !important;
@@ -382,7 +382,8 @@ scrollbox, #vertical-pinned-tabs-container{
       padding-left: 5px !important;
     }
     
-    #urlbar-zoom-button{ order: 9999 !important; }
+    #urlbar-zoom-button{ order: 999 !important; }
+    #identity-box{ order: 9999 !important; }
     
     #urlbar-input.urlbar-input{ padding: 0px !important; }
     
