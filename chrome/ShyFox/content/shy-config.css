@@ -164,10 +164,7 @@
     .has-user-value{
       order: var(--order) !important;
       
-      --text-wdt: 300px;
-      
-      --text-hgt: calc( 20px * var(--text-lines) + 5px );
-      padding-bottom: var(--text-hgt) !important;
+      padding-bottom: 25px !important;
       
       --bg: transparent;
       &:not(:hover){ background: var(--bg) !important; }
@@ -186,8 +183,12 @@
       font-style: italic !important;
       white-space: pre-wrap !important;
       
-      width: var(--text-wdt) !important;
-      
+      color: var(--sm-tr-txt);
+    }
+    
+    /* hint shared */
+    .has-user-value .cell-value > span::after{
+      content: var(--hint);
       color: var(--sm-tr-txt);
     }
     
@@ -214,16 +215,24 @@
     & > .has-user-value:nth-child( 4 of :not(.hidden) ){
       --color: pink;
       --order: calc( var(--min) + 3 );
-        
-      --text-lines: 2;
-      --text-wdt: 400px;
-      --description: "Defines position of the bookmarks bar (if it enabled).    False = top, True = left (above sidebar)"
+      
+      --description: "Defines position of bookmarks bar (if it enabled).";
+      @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") {--hint: ": bookmarks bar on top"}
+      @media (-moz-bool-pref: "shyfox.position.bookmarkbar") {--hint: ": bookmarks bar on left, above sidebar"}
     }
     
     /* 5 - shyfox.position.extbutton */
     & > .has-user-value:nth-child( 5 of :not(.hidden) ){
       --color: bisque;
       --order: calc( var(--min) + 5 );
+      
+      --description: "Defines position of unified extensions button.";
+      @media not (-moz-bool-pref: "shyfox.position.extbutton") {--hint: ": extensions button on navbar" }
+      @media (-moz-bool-pref: "shyfox.position.extbutton") {
+        --hint: ": extensions button on vertical toolbar";
+        @media (-moz-bool-pref: "shyfox.position.tabbar") and (-moz-bool-pref: "shyfox.remove.tabbar"), not (-moz-bool-pref: "shyfox.position.tabbar")
+        { --hint: ": extensions button removed" }
+      }
     }
     
     /* 6 - shyfox.position.menubutton */
@@ -231,6 +240,14 @@
       --color: bisque;
       --bg: var(--odd-bg);
       --order: calc( var(--min) + 4 );
+      
+      --description: "Defines position of menu button.";
+      @media not (-moz-bool-pref: "shyfox.position.menubutton") {--hint: ": menu button on navbar" }
+      @media (-moz-bool-pref: "shyfox.position.menubutton") {
+        --hint: ": menu button on vertical toolbar";
+        @media (-moz-bool-pref: "shyfox.position.tabbar") and (-moz-bool-pref: "shyfox.remove.tabbar"), not (-moz-bool-pref: "shyfox.position.tabbar")
+        { --hint: ": menu button removed" }
+      }
     }
     
     /* 7 - shyfox.position.navbar */
@@ -238,8 +255,9 @@
       --color: pink;
       --order: calc( var(--min) + 1 );
       
-      --text-lines: 2;
-      --description: "Defines position of the navigation bar.    False = top, True = left (above sidebar)";
+      --description: "Defines position of navigation bar.";
+      @media not (-moz-bool-pref: "shyfox.position.navbar") {--hint: ": navbar on top"}
+      @media (-moz-bool-pref: "shyfox.position.navbar") {--hint: ": navbar on left, above sidebar"}
     }
     
     /* 8 - shyfox.position.tabbar */
@@ -248,8 +266,9 @@
       --bg: var(--odd-bg);
       --order: calc( var(--min) + 2 );
       
-      --text-lines: 3;
-      --description: "Defines position of the tab bar.                   False = top (horizontal tabs can be used), True = right (as a toolbar without tabs).";
+      --description: "Defines position of tabs toolbar.";
+      @media not (-moz-bool-pref: "shyfox.position.tabbar") {--hint: ": tabbar on top, horizontal tabs can be used"}
+      @media (-moz-bool-pref: "shyfox.position.tabbar") {--hint: ": tabbar on right as a toolbar"}
     }
     
     /* 9 - shyfox.remove.tabbar */
