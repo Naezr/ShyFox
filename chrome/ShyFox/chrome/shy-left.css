@@ -368,28 +368,21 @@ scrollbox, #vertical-pinned-tabs-container{
     position: absolute !important;
     bottom: 0;
     
-    .urlbar-page-action{ visibility: collapse !important; }
-    #pageActionButton[multiple-children]{ visibility: visible !important; }
+    #urlbar[textoverflow]:not(:hover) > :is(.urlbar-input-container, #urlbar-input-container){
+    & > *:not(.urlbar-searchmode-and-input-box-container, .urlbar-input-box, #page-action-buttons),
+    #page-action-buttons > *:not(#urlbar-zoom-button){
+      visibility: collapse !important;
+      opacity: 0;
+      transition: opacity 0.3s linear, visibility 0.2s linear !important;
+      transition-delay: 1.25s !important;
+    } }
     
-    :is(.urlbar-input-container, #urlbar-input-container) > *{
-      transition: max-width 0.2s  linear, opacity 0.1s linear;
-      transition-delay: 0.7s !important;
-      max-width: var(--sdbr-wdt) !important;
-    }
-    
-    #urlbar:hover > :is(.urlbar-input-container, #urlbar-input-container) > *:not(.urlbar-searchmode-and-input-box-container):not(.urlbar-input-box){
-      transition-delay: 0s !important;
-    }
-    
-    #urlbar:not(:hover) > :is(.urlbar-input-container, #urlbar-input-container) > *:not(.urlbar-searchmode-and-input-box-container):not(.urlbar-input-box){
-      opacity: 0 !important;
-      max-width: 0px !important;
-    }
-    
-    .urlbar-searchmode-and-input-box-container{
+    :is(.urlbar-input-container, #urlbar-input-container) > :is(.urlbar-searchmode-and-input-box-container, .urlbar-input-box){
       order: -1 !important;
       padding-left: 5px !important;
     }
+    
+    #urlbar-zoom-button{ order: 9999 !important; }
     
     #urlbar-input.urlbar-input{ padding: 0px !important; }
     
