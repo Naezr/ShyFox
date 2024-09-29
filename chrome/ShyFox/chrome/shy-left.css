@@ -538,7 +538,7 @@ scrollbox, #vertical-pinned-tabs-container{
 */
 
 @media (-moz-bool-pref: "shyfox.appearance.leftbar.gapless") {
-  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){
+  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main:not([hidden]) > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){
     --left-gap: 0px;
 
     &:has(#PersonalToolbar:not([collapsed="true"])) {
