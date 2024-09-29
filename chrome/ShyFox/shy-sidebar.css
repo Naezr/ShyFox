@@ -125,7 +125,7 @@ Styles for sidebar
   #sidebar-box,
   #PersonalToolbar
   {
-    z-index: 2 !important;
+    z-index: 3 !important;
     width: var(--sdbr-wdt) !important;
     
     left: calc(
