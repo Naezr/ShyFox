@@ -634,9 +634,46 @@ scrollbox, #vertical-pinned-tabs-container{
           }
         }
       }
+      
+      @media (-moz-bool-pref: "shyfox.position.navbar"){
+      &:has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box:not([hidden]) ){
+        #sidebar-main{ 
+          width: calc( var(--sdbr-tb-wdt) + var(--margin) / 2 );
+          --sdbr-main-hover-brs: 0px 0px 0px var(--big-rounding);
+          --sdbr-main-hover-brw: 0px 0px var(--br-wdt) var(--br-wdt);
+        }
+        #sidebar-box{ --sdbr-box-hover-brs: 0px 0px var(--big-rounding) 0px; }
+      } }
+      
+      &:has( #sidebar-main > *[hidden], #sidebar-main[hidden] ):has( #sidebar-box:not([hidden]) ){
+        @media (-moz-bool-pref: "shyfox.position.navbar"){ #sidebar-box{
+          --sdbr-box-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+          --sdbr-box-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
+        } }
+      }
+      
+      &:has( #sidebar-main > *:not([hidden])[expanded] ){
+        @media (-moz-bool-pref: "shyfox.position.navbar") {
+          #sidebar-main{
+            --sdbr-main-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+            --sdbr-main-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
+          }
+        }
+      }
+      
+      &:is( 
+        :has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box:not([hidden]) ),
+        :has( #sidebar-main > *:not([hidden])[expanded] ),
+        :has( #sidebar-main > *[hidden], #sidebar-main[hidden] ):has( #sidebar-box:not([hidden]) )
+      ) {
+        @media (-moz-bool-pref: "shyfox.position.navbar") {
+          #nav-bar{
+            --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
+            --nvbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
+          }
+        }
+      }
     }
-
-
   }
 }
 
