@@ -616,6 +616,17 @@ scrollbox, #vertical-pinned-tabs-container{
           --sdbr-main-hover-brw: 0px 0px var(--br-wdt) var(--br-wdt);
         }
         #sidebar-box{ --sdbr-box-hover-brs: 0px 0px var(--big-rounding) 0px; }
+        #sidebar-box::after {
+          box-shadow: 0 0 0 var(--big-rounding) var(--tb-col) !important;
+          border-radius: var(--big-rounding) !important;
+          border: var(--border);
+
+          position: absolute;
+          pointer-events: none;
+          clip-path: polygon(0 0, var(--big-rounding) 0, var(--big-rounding) var(--big-rounding), 0 var(--big-rounding)) ;
+          content: "";
+          inset: calc( 0px - var(--br-wdt) );
+        }
       } }
       
       
@@ -643,6 +654,17 @@ scrollbox, #vertical-pinned-tabs-container{
           --sdbr-main-hover-brw: 0px 0px var(--br-wdt) var(--br-wdt);
         }
         #sidebar-box{ --sdbr-box-hover-brs: 0px 0px var(--big-rounding) 0px; }
+        #sidebar-box::after {
+          box-shadow: 0 0 0 var(--big-rounding) var(--tb-col) !important;
+          border-radius: var(--big-rounding) !important;
+          border: var(--border);
+
+          position: absolute;
+          pointer-events: none;
+          clip-path: polygon(0 0, var(--big-rounding) 0, var(--big-rounding) var(--big-rounding), 0 var(--big-rounding)) ;
+          content: "";
+          inset: calc( 0px - var(--br-wdt) );
+        }
       } }
       
       &:has( #sidebar-main > *[hidden], #sidebar-main[hidden] ):has( #sidebar-box:not([hidden]) ){
