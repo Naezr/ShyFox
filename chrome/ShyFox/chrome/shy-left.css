@@ -201,6 +201,7 @@ scrollbox, #vertical-pinned-tabs-container{
   left: 0px;
   
   transition: var(--bar-transition), var(--opacity-transition) !important;
+  & > * { transition: var(--opacity-transition) !important; }
   z-index: 2 !important;
 }
 
