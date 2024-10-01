@@ -367,7 +367,7 @@ scrollbox, #vertical-pinned-tabs-container{
     height: var(--nvbr-hgt) !important;
     
     margin: 0 !important;
-    margin-left: var(--toolbar-start-end-padding) !important;
+    margin-left: calc( var(--toolbar-start-end-padding) + 1px ) !important;
     
     position: absolute !important;
     bottom: 0;
