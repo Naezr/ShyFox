@@ -373,9 +373,9 @@ scrollbox, #vertical-pinned-tabs-container{
     bottom: 0;
     
     #urlbar:not(:hover):not([focused]) > :is(.urlbar-input-container, #urlbar-input-container){
-    & > *:not(.urlbar-searchmode-and-input-box-container, .urlbar-input-box, #page-action-buttons),
+    & > *:not(.urlbar-searchmode-and-input-box-container, .urlbar-input-box, #page-action-buttons, #identity-box:is(.chromeUI, .localResource) ),
     #page-action-buttons > *:not(#urlbar-zoom-button){
-      visibility: collapse !important;
+      visibility: collapse;
       opacity: 0;
       transition: opacity 0.3s linear, visibility 0.2s linear !important;
       transition-delay: 1.25s !important;
@@ -386,21 +386,26 @@ scrollbox, #vertical-pinned-tabs-container{
       padding-left: 5px !important;
     }
     
-    #urlbar-zoom-button{ order: 999 !important; }
+    #urlbar-zoom-button{
+      order: 999 !important;
+      margin-inline: 2px !important;
+    }
+    
     #identity-box.chromeUI{
       order: 99 !important;
       margin-left: 3px !important;
       margin-right: 0px !important;
     }
     
-    #identity-box:not(.chromeUI){ margin-right: 3px !important; }
+    #identity-box.localResource{
+      order: -2 !important;
+      margin-inline-end: -5px !important;
+    }
+    
+    #identity-box:not( .chromeUI, .localResource ){ margin-right: 3px !important; }
     #permissions-granted-icon{ display: none !important; }
     #blocked-permissions-container > *:nth-child(1 of [showing]){ margin: 0px !important; }
     #identity-icon-box #identity-icon-label { display: none !important; }
-    #identity-box[pageproxystate="invalid"]{
-      #identity-icon-box { padding: 0.5px !important; }
-      #identity-icon { display: none !important; }
-    }
     
     #urlbar-input.urlbar-input{ padding: 0px !important; }
   }
