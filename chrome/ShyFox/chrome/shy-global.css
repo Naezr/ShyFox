@@ -307,6 +307,9 @@ browser[class*="devtools-toolbox"]{
   transition: var(--bar-transition) !important;
   position: fixed;
   
+  #TabsToolbar-customization-target > *:not(toolbarspring){
+    height: 40px !important;
+  }
   
   toolbarbutton{ height: var(--tbbr-size) !important; }
 
@@ -341,6 +344,40 @@ browser[class*="devtools-toolbox"]{
     }
   }
 }
+
+/* 
+
+##############################################################################################################################
+
+ M E N U   B A R
+
+*/
+
+@media not (-moz-platform: macos) {
+  
+  #toolbar-menubar {
+    
+    position: fixed;
+    overflow: clip;
+    visibility: visible !important;
+    z-index: 5;
+    
+    width: -fit-content;
+    max-height: 0px;
+    padding-bottom: 0 !important;
+    
+    transition: all .3s ease !important;
+    
+    top: var(--top-margin);
+    left: var(--left-margin);
+    
+    border-radius: var(--rounding);
+    background-color: var(--tb-col) !important;
+  }
+
+  #main-menubar > * {padding-top: 0px !important;}
+}
+
 
 /* 
 
