@@ -387,18 +387,22 @@ scrollbox, #vertical-pinned-tabs-container{
     }
     
     #urlbar-zoom-button{ order: 999 !important; }
-    #identity-box{ order: 9999 !important; }
+    #identity-box.chromeUI{
+      order: 99 !important;
+      margin-left: 3px !important;
+      margin-right: 0px !important;
+    }
     
-    #urlbar-input.urlbar-input{ padding: 0px !important; }
-    
-    #identity-box{ margin-right: 0px !important; }
-    
+    #identity-box:not(.chromeUI){ margin-right: 3px !important; }
+    #permissions-granted-icon{ display: none !important; }
+    #blocked-permissions-container > *:nth-child(1 of [showing]){ margin: 0px !important; }
     #identity-icon-box #identity-icon-label { display: none !important; }
-    
     #identity-box[pageproxystate="invalid"]{
       #identity-icon-box { padding: 0.5px !important; }
       #identity-icon { display: none !important; }
     }
+    
+    #urlbar-input.urlbar-input{ padding: 0px !important; }
   }
     
   #urlbar[breakout-extend]{
