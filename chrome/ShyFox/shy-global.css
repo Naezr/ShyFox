@@ -14,10 +14,10 @@ Area where website is displayed
 
 #browser #tabbrowser-tabbox {
   /* shift website content relative to panels */
-  margin-left: var(--left-margin);
-  margin-right: var(--right-margin);
-  margin-top: var(--top-margin);
-  margin-bottom: var(--bottom-margin);
+  margin-left: var(--left-margin) !important;
+  margin-right: var(--right-margin) !important;
+  margin-top: var(--top-margin) !important;
+  margin-bottom: var(--bottom-margin) !important;
   
   /* add smoothness to it */
   transition: var(--transition) !important;
