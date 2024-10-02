@@ -447,6 +447,69 @@ browser[class*="devtools-toolbox"]{
 
 ##############################################################################################################################
 
+ F I N D B A R
+
+*/
+
+findbar{
+  background: var(--tb-col) !important;
+  color: var(--tb-txt) !important;
+  border-radius: var(--big-rounding) !important;
+  border: var(--border) !important;
+  transition: var(--bar-transition) !important;
+  
+  --findbar-width: 850px;
+  @media (max-width: 900px){ --findbar-width: 500px }
+  
+  position: fixed !important;
+  bottom: calc( var(--bottom-margin) + var(--margin) );
+  
+  --blank: calc( 100% - var(--left-margin) - var(--right-margin) - var(--findbar-width) );
+  left: calc( var(--blank) / 2 + var(--left-margin) );
+  right: calc( var(--blank) / 2 + var(--right-margin) );
+  
+  height: 80px !important;
+  padding-top: 40px !important;
+  
+  [anonid="findbar-textbox-wrapper"]{
+    position: absolute !important;
+    top: 0px;
+    left: var(--toolbar-start-end-padding) !important;
+    
+    padding-block: 6px !important;
+
+    width: calc( var(--findbar-width) - var(--toolbar-start-end-padding) * 2 - 40px ) !important;
+
+    .findbar-textbox{
+      border-radius: 100px !important;
+      width: calc( var(--findbar-width) - var(--toolbar-start-end-padding) * 2 - 80px - 40px ) !important;
+    }
+
+    toolbarbutton{
+      margin-inline: 5px !important;
+      width: 30px !important;
+      border-radius: var(--rounding) !important;
+    }
+  }
+  
+  .findbar-closebutton{
+    position: absolute !important;
+    right: var(--toolbar-start-end-padding);
+    top: 0px;
+    
+    height: 28px !important;
+    width: 30px !important;
+    margin-block: 6px !important;
+    margin-inline: 5px !important;
+    
+    border-radius: var(--rounding) !important;
+  }
+}
+
+/* 
+
+##############################################################################################################################
+
  A N I M A T I O N
 
 */
