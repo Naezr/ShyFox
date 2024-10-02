@@ -171,9 +171,7 @@
     }
     
     .cell-reset{ display: none !important; }
-    .has-user-value .cell-edit{
-      &, button{ width: 15vw !important; }
-    }
+    .cell-edit{ &, button{ width: 15vw !important; } }
 
     
     /* pref color accent */
