@@ -132,6 +132,13 @@
   #TabsToolbar-customization-target > * { opacity: 0; }
   #TabsToolbar-customization-target > *[disabled] { opacity: 0 !important; }
   
+  #TabsToolbar-customization-target toolbarspring{
+    background-color: color-mix(in srgb, var(--tb-txt) 25%, transparent) !important;
+    border-radius: var(--rounding) !important;
+    max-height: 1px !important;
+    padding: 1px !important;
+    scale: 0.75;
+  }
   
   @media (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{
     top: calc( var(--top-margin) + var(--margin) + var(--tbbr-menubutton-hgt) );
