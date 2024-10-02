@@ -8,6 +8,9 @@ Styles for Min Max Close buttons
 */
 
 /* move buttons to correct position */
+#TabsToolbar .titlebar-buttonbox-container{ display: none !important; }
+#toolbar-menubar .titlebar-buttonbox-container{ display: flex !important; }
+
 .titlebar-buttonbox-container{
   position: fixed !important;
   overflow: clip !important;

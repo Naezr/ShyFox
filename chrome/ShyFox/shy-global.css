@@ -12,7 +12,7 @@ Area where website is displayed
 /* set background color */
 #appcontent .browserStack, #browser, .browserContainer {background: var(--bg-col)}
 
-#browser > #appcontent {
+#browser #tabbrowser-tabbox {
   /* shift website content relative to panels */
   margin-left: var(--left-margin);
   margin-right: var(--right-margin);
@@ -40,13 +40,15 @@ Area where website is displayed
   ){
     
     /* add rounded corners and outline to browser content */
-    #appcontent browser {
+    #tabbrowser-tabbox {
       border-radius: var(--big-rounding) !important;
       border: var(--outline);
+      outline: none !important;
     }
     
-    #appcontent .browserStack::after {
+    #tabbrowser-tabpanels::after {
       content: "";
+      margin: -1px;
       border: var(--outline);
       position: absolute;
       inset: 0;
