@@ -151,7 +151,7 @@
   --margin-on-left:   0px;
 }
 
-:root{
+:root[chromehidden=""]{
   --top-margin:    var(--margin-on-top);
   --right-margin:  var(--margin-on-right);
   --bottom-margin: var(--margin-on-bottom);

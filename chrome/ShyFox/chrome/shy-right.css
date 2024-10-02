@@ -17,7 +17,7 @@
 
 */
 
-:root:not([titlepreface*="‌"]){
+:root[chromehidden=""]:not([titlepreface*="‌"]){
   --right-margin: var(--tbbr-size);
 }
 

@@ -26,7 +26,7 @@
 }
 
 /* fake border radius & border around main content */
-:root:not([inDOMFullscreen]){
+:root:not([inDOMFullscreen])[chromehidden=""]{
   .browserStack::after {
     box-shadow: 0 0 0 var(--big-rounding) var(--bg-col) !important;
     border-radius: var(--big-rounding);
@@ -55,6 +55,8 @@
 { display: none !important; }
 
 :root[inDOMFullscreen] #navigator-toolbox{ display: none !important; }
+
+:root:not([chromehidden=""]) #navigator-toolbox{ visibility: collapse !important; }
 
 /* opacity fix */
 #titlebar {

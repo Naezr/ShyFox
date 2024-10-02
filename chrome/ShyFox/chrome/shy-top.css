@@ -12,7 +12,7 @@
   --top-bmbr-hgt: 0px;
 }
 
-:root:has(#PersonalToolbar:not([collapsed="true"])){ @media not (
+:root[chromehidden=""]:has(#PersonalToolbar:not([collapsed="true"])){ @media not (
   (
     (-moz-bool-pref: "shyfox.position.tabbar") or
     (  ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") )
@@ -29,7 +29,7 @@
   }
 } }
 
-:root:has(#PersonalToolbar[collapsed="true"]){ @media not (
+:root[chromehidden=""]:has(#PersonalToolbar[collapsed="true"]){ @media not (
   (
     (-moz-bool-pref: "shyfox.position.tabbar") or
     (  ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") )
