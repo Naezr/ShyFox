@@ -125,7 +125,7 @@
   /* The condition is rather fuzzy and checks the number of items shown on the screen. There is no way to know for sure that these styles apply to the right parameters */
   
   /*                     vvvv <<<< Number of all shyfox parameters + 1 */  
-  #prefs .add:nth-child(  13  of :not(.hidden) )
+  #prefs .add:nth-child(  14  of :not(.hidden) )
   
 ) {
 
@@ -196,26 +196,34 @@
       color: var(--sm-tr-txt);
     }
     
-    /* 1 - shyfox.appearance.leftbar.gapless */
+    /* 1 - shyfox.appearance.bottombar.gapless */
     & > .has-user-value:nth-child( 1 of :not(.hidden) ){
+      --color: lightblue;
+      --bg: var(--odd-bg);
+      --order: calc( var(--min) + 101 );
+    }
+    
+    /* 2 - shyfox.appearance.leftbar.gapless */
+    & > .has-user-value:nth-child( 2 of :not(.hidden) ){
       --color: lightblue;
       --bg: var(--odd-bg);
       --order: calc( var(--min) + 90 );
     }
     
-    /* 2 - shyfox.appearance.topbar.gapless */
-    & > .has-user-value:nth-child( 2 of :not(.hidden) ){
+    /* 3 - shyfox.appearance.topbar.gapless */
+    & > .has-user-value:nth-child( 3 of :not(.hidden) ){
       --color: lightblue;
       --order: calc( var(--min) + 100 );
     }
     
-    /* 3 - shyfox.debug.color */
-    & > .has-user-value:nth-child( 3 of :not(.hidden) ){
+    /* 4 - shyfox.debug.color */
+    & > .has-user-value:nth-child( 4 of :not(.hidden) ){
+      --bg: var(--odd-bg);
       --order: calc( var(--min) + 120 );
     }
     
-    /* 4 - shyfox.position.bookmarkbar */
-    & > .has-user-value:nth-child( 4 of :not(.hidden) ){
+    /* 5 - shyfox.position.bookmarkbar */
+    & > .has-user-value:nth-child( 5 of :not(.hidden) ){
       --color: pink;
       --order: calc( var(--min) + 20 );
       
@@ -224,8 +232,8 @@
       @media (-moz-bool-pref: "shyfox.position.bookmarkbar") {--hint: ": bookmarks bar on left, above sidebar"}
     }
     
-    /* 5 - shyfox.position.extbutton */
-    & > .has-user-value:nth-child( 5 of :not(.hidden) ){
+    /* 6 - shyfox.position.extbutton */
+    & > .has-user-value:nth-child( 6 of :not(.hidden) ){
       --color: bisque;
       --order: calc( var(--min) + 80 );
       
@@ -238,8 +246,8 @@
       }
     }
     
-    /* 6 - shyfox.position.menubutton */
-    & > .has-user-value:nth-child( 6 of :not(.hidden) ){
+    /* 7 - shyfox.position.menubutton */
+    & > .has-user-value:nth-child( 7 of :not(.hidden) ){
       --color: bisque;
       --bg: var(--odd-bg);
       --order: calc( var(--min) + 70 );
@@ -253,8 +261,8 @@
       }
     }
     
-    /* 7 - shyfox.position.navbar */
-    & > .has-user-value:nth-child( 7 of :not(.hidden) ){
+    /* 8 - shyfox.position.navbar */
+    & > .has-user-value:nth-child( 8 of :not(.hidden) ){
       --color: pink;
       --bg: var(--odd-bg);
       --order: calc( var(--min) + 10 );
@@ -264,8 +272,8 @@
       @media (-moz-bool-pref: "shyfox.position.navbar") {--hint: ": navbar on left, above sidebar"}
     }
     
-    /* 8 - shyfox.position.tabbar */
-    & > .has-user-value:nth-child( 8 of :not(.hidden) ){
+    /* 9 - shyfox.position.tabbar */
+    & > .has-user-value:nth-child( 9 of :not(.hidden) ){
       --color: pink;
       --bg: var(--odd-bg);
       --order: calc( var(--min) + 30 );
@@ -275,30 +283,29 @@
       @media (-moz-bool-pref: "shyfox.position.tabbar") {--hint: ": tabbar on right as a toolbar"}
     }
     
-    /* 9 - shyfox.remove.tabbar */
-    & > .has-user-value:nth-child( 9 of :not(.hidden) ){
+    /* 10 - shyfox.remove.tabbar */
+    & > .has-user-value:nth-child( 10 of :not(.hidden) ){
       --color: tomato;
-      --bg: var(--odd-bg);
       --order: calc( var(--min) + 110 );
       
       @media not (-moz-bool-pref: "shyfox.position.tabbar") { opacity: 0.5 !important;  }
     }
     
-    /* 10 - shyfox.vert-position.bookmarkbar */
-    & > .has-user-value:nth-child( 10 of :not(.hidden) ){
+    /* 11 - shyfox.vert-position.bookmarkbar */
+    & > .has-user-value:nth-child( 11 of :not(.hidden) ){
       --color: turquoise;
       --bg: var(--odd-bg);
       --order: calc( var(--min) + 50 );
     }
     
-    /* 11 - shyfox.vert-position.navbar */
-    & > .has-user-value:nth-child( 11 of :not(.hidden) ){
+    /* 12 - shyfox.vert-position.navbar */
+    & > .has-user-value:nth-child( 12 of :not(.hidden) ){
       --color: turquoise;
       --order: calc( var(--min) + 40 );
     }
     
-    /* 12 - shyfox.vert-position.navbar */
-    & > .has-user-value:nth-child( 12 of :not(.hidden) ){
+    /* 13 - shyfox.vert-position.navbar */
+    & > .has-user-value:nth-child( 13 of :not(.hidden) ){
       --color: turquoise;
       --order: calc( var(--min) + 60 );
     }
