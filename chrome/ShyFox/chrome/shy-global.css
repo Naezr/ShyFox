@@ -71,6 +71,9 @@
 /* border fix */
 * { border: 0px solid transparent; }
 
+/* transparent sidebar */
+window#webextpanels-window { background: transparent !important; }
+
 /* 
 
 ##############################################################################################################################
