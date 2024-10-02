@@ -18,8 +18,8 @@
   
   & > * {
     width: 100% !important;
-    th[scope="row"]{ width: calc( 50vw - 68px ) !important; }
-    .cell-value    { width: calc( 50vw - 40px ) !important; }
+    th[scope="row"]{ width: calc( 50vw - 7.5vw - 20px ) !important; }
+    .cell-value    { width: calc( 50vw - 7.5vw - 20px ) !important; }
   }
 }
 
@@ -125,7 +125,7 @@
   /* The condition is rather fuzzy and checks the number of items shown on the screen. There is no way to know for sure that these styles apply to the right parameters */
   
   /*                     vvvv <<<< Number of all shyfox parameters + 1 */  
-  #prefs .add:nth-child(  10  of :not(.hidden) )
+  #prefs .add:nth-child(  13  of :not(.hidden) )
   
 ) {
 
@@ -170,6 +170,12 @@
       &:not(:hover){ background: var(--bg) !important; }
     }
     
+    .cell-reset{ display: none !important; }
+    .has-user-value .cell-edit{
+      &, button{ width: 15vw !important; }
+    }
+
+    
     /* pref color accent */
     .has-user-value th[scope="row"]{ color: var(--color) !important; }
     
@@ -196,25 +202,24 @@
     & > .has-user-value:nth-child( 1 of :not(.hidden) ){
       --color: lightblue;
       --bg: var(--odd-bg);
-      --order: calc( var(--min) + 6 );
+      --order: calc( var(--min) + 90 );
     }
     
     /* 2 - shyfox.appearance.topbar.gapless */
     & > .has-user-value:nth-child( 2 of :not(.hidden) ){
       --color: lightblue;
-      --order: calc( var(--min) + 7 );
+      --order: calc( var(--min) + 100 );
     }
     
     /* 3 - shyfox.debug.color */
     & > .has-user-value:nth-child( 3 of :not(.hidden) ){
-      --color: tomato;
-      --order: calc( var(--min) + 9 );
+      --order: calc( var(--min) + 120 );
     }
     
     /* 4 - shyfox.position.bookmarkbar */
     & > .has-user-value:nth-child( 4 of :not(.hidden) ){
       --color: pink;
-      --order: calc( var(--min) + 3 );
+      --order: calc( var(--min) + 20 );
       
       --description: "Defines position of bookmarks bar (if it enabled).";
       @media not (-moz-bool-pref: "shyfox.position.bookmarkbar") {--hint: ": bookmarks bar on top"}
@@ -224,7 +229,7 @@
     /* 5 - shyfox.position.extbutton */
     & > .has-user-value:nth-child( 5 of :not(.hidden) ){
       --color: bisque;
-      --order: calc( var(--min) + 5 );
+      --order: calc( var(--min) + 80 );
       
       --description: "Defines position of unified extensions button.";
       @media not (-moz-bool-pref: "shyfox.position.extbutton") {--hint: ": extensions button on navbar" }
@@ -239,7 +244,7 @@
     & > .has-user-value:nth-child( 6 of :not(.hidden) ){
       --color: bisque;
       --bg: var(--odd-bg);
-      --order: calc( var(--min) + 4 );
+      --order: calc( var(--min) + 70 );
       
       --description: "Defines position of menu button.";
       @media not (-moz-bool-pref: "shyfox.position.menubutton") {--hint: ": menu button on navbar" }
@@ -253,7 +258,8 @@
     /* 7 - shyfox.position.navbar */
     & > .has-user-value:nth-child( 7 of :not(.hidden) ){
       --color: pink;
-      --order: calc( var(--min) + 1 );
+      --bg: var(--odd-bg);
+      --order: calc( var(--min) + 10 );
       
       --description: "Defines position of navigation bar.";
       @media not (-moz-bool-pref: "shyfox.position.navbar") {--hint: ": navbar on top"}
@@ -264,7 +270,7 @@
     & > .has-user-value:nth-child( 8 of :not(.hidden) ){
       --color: pink;
       --bg: var(--odd-bg);
-      --order: calc( var(--min) + 2 );
+      --order: calc( var(--min) + 30 );
       
       --description: "Defines position of tabs toolbar.";
       @media not (-moz-bool-pref: "shyfox.position.tabbar") {--hint: ": tabbar on top, horizontal tabs can be used"}
@@ -273,13 +279,32 @@
     
     /* 9 - shyfox.remove.tabbar */
     & > .has-user-value:nth-child( 9 of :not(.hidden) ){
-      --color: turquoise;
+      --color: tomato;
       --bg: var(--odd-bg);
-      --order: calc( var(--min) + 8 );
+      --order: calc( var(--min) + 110 );
       
       @media not (-moz-bool-pref: "shyfox.position.tabbar") { opacity: 0.5 !important;  }
     }
+    
+    /* 10 - shyfox.vert-position.bookmarkbar */
+    & > .has-user-value:nth-child( 10 of :not(.hidden) ){
+      --color: turquoise;
+      --bg: var(--odd-bg);
+      --order: calc( var(--min) + 50 );
+    }
+    
+    /* 11 - shyfox.vert-position.navbar */
+    & > .has-user-value:nth-child( 11 of :not(.hidden) ){
+      --color: turquoise;
+      --order: calc( var(--min) + 40 );
+    }
+    
+    /* 12 - shyfox.vert-position.navbar */
+    & > .has-user-value:nth-child( 12 of :not(.hidden) ){
+      --color: turquoise;
+      --order: calc( var(--min) + 60 );
+    }
+    
   }
-
 } } 
 }
