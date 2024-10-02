@@ -372,7 +372,7 @@ scrollbox, #vertical-pinned-tabs-container{
     position: absolute !important;
     bottom: 0;
     
-    #urlbar:not(:hover):not([focused]) > :is(.urlbar-input-container, #urlbar-input-container){
+    #urlbar:not(:hover):not([focused]):not(:has(*[open])) > :is(.urlbar-input-container, #urlbar-input-container){
     & > *:not(.urlbar-searchmode-and-input-box-container, .urlbar-input-box, #page-action-buttons, #identity-box:is(.chromeUI, .localResource) ),
     #page-action-buttons > *:not(#urlbar-zoom-button){
       visibility: collapse;
