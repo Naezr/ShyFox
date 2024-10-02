@@ -16,6 +16,8 @@
   box-shadow: none !important;
   outline: none !important;
   
+  z-index: 0 !important;
+  
   position: fixed !important;
   top: 0px; bottom: 0px; left: 0px; right: 0px;
 }

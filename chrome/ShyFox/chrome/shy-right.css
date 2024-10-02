@@ -287,7 +287,9 @@
 }
 
 :root{
+  &:has( #TabsToolbar-customization-target:has(#alltabs-button) ) {
   --tbbr-elements-number: calc( var(--tbbr-elements-counter) - 1 ); /* -1 because hidden alltabs button */
+  } --tbbr-elements-number: calc( var(--tbbr-elements-counter) - 0 );
   
   &:has( #TabsToolbar-customization-target > *:nth-child( 0 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 0} 
   &:has( #TabsToolbar-customization-target > *:nth-child( 1 of :is(toolbarbutton, toolbaritem) ):nth-last-child( 1 of :is(toolbarbutton, toolbaritem) ) ) {--tbbr-elements-counter: 1} 
