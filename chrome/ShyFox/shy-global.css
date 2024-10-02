@@ -555,6 +555,8 @@ File Edit View History Bookmarks Tools Help
   }
 }
 
+/* z-index fix */
+#tabbrowser-tabbox{z-index: 1 !important;}
 
 /*
 
