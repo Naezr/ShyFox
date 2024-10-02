@@ -12,7 +12,7 @@
   --top-bmbr-hgt: 0px;
 }
 
-@media not (
+:root:has(#PersonalToolbar:not([collapsed="true"])){ @media not (
   (
     (-moz-bool-pref: "shyfox.position.tabbar") or
     (  ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") )
@@ -24,11 +24,24 @@
     (  ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) and (-moz-bool-pref: "shyfox.vert-position.bookmarkbar") )
   )
 ) {
-  
-  :root:not([titlepreface*="​"]){
+  &:not([titlepreface*="​"]){
     --top-margin: calc( var(--top-tbbr-hgt) + var(--top-nvbr-hgt) + var(--top-bmbr-hgt) );
   }
-}
+} }
+
+:root:has(#PersonalToolbar[collapsed="true"]){ @media not (
+  (
+    (-moz-bool-pref: "shyfox.position.tabbar") or
+    (  ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") )
+  ) and (
+    (-moz-bool-pref: "shyfox.position.navbar") or
+    (  ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") )
+  )
+) {
+  &:not([titlepreface*="​"]){
+    --top-margin: calc( var(--top-tbbr-hgt) + var(--top-nvbr-hgt) );
+  }
+} }
 
 :root{
   --topbar-right: var(--right-margin);
@@ -314,8 +327,9 @@
   @media ( not ( 
     (-moz-bool-pref: "shyfox.position.navbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
-  ) ) and (-moz-bool-pref: "shyfox.position.bookmarkbar")
-  { #nav-bar{
+  ) ) and (
+    (-moz-bool-pref: "shyfox.position.bookmarkbar") or ( ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) and (-moz-bool-pref: "shyfox.vert-position.bookmarkbar") ) 
+  ) { #nav-bar{
     &::after{
       content: ""; position: absolute;
       pointer-events: none;
@@ -333,8 +347,11 @@
   @media ( not ( 
     (-moz-bool-pref: "shyfox.position.tabbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
-  ) ) and (-moz-bool-pref: "shyfox.position.bookmarkbar") and (-moz-bool-pref: "shyfox.position.navbar") 
-  { #TabsToolbar{
+  ) ) and (
+    (-moz-bool-pref: "shyfox.position.bookmarkbar") or ( ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) and (-moz-bool-pref: "shyfox.vert-position.bookmarkbar") ) 
+  ) and (
+    (-moz-bool-pref: "shyfox.position.navbar") or ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
+  ) { #TabsToolbar{
     &::after{
       content: ""; position: absolute;
       pointer-events: none;
@@ -372,7 +389,9 @@
   @media ( not ( 
     (-moz-bool-pref: "shyfox.position.tabbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
-  ) ) and (-moz-bool-pref: "shyfox.position.navbar") { #TabsToolbar{
+  ) ) and (
+    (-moz-bool-pref: "shyfox.position.navbar") or ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
+  ) { #TabsToolbar{
     &::after{
       content: ""; position: absolute;
       pointer-events: none;
@@ -436,7 +455,13 @@
     @media ( not ( 
       (-moz-bool-pref: "shyfox.position.navbar") or 
       ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
-    ) ) and ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
+    ) ) and ( not ( 
+      (-moz-bool-pref: "shyfox.position.tabbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
+    ) ) and ( not ( 
+      (-moz-bool-pref: "shyfox.position.bookmarkbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) and (-moz-bool-pref: "shyfox.vert-position.bookmarkbar") ) 
+    ) ) {
       #navigator-toolbox #nav-bar{
         --nvbr-hover-brs: 0px;
         --nvbr-hover-brw: 0px var(--br-wdt) 0px var(--br-wdt);
@@ -488,7 +513,9 @@
   @media ( not ( 
     (-moz-bool-pref: "shyfox.position.navbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
-  ) ) and (-moz-bool-pref: "shyfox.position.tabbar") and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) and (-moz-bool-pref: "shyfox.position.extbutton") { &:has(
+  ) ) and (
+    (-moz-bool-pref: "shyfox.position.tabbar") or ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
+  ) and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) and (-moz-bool-pref: "shyfox.position.extbutton") { &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
     #nav-bar-customization-target *:not(#unified-extensions-button, #firefox-view-button)[open],
     #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
@@ -515,7 +542,9 @@
   @media ( not ( 
     (-moz-bool-pref: "shyfox.position.navbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
-  ) ) and (-moz-bool-pref: "shyfox.position.tabbar") and (-moz-bool-pref: "shyfox.position.menubutton") and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) { &:has(
+  ) ) and (
+    (-moz-bool-pref: "shyfox.position.tabbar") or ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
+  ) and (-moz-bool-pref: "shyfox.position.menubutton") and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) { &:has(
     #nav-bar-customization-target:hover, #nav-bar-customization-target:-moz-drag-over,
     #nav-bar-customization-target *:not(#firefox-view-button)[open]
   ) { --top-hvbr-opct: 0;
@@ -541,7 +570,9 @@
   @media ( not ( 
     (-moz-bool-pref: "shyfox.position.navbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
-  ) ) and (-moz-bool-pref: "shyfox.position.tabbar") and (-moz-bool-pref: "shyfox.position.menubutton") and (-moz-bool-pref: "shyfox.position.extbutton") { &:has(
+  ) ) and (
+    (-moz-bool-pref: "shyfox.position.tabbar") or ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
+  ) and (-moz-bool-pref: "shyfox.position.menubutton") and (-moz-bool-pref: "shyfox.position.extbutton") { &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
     #nav-bar-customization-target *:not(#unified-extensions-button, #firefox-view-button)[open]
   ) { --top-hvbr-opct: 0;
@@ -567,7 +598,9 @@
   @media ( not ( 
     (-moz-bool-pref: "shyfox.position.navbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
-  ) ) and (-moz-bool-pref: "shyfox.position.tabbar") and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) { &:has(
+  ) ) and (
+    (-moz-bool-pref: "shyfox.position.tabbar") or ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
+  ) and ( not (-moz-bool-pref: "shyfox.position.menubutton") ) and ( not (-moz-bool-pref: "shyfox.position.extbutton") ) { &:has(
     #nav-bar-customization-target:hover, #nav-bar-customization-target *:not(#firefox-view-button)[open],
     #PanelUI-menu-button:hover, #PanelUI-menu-button[open]
   ) { --top-hvbr-opct: 0;

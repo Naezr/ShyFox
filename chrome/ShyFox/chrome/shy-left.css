@@ -302,7 +302,7 @@ scrollbox, #vertical-pinned-tabs-container{
     & > * { opacity: 0; }
     
     top: calc( var(--top-margin) + var(--left-nvbr-hgt) + var(--margin) + var(--bmbr-left-gap) + var(--left-bmbr-hgt) + var(--sdbr-left-gap) ) !important;
-    bottom: calc( var(--margin-on-bottom) + var(--margin) ) !important;
+    bottom: calc( var(--bottom-margin) + var(--margin) ) !important;
     
     --sdbr-hover-col: var(--tb-col);
     --sdbr-hover-txt: var(--tb-txt);

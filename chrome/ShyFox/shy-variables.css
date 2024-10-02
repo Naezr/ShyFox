@@ -18,6 +18,7 @@
   --sdbr-wdt: 300px;
   --sdbr-tb-wdt: 40px;
   --top-hide-margin-inline: 100px;
+  --bottom-hide-margin-inline: 100px;
   --panel-hidden-hitbox: 8px;
 }
 
@@ -143,7 +144,7 @@
   --margin-on-left:   var(--margin);
 }
 
-:root[titlepreface*="‍"]{
+:root[titlepreface*="‎"]{
   --margin-on-top:    0px;
   --margin-on-right:  0px;
   --margin-on-bottom: 0px;
