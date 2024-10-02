@@ -403,8 +403,6 @@ scrollbox, #vertical-pinned-tabs-container{
     }
     
     #identity-box:not( .chromeUI, .localResource ){ margin-right: 3px !important; }
-    #permissions-granted-icon{ display: none !important; }
-    #blocked-permissions-container > *:nth-child(1 of [showing]){ margin: 0px !important; }
     #identity-icon-box #identity-icon-label { display: none !important; }
     
     #urlbar-input.urlbar-input{ padding: 0px !important; }
