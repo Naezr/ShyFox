@@ -90,26 +90,6 @@
     bottom: 0px;
   }
   
-  #TabsToolbar-customization-target{
-    toolbarspring { max-width: none !important; }
-    padding-inline: var(--toolbar-start-end-padding) !important;
-    
-    & :is( #edit-controls, #zoom-controls ) > *,
-    & > * { transition: var(--opacity-transition) !important; }
-    
-    &:not( :has(#tabbrowser-tabs) ) #alltabs-button{ display: none !important; }
-    #tabbrowser-tabs{ padding-bottom: 0px !important; }
-    
-    & > *:nth-child(1 of :is(toolbarbutton, toolbaritem)) {
-      margin-left: 0px !important;
-      padding-left: 0px !important;
-    }
-    & > *:nth-last-child(1 of :is(toolbarbutton, toolbaritem)) {
-      margin-right: 0px !important;
-      padding-right: 0px !important;
-    }
-  }
-  
   :root[titlepreface*="‍"]{
     #TabsToolbar{
       --tbbr-hidden-hitbox: 0px;
@@ -413,7 +393,7 @@
 
 */
 
-:root[titlepreface*="​"]{ @media (-moz-bool-pref: "shyfox.appearance.bottombar.gapless") {
+:root[titlepreface*="‍"]{ @media (-moz-bool-pref: "shyfox.appearance.bottombar.gapless") {
   & { --bottom-gap: 0px; }
   
   /* tabbar top */
