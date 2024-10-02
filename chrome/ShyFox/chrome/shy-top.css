@@ -303,8 +303,6 @@
 :root{ --top-hvbr-opct: 0; }
 :root[titlepreface*="​"]{ --top-hvbr-opct: var(--hvbr-opct); }
 
-
-
 :root:has(#PersonalToolbar:not([collapsed="true"])){ 
   @media not ( 
     (-moz-bool-pref: "shyfox.position.bookmarkbar") or 
