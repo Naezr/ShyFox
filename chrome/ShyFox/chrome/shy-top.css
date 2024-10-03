@@ -179,7 +179,6 @@
       margin-inline: var(--top-hide-margin-inline) !important;
       overflow: visible !important;
     }
-    
 
     #nav-bar-customization-target, #PanelUI-button{
       height: var(--nvbr-hgt) !important;
