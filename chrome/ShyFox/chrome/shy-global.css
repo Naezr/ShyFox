@@ -323,6 +323,13 @@ browser[class*="devtools-toolbox"]{
   align-content: center !important;
 }
 
+#PlacesToolbarItems:empty::before{
+  content: "Create your first bookmark!";
+  margin-left: 10px;
+  height: 100%;
+  align-content: center;
+}
+
 /* 
 
 ##############################################################################################################################
