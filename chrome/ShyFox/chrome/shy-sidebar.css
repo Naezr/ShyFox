@@ -122,13 +122,17 @@
   --tab-collapsed-background-width: 32px !important;
   --tab-min-height: 32px;
   
-  .tab-background{ margin-inline: 4px !important; }
-  #tabs-newtab-button{ margin-inline: 4px !important; }
+  .tab-background, #tabs-newtab-button{ 
+    margin-inline: 4px !important; 
+    border-radius: var(--rounding) !important; 
+  }
+  
+  #tabs-newtab-button{ margin-top: 2px !important; }
 }
 
 #vertical-pinned-tabs-container-separator{ margin: 0px !important; }
 
-#vertical-pinned-tabs-container:not(:empty){ margin-top: var(--margin) !important; }
+:root:not([titlepreface*="᠎"]) #vertical-pinned-tabs-container:not(:empty){ margin-top: var(--margin) !important; }
 
 /* rm scrollbars */
 #tabbrowser-arrowscrollbox, #vertical-pinned-tabs-container{
