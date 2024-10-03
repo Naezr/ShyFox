@@ -305,8 +305,8 @@ browser[class*="devtools-toolbox"]{
 }
 
 /* empty bookmarks description tweaks */
-#PersonalToolbar:has(#personal-toolbar-empty) 
-             > *:not(#personal-toolbar-empty)
+#PersonalToolbar:has( #personal-toolbar-empty:not([hidden]) ) 
+             > *:not(#personal-toolbar-empty:not([hidden]) )
 { visibility: collapse !important; }
 
 #personal-toolbar-empty{
