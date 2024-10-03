@@ -321,6 +321,31 @@ browser[class*="devtools-toolbox"]{
     height: 40px !important;
   }
   
+  #TabsToolbar-customization-target:empty{
+    &::before{
+      content: "";
+      width: 16px;
+      height: 16px;
+      position: absolute;
+
+      mask-image: url("chrome://global/skin/icons/info-filled.svg");
+      background-color: lightblue;
+      mask-repeat: no-repeat;
+
+      top: 12px;
+      left: 5px;
+    }
+    &::after{
+      content: "Right click > Customize Toolbar, to add some buttons here";
+
+      position: absolute;
+      top: 0px;
+      left: 25px;
+
+      height: 40px;
+      align-content: center;
+    }
+  }
   toolbarbutton{ height: var(--tbbr-size) !important; }
 
   toolbarbutton > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack){
