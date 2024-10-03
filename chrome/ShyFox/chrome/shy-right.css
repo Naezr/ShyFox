@@ -104,6 +104,12 @@
   transition: var(--opacity-transition) !important;
 }
 
+#TabsToolbar-customization-target toolbarspring{ 
+  border-top: 0px solid transparent !important;
+  transition: border var(--trans-dur) ease !important;
+  margin-inline: 5px !important;
+}
+
 :root[titlepreface*="‌"]{
   --tbbr-right: calc( var(--margin-on-right) - var(--tbbr-size) );
   --tbbr-hover-right: calc( var(--margin) + var(--margin-on-right) );  
@@ -131,6 +137,9 @@
   
   #TabsToolbar-customization-target > * { opacity: 0; }
   #TabsToolbar-customization-target > *[disabled] { opacity: 0 !important; }
+  
+  #TabsToolbar-customization-target toolbarspring
+  { border-top: 1px solid color-mix(in srgb, var(--tb-txt) 25%, transparent) !important; }
   
   @media (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{
     top: calc( var(--top-margin) + var(--margin) + var(--tbbr-menubutton-hgt) );
