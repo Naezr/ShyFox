@@ -177,6 +177,10 @@
     left: var(--hidden-left) !important;
   }
   
+  #sidebar-main:not( :is( :has( > *[hidden]), [hidden] ) ){
+    left: calc( var(--hidden-left) + var(--br-wdt) * 2 ) !important;
+  }
+  
   :is( #sidebar-box, #sidebar-main:not( :is( :has( > *[hidden]), [hidden] ) ) )::before{
     content: ""; position: absolute;
     -moz-window-dragging: drag;
