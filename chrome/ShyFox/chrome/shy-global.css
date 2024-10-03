@@ -199,6 +199,8 @@ browser[class*="devtools-toolbox"]{
     --urlbar-container-height: var(--nvbr-hgt) !important;
     --urlbar-height: 32px !important;
   }
+  
+  #alltabs-button{ display: none !important; visibility: collapse !important; }
 }
 
 /* opacity transition */
