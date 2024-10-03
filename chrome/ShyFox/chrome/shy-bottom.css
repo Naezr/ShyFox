@@ -109,9 +109,9 @@
       overflow: visible !important;
     }
     
-    #TabsToolbar .toolbar-items{
-      height: var(--tbbr-size) !important;
-      margin-bottom: calc( 0px - var(--br-wdt) ) !important;
+    #TabsToolbar-customization-target {
+      height: calc( var(--tbbr-size) - var(--br-wdt) ) !important;
+      margin-top: var(--br-wdt) !important;
     }
     
     #TabsToolbar::before{
@@ -396,39 +396,57 @@
 :root[titlepreface*="‍"]{ @media (-moz-bool-pref: "shyfox.appearance.bottombar.gapless") {
   & { --bottom-gap: 0px; }
   
-  /* tabbar top */
-  @media not ( 
-    (-moz-bool-pref: "shyfox.position.tabbar") or 
-    ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.tabbar") ) )
-  ) {
-  @media not ( 
-    (-moz-bool-pref: "shyfox.position.navbar") or 
-    ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.navbar") ) )
-  ), not ( 
-    (-moz-bool-pref: "shyfox.position.bookmarkbar") or 
-    ( ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.bookmarkbar") ) )
-  ) {
-    #navigator-toolbox #titlebar #TabsToolbar{
-      --tbbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
-      --tbbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
-    }
-  } }
+  &:has(#PersonalToolbar[collapsed="true"]){
+    /* tabbar top */
+    @media not ( 
+      (-moz-bool-pref: "shyfox.position.tabbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.tabbar") ) )
+    ) {
+    @media not ( 
+      (-moz-bool-pref: "shyfox.position.navbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.navbar") ) )
+    ) {
+      #navigator-toolbox #titlebar #TabsToolbar{
+        --tbbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+        --tbbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
+      }
+    } }
   
-  /* navbar bottom */
-  @media ( not ( 
-    (-moz-bool-pref: "shyfox.position.navbar") or 
-    ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.navbar") ) )
-  ) ) and ( not ( 
-    (-moz-bool-pref: "shyfox.position.tabbar") or 
-    ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.tabbar") ) )
-  ) ) {
-    #navigator-toolbox #nav-bar{
-      --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
-      --nvbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
+    /* navbar bottom */
+    @media ( not ( 
+      (-moz-bool-pref: "shyfox.position.navbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.navbar") ) )
+    ) ) and ( not ( 
+      (-moz-bool-pref: "shyfox.position.tabbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.tabbar") ) )
+    ) ) {
+      #navigator-toolbox #nav-bar{
+        --nvbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
+        --nvbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
+      }
     }
   }
   
   &:has(#PersonalToolbar:not([collapsed="true"])){
+  
+    /* tabbar top */
+    @media not ( 
+      (-moz-bool-pref: "shyfox.position.tabbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.tabbar") ) )
+    ) {
+    @media not ( 
+      (-moz-bool-pref: "shyfox.position.navbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.navbar") ) )
+    ), not ( 
+      (-moz-bool-pref: "shyfox.position.bookmarkbar") or 
+      ( ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.bookmarkbar") ) )
+    ) {
+      #navigator-toolbox #titlebar #TabsToolbar{
+        --tbbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+        --tbbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
+      }
+    } }
+    
     /* navbar top & bottom */
     @media ( not ( 
       (-moz-bool-pref: "shyfox.position.navbar") or 
