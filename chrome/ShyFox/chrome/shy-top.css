@@ -409,19 +409,19 @@
         --tbbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
       }
     } }
-
-    /* navbar top */
-    @media ( not ( 
-      (-moz-bool-pref: "shyfox.position.navbar") or 
-      ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
-    ) ) and ( not ( 
-      (-moz-bool-pref: "shyfox.position.tabbar") or 
-      ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
-    ) ) {
-      #navigator-toolbox #nav-bar{
-        --nvbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
-        --nvbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
-      }
+  }
+  
+  /* navbar top */
+  @media ( not ( 
+    (-moz-bool-pref: "shyfox.position.navbar") or 
+    ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
+  ) ) and ( not ( 
+    (-moz-bool-pref: "shyfox.position.tabbar") or 
+    ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
+  ) ) {
+    #navigator-toolbox #nav-bar{
+      --nvbr-hover-brs: 0px 0px var(--big-rounding) var(--big-rounding);
+      --nvbr-hover-brw: 0px var(--br-wdt) var(--br-wdt) var(--br-wdt);
     }
   }
   
