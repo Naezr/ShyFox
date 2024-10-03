@@ -217,7 +217,11 @@ browser[class*="devtools-toolbox"]{
   #identity-box,
   #page-action-buttons,
   #tracking-protection-icon-container
-  { display: none !important; }
+  { 
+    width: 0px !important; 
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
   
   #urlbar-input { padding-inline-start: 5px !important; }
 }

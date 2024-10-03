@@ -151,7 +151,21 @@
     bottom: var(--bottom-tbbr-hgt);
 
     height: var(--nvbr-hgt) !important;
-  }  
+  }
+  
+  /* revert urlbar suggestions */
+  #urlbar[breakout][breakout-extend]{
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    bottom: 3px !important;
+    top: auto !important;
+    
+    #urlbar-input-container{
+      min-height: 40px !important;
+      max-height: 40px !important;
+      height: 40px !important;
+    }
+  }
   
   :root[titlepreface*="‍"]{
     
