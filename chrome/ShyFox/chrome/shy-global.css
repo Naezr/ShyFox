@@ -342,6 +342,11 @@ browser[class*="devtools-toolbox"]{
     height: 40px !important;
   }
   
+  #TabsToolbar-customization-target > #new-tab-button{
+    display: flex !important;
+    visibility: visible !important;
+  }
+  
   toolbarbutton{ height: var(--tbbr-size) !important; }
 
   toolbarbutton > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack){
