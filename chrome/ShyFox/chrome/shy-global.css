@@ -339,6 +339,7 @@ browser[class*="devtools-toolbox"]{
 */
 
 #TabsToolbar{
+  visibility: visible !important;
   background: transparent !important;
   color: var(--bg-txt) !important;
   border: 0px solid transparent !important;

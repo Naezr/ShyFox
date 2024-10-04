@@ -267,7 +267,7 @@
     right: 0 !important;
   }
   
-  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ) {
+  :root:not([customizing=""]):is([titlepreface*="᠎"], not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ) {
     #nav-bar{
       --nvbr-hover-top: calc( var(--top-margin) + var(--margin) ) !important;
       
@@ -304,20 +304,20 @@
     #nav-bar-overflow-button { opacity: 0; }
     @media not (-moz-bool-pref: "shyfox.position.extbutton") { #unified-extensions-button{ opacity: 0; } }
     @media not (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{ opacity: 0; } }
-  }
   
-  :root[titlepreface*="᠎"]{
-    #nav-bar{
-      left: var(--hidden-left) !important;
+  
+    &[titlepreface*="᠎"]{
+      #nav-bar{
+        left: var(--hidden-left) !important;
+      }
+    }
+
+    &:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
+      #nav-bar{
+        left: var(--semi-hidden-left) !important;
+      }
     }
   }
-  
-  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
-    #nav-bar{
-      left: var(--semi-hidden-left) !important;
-    }
-  }
-  
 }
 
 /* 
@@ -342,7 +342,7 @@
     overflow: visible !important;
   }
   
-  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){
+  :root:not([customizing=""]):is([titlepreface*="᠎"], not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ) {
     
     @media (-moz-bool-pref: "shyfox.position.navbar") { --bmbr-left-gap: var(--left-gap); }
     
@@ -372,17 +372,18 @@
     
     #PersonalToolbar > * { opacity: 0; }
     #PersonalToolbar > *[disabled] { opacity: 0 !important; }
-  }
   
-  :root[titlepreface*="᠎"]{
-    #PersonalToolbar{
-      left: var(--hidden-left) !important;
+  
+    &[titlepreface*="᠎"]{
+      #PersonalToolbar{
+        left: var(--hidden-left) !important;
+      }
     }
-  }
-  
-  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
-    #PersonalToolbar{
-      left: var(--semi-hidden-left) !important;
+
+    &:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
+      #PersonalToolbar{
+        left: var(--semi-hidden-left) !important;
+      }
     }
   }
 }
@@ -482,9 +483,9 @@
       }
 
       &:is( 
-        :has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box:not([hidden]) ),
-        :has( #sidebar-main > *:not([hidden])[expanded] ),
-        :has( #sidebar-main > *[hidden], #sidebar-main[hidden] ):has( #sidebar-box:not([hidden]) )
+        :has( #sidebar-main:not([hidden]) > *:not([hidden]):not([expanded]) ):has( #sidebar-box:not([hidden]) ),
+        :has( #sidebar-main:not([hidden]) > *:not([hidden])[expanded] ),
+        :has( #sidebar-main:not([hidden]) > *[hidden], #sidebar-main[hidden] ):has( #sidebar-box:not([hidden]) )
       ) {
         @media (-moz-bool-pref: "shyfox.position.navbar") and ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
           #nav-bar{
