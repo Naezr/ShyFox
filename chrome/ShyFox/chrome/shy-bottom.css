@@ -294,7 +294,7 @@
 :root{ --bottom-hvbr-opct: 0; }
 :root[titlepreface*="‍"]{ --bottom-hvbr-opct: var(--hvbr-opct); }
 
-:root:has(#PersonalToolbar:not([collapsed="true"])){ 
+:root:not([customizing]):has(#PersonalToolbar:not([collapsed="true"])){ 
   @media not ( 
     (-moz-bool-pref: "shyfox.position.bookmarkbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.bookmarkbar") ) )
@@ -356,7 +356,7 @@
   } }
 }
 
-:root:has(#PersonalToolbar[collapsed="true"]){ 
+:root:not([customizing]):has(#PersonalToolbar[collapsed="true"]){ 
   @media not ( 
     (-moz-bool-pref: "shyfox.position.navbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and ( not (-moz-bool-pref: "shyfox.vert-position.navbar") ) )

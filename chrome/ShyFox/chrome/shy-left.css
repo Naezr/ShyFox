@@ -14,7 +14,7 @@
   --left-gap: calc( var(--margin) / 2 );
 }
 
-:root:not([customizing])[chromehidden=""]:not([titlepreface*="᠎"]){
+:root[chromehidden=""]:not([titlepreface*="᠎"]), :root[customizing]{
   &:not( :has( #sidebar-main > *[hidden], #sidebar-main[hidden] )
   ) { --left-margin: var(--sdbr-tb-wdt); }
   
@@ -209,7 +209,8 @@
   
   #nav-bar-customization-target{ margin-left: calc( 0px - var(--br-wdt) ) }
   
-  #urlbar-container{
+  /* urlbar position */
+  :not(#wrapper-urlbar-container) > #urlbar-container, #wrapper-urlbar-container{
     width: calc( var(--sdbr-wdt) - var(--toolbar-start-end-padding) * 2 ) !important;
     height: var(--nvbr-hgt) !important;
     
@@ -218,7 +219,21 @@
     
     position: absolute !important;
     bottom: 0;
+  }
+  
+  /* customization mode */
+  #wrapper-urlbar-container{
+    pointer-events: none !important;
     
+    #urlbar-container{
+      width: 100% !important;
+      margin: 0px !important;
+      padding: 0px !important;
+    }
+  }
+  
+  /* urlbar buttons tweaks */
+  :not(#wrapper-urlbar-container) > #urlbar-container{
     #urlbar:not(:hover):not([focused]):not(:has(*[open])) > :is(.urlbar-input-container, #urlbar-input-container){
     & > *:not(.urlbar-searchmode-and-input-box-container, .urlbar-input-box, #page-action-buttons, #identity-box:is(.chromeUI, .localResource) ),
     #page-action-buttons > *:not(#urlbar-zoom-button){

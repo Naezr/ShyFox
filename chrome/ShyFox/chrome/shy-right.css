@@ -17,7 +17,7 @@
 
 */
 
-:root:not([customizing])[chromehidden=""]:not([titlepreface*="‌"]){
+:root[chromehidden=""]:not([titlepreface*="‌"]), :root[customizing]{
   --right-margin: var(--tbbr-size);
 }
 
@@ -26,6 +26,10 @@
 
   --tbbr-menubutton-hgt: 0px;
   --tbbr-extbutton-hgt: 0px;
+}
+  
+:root{
+  --right-tbbr-wdt: var(--tbbr-size);
 }
   
 /* 
@@ -167,7 +171,7 @@
 :root{ --right-hvbr-opct: 0; }
 :root[titlepreface*="‌"]{ --right-hvbr-opct: var(--hvbr-opct); }
 
-#TabsToolbar::after{
+:root:not([customizing]) #TabsToolbar::after{
   content: ""; position: absolute;
   pointer-events: none;
   transition: var(--hoverbar-transition) !important;
