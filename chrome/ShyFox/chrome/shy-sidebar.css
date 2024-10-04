@@ -147,3 +147,17 @@
 scrollbox, #vertical-pinned-tabs-container{
   scrollbar-width: var(--vertical-tabs-scrollbox-width) !important;
 }
+
+/* old sidebar header */
+#sidebar-box{  
+  #sidebar-header{
+    border: none !important;
+    padding: 4px 3px !important;
+  }
+  #sidebar-close{
+    margin-inline: 4px !important;
+    padding: 7px !important;
+    width: 30px !important;
+    border-radius: var(--rounding) !important;
+  }
+}

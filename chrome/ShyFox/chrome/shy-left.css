@@ -20,7 +20,7 @@
   
   &:has(
     #sidebar-box:not([hidden]),
-    #sidebar-main > *[expanded]:not([hidden])
+    #sidebar-main:not([hidden]) > *[expanded]:not([hidden])
   ) { --left-margin: var(--sdbr-wdt); }
   
   &:has(#sidebar-box[hidden]):has( #sidebar-main > *[hidden], #sidebar-main[hidden] ){
@@ -117,20 +117,6 @@
     margin-left: 0px !important;
   }
 }
-
-#sidebar-box{  
-  #sidebar-header{
-    border: none !important;
-    padding: 4px 3px !important;
-  }
-  #sidebar-close{
-    margin-inline: 4px !important;
-    padding: 7px !important;
-    width: 30px !important;
-    border-radius: var(--rounding) !important;
-  }
-}
-
 
 /* width */
 #sidebar-main > *:not([expanded]){
