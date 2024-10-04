@@ -272,10 +272,15 @@ browser[class*="devtools-toolbox"]{
   margin: 0 4px !important;
   padding-inline: 0px !important;
     
-  & > .toolbarbutton-icon{
+  & > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack){
     width: 32px !important;
     padding: 0 8px !important;
   }
+}
+
+#PersonalToolbar toolbarspring{
+  max-width: none !important;
+  min-width: 0px !important;
 }
 
 #OtherBookmarks{ 
@@ -288,6 +293,7 @@ browser[class*="devtools-toolbox"]{
   padding: 0 8px !important;
 }
 
+/* start end padding */
 #PersonalToolbar{
   & > *:nth-child(1 of toolbarbutton) {
     margin-left: 0px !important;
