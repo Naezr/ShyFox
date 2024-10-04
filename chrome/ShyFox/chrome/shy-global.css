@@ -278,11 +278,6 @@ browser[class*="devtools-toolbox"]{
   }
 }
 
-#PersonalToolbar toolbarspring{
-  max-width: none !important;
-  min-width: 0px !important;
-}
-
 #OtherBookmarks{ 
   .toolbarbutton-text{ display: none !important; }
   .toolbarbutton-icon{ margin: 0 !important; }
@@ -291,6 +286,25 @@ browser[class*="devtools-toolbox"]{
 #import-button, .bookmark-item{
   margin: 0 2px !important;
   padding: 0 8px !important;
+}
+
+/* special items */
+#PersonalToolbar{
+  toolbarspring{
+    max-width: none !important;
+    min-width: 0px !important;
+  }
+  @media not (-moz-bool-pref: "shyfox.position.bookmarkbar"){
+    #search-container{
+      height: 22px !important;
+      padding-block: 0px !important;
+    }
+    #searchbar{
+      height: 22px !important;
+      min-height: 22px !important;
+      max-height: 22px !important;
+    }
+  }
 }
 
 /* start end padding */
