@@ -329,13 +329,13 @@
     @media not (-moz-bool-pref: "shyfox.position.menubutton") { #PanelUI-menu-button{ opacity: 0; } }
   }
   
-  :root[titlepreface*="᠎"]{
+  :root:not([customizing=""])[titlepreface*="᠎"]{
     #nav-bar{
       left: var(--hidden-left) !important;
     }
   }
 
-  :root:has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
+  :root:not([customizing=""]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
     #nav-bar{
       left: var(--semi-hidden-left) !important;
     }
@@ -404,13 +404,13 @@
     #PersonalToolbar > *[disabled] { opacity: 0 !important; }
   }
   
-  :root[titlepreface*="᠎"]{
+  :root:not([customizing=""])[titlepreface*="᠎"]{
     #PersonalToolbar{
       left: var(--hidden-left) !important;
     }
   }
 
-  :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
+  :root:not([customizing=""]):not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
     #PersonalToolbar{
       left: var(--semi-hidden-left) !important;
     }
