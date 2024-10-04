@@ -275,7 +275,7 @@
   :root[customizing]{ 
     #nav-bar{
       margin-left: var(--margin);
-      margin-top: var(--margin);
+      margin-top:  var(--margin);
     }
 
     #wrapper-urlbar-container{

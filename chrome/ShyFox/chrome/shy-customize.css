@@ -1,14 +1,27 @@
 :root[customizing]{
   
+  --top-customizing-margin: calc(
+      var(--top-tbbr-hgt)
+    + var(--top-nvbr-hgt) + var(--nvbr-top-gap) 
+    + var(--top-bmbr-hgt) + var(--bmbr-top-gap)
+  ) !important;
+  
+  --bottom-customizing-margin: calc( 
+      var(--bottom-tbbr-hgt) 
+    + var(--bottom-nvbr-hgt) + var(--nvbr-bottom-gap)
+    + var(--bottom-bmbr-hgt) + var(--bmbr-bottom-gap)
+  ) !important;
+  
+  @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") {
+    --left-customizing-margin: var(--sdbr-wdt) !important;
+  } --left-customizing-margin: 0px;
+  
   #customization-container{
-   
-    --top-customizing-margin:    calc( var(--top-tbbr-hgt)    + var(--top-nvbr-hgt)    + var(--top-bmbr-hgt)    ) !important;
-    --bottom-customizing-margin: calc( var(--bottom-tbbr-hgt) + var(--bottom-nvbr-hgt) + var(--bottom-bmbr-hgt) ) !important;
     
     padding-top:    calc( var(--margin) * 2 + var(--top-customizing-margin)    ) !important;
     padding-bottom: calc( var(--margin) * 2 + var(--bottom-customizing-margin) ) !important;
-    padding-right:  calc( var(--margin) * 2 + var(--right-margin) ) !important;
-    padding-left:   calc( var(--margin) * 2 + var(--left-margin)  ) !important;
+    padding-right:  calc( var(--margin) * 2 + var(--right-margin)              ) !important;
+    padding-left:   calc( var(--margin) * 2 + var(--left-customizing-margin)   ) !important;
   }
   
   /* items box */

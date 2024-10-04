@@ -89,6 +89,17 @@
     top: 0px;
   }
   
+  /* customizing mode */
+  :root[customizing]{
+    #TabsToolbar{
+      left:  calc( var(--margin) * 2 + var(--left-customizing-margin) ) !important;
+      right: calc( var(--margin) * 2 + var(--right-margin) ) !important;
+      
+      margin-top: var(--margin);
+    }
+  }
+  
+  /* hidden mode */
   :root:not([customizing])[titlepreface*="​"]{
     #TabsToolbar{
       --tbbr-hidden-hitbox: 0px;
@@ -155,8 +166,19 @@
   @media not ( 
     (-moz-bool-pref: "shyfox.position.tabbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
-  ) { --nvbr-top-gap: var(--top-gap); }
+  ) { :root{ --nvbr-top-gap: var(--top-gap); } }
   
+  /* customizing mode */
+  :root[customizing]{
+    #nav-bar{
+      left:  calc( var(--margin) * 2 + var(--left-customizing-margin) ) !important;
+      right: calc( var(--margin) * 2 + var(--right-margin) ) !important;
+      
+      margin-top: calc( var(--margin) + var(--nvbr-top-gap) );
+    }
+  }
+  
+  /* hidden mode */
   :root:not([customizing])[titlepreface*="​"]{
     
     #nav-bar{
@@ -232,8 +254,19 @@
   ), not ( 
     (-moz-bool-pref: "shyfox.position.tabbar") or 
     ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
-  ) { --bmbr-top-gap: var(--top-gap); }
+  ) { :root{ --bmbr-top-gap: var(--top-gap); } }
   
+  /* customizing mode */
+  :root[customizing]{
+    #PersonalToolbar{
+      left:  calc( var(--margin) * 2 + var(--left-customizing-margin) ) !important;
+      right: calc( var(--margin) * 2 + var(--right-margin) ) !important;
+      
+      margin-top: calc( var(--margin) + var(--nvbr-top-gap) + var(--bmbr-top-gap) );
+    }
+  }
+  
+  /* hidden mode */
   :root:not([customizing])[titlepreface*="​"]{
         
     #PersonalToolbar{
