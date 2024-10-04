@@ -403,9 +403,9 @@
     --tbbr-elements-alltabs-rm: 1;
   }
   
-  &:has( toolbaritem:nth-child( 1 of .toolbaritem-combined-buttons ):nth-last-child( 1 of .toolbaritem-combined-buttons ) ) { --tbbr-elements-combined-overdraft: 2; }
-  &:has( toolbaritem:nth-child( 2 of .toolbaritem-combined-buttons ):nth-last-child( 1 of .toolbaritem-combined-buttons ) ) { --tbbr-elements-combined-overdraft: 4; }
-  &:has( toolbaritem:nth-child( 3 of .toolbaritem-combined-buttons ):nth-last-child( 1 of .toolbaritem-combined-buttons ) ) { --tbbr-elements-combined-overdraft: 6; }
+  &:has( #TabsToolbar-customization-target toolbaritem:nth-child( 1 of .toolbaritem-combined-buttons ):nth-last-child( 1 of .toolbaritem-combined-buttons ) ) { --tbbr-elements-combined-overdraft: 2; }
+  &:has( #TabsToolbar-customization-target toolbaritem:nth-child( 2 of .toolbaritem-combined-buttons ):nth-last-child( 1 of .toolbaritem-combined-buttons ) ) { --tbbr-elements-combined-overdraft: 4; }
+  &:has( #TabsToolbar-customization-target toolbaritem:nth-child( 3 of .toolbaritem-combined-buttons ):nth-last-child( 1 of .toolbaritem-combined-buttons ) ) { --tbbr-elements-combined-overdraft: 6; }
   
   --tbbr-elements-adjust: calc( 0
     - var(--tbbr-elements-alltabs-rm)
