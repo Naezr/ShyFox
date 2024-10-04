@@ -17,11 +17,13 @@
   } --left-customizing-margin: 0px;
   
   #customization-container{
-    
     padding-top:    calc( var(--margin) * 2 + var(--top-customizing-margin)    ) !important;
     padding-bottom: calc( var(--margin) * 2 + var(--bottom-customizing-margin) ) !important;
     padding-right:  calc( var(--margin) * 2 + var(--right-margin)              ) !important;
     padding-left:   calc( var(--margin) * 2 + var(--left-customizing-margin)   ) !important;
+    
+    -moz-window-dragging: drag !important;
+    & * {-moz-window-dragging: no-drag !important;}
   }
   
   /* items box */
@@ -88,6 +90,9 @@
     
     padding: 5px 10px !important;
     margin-top: 10px !important;
+    
+    -moz-window-dragging: drag !important;
+    & * {-moz-window-dragging: no-drag !important;}
   }
   
   #nav-bar, #TabsToolbar, #PersonalToolbar{
