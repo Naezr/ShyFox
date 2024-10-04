@@ -609,7 +609,7 @@
 
 */
 
-:is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){  
+:is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main:not([hidden]) > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){  
   
   @media (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.extbutton") and (-moz-bool-pref: "shyfox.position.menubutton") {&:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
