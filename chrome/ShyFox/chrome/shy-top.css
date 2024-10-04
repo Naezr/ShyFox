@@ -403,7 +403,7 @@
       (-moz-bool-pref: "shyfox.position.navbar") or 
       ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
     ) {
-      #navigator-toolbox #titlebar #TabsToolbar{
+      #navigator-toolbox #TabsToolbar{
         --tbbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
         --tbbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
       }
@@ -438,7 +438,7 @@
       (-moz-bool-pref: "shyfox.position.bookmarkbar") or 
       ( ( not (-moz-bool-pref: "shyfox.position.bookmarkbar") ) and (-moz-bool-pref: "shyfox.vert-position.bookmarkbar") ) 
     ) {
-      #navigator-toolbox #titlebar #TabsToolbar{
+      #navigator-toolbox #TabsToolbar{
         --tbbr-hover-brs: var(--big-rounding) var(--big-rounding) 0px 0px;
         --tbbr-hover-brw: var(--br-wdt) var(--br-wdt) 0px var(--br-wdt);
       }
