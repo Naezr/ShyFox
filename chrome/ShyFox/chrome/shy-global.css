@@ -338,6 +338,7 @@ browser[class*="devtools-toolbox"]{
 
 */
 
+/* change the height to match the navbar */
 #TabsToolbar{
   visibility: visible !important;
   background: transparent !important;
@@ -355,15 +356,16 @@ browser[class*="devtools-toolbox"]{
     visibility: visible !important;
   }
   
-  toolbarbutton{ height: var(--tbbr-size) !important; }
+  toolbarbutton:not(.bookmark-item){ height: var(--tbbr-size) !important; }
 
-  toolbarbutton > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack){
+  toolbarbutton:not(.bookmark-item) > :is(.toolbarbutton-icon, .toolbarbutton-badge-stack){
     width: 32px !important;
     height: 32px !important;
     padding: 8px !important;
     margin: 0px !important;
   }
   
+  /* horizontal tabs */
   #tabbrowser-tabs{
     height: var(--tbbr-size) !important;
 
@@ -387,8 +389,16 @@ browser[class*="devtools-toolbox"]{
       .tab-label-container{ display: none !important; }
     }
   }
+  
+  /* bookmarks inside tabbar */
+  #TabsToolbar-customization-target #personal-bookmarks{
+    margin-block: 4px !important;
+    height: 32px !important;
+  }
+  
 }
 
+/* start end padding */
 @media not (-moz-bool-pref: "shyfox.position.tabbar") {
   #TabsToolbar-customization-target{
     toolbarspring { max-width: none !important; }
