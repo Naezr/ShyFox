@@ -71,7 +71,7 @@
     
     --wdt: calc( 100% - 400px );
     max-width: var(--wdt) !important;
-    min-width: var(--wdt) !important;
+    min-width: 430px !important;
   }
   
   /* overflow menu */
@@ -141,4 +141,10 @@
   /* overflow opacity */
   #nav-bar-overflow-button{ fill-opacity: 1 !important; }
   
+  /* destination color */
+  .customization-target [id*="wrapper"]{
+    border-color: color-mix( in srgb, var(--bg-txt) 15%, transparent ) !important;
+  }
+  
+  toolbarspring{ border-radius: var(--rounding) !important; }
 }
