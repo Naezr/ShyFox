@@ -157,7 +157,7 @@
   #urlbar[breakout][breakout-extend]{
     display: flex !important;
     flex-direction: column-reverse !important;
-    bottom: 3px !important;
+    bottom: 0px !important;
     top: auto !important;
     
     #urlbar-input-container{
