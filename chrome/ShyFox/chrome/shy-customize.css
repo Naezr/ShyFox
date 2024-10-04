@@ -12,10 +12,19 @@
     + var(--bottom-bmbr-hgt) + var(--bmbr-bottom-gap)
   ) !important;
   
-  @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") {
-    --left-customizing-margin: var(--sdbr-wdt) !important;
-  } --left-customizing-margin: 0px;
+  /* left margin */
+  --left-customizing-margin: 0px;
   
+  @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") 
+  { --left-customizing-margin: var(--sdbr-wdt); }
+  
+  &:has( #sidebar-main:not([hidden]) > *:not([hidden])[expanded] )
+  { --left-customizing-margin: var(--sdbr-wdt); }
+  
+  &:has( #sidebar-main:not([hidden]) > *:not([hidden]):not([expanded]) )
+  { --left-customizing-margin: var(--sdbr-tb-wdt); }
+  
+  /* main box */
   #customization-container{
     padding-top:    calc( var(--margin) * 2 + var(--top-customizing-margin)    ) !important;
     padding-bottom: calc( var(--margin) * 2 + var(--bottom-customizing-margin) ) !important;
@@ -24,6 +33,34 @@
     
     -moz-window-dragging: drag !important;
     & * {-moz-window-dragging: no-drag !important;}
+  }
+  
+  /* browser box */
+  #browser{
+    visibility: visible !important;
+    display: flex !important;
+    position: absolute !important;
+    
+    & > :not(#sidebar-main) { visibility: collapse !important; }
+    
+    #sidebar-main{
+      margin-left: var(--margin) !important;
+      top: calc( 
+          var(--margin) * 2
+        + var(--left-bmbr-hgt) + var(--bmbr-left-gap) 
+        + var(--left-nvbr-hgt)
+      ) !important;
+      bottom: calc( var(--margin) * 2 );
+      
+      border: var(--border) !important;
+      border-radius: var(--big-rounding) !important;
+      background: var(--bg-col) !important;
+    }
+  }
+  
+  /* fix */
+  .customization-target:not(#widget-overflow-fixed-list) {
+    min-width: unset !important;
   }
   
   /* items box */
@@ -95,9 +132,13 @@
     & * {-moz-window-dragging: no-drag !important;}
   }
   
+  /* dashed outline */
   #nav-bar, #TabsToolbar, #PersonalToolbar{
     outline: 1px dashed !important;
     border-radius: var(--rounding) !important;
   }
+  
+  /* overflow opacity */
+  #nav-bar-overflow-button{ fill-opacity: 1 !important; }
   
 }

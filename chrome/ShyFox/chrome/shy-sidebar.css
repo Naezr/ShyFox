@@ -41,7 +41,7 @@
 }
 
 /* tab background */
-:root[titlepreface*="᠎"] #vertical-tabs #tabbrowser-tabs
+:root:not([customizing])[titlepreface*="᠎"] #vertical-tabs #tabbrowser-tabs
 .tab-background:is([selected], [multiselected]){
   background: var(--bg-col) !important;
 }
@@ -136,7 +136,7 @@
 #vertical-pinned-tabs-container-separator{ margin: 0px !important; }
 
 /* pinned top margin */
-:root:not([titlepreface*="᠎"]) #vertical-tabs #tabbrowser-tabs[expanded] #vertical-pinned-tabs-container:not(:empty){ margin-top: var(--margin) !important; }
+#vertical-tabs #tabbrowser-tabs[expanded] #vertical-pinned-tabs-container:not(:empty){ margin-top: var(--margin) !important; }
 #vertical-pinned-tabs-container{ transition: margin-top var(--trans-dur) ease-out !important; }
 
 /* rm scrollbars */

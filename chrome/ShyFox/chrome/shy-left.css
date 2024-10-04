@@ -127,7 +127,7 @@
   width: var(--sdbr-wdt) !important;
 }
 
-:root[titlepreface*="᠎"] #sidebar-main > *[expanded]{
+:root:not([customizing])[titlepreface*="᠎"] #sidebar-main > *[expanded]{
   width: calc( var(--sdbr-wdt) - var(--br-wdt) * 2 ) !important;
 }
 
@@ -136,7 +136,7 @@
   #sidebar { border: 0px solid transparent !important; }
 }
 
-:root[titlepreface*="᠎"]{
+:root:not([customizing])[titlepreface*="᠎"]{
   @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") { --sdbr-left-gap: var(--left-gap); }
   
   #sidebar-box{ background: transparent !important; }
@@ -428,7 +428,7 @@
 :root{ --left-hvbr-opct: 0; }
 :root[titlepreface*="᠎"]{ --left-hvbr-opct: var(--hvbr-opct); }
 
-:root:has( #sidebar-box:not([hidden]) ){ #sidebar-box{
+:root:not([customizing]):has( #sidebar-box:not([hidden]) ){ #sidebar-box{
   &::after{
     content: ""; position: absolute;
     pointer-events: none;
@@ -443,7 +443,7 @@
   }
 } }
 
-:root:has( #sidebar-box[hidden] ):has( #sidebar-main:not([hidden]) > *:not([hidden]) ){ #sidebar-main{
+:root:not([customizing]):has( #sidebar-box[hidden] ):has( #sidebar-main:not([hidden]) > *:not([hidden]) ){ #sidebar-main{
   &::after{
     content: ""; position: absolute;
     pointer-events: none;
