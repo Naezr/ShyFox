@@ -83,6 +83,8 @@
   }
   
   :root[customizing]{
+    #wrapper-unified-extensions-button{ pointer-events: none !important; }
+    
     #unified-extensions-button{
       top: calc( var(--margin) + var(--tbbr-menubutton-hgt) ) !important;
       right: var(--margin) !important;
