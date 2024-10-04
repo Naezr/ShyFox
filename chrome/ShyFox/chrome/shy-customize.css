@@ -41,26 +41,39 @@
     min-width: var(--wdt) !important;
     max-width: var(--wdt) !important;
     
-    padding-inline-end: 0px !important;
+    padding: 0px !important;
     padding-inline-start: var(--margin) !important;
   }
   
   #customization-panelWrapper{
-    #customization-panelHeader{ fill: red !important; }
-    
-    #customization-panelHeader::after{
-      content: url("chrome://global/skin/icons/chevron.svg");
-      display: inline-block;
-
+    #customization-panelHeader{ 
+      --icon-size: 25px;
       
-      background-image:;
-      width: 16px;
-      height: 16px;
+      display: flex !important;
+      align-items: center !important;
+      
+      margin-bottom: 4px !important;
+      
+      &::before{
+        content: "";
+        display: inline-block;
+        margin-right: 5px;
+        
+        width:     var(--icon-size);
+        height:    var(--icon-size);
+        mask-size: var(--icon-size);
+
+        mask-image: url("chrome://global/skin/icons/chevron.svg");
+        background-color: var(--arrowpanel-color);
+        mask-repeat: no-repeat;
+      }
     }
     
     .panel-arrowbox{ display: none !important; }
     
     .panel-arrowcontent{
+      height: 100% !important;
+      
       border: var(--border) !important;
       border-radius: var(--big-rounding) !important;
       background: var(--bg-col) !important;
@@ -71,7 +84,6 @@
   #customization-footer{
     border: var(--border) !important;
     border-radius: var(--big-rounding) !important;
-    
     background: var(--arrowpanel-background) !important;
     
     padding: 5px 10px !important;

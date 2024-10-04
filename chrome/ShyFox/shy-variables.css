@@ -175,11 +175,12 @@
   --toolbarbutton-border-radius:       var(--rounding) !important; /* navbar & bookmark */
   --arrowpanel-menuitem-border-radius: var(--rounding) !important; /* popup button      */
   --button-border-radius:              var(--rounding) !important; /* button            */
+  --border-radius-small:               var(--rounding) !important; /* global small      */
   
   --arrowpanel-border-radius:          var(--big-rounding) !important; /* popup itself  */
   --panel-border-radius:               var(--big-rounding) !important; /* context menu  */
   
   --toolbar-start-end-padding: 5px !important;
-  --bookmarks-toolbar-overlapping-browser-height: 0px !important;
+  --bookmarks-toolbar-overlapping-browser-height: 0px !important; /* fix bookmarkbar "Only Show on New Tab" */
 }
 

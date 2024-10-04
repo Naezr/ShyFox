@@ -56,6 +56,13 @@
     margin: 4px !important;
     padding-inline: 0 !important;
   }
+  
+  :root[customizing]{
+    #PanelUI-menu-button{
+      top:  var(--margin) !important;
+      right: var(--margin) !important;
+    }
+  }
 }
 
 @media (-moz-bool-pref: "shyfox.position.extbutton") {
@@ -74,6 +81,14 @@
     margin: 4px !important;
     padding-inline: 0px !important;
   }
+  
+  :root[customizing]{
+    #unified-extensions-button{
+      top: calc( var(--margin) + var(--tbbr-menubutton-hgt) ) !important;
+      right: var(--margin) !important;
+    }
+  }
+  
 }
 
 /* 
@@ -114,6 +129,36 @@
   margin-inline: 5px !important;
 }
 
+/* customizing mode */
+:root[customizing]{
+  #TabsToolbar{
+    top:    var(--margin);
+    right:  var(--margin);
+    bottom: var(--margin);
+  }
+  #TabsToolbar-customization-target{
+    [id*="wrapper-"]{
+      max-width: 40px !important;
+      justify-content: center !important;
+      align-content: center !important;
+      
+      box-sizing: content-box !important;
+      
+      border-color: color-mix( in srgb, var(--bg-txt) 15%, transparent ) !important;
+      
+      &[style*="border-inline-start-width"]{
+        border-inline-start-width: 0px !important;
+        border-block-start-width: 40px !important;
+      }
+      &[style*="border-inline-end-width"]{
+        border-inline-end-width: 0px !important;
+        border-block-end-width: 40px !important;
+      }
+    }
+  }
+}
+
+/* hidden mode */
 :root:not([customizing])[titlepreface*="‌"]{
   --tbbr-right: calc( var(--margin-on-right) - var(--tbbr-size) );
   --tbbr-hover-right: calc( var(--margin) + var(--margin-on-right) );  
