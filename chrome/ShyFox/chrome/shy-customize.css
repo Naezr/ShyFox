@@ -5,10 +5,10 @@
     --top-customizing-margin:    calc( var(--top-tbbr-hgt)    + var(--top-nvbr-hgt)    + var(--top-bmbr-hgt)    ) !important;
     --bottom-customizing-margin: calc( var(--bottom-tbbr-hgt) + var(--bottom-nvbr-hgt) + var(--bottom-bmbr-hgt) ) !important;
     
-    padding-top:    calc( var(--margin) + var(--top-customizing-margin)    ) !important;
-    padding-bottom: calc( var(--margin) + var(--bottom-customizing-margin) ) !important;
-    padding-right:  calc( var(--margin) + var(--right-margin) ) !important;
-    padding-left:   calc( var(--margin) + var(--left-margin)  ) !important;
+    padding-top:    calc( var(--margin) * 2 + var(--top-customizing-margin)    ) !important;
+    padding-bottom: calc( var(--margin) * 2 + var(--bottom-customizing-margin) ) !important;
+    padding-right:  calc( var(--margin) * 2 + var(--right-margin) ) !important;
+    padding-left:   calc( var(--margin) * 2 + var(--left-margin)  ) !important;
   }
   
   /* items box */
@@ -33,11 +33,24 @@
   }
   
   #customization-panelWrapper{
+    #customization-panelHeader{ fill: red !important; }
+    
+    #customization-panelHeader::after{
+      content: url("chrome://global/skin/icons/chevron.svg");
+      display: inline-block;
+
+      
+      background-image:;
+      width: 16px;
+      height: 16px;
+    }
+    
     .panel-arrowbox{ display: none !important; }
     
     .panel-arrowcontent{
       border: var(--border) !important;
       border-radius: var(--big-rounding) !important;
+      background: var(--bg-col) !important;
     }
   }
   

@@ -152,12 +152,12 @@
     height: var(--nvbr-hgt) !important;
   }  
   
+  @media not ( 
+    (-moz-bool-pref: "shyfox.position.tabbar") or 
+    ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
+  ) { --nvbr-top-gap: var(--top-gap); }
+  
   :root:not([customizing])[titlepreface*="​"]{
-    
-    @media not ( 
-      (-moz-bool-pref: "shyfox.position.tabbar") or 
-      ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
-    ) { --nvbr-top-gap: var(--top-gap); }
     
     #nav-bar{
       --nvbr-hidden-hitbox: 0px;
@@ -226,16 +226,16 @@
     left: var(--topbar-left);
   }
   
+  @media not ( 
+    (-moz-bool-pref: "shyfox.position.navbar") or 
+    ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
+  ), not ( 
+    (-moz-bool-pref: "shyfox.position.tabbar") or 
+    ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
+  ) { --bmbr-top-gap: var(--top-gap); }
+  
   :root:not([customizing])[titlepreface*="​"]{
-    
-    @media not ( 
-      (-moz-bool-pref: "shyfox.position.navbar") or 
-      ( ( not (-moz-bool-pref: "shyfox.position.navbar") ) and (-moz-bool-pref: "shyfox.vert-position.navbar") ) 
-    ), not ( 
-      (-moz-bool-pref: "shyfox.position.tabbar") or 
-      ( ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") ) 
-    ) { --bmbr-top-gap: var(--top-gap); }  
-    
+        
     #PersonalToolbar{
       --bmbr-hidden-hitbox: 0px;
       
