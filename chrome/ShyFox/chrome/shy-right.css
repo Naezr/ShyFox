@@ -17,7 +17,7 @@
 
 */
 
-:root[chromehidden=""]:not([titlepreface*="‌"]){
+:root:not([customizing])[chromehidden=""]:not([titlepreface*="‌"]){
   --right-margin: var(--tbbr-size);
 }
 
@@ -110,7 +110,7 @@
   margin-inline: 5px !important;
 }
 
-:root[titlepreface*="‌"]{
+:root:not([customizing])[titlepreface*="‌"]{
   --tbbr-right: calc( var(--margin-on-right) - var(--tbbr-size) );
   --tbbr-hover-right: calc( var(--margin) + var(--margin-on-right) );  
   --tbbr-hover-txt: var(--tb-txt);
@@ -194,7 +194,7 @@
   --tbbr-bottom: calc( 100% - var(--top-margin) - var(--margin) - var(--tbbr-hgt) )
 }
   
-:root[titlepreface*="‌"]{
+:root:not([customizing])[titlepreface*="‌"]{
   &:has(
     #TabsToolbar:hover,
     #TabsToolbar *:not(.tabbrowser-tab)[open]

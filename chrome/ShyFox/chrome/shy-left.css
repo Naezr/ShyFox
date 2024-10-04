@@ -14,7 +14,7 @@
   --left-gap: calc( var(--margin) / 2 );
 }
 
-:root[chromehidden=""]:not([titlepreface*="᠎"]){
+:root:not([customizing])[chromehidden=""]:not([titlepreface*="᠎"]){
   &:not( :has( #sidebar-main > *[hidden], #sidebar-main[hidden] )
   ) { --left-margin: var(--sdbr-tb-wdt); }
   
@@ -438,7 +438,7 @@
 */
 
 @media (-moz-bool-pref: "shyfox.appearance.leftbar.gapless") {
-  :is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main:not([hidden]) > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){
+  :root:not([customizing=""]):is([titlepreface*="᠎"], not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ) {
     --left-gap: 0px;
     
     &:has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box:not([hidden]) ){
@@ -609,7 +609,7 @@
 
 */
 
-:is(:root[titlepreface*="᠎"], :root:not([titlepreface*="᠎"]):has( #sidebar-main:not([hidden]) > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ){  
+:root:not([customizing=""]):is([titlepreface*="᠎"], not([titlepreface*="᠎"]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) ) {
   
   @media (-moz-bool-pref: "shyfox.position.navbar") and (-moz-bool-pref: "shyfox.position.extbutton") and (-moz-bool-pref: "shyfox.position.menubutton") {&:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),

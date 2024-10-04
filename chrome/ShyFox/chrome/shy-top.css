@@ -12,7 +12,7 @@
   --top-bmbr-hgt: 0px;
 }
 
-:root[chromehidden=""]:has(#PersonalToolbar:not([collapsed="true"])){ @media not (
+:root:not([customizing])[chromehidden=""]:has(#PersonalToolbar:not([collapsed="true"])){ @media not (
   (
     (-moz-bool-pref: "shyfox.position.tabbar") or
     (  ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") )
@@ -29,7 +29,7 @@
   }
 } }
 
-:root[chromehidden=""]:has(#PersonalToolbar[collapsed="true"]){ @media not (
+:root:not([customizing])[chromehidden=""]:has(#PersonalToolbar[collapsed="true"]){ @media not (
   (
     (-moz-bool-pref: "shyfox.position.tabbar") or
     (  ( not (-moz-bool-pref: "shyfox.position.tabbar") ) and (-moz-bool-pref: "shyfox.vert-position.tabbar") )
@@ -89,7 +89,7 @@
     top: 0px;
   }
   
-  :root[titlepreface*="​"]{
+  :root:not([customizing])[titlepreface*="​"]{
     #TabsToolbar{
       --tbbr-hidden-hitbox: 0px;
       
@@ -152,7 +152,7 @@
     height: var(--nvbr-hgt) !important;
   }  
   
-  :root[titlepreface*="​"]{
+  :root:not([customizing])[titlepreface*="​"]{
     
     @media not ( 
       (-moz-bool-pref: "shyfox.position.tabbar") or 
@@ -226,7 +226,7 @@
     left: var(--topbar-left);
   }
   
-  :root[titlepreface*="​"]{
+  :root:not([customizing])[titlepreface*="​"]{
     
     @media not ( 
       (-moz-bool-pref: "shyfox.position.navbar") or 
@@ -390,7 +390,7 @@
 
 */
 
-:root[titlepreface*="​"]{ @media (-moz-bool-pref: "shyfox.appearance.topbar.gapless") {
+:root:not([customizing])[titlepreface*="​"]{ @media (-moz-bool-pref: "shyfox.appearance.topbar.gapless") {
   & { --top-gap: 0px; }
   
   &:has(#PersonalToolbar[collapsed="true"]){
@@ -505,7 +505,7 @@
 
 */
 
-:root[titlepreface*="​"]{
+:root:not([customizing])[titlepreface*="​"]{
   
   
   @media ( not ( 
