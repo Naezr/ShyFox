@@ -40,6 +40,14 @@
   --button-size-icon: 32px !important;
 }
 
+/* tab background */
+:root[titlepreface*="᠎"] #vertical-tabs #tabbrowser-tabs
+.tab-background:is([selected], [multiselected]){
+  background: var(--bg-col) !important;
+}
+
+.tab-background{ transition: background var(--trans-dur) ease-out !important; }
+
 
 /* tabs expanded */
 #vertical-tabs #tabbrowser-tabs[expanded]{
@@ -79,28 +87,23 @@
     padding-inline: 0px !important;
     display: flex !important;
     flex-wrap: wrap;
-    flex-direction: row;
-
+    
     --grid-gap: 5px;
-    width: calc( 100% + var(--grid-gap) ) !important;
     grid-gap: var(--grid-gap) !important;
+    
+    /* odd */
+    --max-tabs-in-row: 3;
+    
+    /* even */
+    &:has( tab:nth-child( 2n of tab ):nth-last-child( 1 of tab ) ) 
+    { --max-tabs-in-row: 4; }
 
     .tabbrowser-tab[pinned]{
-      --wm: 3; --hm: 1; min-width: 0px !important;
-      width: calc( 100% / var(--wm) - var(--grid-gap) ) !important;
-      height: calc( var(--sdbr-wdt) / 4.6 / var(--hm) ) !important;
+      flex-grow: 1 !important;
+      min-width: calc( var(--sdbr-wdt) / var(--max-tabs-in-row) - var(--grid-gap) * var(--max-tabs-in-row) ) !important;
+      width: auto !important;
+      height: 42px !important;
     }
-
-    .tabbrowser-tab[pinned]:nth-child(1):last-child
-    {--wm: 1; --hm: 1.4;}
-
-    &:has(.tabbrowser-tab:nth-child(3n + 2):last-child)
-    .tabbrowser-tab:nth-last-child(-n + 2)
-    {--wm: 2; --hm: 1.2;}
-
-    &:has(.tabbrowser-tab:nth-child(3n + 4):last-child)
-    .tabbrowser-tab:nth-last-child(-n + 4)
-    {--wm: 4; --hm: 1.3;}
 
     .tabbrowser-tab[pinned] .tab-background{
       margin: 0px !important;
@@ -132,7 +135,9 @@
 
 #vertical-pinned-tabs-container-separator{ margin: 0px !important; }
 
-:root:not([titlepreface*="᠎"]) #vertical-pinned-tabs-container:not(:empty){ margin-top: var(--margin) !important; }
+/* pinned top margin */
+:root:not([titlepreface*="᠎"]) #vertical-tabs #tabbrowser-tabs[expanded] #vertical-pinned-tabs-container:not(:empty){ margin-top: var(--margin) !important; }
+#vertical-pinned-tabs-container{ transition: margin-top var(--trans-dur) ease-out !important; }
 
 /* rm scrollbars */
 #tabbrowser-arrowscrollbox, #vertical-pinned-tabs-container{
