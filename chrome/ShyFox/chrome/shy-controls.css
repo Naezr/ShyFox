@@ -3,6 +3,6 @@
   display: none; /* */
 }
 
-#TabsToolbar .titlebar-buttonbox-container{
+:not(#toolbar-menubar) .titlebar-buttonbox-container{
   display: none !important;
 }

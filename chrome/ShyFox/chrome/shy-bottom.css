@@ -80,9 +80,8 @@
 ) {
   :root{ --bottom-tbbr-hgt: var(--tbbr-size); }
   
-  #titlebar{ z-index: calc( var(--bottombar-zindex) + 1 ) !important; }
-  
   #TabsToolbar{
+    z-index: calc( var(--bottombar-zindex) + 1 ) !important;
     height: var(--tbbr-size) !important;
     
     right: var(--bottombar-right);

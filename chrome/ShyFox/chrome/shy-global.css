@@ -48,7 +48,7 @@
 #navigator-toolbox{
   position: relative !important;
   margin-top: -1px !important;
-  z-index: 5;
+  z-index: 5 !important;
 }
 
 /* remove useless items */
@@ -61,7 +61,7 @@
 :root:not([chromehidden=""]) #navigator-toolbox{ visibility: collapse !important; }
 
 /* opacity fix */
-#titlebar {
+.browser-titlebar {
   :root[tabsintitlebar] & {
     &:-moz-window-inactive {
       opacity: var(--inactive-titlebar-opacity);
