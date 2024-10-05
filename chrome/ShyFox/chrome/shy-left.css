@@ -222,7 +222,7 @@
   }
     
   /* urlbar buttons tweaks */
-  :not(#wrapper-urlbar-container) > #urlbar-container{
+  :root:not([customizing]) #urlbar-container{
     #urlbar:not(:hover):not([focused]):not(:has(*[open])) > :is(.urlbar-input-container, #urlbar-input-container){
     & > *:not(.urlbar-searchmode-and-input-box-container, .urlbar-input-box, #page-action-buttons, #identity-box:is(.chromeUI, .localResource) ),
     #page-action-buttons > *:not(#urlbar-zoom-button, #pageAction-urlbar-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_){ /* reload in adress bar extension */

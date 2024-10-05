@@ -230,11 +230,6 @@ browser[class*="devtools-toolbox"]{
 #PanelUI-button{ padding-inline-end: var(--toolbar-start-end-padding); }
 #ion-button{ display: none !important; }
 
-/* idk what is it */
-#pageActionSeparator, #pageActionButton[multiple-children] ~ .urlbar-page-action {
-  display: flex !important;
-}
-
 /* identity box tweak */
 #identity-icon-box {
   padding-inline: 6px !important;
