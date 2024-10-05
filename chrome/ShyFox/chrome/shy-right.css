@@ -222,11 +222,11 @@
     }
   }
   
-  #wrapper-personal-bookmarks[mousedown]::after{
+  #wrapper-personal-bookmarks:not([mousedown])::after{
     content: "Bookmarks toolbar items are not supported by vertical toolbar"; /* tr */
     position: absolute;
-    margin-top: 40px;
-    min-width: 230px;
+    margin-left: -300px;
+    width: 230px;
     padding: 10px;
     background: var(--arrowpanel-background);
     border-radius: var(--big-rounding);
