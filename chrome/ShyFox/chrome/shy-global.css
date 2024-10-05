@@ -442,7 +442,7 @@ browser[class*="devtools-toolbox"]{
 }
 
 /* tabs toolbar empty description */
-#TabsToolbar-customization-target:empty::after{
+:root:not([customizing]) #TabsToolbar-customization-target:empty::after{
   content: "For quick access, place your favorite buttons here on the tabs toolbar. Right click > Customize toolbar...";
   white-space: nowrap;
   mask-image: linear-gradient(to left, transparent, black 3ch) !important;
