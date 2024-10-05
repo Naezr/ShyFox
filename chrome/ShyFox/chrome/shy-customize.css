@@ -35,6 +35,12 @@
     
     -moz-window-dragging: drag !important;
     & * {-moz-window-dragging: no-drag !important;}
+    
+
+    background-image: url("chrome://global/content/aboutconfig/background.svg") !important;
+    background-color: var(--tb-col) !important;
+    background-repeat: no-repeat !imporant;
+    background-position: 50px calc(50vh - 150px) !important;
   }
   
   /* browser box */
@@ -130,8 +136,24 @@
     padding: 5px 10px !important;
     margin-top: 10px !important;
     
+    grid-gap: 5px !important;
+    
     -moz-window-dragging: drag !important;
     & * {-moz-window-dragging: no-drag !important;}
+    
+    /* manage themes button */
+    #customization-lwtheme-link{
+      color: var(--button-text-color) !important;
+      text-decoration: none !important;
+      
+      background-color: var(--button-background-color);
+      &:hover { background-color: var(--button-background-color-hover); }
+      
+      border-radius: var(--border-radius-small);
+      padding: .45em 1em;
+      min-height: var(--size-item-large);
+      font-weight: 600;
+    }
   }
   
   /* dashed outline */

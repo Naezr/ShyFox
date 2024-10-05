@@ -76,6 +76,9 @@
 /* transparent sidebar */
 window#webextpanels-window { background: transparent !important; }
 
+/* button cursor */
+button, toolbarbutton{ cursor: pointer; }
+
 /* 
 
 ##############################################################################################################################
