@@ -15,10 +15,10 @@
 :root{
   --nvbr-hgt: 40px;
   --tbbr-size: 40px;
-  --sdbr-wdt: 300px;
+  --sdbr-wdt: 280px;
   --sdbr-tb-wdt: 40px;
-  --top-hide-margin-inline: 100px;
-  --bottom-hide-margin-inline: 100px;
+  --top-hide-margin-inline: 12%;
+  --bottom-hide-margin-inline: 12%;
   --panel-hidden-hitbox: 8px;
 }
 
