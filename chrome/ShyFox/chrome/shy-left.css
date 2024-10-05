@@ -225,7 +225,7 @@
   :not(#wrapper-urlbar-container) > #urlbar-container{
     #urlbar:not(:hover):not([focused]):not(:has(*[open])) > :is(.urlbar-input-container, #urlbar-input-container){
     & > *:not(.urlbar-searchmode-and-input-box-container, .urlbar-input-box, #page-action-buttons, #identity-box:is(.chromeUI, .localResource) ),
-    #page-action-buttons > *:not(#urlbar-zoom-button){
+    #page-action-buttons > *:not(#urlbar-zoom-button, #pageAction-urlbar-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_){ /* reload in adress bar extension */
       visibility: collapse;
       opacity: 0;
       transition: opacity 0.3s linear, visibility 0.2s linear !important;
@@ -235,6 +235,10 @@
     :is(.urlbar-input-container, #urlbar-input-container) > :is(.urlbar-searchmode-and-input-box-container, .urlbar-input-box){
       order: -1 !important;
       padding-left: 5px !important;
+    }
+    
+    #pageAction-urlbar-_e1ed7a80-7c11-4f7e-968b-79b551a0067f_{
+      order: 9999 !important; /* reload in adress bar */
     }
     
     #urlbar-zoom-button{
