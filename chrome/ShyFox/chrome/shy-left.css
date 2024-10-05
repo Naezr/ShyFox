@@ -335,7 +335,7 @@
     }
   }
 
-  :root:not([customizing=""]):has( #sidebar-main > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
+  :root:not([customizing=""]):has( #sidebar-main:not([hidden]) > *:not([hidden]):not([expanded]) ):has( #sidebar-box[hidden] ) {
     #nav-bar{
       left: var(--semi-hidden-left) !important;
     }
