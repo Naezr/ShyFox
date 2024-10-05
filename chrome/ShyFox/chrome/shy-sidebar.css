@@ -38,6 +38,8 @@
 
   --button-padding-icon: 14px !important;
   --button-size-icon: 32px !important;
+  
+  &[aria-pressed="true"]{ --button-background-color: color-mix(in srgb, currentColor 7%, transparent); !important; }
 }
 
 /* tab background */

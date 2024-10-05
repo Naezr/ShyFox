@@ -18,11 +18,11 @@
   @media (-moz-bool-pref: "shyfox.position.navbar"), (-moz-bool-pref: "shyfox.position.bookmarkbar") 
   { --left-customizing-margin: var(--sdbr-wdt); }
   
-  &:has( #sidebar-main:not([hidden]) > *:not([hidden])[expanded] )
+  &:has( #sidebar-main:not([hidden]) sidebar-main[expanded] )
   { --left-customizing-margin: var(--sdbr-wdt); }
   
   @media not ( (-moz-bool-pref: "shyfox.position.navbar") or (-moz-bool-pref: "shyfox.position.bookmarkbar") ) {
-    &:has( #sidebar-main:not([hidden]) > *:not([hidden]):not([expanded]) )
+    &:has( #sidebar-main:not([hidden]) sidebar-main:not([expanded]) )
     { --left-customizing-margin: var(--sdbr-tb-wdt); }
   }
  
