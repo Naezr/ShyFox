@@ -344,7 +344,7 @@ browser[class*="devtools-toolbox"]{
 }
 
 #PlacesToolbarItems:empty::before{
-  content: "Create your first bookmark!";
+  content: "Create your first bookmark!"; /* tr */
   margin-left: 10px;
   height: 100%;
   align-content: center;
@@ -443,7 +443,7 @@ browser[class*="devtools-toolbox"]{
 
 /* tabs toolbar empty description */
 :root:not([customizing]) #TabsToolbar-customization-target:empty::after{
-  content: "For quick access, place your favorite buttons here on the tabs toolbar. Right click > Customize toolbar...";
+  content: "For quick access, place your favorite buttons here on the tabs toolbar. Right click > Customize toolbar..."; /* tr */
   white-space: nowrap;
   mask-image: linear-gradient(to left, transparent, black 3ch) !important;
 

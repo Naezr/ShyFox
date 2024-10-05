@@ -188,6 +188,49 @@
       }
     }
   }
+  
+  /* bookmarks */
+  #bookmarks-toolbar-placeholder{ 
+    .toolbarbutton-text{ display: none !important; }
+    .toolbarbutton-icon{ margin: 0px !important; }
+    background: red !important;
+  }
+  
+  #PlacesToolbar{ max-width: 40px !important; }
+  #PlacesToolbarItems{ visibility: collapse }
+  #PlacesChevron{
+    visibility: visible !important;
+    min-width: 40px !important; 
+    margin: 0px !important;
+    
+    .toolbarbutton-icon{ background: red !important; }
+  }
+  
+  #PlacesChevronPopup{
+    --panel-background: transparent !important;
+    --panel-border-color: transparent !important;
+    --panel-shadow: none !important;
+    --panel-width: 0px !important;
+    
+    &::before{
+      content: "Bookmarks toolbar items are not supported by vertical toolbar. Right click on blank space > Customize Toolbar... to remove it"; /* tr */
+      min-width: 230px;
+      margin-block: 10px;
+      padding: 10px;
+      background: var(--arrowpanel-background);
+      border-radius: var(--big-rounding);
+    }
+  }
+  
+  #wrapper-personal-bookmarks[mousedown]::after{
+    content: "Bookmarks toolbar items are not supported by vertical toolbar"; /* tr */
+    position: absolute;
+    margin-top: 40px;
+    min-width: 230px;
+    padding: 10px;
+    background: var(--arrowpanel-background);
+    border-radius: var(--big-rounding);
+  }
 }
 
 /* customizing mode */
