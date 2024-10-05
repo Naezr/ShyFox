@@ -100,16 +100,15 @@
     
     tab{
       flex-grow: 1 !important;
-      min-width: calc( var(--sdbr-wdt) / var(--max-tabs-in-row) - var(--toolbar-start-end-padding) * 2 ) !important;
+      min-width: calc( 100% / var(--max-tabs-in-row) ) !important;
       width: auto !important;
       height: 42px !important;
     }
 
     tab .tab-background{
       border-radius: var(--big-rounding) !important;
+      height: auto !important;
       margin: 2.5px !important;
-      height: calc( 100% - 5px ) !important;
-      width: calc( 100% - 5px ) !important;
     }
 
     .tab-icon-image, .tab-icon-stack{
