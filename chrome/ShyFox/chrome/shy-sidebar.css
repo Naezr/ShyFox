@@ -89,29 +89,27 @@
     padding-inline: 0px !important;
     display: flex !important;
     flex-wrap: wrap;
-    
-    --grid-gap: 5px;
-    grid-gap: var(--grid-gap) !important;
-    
-    /* odd */
+        
     --max-tabs-in-row: 3;
     
-    /* even */
-    &:has( tab:nth-child( 2n of tab ):nth-last-child( 1 of tab ) ) 
+    &:has( tab:nth-child(3n + 4):nth-last-child(1) ) tab:nth-last-child( -n + 4 )
     { --max-tabs-in-row: 4; }
-
-    .tabbrowser-tab[pinned]{
+    
+    &:has( tab:nth-child(3n + 2):nth-last-child(1) ) tab:nth-last-child( -n + 2 )
+    { --max-tabs-in-row: 2; }
+    
+    tab{
       flex-grow: 1 !important;
-      min-width: calc( var(--sdbr-wdt) / var(--max-tabs-in-row) - var(--grid-gap) * var(--max-tabs-in-row) ) !important;
+      min-width: calc( var(--sdbr-wdt) / var(--max-tabs-in-row) - var(--toolbar-start-end-padding) * 2 ) !important;
       width: auto !important;
       height: 42px !important;
     }
 
-    .tabbrowser-tab[pinned] .tab-background{
-      margin: 0px !important;
+    tab .tab-background{
       border-radius: var(--big-rounding) !important;
-      height: 100% !important;
-      width: 100% !important;
+      margin: 2.5px !important;
+      height: calc( 100% - 5px ) !important;
+      width: calc( 100% - 5px ) !important;
     }
 
     .tab-icon-image, .tab-icon-stack{
