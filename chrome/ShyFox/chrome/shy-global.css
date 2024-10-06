@@ -369,9 +369,9 @@ browser[class*="devtools-toolbox"]{
     height: 40px !important;
   }
   
-  #TabsToolbar-customization-target > #new-tab-button{
-    display: flex !important;
-    visibility: visible !important;
+  #TabsToolbar-customization-target{
+    min-height: 100% !important;
+    height: auto !important;
   }
   
   toolbarbutton:not(.bookmark-item){ height: var(--tbbr-size) !important; }
