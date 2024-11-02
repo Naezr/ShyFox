@@ -17,7 +17,7 @@ findbar{
     (
       100vw
       - var(--findbar-wdt)
-      + var(--left-margin)
+      - var(--left-margin)
       - var(--right-margin)
     ) / 2
   );

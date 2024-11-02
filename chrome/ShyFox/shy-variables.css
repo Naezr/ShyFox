@@ -132,6 +132,9 @@ Reserved values and all sorts of dynamic variables. You should not touch them.
   
   /* override one padding in navbar to match style */
   --toolbar-start-end-padding: calc(var(--margin) / 2) !important;
+  
+  /* fix bookmark toolbar */
+  --bookmarks-toolbar-overlapping-browser-height: 0px !important;
 }
 
 /* current tab loading progress */

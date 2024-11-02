@@ -29,6 +29,10 @@ Area where website is displayed
   --margin: 0px !important;
 }
 
+/* some z-index */
+#navigator-toolbox {z-index: 2 !important;}
+#browser {z-index: 1 !important;}
+
 /* if it not fullscreen video or floating window */
 #main-window:not([inDOMFullscreen="true"])[chromehidden=""]{
     
@@ -557,6 +561,12 @@ File Edit View History Bookmarks Tools Help
 
 /* z-index fix */
 #tabbrowser-tabbox{z-index: 1 !important;}
+
+/* border fix */
+* {
+  border: 0px solid transparent; 
+  outline: 0px solid transparent;
+}
 
 /*
 
