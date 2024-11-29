@@ -235,6 +235,20 @@ Navigation bar on top of the window
     );
   }
   
+  /* hotfix */
+  #urlbar{
+    visibility: collapse;
+  }
+
+  #urlbar-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: var(--rounding);
+    background-color: var(--toolbar-field-background-color);
+  }
+  
+  
   /* show navbar on hover or focus */
   &:has(
     #nav-bar-customization-target:hover #unified-extensions-button:not(:hover),
@@ -246,6 +260,15 @@ Navigation bar on top of the window
     #nav-bar-overflow-button:hover
   ) {
     #nav-bar{
+      
+      /* hotfix */
+      #urlbar{
+        visibility: visible !important;
+        transition: visibility 0s linear var(--trans-dur);
+        min-width: var(--urlbar-width) !important;
+      }
+
+      
       top: calc(var(--top-margin) + var(--margin));
       
       background-color: var(--tb-col) !important;
