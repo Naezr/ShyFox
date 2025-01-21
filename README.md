@@ -9,6 +9,11 @@
 
 </div>
 
+<br>
+
+> [!WARNING]
+> This theme is not maintained right now and can be broken
+
 <br/>
 
 <details><summary>🚩 Release notes</summary>
